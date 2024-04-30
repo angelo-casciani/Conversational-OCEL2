@@ -1,0 +1,15 @@
+Query: Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.
+
+test
+
+Answer: <s>[INST]
+    <<SYS>>
+    Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.
+    <</SYS>>
+    Context:
+    
+    Question:
+    test
+     Answer: [/INST]  I don't know the answer to your question "test" as there is no information provided in the given context. Please provide more details or clarify your question so I can assist you better.
+
+

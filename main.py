@@ -1,105 +1,194 @@
-import json
+from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline, BitsAndBytesConfig, AutoConfig
+from torch import cuda, bfloat16
+from langchain_community.embeddings.huggingface import HuggingFaceEmbeddings
+from langchain_community.vectorstores.qdrant import Qdrant
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_community.llms.huggingface_pipeline import HuggingFacePipeline
+from langchain_core.prompts import PromptTemplate
 import os
-import pm4py
-import pandas as pd
+import datetime
+
+"""Initializing the Hugging Face Embedding Pipeline
+
+Hugging Face Embedding model: https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
+"""
 
 
-def compute_times(temp_summ_df):
-    temp_summ_df['ocel:timestamp'] = pd.to_datetime(temp_summ_df['ocel:timestamp'])
+def initialize_embedding_model(embedding_model_id, dev):
+    embedding_model = HuggingFaceEmbeddings(
+        model_name=embedding_model_id,
+        model_kwargs={'device': dev},
+        encode_kwargs={'device': dev, 'batch_size': 32}
+        # multi_process=True
+    )
 
-    earliest_event = temp_summ_df['ocel:timestamp'].min()
-    latest_event = temp_summ_df['ocel:timestamp'].max()
-    total_duration = latest_event - earliest_event
-
-    return earliest_event, latest_event, total_duration
-
-
-# Get the resources for a flattened event log as a dataframe
-def get_resources_flat(log):
-    resources = log['resource'].dropna().unique()
-    return resources
+    return embedding_model
 
 
-def empty_execution_data(exe_dir):
-    exe_dir = os.path.join('data', 'execution')
-    files = os.listdir(directory)
+"""Once defined embeddings model and vectorDB with its indexing methods in-place, we proceed to the indexing process.
 
-    for file in files:
-        if file.endswith('.txt'):
-            file_path = os.path.join(directory, file)
-            os.remove(file_path)
+We need to describe the process: we incorporate the representation and generate the indexes.
+"""
 
-    print("All execution files have been deleted.")
+
+def load_process_representation(filename):
+    filepath = os.path.join('data', 'execution', filename)
+    with open(filepath, 'r') as file:
+        file_content = file.read()
+        return file_content
+
+
+def store_vectorized_info(file_content, filename, embeds_model, address, port):
+    source = filename.strip('.txt').capitalize()
+    title = f"{source}"
+    batch_size = 2048
+    qdrant_store = 'No qDrant store.'
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=batch_size, chunk_overlap=128)
+    # all_splits = text_splitter.split_documents(file_content)
+    splits = text_splitter.split_text(file_content)
+    all_splits = text_splitter.create_documents(splits)
+
+    for document in all_splits:
+        chunk = document.page_content
+        metadata = {'text': chunk, 'source': source, 'title': title}
+        qdrant_store = Qdrant.from_texts(
+            [chunk],
+            embeds_model,
+            metadatas=[metadata],
+            url=address,
+            prefer_grpc=True,
+            grpc_port=port,
+            collection_name="llama-2-rag",
+        )
+    return qdrant_store
+
+
+def retrieve_context(vector_index, query):
+    retrieved = vector_index.similarity_search(query, k=3)
+    retrieved_text = ''
+    for i in range(len(retrieved)):
+        content = retrieved[i].page_content
+        if i != len(retrieved) - 1:
+            retrieved_text += f'{content}\n\n'
+        else: retrieved_text += f'{content}'
+
+    return retrieved_text
+
+
+def initialize_pipeline(model_identifier, hf_auth):
+    bnb_config = BitsAndBytesConfig(
+        load_in_4bit=True,
+        bnb_4bit_quant_type='nf4',
+        bnb_4bit_use_double_quant=True,
+        bnb_4bit_compute_dtype=bfloat16
+    )
+
+    model_config = AutoConfig.from_pretrained(
+        model_identifier,
+        token=hf_auth
+    )
+
+    model = AutoModelForCausalLM.from_pretrained(
+        model_identifier,
+        trust_remote_code=True,
+        config=model_config,
+        quantization_config=bnb_config,
+        device_map='auto',
+        token=hf_auth
+    )
+    # model.eval()
+    # print(f"Model loaded on {device}")
+
+    tokenizer = AutoTokenizer.from_pretrained(
+        model_identifier,
+        token=hf_auth
+    )
+
+    generate_text = pipeline(
+        model=model, tokenizer=tokenizer,
+        return_full_text=True,
+        task='text-generation',
+        do_sample=True,
+        max_new_tokens=512,
+        repetition_penalty=1.1
+    )
+
+    return generate_text
+
+
+def log_to_file(message, curr_datetime):
+    folder = 'tests'
+    sub_folder = 'outputs'
+    filename = f"output_{curr_datetime}.txt"
+    filepath = os.path.join(folder, sub_folder, filename)
+    with open(filepath, 'a') as file1:
+        file1.write(message)
+
+
+def produce_answer(question, curr_datetime, llm_chain, vectdb):
+    sys_mess = "Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer."
+    context = retrieve_context(vectdb, question)
+    complete_answer = llm_chain.invoke({"question": question,
+                               "system_message": sys_mess,
+                               "context": context})
+    index = complete_answer.find('[/INST]')
+    prompt = complete_answer[:index + len('[/INST]')]
+    answer = complete_answer[index + len('[/INST]'):]
+    print(f'Prompt: {prompt}\n')
+    print(f'Answer: {answer}\n')
+    print('--------------------------------------------------')
+
+    log_to_file(f'Query: {sys_mess}\n{context}\n{question}\n\nAnswer: {answer}\n\n\n', curr_datetime)
+
+
+def live_prompting(model1, vect_db):
+    current_datetime = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    while True:
+        query = input('Insert the query (type "quit" to exit): ')
+
+        if query.lower() == 'quit':
+            print("Exiting the chat.")
+            break
+
+        produce_answer(query, current_datetime, model1, vect_db)
+        print()
 
 
 if __name__ == "__main__":
-    directory = os.path.join('data', 'execution')
-    if not os.path.exists(directory):
-        os.makedirs(directory)
-    empty_execution_data(directory)
+    device = f'cuda:{cuda.current_device()}' if cuda.is_available() else 'cpu'
+    hf_token = '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'  # HuggingFace Token
+    # Qdrant Credentials
+    url = "192.168.1.240:6333"
+    grpc_port = 6334
 
-    path = os.path.join("data", "ocel2-p2p.json")
-    ocel = pm4py.read_ocel2(path)
-    
-    # Discover and view the DFG with the frequency annotation
-    # ocdfg = pm4py.discover_ocdfg(ocel)
-    # pm4py.view_ocdfg(ocdfg, format="svg")
+    embed_model_id = 'sentence-transformers/all-MiniLM-L6-v2'
 
-    # Basic Statistics
-    with open(os.path.join('data', 'execution', 'basic_stats.txt'), 'w') as file:
-        file.write(f'OCEL2.0 basic statistics.\n')
-        print(ocel, file=file)
-      
-    # Names of the attributes in the log
-    attribute_names = pm4py.ocel_get_attribute_names(ocel)
-    attributes_as_string = ', '.join(attribute_names)
-    with open(os.path.join('data', 'execution', 'attribute_names.txt'), 'w') as file:
-        file.write(f'OCEL2.0 object types, a list containing the attribute names.\n')
-        file.write(attributes_as_string)
+    embed_model = initialize_embedding_model(embed_model_id, device)
 
-    # Object Types
-    object_types = pm4py.ocel_get_object_types(ocel)
-    obj_as_string = ', '.join(attribute_names)
-    with open(os.path.join('data', 'execution', 'object_types.txt'), 'w') as file:
-        file.write(f'OCEL2.0 object types, a list containing the object types.\n')
-        file.write(obj_as_string)
+    files = os.listdir(os.path.join('data', 'execution'))
+    for f in files:
+        if f.endswith('.txt'):
+            content = load_process_representation(f)
+            qdrant = store_vectorized_info(content, f, embed_model, url, grpc_port)
 
-    # Dictionary containing the set of activities for each object type 
-    object_type_activities = pm4py.ocel_object_type_activities(ocel)
-    dict_serializable = {key: list(value) for key, value in object_type_activities.items()}
-    dict_as_string = json.dumps(dict_serializable)
-    with open(os.path.join('data', 'execution', 'object_type_activities.txt'), 'w') as file:
-        file.write(f'OCEL2.0 object type activities, a dictionary containing the set of activities for each object type.\n')
-        file.write(dict_as_string)
+    model_id = 'meta-llama/Llama-2-13b-chat-hf'
+    pipeline = initialize_pipeline(model_id, hf_token)
+    hf_pipeline = HuggingFacePipeline(pipeline=pipeline)
 
-    # Number of related objects to the event for each event identifier and object type
-    ocel_objects_ot_count = pm4py.ocel_objects_ot_count(ocel)
-    dict_as_string = json.dumps(ocel_objects_ot_count)
-    with open(os.path.join('data', 'execution', 'objects_ot_count.txt'), 'w') as file:
-        file.write(f'OCEL2.0 objects ot count, number of related objects to the event for each event identifier and object type.\n')
-        file.write(dict_as_string)
+    # template = """<s>[INST] {question} [/INST]"""
+    template = """[INST]
+    <<SYS>>
+    {system_message}
+    <</SYS>>
+    <<CONTEXT>>
+    {context}
+    <</CONTEXT>>
+    <<QUESTION>>
+    {question}
+    <</QUESTION>>
+    <<ANSWER>> [/INST]"""
 
-    # Temporal info
-    temporal_summary = pm4py.ocel_temporal_summary(ocel)
-    earliest, latest, total = compute_times(temporal_summary)
-    with open(os.path.join('data', 'execution', 'temporal_info.txt'), 'w') as file:
-        file.write(f'OCEL2.0 temporal summary.\n')
-        file.write(f'Earliest event timestamp: {earliest}\n')
-        file.write(f'Latest event timestamp: {latest}\n')
-        file.write(f'Total duration: {total}\n')
-        file.write(temporal_summary.to_string())
+    prompt = PromptTemplate.from_template(template)
+    chain = prompt | hf_pipeline
 
-    # Object summary
-    objects_summary = pm4py.ocel_objects_summary(ocel)
-    with open(os.path.join('data', 'execution', 'object_summary.txt'), 'w') as file:
-        file.write(f'OCEL2.0 object summary, a dataframe with the different objects in the log along with the activities of the events related to the object, the start/end timestamps of the lifecycle, the duration of the lifecycle and the other objects related to the given object in the interaction graph.\n')
-        file.write(objects_summary.to_string())
-
-    # Operations on a flattened log for object type
-    obj_type = 'invoice receipt'
-    flattened_log = pm4py.ocel_flattening(ocel, obj_type)
-    resources = get_resources_flat(flattened_log)
-    filename = f'flattened_log_{obj_type}.txt' 
-    with open(os.path.join('data', 'execution', filename), 'w') as file:
-        file.write(f'OCEL2.0 event log flattened on the object type "{obj_type}".\n')
-        file.write(flattened_log.to_string())
+    live_prompting(chain, qdrant)
