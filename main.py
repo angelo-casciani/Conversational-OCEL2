@@ -138,7 +138,7 @@ def produce_answer(question, curr_datetime, llm_chain, vectdb):
     print(f'Answer: {answer}\n')
     print('--------------------------------------------------')
 
-    log_to_file(f'Query: {sys_mess}\n{context}\n{question}\n\nAnswer: {answer}\n\n\n', curr_datetime)
+    log_to_file(f'Query: {sys_mess}\n{context}\n{question}\n\nAnswer: {answer}\n\n##########################\n\n', curr_datetime)
 
 
 def live_prompting(model1, vect_db):
@@ -176,7 +176,7 @@ if __name__ == "__main__":
     hf_pipeline = HuggingFacePipeline(pipeline=pipeline)
 
     # template = """<s>[INST] {question} [/INST]"""
-    template = """[INST]
+    template = """<s>[INST]
     <<SYS>>
     {system_message}
     <</SYS>>

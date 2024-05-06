@@ -14,6 +14,7 @@ What is the total duration of the process?
 
 Answer:   Based on the given context, the total duration of the process is 944 days, 11 hours, and 2 minutes.
 
+##########################
 
 Query: Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.
 OCEL2.0 basic statistics.
@@ -31,6 +32,7 @@ what are the object type of the log?
 
 Answer:   Based on the provided context, the object type of the log is "purchase requisition".
 
+##########################
 
 Query: Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.
 OCEL2.0 object types, a list containing the object types.
@@ -56,6 +58,7 @@ Answer:   Based on the provided context, the object types of the log are:
 * purchase requisition
 * quotation.
 
+##########################
 
 Query: Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.
 8417                             quotation:36                                                                                                                     [Create Request for Quotation, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order] 2022-05-09 19:24:00+00:00 2022-05-12 14:26:00+00:00            241320.0                                                                                                                      {purchase_order:61, purchase_order:62, purchase_requisition:35:pr_trigger_35}
@@ -81,4 +84,4 @@ Answer:   Based on the provided context, I can see that there are several activi
 
 These activities are all related to the procurement process and involve various stages of requesting, creating, approving, and managing purchase orders and requisitions.
 
-
+##########################
