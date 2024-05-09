@@ -1,0 +1,26 @@
+Resources and their working calendar for the OCEL2.0 event log flattened on the object type "purchase_requisition".
+The resources that manipulates an object of type "purchase_requisition" are: ['Manufacturing Department' 'Procurement Requisition Manager'
+ 'Procurement Department'].
+The working calendar of these resources is as follows:
+                                                    min_time  max_time
+resource                        weekday dayname                      
+Manufacturing Department        0       Monday     07:01:00  23:57:00
+                                1       Tuesday    01:00:00  23:30:00
+                                2       Wednesday  00:19:00  23:33:00
+                                3       Thursday   00:12:00  23:50:00
+                                4       Friday     00:33:00  23:56:00
+                                5       Saturday   00:10:00  15:47:00
+Procurement Department          0       Monday     00:13:00  23:46:00
+                                1       Tuesday    00:17:00  23:54:00
+                                2       Wednesday  00:02:00  23:57:00
+                                3       Thursday   00:13:00  23:44:00
+                                4       Friday     00:04:00  23:47:00
+                                5       Saturday   00:06:00  23:58:00
+                                6       Sunday     00:37:00  23:45:00
+Procurement Requisition Manager 0       Monday     00:02:00  23:57:00
+                                1       Tuesday    00:01:00  23:55:00
+                                2       Wednesday  00:21:00  23:19:00
+                                3       Thursday   00:39:00  23:45:00
+                                4       Friday     00:04:00  23:56:00
+                                5       Saturday   00:56:00  23:20:00
+                                6       Sunday     00:04:00  23:55:00

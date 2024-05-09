@@ -1,0 +1,5 @@
+Statistics about the string attribute values for the OCEL2.0 event log flattened on the object type "purchase_requisition".
+"Release Indicator (EBAN-FRGZU)"
+Values: ['Released']
+"Purchasing Group (EBAN-EKGRP)"
+Values: ['003', '001', '005', '004', '002']

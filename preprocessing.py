@@ -68,19 +68,24 @@ def get_resource_calendar(log):
     log['time'] = log['time:timestamp'].dt.time
     min_times = log.groupby(['resource', log['weekday'], log['dayname']])['time'].min()
     max_times = log.groupby(['resource', log['weekday'], log['dayname']])['time'].max()
-    resourceTimes = pd.DataFrame({'min_time': min_times, 'max_time': max_times})
+    resource_times = pd.DataFrame({'min_time': min_times, 'max_time': max_times})
 
-    return resourceTimes
+    return resource_times
 
 
 def compute_stats_numeric_attributes(log, num_attribute):
     attribute = f'case:{num_attribute}'
     log[attribute] = pd.to_numeric(log[attribute], errors='coerce')
-    minimum = log[attribute].min()
-    maximum = log[attribute].max()
+
+    log = log.dropna(subset=[attribute])
+    if log.empty:
+        return None, None, None
+
+    minimum_row = log.loc[log[attribute].idxmin()]
+    maximum_row = log.loc[log[attribute].idxmax()]
     average = log[attribute].mean()
 
-    return minimum, maximum, average
+    return minimum_row, maximum_row, average
 
 
 def compute_stats_string_attributes(log, str_attribute):
@@ -93,10 +98,15 @@ def compute_stats_string_attributes(log, str_attribute):
 def compute_stats_date_attributes(log, date_attribute):
     attribute = f'case:{date_attribute}'
     log[attribute] = pd.to_datetime(log[attribute], errors='coerce')
-    minimum = log[attribute].min()
-    maximum = log[attribute].max()
 
-    return minimum, maximum
+    log = log.dropna(subset=[attribute])
+    if log.empty:
+        return None, None
+
+    minimum_row = log.loc[log[attribute].idxmin()]
+    maximum_row = log.loc[log[attribute].idxmax()]
+
+    return minimum_row, maximum_row
 
 
 def empty_execution_data(exe_dir):
@@ -161,12 +171,11 @@ if __name__ == "__main__":
         file.write(dict_as_string)
 
     # Number of related objects to the event for each event identifier and object type
-    """ocel_objects_ot_count = pm4py.ocel_objects_ot_count(ocel)
+    ocel_objects_ot_count = pm4py.ocel_objects_ot_count(ocel)
     dict_as_string = json.dumps(ocel_objects_ot_count)
     with open(os.path.join('data', 'execution', 'to_chunk', 'objects_ot_count.txt'), 'w') as file:
-        file.write(
-            f'OCEL2.0 objects ot count: number of related objects to the event for each event identifier and object type.\n')
-        file.write(dict_as_string)"""
+        #file.write(f'OCEL2.0 objects ot count: number of related objects to the event for each event identifier and object type.\n')
+        file.write(dict_as_string)
 
     # Temporal info
     temporal_summary = pm4py.ocel_temporal_summary(ocel)
@@ -228,19 +237,35 @@ if __name__ == "__main__":
             file.write(
                 f'Statistics about the numeric attribute values for the OCEL2.0 event log flattened on the object type "{obj_type}".\n')
             for num_attr in numeric_attributes:
-                min, max, avg = compute_stats_numeric_attributes(flattened_log, num_attr)
-                file.write(f'"{num_attr}"\nMinimum: {min} - Maximum: {max} - Average: {avg}\n')
+                min_val_row, max_val_row, avg = compute_stats_numeric_attributes(flattened_log, num_attr)
+                if isinstance(min_val_row, pd.Series) and isinstance(max_val_row, pd.Series):
+                    min_val = min_val_row[f'case:{num_attr}']
+                    max_val = max_val_row[f'case:{num_attr}']
+                    min_case_name = min_val_row['case:concept:name']
+                    max_case_name = max_val_row['case:concept:name']
+                    min_ocel_eid = min_val_row['ocel:eid']
+                    max_ocel_eid = max_val_row['ocel:eid']
+                    avg = round(avg, 2)
+                    file.write(f'"{num_attr}"\nMinimum: {min_val} with object {min_case_name} in event {min_ocel_eid} - Maximum: {max_val} with object {max_case_name} in event {max_ocel_eid}  - Average: {avg}\n')
         filename = f'string_attributes_stats_{obj_type.replace(" ", "_")}.txt'
         with open(os.path.join('data', 'execution', filename), 'w') as file:
             file.write(
                 f'Statistics about the string attribute values for the OCEL2.0 event log flattened on the object type "{obj_type}".\n')
             for str_attr in string_attributes:
                 values = compute_stats_string_attributes(flattened_log, str_attr)
-                file.write(f'"{str_attr}"\nValues: {values}\n')
+                if not (pd.isna(values).any()):
+                    file.write(f'"{str_attr}"\nValues: {values}\n')
         filename = f'date_attributes_stats_{obj_type.replace(" ", "_")}.txt'
         with open(os.path.join('data', 'execution', filename), 'w') as file:
             file.write(
                 f'Statistics about the date attribute values for the OCEL2.0 event log flattened on the object type "{obj_type}".\n')
             for date_attr in date_attributes:
-                min, max = compute_stats_date_attributes(flattened_log, date_attr)
-                file.write(f'"{date_attr}"\nMinimum Date: {min} - Maximum Date: {max}\n')
+                min_val_row, max_val_row = compute_stats_date_attributes(flattened_log, date_attr)
+                if isinstance(min_val_row, pd.Series) and isinstance(max_val_row, pd.Series):
+                    min_val = min_val_row[f'case:{num_attr}']
+                    max_val = max_val_row[f'case:{num_attr}']
+                    min_case_name = min_val_row['case:concept:name']
+                    max_case_name = max_val_row['case:concept:name']
+                    min_ocel_eid = min_val_row['ocel:eid']
+                    max_ocel_eid = max_val_row['ocel:eid']
+                    file.write(f'"{date_attr}"\nMinimum Date: {min_val} with object {min_case_name} in event {min_ocel_eid} - Maximum Date: {max_val} with object {max_case_name} in event {max_ocel_eid}\n')

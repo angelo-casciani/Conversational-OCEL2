@@ -1,0 +1,2 @@
+OCEL2.0 object types: a list containing the object types.
+goods receipt, invoice receipt, material, payment, purchase_order, purchase_requisition, quotation

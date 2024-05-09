@@ -1,0 +1,11 @@
+Statistics about the string attribute values for the OCEL2.0 event log flattened on the object type "purchase_order".
+"Document Type (EKKO-BSART)"
+Values: ['Standard PO (NB)']
+"Vendor (EKKO-LIFNR)"
+Values: ['Bottle Bosses Co', 'Precision Gears Ltd', 'Chainring Champions Inc', 'Durable Bike Seats Inc', 'Brake Bosses Ltd', 'Tire Titans Ltd', 'Cable Creators Inc', 'Secure Locks Co', 'Tube Traders Inc', 'Strap Stars Inc', 'Safety Gear Ltd', 'Quality Helmets Co', 'Cassette Captains Co', 'Lock Lords Ltd', 'Crankset Kings Ltd', 'Valve Ventures Co', 'Helmet Heroes Inc', 'Pants Providers Inc', 'Hub Heroes Ltd', 'Cage Creators Ltd', 'Rider Apparel Co', 'Cycle Parts Manufacturing', 'Wheel Wizards Co', 'Lever Legends Ltd', 'Rim Royals Ltd', 'Spoke Suppliers Inc', 'Road Protection Corp', 'Bell Barons Inc', 'Speedometer Specialists Co', 'Reliable Tyres Ltd', 'Comfort Clothing Inc', 'Nipple Navigators Co', 'Jacket Junction Co', 'Cycling Accessory Corp', 'Safety Suppliers Ltd', 'Cycling Style Ltd', 'Cycle Component Corp', 'Bearing Barons Inc', 'Pedal Providers Co', 'Derailleur Dynamos Co', 'Pump Pros Inc', 'Lighting Legends Co', 'Advanced Bike Frames Inc', 'Chain Chiefs Ltd', 'Glove Masters Ltd', 'Mirror Makers Ltd', 'Bracket Barons Inc', 'Bike Components Corp', 'Efficient Lighting Solutions Ltd', 'Professional Cycling Products']
+"Release Status (EKKO-FRGZU)"
+Values: ['Fully Approved']
+"Purchasing Organization (EKKO-EKORG)"
+Values: ['Global Bike Inc']
+"Purchasing Group (EKKO-EKGRP)"
+Values: ['003', '001', '005', '004', '002']

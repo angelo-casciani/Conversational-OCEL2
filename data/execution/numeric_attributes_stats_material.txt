@@ -1,0 +1,5 @@
+Statistics about the numeric attribute values for the OCEL2.0 event log flattened on the object type "material".
+"Net Price (EKPO-NETPR)"
+Minimum: 100.0 with object material:12 in event event:15 - Maximum: 1500.0 with object material:9 in event event:19  - Average: 794.85
+"Quantity (EKPO-MENGE)"
+Minimum: 1.0 with object material:103 in event event:801 - Maximum: 100.0 with object material:246 in event event:2727  - Average: 50.6

@@ -1,0 +1,3 @@
+Statistics about the date attribute values for the OCEL2.0 event log flattened on the object type "material".
+"Delivery Date (EKPO-BEDAT)"
+Minimum Date: 25.0 with object material:1 in event event:1 - Maximum Date: 26.0 with object material:2243 in event event:28053

@@ -1,3 +1,5 @@
+import json
+
 from qdrant_client import QdrantClient
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline, BitsAndBytesConfig, AutoConfig
 from torch import cuda, bfloat16
@@ -74,11 +76,11 @@ def intelligent_chunking_large_files(file_path, chunk_size=6):
         next(file)
         chunk = ''
         for line in file:
-            #line = re.sub(r'\|\s+', '|', line)
             chunk += line
             if line.strip() == '' or len(
-                    chunk.split('\n')) > chunk_size + 1:
-                chunks.append(chunk)
+                    chunk.split('\n')) > chunk_size:
+                chunk_cleaned = re.sub(r'\| +', '|', chunk)
+                chunks.append(chunk_cleaned)
                 chunk = ''
         if chunk.strip() != '':     # Append remaining lines as the last chunk
             chunks.append(chunk)
@@ -101,8 +103,19 @@ def store_vectorized_chunks(chunks_to_save, filename, embeds_model, address, por
             grpc_port=port,
             collection_name="llama-2-rag",
         )
-        print(chunk)
     return qdrant_store
+
+
+def intelligent_chunking_json(json_dict):
+    chunks_list = []
+    items = list(json_dict.items())
+    chunk = ''
+    for i in range(0, len(items), 8):
+        sublist = items[i:i + 8]
+        for key, value in sublist:
+            chunk = ''.join(key + ' : ' + str(value))
+        chunks_list.append(chunk)
+    return chunks_list
 
 
 def retrieve_context(vector_index, query):
@@ -196,6 +209,11 @@ def live_prompting(model1, vect_db):
         print()
 
 
+def delete_qdrant_collection():
+    qdrant_client = QdrantClient(url="192.168.1.240:6333", grpc_port=6334, prefer_grpc=True)
+    qdrant_client.delete_collection('llama-2-rag')
+    qdrant_client.close()
+
 if __name__ == "__main__":
     device = f'cuda:{cuda.current_device()}' if cuda.is_available() else 'cpu'
     hf_token = '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'  # HuggingFace Token
@@ -214,16 +232,22 @@ if __name__ == "__main__":
             store_vectorized_info(content, f, embed_model, url, grpc_port)
 
     files_to_chunk = os.listdir(os.path.join('data', 'execution', 'to_chunk'))
+    jsonfile = 'objects_ot_count.txt'
     for f in files_to_chunk:
-        if f.endswith('.txt'):
+        if f.endswith('.txt') and f != jsonfile:
             chunks_to_store = intelligent_chunking_large_files(f)
             qdrant = store_vectorized_chunks(chunks_to_store, f, embed_model, url, grpc_port)
+        elif f == jsonfile:
+            file_path = os.path.join('data', 'execution', 'to_chunk', jsonfile)
+            with open(file_path, 'r') as jsonf:
+                j_dict = json.load(jsonf)
+                j_chunks = intelligent_chunking_json(j_dict)
+                qdrant = store_vectorized_chunks(j_chunks, f, embed_model, url, grpc_port)
 
     model_id = 'meta-llama/Llama-2-13b-chat-hf'
     pipeline = initialize_pipeline(model_id, hf_token)
     hf_pipeline = HuggingFacePipeline(pipeline=pipeline)
 
-    # template = """<s>[INST] {question} [/INST]"""
     template = """<s>[INST]
     <<SYS>>
     {system_message}
@@ -240,3 +264,5 @@ if __name__ == "__main__":
     chain = prompt | hf_pipeline
 
     live_prompting(chain, qdrant)
+
+    delete_qdrant_collection()

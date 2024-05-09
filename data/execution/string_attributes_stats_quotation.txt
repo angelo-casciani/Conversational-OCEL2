@@ -1,0 +1,9 @@
+Statistics about the string attribute values for the OCEL2.0 event log flattened on the object type "quotation".
+"Vendor (EBAN-LIFNR)"
+Values: ['Precision Gears Ltd', 'Bottle Bosses Co', 'Durable Bike Seats Inc', 'Brake Bosses Ltd', 'Chainring Champions Inc', 'Tire Titans Ltd', 'Cable Creators Inc', 'Secure Locks Co', 'Tube Traders Inc', 'Strap Stars Inc', 'Safety Gear Ltd', 'Quality Helmets Co', 'Lock Lords Ltd', 'Cassette Captains Co', 'Crankset Kings Ltd', 'Valve Ventures Co', 'Helmet Heroes Inc', 'Pants Providers Inc', 'Hub Heroes Ltd', 'Cage Creators Ltd', 'Cycle Parts Manufacturing', 'Rider Apparel Co', 'Wheel Wizards Co', 'Rim Royals Ltd', 'Lever Legends Ltd', 'Spoke Suppliers Inc', 'Reliable Tyres Ltd', 'Road Protection Corp', 'Speedometer Specialists Co', 'Bell Barons Inc', 'Comfort Clothing Inc', 'Nipple Navigators Co', 'Jacket Junction Co', 'Cycling Accessory Corp', 'Safety Suppliers Ltd', 'Cycling Style Ltd', 'Bearing Barons Inc', 'Cycle Component Corp', 'Derailleur Dynamos Co', 'Pedal Providers Co', 'Pump Pros Inc', 'Lighting Legends Co', 'Advanced Bike Frames Inc', 'Chain Chiefs Ltd', 'Glove Masters Ltd', 'Mirror Makers Ltd', 'Bracket Barons Inc', 'Bike Components Corp', 'Efficient Lighting Solutions Ltd', 'Professional Cycling Products']
+"RFQ Type (EBAN-BSART)"
+Values: ['AN']
+"Purchasing Organization (EBAN-EKORG)"
+Values: ['Global Bike Inc']
+"Purchasing Group (EBAN-EKGRP)"
+Values: ['001', '003', '005', '004', '002']

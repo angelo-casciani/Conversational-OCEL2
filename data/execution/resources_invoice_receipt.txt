@@ -1,0 +1,12 @@
+Resources and their working calendar for the OCEL2.0 event log flattened on the object type "invoice receipt".
+The resources that manipulates an object of type "invoice receipt" are: ['Finance/Account Department'].
+The working calendar of these resources is as follows:
+                                               min_time  max_time
+resource                   weekday dayname                      
+Finance/Account Department 0       Monday     00:08:00  23:58:00
+                           1       Tuesday    00:09:00  23:53:00
+                           2       Wednesday  00:03:00  23:54:00
+                           3       Thursday   00:01:00  23:59:00
+                           4       Friday     00:04:00  23:59:00
+                           5       Saturday   00:04:00  23:38:00
+                           6       Sunday     00:08:00  23:59:00

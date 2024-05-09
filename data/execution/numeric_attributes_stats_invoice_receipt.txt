@@ -1,0 +1,5 @@
+Statistics about the numeric attribute values for the OCEL2.0 event log flattened on the object type "invoice receipt".
+"Credit Amount (BSEG-WRBTR)"
+Minimum: 200.0 with object invoice receipt:1802 in event event:27340 - Maximum: 375050.0 with object invoice receipt:1282 in event event:19684  - Average: 63966.24
+"Debit Amount (BSEG-DMBTR)"
+Minimum: 200.0 with object invoice receipt:1802 in event event:27340 - Maximum: 375050.0 with object invoice receipt:1282 in event event:19684  - Average: 63966.24

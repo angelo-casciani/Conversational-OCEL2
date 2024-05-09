@@ -1,0 +1,34 @@
+Resources and their working calendar for the OCEL2.0 event log flattened on the object type "purchase_order".
+The resources that manipulates an object of type "purchase_order" are: ['Procurement Department' 'Procurement Order Manager'
+ 'Warehouse Department' 'Finance/Account Department'].
+The working calendar of these resources is as follows:
+                                               min_time  max_time
+resource                   weekday dayname                      
+Finance/Account Department 0       Monday     00:14:00  23:56:00
+                           1       Tuesday    00:09:00  23:40:00
+                           2       Wednesday  00:03:00  23:54:00
+                           3       Thursday   00:34:00  23:59:00
+                           4       Friday     00:16:00  23:59:00
+                           5       Saturday   00:04:00  23:32:00
+                           6       Sunday     00:12:00  23:59:00
+Procurement Department     0       Monday     00:40:00  23:58:00
+                           1       Tuesday    00:02:00  23:57:00
+                           2       Wednesday  00:01:00  23:56:00
+                           3       Thursday   00:05:00  23:59:00
+                           4       Friday     00:00:00  23:38:00
+                           5       Saturday   00:00:00  22:01:00
+                           6       Sunday     00:03:00  19:22:00
+Procurement Order Manager  0       Monday     00:00:00  23:51:00
+                           1       Tuesday    00:07:00  23:55:00
+                           2       Wednesday  00:14:00  23:37:00
+                           3       Thursday   00:11:00  23:55:00
+                           4       Friday     00:14:00  23:59:00
+                           5       Saturday   00:01:00  23:57:00
+                           6       Sunday     00:07:00  23:41:00
+Warehouse Department       0       Monday     00:00:00  23:54:00
+                           1       Tuesday    00:02:00  23:56:00
+                           2       Wednesday  00:05:00  23:59:00
+                           3       Thursday   00:00:00  23:59:00
+                           4       Friday     00:04:00  23:59:00
+                           5       Saturday   00:05:00  23:52:00
+                           6       Sunday     00:02:00  23:57:00

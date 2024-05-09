@@ -1,0 +1,3 @@
+Statistics about the numeric attribute values for the OCEL2.0 event log flattened on the object type "payment".
+"Amount (DMBTR)"
+Minimum: 200.0 with object payment:861 in event event:27503 - Maximum: 375050.0 with object payment:614 in event event:19842  - Average: 63358.83

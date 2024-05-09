@@ -1,0 +1,3 @@
+Statistics about the string attribute values for the OCEL2.0 event log flattened on the object type "invoice receipt".
+"Payment Block (RSEG-ZLSPR)"
+Values: ['']
