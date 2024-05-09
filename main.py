@@ -1,3 +1,4 @@
+from qdrant_client import QdrantClient
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline, BitsAndBytesConfig, AutoConfig
 from torch import cuda, bfloat16
 from langchain_community.embeddings.huggingface import HuggingFaceEmbeddings
@@ -7,6 +8,7 @@ from langchain_community.llms.huggingface_pipeline import HuggingFacePipeline
 from langchain_core.prompts import PromptTemplate
 import os
 import datetime
+import re
 
 """Initializing the Hugging Face Embedding Pipeline
 
@@ -60,6 +62,46 @@ def store_vectorized_info(file_content, filename, embeds_model, address, port):
             grpc_port=port,
             collection_name="llama-2-rag",
         )
+    return qdrant_store
+
+
+# Chunk size in lines of the file
+def intelligent_chunking_large_files(file_path, chunk_size=6):
+    file_path = os.path.join('data', 'execution', 'to_chunk', file_path)
+    chunks = []
+    with open(file_path, 'r') as file:
+        next(file)
+        next(file)
+        chunk = ''
+        for line in file:
+            #line = re.sub(r'\|\s+', '|', line)
+            chunk += line
+            if line.strip() == '' or len(
+                    chunk.split('\n')) > chunk_size + 1:
+                chunks.append(chunk)
+                chunk = ''
+        if chunk.strip() != '':     # Append remaining lines as the last chunk
+            chunks.append(chunk)
+        return chunks
+
+
+def store_vectorized_chunks(chunks_to_save, filename, embeds_model, address, port):
+    source = filename.strip('.txt').capitalize()
+    title = f"{source}"
+    qdrant_store = 'No qDrant store.'
+
+    for chunk in chunks_to_save:
+        metadata = {'text': chunk, 'source': source, 'title': title}
+        qdrant_store = Qdrant.from_texts(
+            [chunk],
+            embeds_model,
+            metadatas=[metadata],
+            url=address,
+            prefer_grpc=True,
+            grpc_port=port,
+            collection_name="llama-2-rag",
+        )
+        print(chunk)
     return qdrant_store
 
 
@@ -169,7 +211,13 @@ if __name__ == "__main__":
     for f in files:
         if f.endswith('.txt'):
             content = load_process_representation(f)
-            qdrant = store_vectorized_info(content, f, embed_model, url, grpc_port)
+            store_vectorized_info(content, f, embed_model, url, grpc_port)
+
+    files_to_chunk = os.listdir(os.path.join('data', 'execution', 'to_chunk'))
+    for f in files_to_chunk:
+        if f.endswith('.txt'):
+            chunks_to_store = intelligent_chunking_large_files(f)
+            qdrant = store_vectorized_chunks(chunks_to_store, f, embed_model, url, grpc_port)
 
     model_id = 'meta-llama/Llama-2-13b-chat-hf'
     pipeline = initialize_pipeline(model_id, hf_token)

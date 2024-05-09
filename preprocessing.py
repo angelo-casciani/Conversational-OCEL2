@@ -110,6 +110,10 @@ def empty_execution_data(exe_dir):
     print("All execution files have been deleted.")
 
 
+def format_df_value(val, name):
+    return f'{name}: {val} | '
+
+
 if __name__ == "__main__":
     directory = os.path.join('data', 'execution')
     if not os.path.exists(directory):
@@ -144,7 +148,7 @@ if __name__ == "__main__":
     object_types = pm4py.ocel_get_object_types(ocel)
     obj_as_string = ', '.join(object_types)
     with open(os.path.join('data', 'execution', 'object_types.txt'), 'w') as file:
-        file.write(f'OCEL2.0 object types, a list containing the object types.\n')
+        file.write(f'OCEL2.0 object types: a list containing the object types.\n')
         file.write(obj_as_string)
 
     # Dictionary containing the set of activities for each object type
@@ -153,22 +157,23 @@ if __name__ == "__main__":
     dict_as_string = json.dumps(dict_serializable)
     with open(os.path.join('data', 'execution', 'object_type_activities.txt'), 'w') as file:
         file.write(
-            f'OCEL2.0 object type activities, a dictionary containing the set of activities for each object type.\n')
+            f'OCEL2.0 object type activities: the set of activities for each object type.\n')
         file.write(dict_as_string)
 
     # Number of related objects to the event for each event identifier and object type
-    ocel_objects_ot_count = pm4py.ocel_objects_ot_count(ocel)
+    """ocel_objects_ot_count = pm4py.ocel_objects_ot_count(ocel)
     dict_as_string = json.dumps(ocel_objects_ot_count)
-    with open(os.path.join('data', 'execution', 'objects_ot_count.txt'), 'w') as file:
+    with open(os.path.join('data', 'execution', 'to_chunk', 'objects_ot_count.txt'), 'w') as file:
         file.write(
-            f'OCEL2.0 objects ot count, number of related objects to the event for each event identifier and object type.\n')
-        file.write(dict_as_string)
+            f'OCEL2.0 objects ot count: number of related objects to the event for each event identifier and object type.\n')
+        file.write(dict_as_string)"""
 
     # Temporal info
     temporal_summary = pm4py.ocel_temporal_summary(ocel)
-    with open(os.path.join('data', 'execution', 'temporal_summary.txt'), 'w') as file:
-        file.write(f'OCEL2.0 temporal summary.\n')
-        file.write(temporal_summary.to_string())
+    formatted_columns = {col: lambda x, name=col: format_df_value(x, name) for col in temporal_summary.columns}
+    with open(os.path.join('data', 'execution', 'to_chunk', 'temporal_summary.txt'), 'w') as file:
+        file.write(f'OCEL2.0 temporal summary: the events happening in a specific timestamp and the objects on which they operate.\n')
+        file.write(temporal_summary.to_string(formatters=formatted_columns, index=False))
 
     # Temporal Process Wide Info
     earliest, latest, total = compute_times(temporal_summary)
@@ -179,10 +184,11 @@ if __name__ == "__main__":
 
     # Object summary
     objects_summary = pm4py.ocel_objects_summary(ocel)
-    with open(os.path.join('data', 'execution', 'object_summary.txt'), 'w') as file:
+    formatted_columns = {col: lambda x, name=col: format_df_value(x, name) for col in objects_summary.columns}
+    with open(os.path.join('data', 'execution', 'to_chunk', 'object_summary.txt'), 'w') as file:
         file.write(
-            f'OCEL2.0 object summary, a dataframe with the different objects in the log along with the activities of the events related to the object, the start/end timestamps of the lifecycle, the duration of the lifecycle and the other objects related to the given object in the interaction graph.\n')
-        file.write(objects_summary.to_string())
+            f'OCEL2.0 object summary: info on the objects with the events related to the object, the start/end timestamps and duration of the object lifecycle, and the other objects interacting with the given object.\n')
+        file.write(objects_summary.to_string(formatters=formatted_columns, index=False))
 
     # Operations on a flattened log for each object type
     with open(os.path.join('data', 'execution', 'object_types.txt'), 'r') as file:

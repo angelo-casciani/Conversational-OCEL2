@@ -1,0 +1,59 @@
+Query: Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.
+OCEL2.0 object summary: info on the objects with the events related to the object, the start/end timestamps and duration of the object lifecycle, and the other objects interacting with the given object.
+                           ocel:oid: quotation:96                                                                             activities_lifecycle: ['Create Request for Quotation', 'Create Purchase Order', 'Create Purchase Order', 'Create Purchase Order', 'Approve Purchase Order', 'Approve Purchase Order', 'Approve Purchase Order'] lifecycle_start: 2022-07-12 14:59:00+00:00 lifecycle_end: 2022-07-16 13:36:00+00:00  lifecycle_duration: 340620.0                                                                                                           interacting_objects: {'purchase_requisition:66:pr_trigger_66', 'purchase_order:175', 'purchase_order:176', 'purchase_order:174'}
+                           ocel:oid: quotation:97                                                                                                                                                                                   activities_lifecycle: ['Create Request for Quotation', 'Create Purchase Order', 'Approve Purchase Order'] lifecycle_start: 2022-06-29 11:01:00+00:00 lifecycle_end: 2022-07-04 15:50:00+00:00  lifecycle_duration: 449340.0                                                                                                                                                       interacting_objects: {'purchase_requisition:95:pr_trigger_95', 'purchase_order:151'}
+                           ocel:oid: quotation:98                                                                             activities_lifecycle: ['Create Request for Quotation', 'Create Purchase Order', 'Create Purchase Order', 'Create Purchase Order', 'Approve Purchase Order', 'Approve Purchase Order', 'Approve Purchase Order'] lifecycle_start: 2022-06-30 13:56:00+00:00 lifecycle_end: 2022-07-05 15:34:00+00:00  lifecycle_duration: 437880.0                                                                                                           interacting_objects: {'purchase_requisition:99:pr_trigger_99', 'purchase_order:159', 'purchase_order:158', 'purchase_order:160'}
+                           ocel:oid: quotation:99                                                                             activities_lifecycle: ['Create Request for Quotation', 'Create Purchase Order', 'Create Purchase Order', 'Approve Purchase Order', 'Approve Purchase Order', 'Create Purchase Order', 'Approve Purchase Order'] lifecycle_start: 2022-07-10 01:28:00+00:00 lifecycle_end: 2022-07-17 09:08:00+00:00  lifecycle_duration: 632400.0                                                                                                         interacting_objects: {'purchase_order:164', 'purchase_order:165', 'purchase_order:166', 'purchase_requisition:102:pr_trigger_102'}
+retrieve the information you have about the ocel:oid goods receipt:0 
+
+Answer:   Based on the provided OCEL2.0 object summary, I do not have information about the ocel:oid goods receipt:0. The provided context only includes information about purchase orders, purchase requisitions, and quotations, but does not mention any goods receipts.
+
+##########################
+
+Query: Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.
+OCEL2.0 object summary: info on the objects with the events related to the object, the start/end timestamps and duration of the object lifecycle, and the other objects interacting with the given object.
+                           ocel:oid: quotation:96                                                                             activities_lifecycle: ['Create Request for Quotation', 'Create Purchase Order', 'Create Purchase Order', 'Create Purchase Order', 'Approve Purchase Order', 'Approve Purchase Order', 'Approve Purchase Order'] lifecycle_start: 2022-07-12 14:59:00+00:00 lifecycle_end: 2022-07-16 13:36:00+00:00  lifecycle_duration: 340620.0                                                                                                           interacting_objects: {'purchase_requisition:66:pr_trigger_66', 'purchase_order:175', 'purchase_order:176', 'purchase_order:174'}
+                           ocel:oid: quotation:97                                                                                                                                                                                   activities_lifecycle: ['Create Request for Quotation', 'Create Purchase Order', 'Approve Purchase Order'] lifecycle_start: 2022-06-29 11:01:00+00:00 lifecycle_end: 2022-07-04 15:50:00+00:00  lifecycle_duration: 449340.0                                                                                                                                                       interacting_objects: {'purchase_requisition:95:pr_trigger_95', 'purchase_order:151'}
+                           ocel:oid: quotation:98                                                                             activities_lifecycle: ['Create Request for Quotation', 'Create Purchase Order', 'Create Purchase Order', 'Create Purchase Order', 'Approve Purchase Order', 'Approve Purchase Order', 'Approve Purchase Order'] lifecycle_start: 2022-06-30 13:56:00+00:00 lifecycle_end: 2022-07-05 15:34:00+00:00  lifecycle_duration: 437880.0                                                                                                           interacting_objects: {'purchase_requisition:99:pr_trigger_99', 'purchase_order:159', 'purchase_order:158', 'purchase_order:160'}
+                           ocel:oid: quotation:99                                                                             activities_lifecycle: ['Create Request for Quotation', 'Create Purchase Order', 'Create Purchase Order', 'Approve Purchase Order', 'Approve Purchase Order', 'Create Purchase Order', 'Approve Purchase Order'] lifecycle_start: 2022-07-10 01:28:00+00:00 lifecycle_end: 2022-07-17 09:08:00+00:00  lifecycle_duration: 632400.0                                                                                                         interacting_objects: {'purchase_order:164', 'purchase_order:165', 'purchase_order:166', 'purchase_requisition:102:pr_trigger_102'}
+ocel:oid: quotation:98
+
+Answer:   Based on the provided context, I can answer the question "ocel:oid: quotation:98" as follows:
+
+The object with the specified ocel ID "quotation:98" is a purchase order with the following activities in its lifecycle:
+
+* Create Request for Quotation
+* Create Purchase Order
+* Create Purchase Order
+* Create Purchase Order
+* Approve Purchase Order
+* Approve Purchase Order
+* Approve Purchase Order
+
+The lifecycle start date is 2022-06-30 13:56:00+00:00 and the lifecycle end date is 2022-07-05 15:34:00+00:00, with a total duration of 437880 seconds (or approximately 14 days).
+
+The interacting objects with this purchase order are:
+
+* purchase_requisition:99:pr_trigger_99
+* purchase_order:159
+* purchase_order:158
+* purchase_order:160
+
+Therefore, the answer to the question "ocel:oid: quotation:98" is:
+
+A purchase order with the specified ID, which has the following activities in its lifecycle and interacts with several other objects.
+
+##########################
+
+Query: Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.
+OCEL2.0 object summary: info on the objects with the events related to the object, the start/end timestamps and duration of the object lifecycle, and the other objects interacting with the given object.
+                           ocel:oid: quotation:96                                                                             activities_lifecycle: ['Create Request for Quotation', 'Create Purchase Order', 'Create Purchase Order', 'Create Purchase Order', 'Approve Purchase Order', 'Approve Purchase Order', 'Approve Purchase Order'] lifecycle_start: 2022-07-12 14:59:00+00:00 lifecycle_end: 2022-07-16 13:36:00+00:00  lifecycle_duration: 340620.0                                                                                                           interacting_objects: {'purchase_requisition:66:pr_trigger_66', 'purchase_order:175', 'purchase_order:176', 'purchase_order:174'}
+                           ocel:oid: quotation:97                                                                                                                                                                                   activities_lifecycle: ['Create Request for Quotation', 'Create Purchase Order', 'Approve Purchase Order'] lifecycle_start: 2022-06-29 11:01:00+00:00 lifecycle_end: 2022-07-04 15:50:00+00:00  lifecycle_duration: 449340.0                                                                                                                                                       interacting_objects: {'purchase_requisition:95:pr_trigger_95', 'purchase_order:151'}
+                           ocel:oid: quotation:98                                                                             activities_lifecycle: ['Create Request for Quotation', 'Create Purchase Order', 'Create Purchase Order', 'Create Purchase Order', 'Approve Purchase Order', 'Approve Purchase Order', 'Approve Purchase Order'] lifecycle_start: 2022-06-30 13:56:00+00:00 lifecycle_end: 2022-07-05 15:34:00+00:00  lifecycle_duration: 437880.0                                                                                                           interacting_objects: {'purchase_requisition:99:pr_trigger_99', 'purchase_order:159', 'purchase_order:158', 'purchase_order:160'}
+                           ocel:oid: quotation:99                                                                             activities_lifecycle: ['Create Request for Quotation', 'Create Purchase Order', 'Create Purchase Order', 'Approve Purchase Order', 'Approve Purchase Order', 'Create Purchase Order', 'Approve Purchase Order'] lifecycle_start: 2022-07-10 01:28:00+00:00 lifecycle_end: 2022-07-17 09:08:00+00:00  lifecycle_duration: 632400.0                                                                                                         interacting_objects: {'purchase_order:164', 'purchase_order:165', 'purchase_order:166', 'purchase_requisition:102:pr_trigger_102'}
+ocel:oid: quotation:0
+
+Answer:   Based on the provided OCEL2.0 object summary, I do not see any information about a quotation with the ID "0". The provided context only shows information about specific purchase orders and purchase requisitions, as well as their corresponding lifecycles and interacting objects. Therefore, I cannot answer the question about a quotation with the ID "0" as there is no relevant information provided in the context.
+
+##########################
+
