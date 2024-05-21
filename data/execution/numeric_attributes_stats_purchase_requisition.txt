@@ -1,1 +1,0 @@
-Statistics about the numeric attribute values for the OCEL2.0 event log flattened on the object type "purchase_requisition".

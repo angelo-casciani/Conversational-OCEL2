@@ -123,6 +123,25 @@ def empty_execution_data(exe_dir):
 def format_df_value(val, name):
     return f'{name}: {val} | '
 
+def delete_files_no_info():
+    files = os.listdir(os.path.join('data', 'execution'))
+    criteria = ('date_attributes', 'string_attributes', 'numeric_attributes')
+
+    for file in files:
+        if file.startswith(criteria) and file.endswith('.txt'):
+            file_path = os.path.join('data', 'execution', file)
+            try:
+                with open(file_path, 'r') as f:
+                    lines = f.readlines()
+                    if len(lines) <= 1:
+                        f.close()
+                        os.remove(file_path)
+                        print(f'Deleted file: {file_path}')
+            except PermissionError:
+                print(f'Cannot delete file: {file_path} as it is being used by another process')
+            except Exception as e:
+                print(f'An error occurred: {e}')
+
 
 if __name__ == "__main__":
     directory = os.path.join('data', 'execution')
@@ -262,10 +281,12 @@ if __name__ == "__main__":
             for date_attr in date_attributes:
                 min_val_row, max_val_row = compute_stats_date_attributes(flattened_log, date_attr)
                 if isinstance(min_val_row, pd.Series) and isinstance(max_val_row, pd.Series):
-                    min_val = min_val_row[f'case:{num_attr}']
-                    max_val = max_val_row[f'case:{num_attr}']
+                    min_val = min_val_row[f'case:{date_attr}']
+                    max_val = max_val_row[f'case:{date_attr}']
                     min_case_name = min_val_row['case:concept:name']
                     max_case_name = max_val_row['case:concept:name']
                     min_ocel_eid = min_val_row['ocel:eid']
                     max_ocel_eid = max_val_row['ocel:eid']
                     file.write(f'"{date_attr}"\nMinimum Date: {min_val} with object {min_case_name} in event {min_ocel_eid} - Maximum Date: {max_val} with object {max_case_name} in event {max_ocel_eid}\n')
+
+    delete_files_no_info()

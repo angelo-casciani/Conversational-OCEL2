@@ -1,6 +1,6 @@
 import json
-
 from qdrant_client import QdrantClient
+from qdrant_client.http import models
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline, BitsAndBytesConfig, AutoConfig
 from torch import cuda, bfloat16
 from langchain_community.embeddings.huggingface import HuggingFaceEmbeddings
@@ -68,7 +68,7 @@ def store_vectorized_info(file_content, filename, embeds_model, address, port):
 
 
 # Chunk size in lines of the file
-def intelligent_chunking_large_files(file_path, chunk_size=6):
+def intelligent_chunking_large_files(file_path, chunk_size=1):
     file_path = os.path.join('data', 'execution', 'to_chunk', file_path)
     chunks = []
     with open(file_path, 'r') as file:
@@ -82,7 +82,7 @@ def intelligent_chunking_large_files(file_path, chunk_size=6):
                 chunk_cleaned = re.sub(r'\| +', '|', chunk)
                 chunks.append(chunk_cleaned)
                 chunk = ''
-        if chunk.strip() != '':     # Append remaining lines as the last chunk
+        if chunk.strip() != '':  # Append remaining lines as the last chunk
             chunks.append(chunk)
         return chunks
 
@@ -91,9 +91,19 @@ def store_vectorized_chunks(chunks_to_save, filename, embeds_model, address, por
     source = filename.strip('.txt').capitalize()
     title = f"{source}"
     qdrant_store = 'No qDrant store.'
+    if filename == 'object_summary.txt':
+        pattern = r'ocel:oid:\s*([^|]+)'
+        meta_search = 'ocel_oid'
+    else:
+        pattern = r'ocel:timestamp:\s*([^|]+)'
+        meta_search = 'ocel:timestamp'
 
     for chunk in chunks_to_save:
-        metadata = {'text': chunk, 'source': source, 'title': title}
+        match = re.search(pattern, chunk)
+        if match is not None:
+            meta_value = match.group(1).strip()
+        else: meta_value = ''
+        metadata = {'text': chunk, 'source': source, 'title': title, meta_search: meta_value}
         qdrant_store = Qdrant.from_texts(
             [chunk],
             embeds_model,
@@ -106,26 +116,39 @@ def store_vectorized_chunks(chunks_to_save, filename, embeds_model, address, por
     return qdrant_store
 
 
-def intelligent_chunking_json(json_dict):
+def intelligent_chunking_json(json_dict, metadata):
     chunks_list = []
     items = list(json_dict.items())
-    chunk = ''
-    for i in range(0, len(items), 8):
-        sublist = items[i:i + 8]
+    chunk = metadata
+    for i in range(0, len(items), 3):
+        sublist = items[i:i + 3]
         for key, value in sublist:
-            chunk = ''.join(key + ' : ' + str(value))
+            chunk = chunk.join(key + ' : ' + str(value))
         chunks_list.append(chunk)
+        chunk = metadata
     return chunks_list
 
 
-def retrieve_context(vector_index, query):
-    retrieved = vector_index.similarity_search(query, k=3)
+def retrieve_context(vector_index, query, search_filter='', key=''):
+    if search_filter == '':
+        retrieved = vector_index.similarity_search(query, k=3)
+    else:
+        filter_ = models.Filter(
+            must=[
+                models.FieldCondition(
+                    key=key,
+                    match=models.MatchValue(value=search_filter)
+                )
+            ]
+        )
+        retrieved = vector_index.similarity_search(query, filter=filter_, k=3)
     retrieved_text = ''
     for i in range(len(retrieved)):
         content = retrieved[i].page_content
         if i != len(retrieved) - 1:
             retrieved_text += f'{content}\n\n'
-        else: retrieved_text += f'{content}'
+        else:
+            retrieved_text += f'{content}'
 
     return retrieved_text
 
@@ -182,10 +205,29 @@ def log_to_file(message, curr_datetime):
 
 def produce_answer(question, curr_datetime, llm_chain, vectdb):
     sys_mess = "Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer."
-    context = retrieve_context(vectdb, question)
+
+    # Take the question and extract the metadata for the filtering if any
+    pattern_oid = r'ocel:oid:\s*([^|]+)'
+    match_oid = re.search(pattern_oid, question)
+    meta_value_oid = match_oid.group(1).strip() if match_oid else ''
+    meta_search_oid = 'ocel_oid'
+
+    pattern_ts = r'ocel:timestamp:\s*([^|]+)'
+    match_ts = re.search(pattern_ts, question)
+    meta_value_ts = match_oid.group(1).strip() if match_ts else ''
+    meta_search_ts = 'ocel:timestamp'
+
+    if meta_value_oid:
+        search_filter = meta_value_oid
+        context = retrieve_context(vectdb, question, search_filter, meta_search_oid)
+    elif meta_value_ts:
+        search_filter = meta_value_ts
+        context = retrieve_context(vectdb, question, search_filter, meta_search_ts)
+    else:
+        context = retrieve_context(vectdb, question)
     complete_answer = llm_chain.invoke({"question": question,
-                               "system_message": sys_mess,
-                               "context": context})
+                                        "system_message": sys_mess,
+                                        "context": context})
     index = complete_answer.find('[/INST]')
     prompt = complete_answer[:index + len('[/INST]')]
     answer = complete_answer[index + len('[/INST]'):]
@@ -193,7 +235,8 @@ def produce_answer(question, curr_datetime, llm_chain, vectdb):
     print(f'Answer: {answer}\n')
     print('--------------------------------------------------')
 
-    log_to_file(f'Query: {sys_mess}\n{context}\n{question}\n\nAnswer: {answer}\n\n##########################\n\n', curr_datetime)
+    log_to_file(f'Query: {sys_mess}\n{context}\n{question}\n\nAnswer: {answer}\n\n##########################\n\n',
+                curr_datetime)
 
 
 def live_prompting(model1, vect_db):
@@ -213,6 +256,7 @@ def delete_qdrant_collection():
     qdrant_client = QdrantClient(url="192.168.1.240:6333", grpc_port=6334, prefer_grpc=True)
     qdrant_client.delete_collection('llama-2-rag')
     qdrant_client.close()
+
 
 if __name__ == "__main__":
     device = f'cuda:{cuda.current_device()}' if cuda.is_available() else 'cpu'
@@ -241,7 +285,8 @@ if __name__ == "__main__":
             file_path = os.path.join('data', 'execution', 'to_chunk', jsonfile)
             with open(file_path, 'r') as jsonf:
                 j_dict = json.load(jsonf)
-                j_chunks = intelligent_chunking_json(j_dict)
+                meta = 'Legend: "event_id":{object_type:number of objects of that type}'
+                j_chunks = intelligent_chunking_json(j_dict, meta)
                 qdrant = store_vectorized_chunks(j_chunks, f, embed_model, url, grpc_port)
 
     model_id = 'meta-llama/Llama-2-13b-chat-hf'

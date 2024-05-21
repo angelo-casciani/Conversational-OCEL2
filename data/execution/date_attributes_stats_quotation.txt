@@ -1,1 +1,0 @@
-Statistics about the date attribute values for the OCEL2.0 event log flattened on the object type "quotation".
