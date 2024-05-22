@@ -94,6 +94,9 @@ def store_vectorized_chunks(chunks_to_save, filename, embeds_model, address, por
     if filename == 'object_summary.txt':
         pattern = r'ocel:oid:\s*([^|]+)'
         meta_search = 'ocel_oid'
+    elif filename == 'objects_ot_count.txt':
+        pattern = r'"(event:\d+)"'
+        meta_search = 'event:id'
     else:
         pattern = r'ocel:timestamp:\s*([^|]+)'
         meta_search = 'ocel:timestamp'
@@ -116,16 +119,15 @@ def store_vectorized_chunks(chunks_to_save, filename, embeds_model, address, por
     return qdrant_store
 
 
-def intelligent_chunking_json(json_dict, metadata):
+def intelligent_chunking_json(json_dict):
     chunks_list = []
     items = list(json_dict.items())
-    chunk = metadata
-    for i in range(0, len(items), 3):
-        sublist = items[i:i + 3]
-        for key, value in sublist:
-            chunk = chunk.join(key + ' : ' + str(value))
+    chunk = ''
+    for i in range(0, len(items)):
+        key, value = items[i]
+        chunk = chunk.join(key + ' : ' + str(value))
         chunks_list.append(chunk)
-        chunk = metadata
+        chunk = ''
     return chunks_list
 
 
@@ -217,12 +219,20 @@ def produce_answer(question, curr_datetime, llm_chain, vectdb):
     meta_value_ts = match_oid.group(1).strip() if match_ts else ''
     meta_search_ts = 'ocel:timestamp'
 
+    pattern_js = r'"(event:\d+)"'
+    match_js = re.search(pattern_js, question)
+    meta_value_js = match_oid.group(1).strip() if match_js else ''
+    meta_search_js = 'event:id'
+
     if meta_value_oid:
         search_filter = meta_value_oid
         context = retrieve_context(vectdb, question, search_filter, meta_search_oid)
     elif meta_value_ts:
         search_filter = meta_value_ts
         context = retrieve_context(vectdb, question, search_filter, meta_search_ts)
+    elif meta_value_js:
+        search_filter = meta_value_js
+        context = retrieve_context(vectdb, question, search_filter, meta_search_js)
     else:
         context = retrieve_context(vectdb, question)
     complete_answer = llm_chain.invoke({"question": question,
@@ -285,8 +295,7 @@ if __name__ == "__main__":
             file_path = os.path.join('data', 'execution', 'to_chunk', jsonfile)
             with open(file_path, 'r') as jsonf:
                 j_dict = json.load(jsonf)
-                meta = 'Legend: "event_id":{object_type:number of objects of that type}'
-                j_chunks = intelligent_chunking_json(j_dict, meta)
+                j_chunks = intelligent_chunking_json(j_dict)
                 qdrant = store_vectorized_chunks(j_chunks, f, embed_model, url, grpc_port)
 
     model_id = 'meta-llama/Llama-2-13b-chat-hf'
