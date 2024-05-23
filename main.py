@@ -1,6 +1,4 @@
-import json
-from qdrant_client import QdrantClient
-from qdrant_client.http import models
+from qdrant_client import QdrantClient, models
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline, BitsAndBytesConfig, AutoConfig
 from torch import cuda, bfloat16
 from langchain_community.embeddings.huggingface import HuggingFaceEmbeddings
@@ -10,6 +8,7 @@ from langchain_community.llms.huggingface_pipeline import HuggingFacePipeline
 from langchain_core.prompts import PromptTemplate
 import os
 import datetime
+import json
 import re
 
 """Initializing the Hugging Face Embedding Pipeline
@@ -87,36 +86,42 @@ def intelligent_chunking_large_files(file_path, chunk_size=1):
         return chunks
 
 
-def store_vectorized_chunks(chunks_to_save, filename, embeds_model, address, port):
+def store_vectorized_chunks(chunks_to_save, filename, embeds_model, qdrant_client, identifier):
     source = filename.strip('.txt').capitalize()
     title = f"{source}"
-    qdrant_store = 'No qDrant store.'
     if filename == 'object_summary.txt':
         pattern = r'ocel:oid:\s*([^|]+)'
-        meta_search = 'ocel_oid'
+        meta_search = 'ocel:oid'
     elif filename == 'objects_ot_count.txt':
-        pattern = r'"(event:\d+)"'
+        pattern = r'"event:\d+"'
         meta_search = 'event:id'
     else:
         pattern = r'ocel:timestamp:\s*([^|]+)'
         meta_search = 'ocel:timestamp'
 
+    points = []
+    identifier += 1
     for chunk in chunks_to_save:
         match = re.search(pattern, chunk)
         if match is not None:
             meta_value = match.group(1).strip()
         else: meta_value = ''
-        metadata = {'text': chunk, 'source': source, 'title': title, meta_search: meta_value}
-        qdrant_store = Qdrant.from_texts(
-            [chunk],
-            embeds_model,
-            metadatas=[metadata],
-            url=address,
-            prefer_grpc=True,
-            grpc_port=port,
-            collection_name="llama-2-rag",
+        metadata = {'page_content': chunk, 'source': source, 'title': title, meta_search: meta_value}
+        point = models.PointStruct(
+            id=identifier,
+            vector=embeds_model.embed_documents([chunk])[0],
+            payload=metadata
         )
-    return qdrant_store
+        points.append(point)
+        identifier += 1
+
+    print("Created points for this phase!")
+    qdrant_client.upsert(
+        collection_name="llama-2-rag",
+        points=points
+    )
+
+    return identifier
 
 
 def intelligent_chunking_json(json_dict):
@@ -208,13 +213,14 @@ def log_to_file(message, curr_datetime):
 def produce_answer(question, curr_datetime, llm_chain, vectdb):
     sys_mess = "Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer."
 
-    # Take the question and extract the metadata for the filtering if any
-    pattern_oid = r'ocel:oid:\s*([^|]+)'
+    # Take the question and extract the metadata for the filtering if any.
+    # Pattern in the question: metadata_key "metadata_value", while for events "event:id_num"
+    pattern_oid = r'ocel:oid\s*"([^"]+)"'
     match_oid = re.search(pattern_oid, question)
     meta_value_oid = match_oid.group(1).strip() if match_oid else ''
-    meta_search_oid = 'ocel_oid'
+    meta_search_oid = 'ocel:oid'
 
-    pattern_ts = r'ocel:timestamp:\s*([^|]+)'
+    pattern_ts = r'ocel:timestamp\s*"([^"]+)"'
     match_ts = re.search(pattern_ts, question)
     meta_value_ts = match_oid.group(1).strip() if match_ts else ''
     meta_search_ts = 'ocel:timestamp'
@@ -279,25 +285,41 @@ if __name__ == "__main__":
 
     embed_model = initialize_embedding_model(embed_model_id, device)
 
-    files = os.listdir(os.path.join('data', 'execution'))
-    for f in files:
-        if f.endswith('.txt'):
-            content = load_process_representation(f)
-            store_vectorized_info(content, f, embed_model, url, grpc_port)
+    index_ans = input("Maintain Vector Index?\ny - yes, maintain it.\nn - no, rebuild it.\n")
+    if index_ans == 'y':
+        index_bool = True
+    else:
+        index_bool = False
 
-    files_to_chunk = os.listdir(os.path.join('data', 'execution', 'to_chunk'))
-    jsonfile = 'objects_ot_count.txt'
-    for f in files_to_chunk:
-        if f.endswith('.txt') and f != jsonfile:
-            chunks_to_store = intelligent_chunking_large_files(f)
-            qdrant = store_vectorized_chunks(chunks_to_store, f, embed_model, url, grpc_port)
-        elif f == jsonfile:
-            file_path = os.path.join('data', 'execution', 'to_chunk', jsonfile)
-            with open(file_path, 'r') as jsonf:
-                j_dict = json.load(jsonf)
-                j_chunks = intelligent_chunking_json(j_dict)
-                qdrant = store_vectorized_chunks(j_chunks, f, embed_model, url, grpc_port)
+    client = QdrantClient(url, grpc_port=grpc_port, prefer_grpc=True)
+    qdrant = Qdrant(client, collection_name='llama-2-rag', embeddings=embed_model)
 
+    if index_bool:
+        print("Using existing vector index.")
+    else:
+        id = 0
+        print("Building and populating the vector index... (1/3)")
+        files = os.listdir(os.path.join('data', 'execution'))
+        for f in files:
+            if f.endswith('.txt'):
+                content = load_process_representation(f)
+                qdrant = store_vectorized_info(content, f, embed_model, url, grpc_port)
+        print(f"Populating the vector index... (2/3)")
+        files_to_chunk = os.listdir(os.path.join('data', 'execution', 'to_chunk'))
+        jsonfile = 'objects_ot_count.txt'
+        for f in files_to_chunk:
+            if f.endswith('.txt') and f != jsonfile:
+                chunks_to_store = intelligent_chunking_large_files(f)
+                id = store_vectorized_chunks(chunks_to_store, f, embed_model, client, id)
+            elif f == jsonfile:
+                file_path = os.path.join('data', 'execution', 'to_chunk', jsonfile)
+                with open(file_path, 'r') as jsonf:
+                    print(f"Populating the vector index... (3/3)")
+                    j_dict = json.load(jsonf)
+                    j_chunks = intelligent_chunking_json(j_dict)
+                    id = store_vectorized_chunks(j_chunks, f, embed_model, client, id)
+
+    print(f"Vector index successfully created and initialized!")
     model_id = 'meta-llama/Llama-2-13b-chat-hf'
     pipeline = initialize_pipeline(model_id, hf_token)
     hf_pipeline = HuggingFacePipeline(pipeline=pipeline)
@@ -319,4 +341,6 @@ if __name__ == "__main__":
 
     live_prompting(chain, qdrant)
 
-    delete_qdrant_collection()
+    collection_bool = False
+    if collection_bool:
+        delete_qdrant_collection()
