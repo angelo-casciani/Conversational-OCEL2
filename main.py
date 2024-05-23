@@ -93,7 +93,7 @@ def store_vectorized_chunks(chunks_to_save, filename, embeds_model, qdrant_clien
         pattern = r'ocel:oid:\s*([^|]+)'
         meta_search = 'ocel:oid'
     elif filename == 'objects_ot_count.txt':
-        pattern = r'"event:\d+"'
+        pattern = r'event:\d+\s*'
         meta_search = 'event:id'
     else:
         pattern = r'ocel:timestamp:\s*([^|]+)'
@@ -104,7 +104,10 @@ def store_vectorized_chunks(chunks_to_save, filename, embeds_model, qdrant_clien
     for chunk in chunks_to_save:
         match = re.search(pattern, chunk)
         if match is not None:
-            meta_value = match.group(1).strip()
+            if filename == 'objects_ot_count.txt':
+                meta_value = match.group(0).strip()
+            else:
+                meta_value = match.group(1).strip()
         else: meta_value = ''
         metadata = {'page_content': chunk, 'source': source, 'title': title, meta_search: meta_value}
         point = models.PointStruct(
@@ -133,6 +136,7 @@ def intelligent_chunking_json(json_dict):
         chunk = chunk.join(key + ' : ' + str(value))
         chunks_list.append(chunk)
         chunk = ''
+
     return chunks_list
 
 
@@ -222,12 +226,12 @@ def produce_answer(question, curr_datetime, llm_chain, vectdb):
 
     pattern_ts = r'ocel:timestamp\s*"([^"]+)"'
     match_ts = re.search(pattern_ts, question)
-    meta_value_ts = match_oid.group(1).strip() if match_ts else ''
+    meta_value_ts = match_ts.group(1).strip() if match_ts else ''
     meta_search_ts = 'ocel:timestamp'
 
-    pattern_js = r'"(event:\d+)"'
+    pattern_js = r'"event:\d+"'
     match_js = re.search(pattern_js, question)
-    meta_value_js = match_oid.group(1).strip() if match_js else ''
+    meta_value_js = match_js.group(0).strip('"') if match_js else ''
     meta_search_js = 'event:id'
 
     if meta_value_oid:
