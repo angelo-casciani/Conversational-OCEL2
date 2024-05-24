@@ -6,9 +6,10 @@ from langchain_community.vectorstores.qdrant import Qdrant
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.llms.huggingface_pipeline import HuggingFacePipeline
 from langchain_core.prompts import PromptTemplate
-import os
+import csv
 import datetime
 import json
+import os
 import re
 
 """Initializing the Hugging Face Embedding Pipeline
@@ -276,6 +277,31 @@ def delete_qdrant_collection():
     qdrant_client = QdrantClient(url="192.168.1.240:6333", grpc_port=6334, prefer_grpc=True)
     qdrant_client.delete_collection('llama-2-rag')
     qdrant_client.close()
+
+
+def evaluate_rag_chain_zero_shot(eval_oracle, lang_chain, reference, traces_dict):
+    path_tests_data = os.path.join('tests', 'test_dataset', 'validation_events_questions.csv')
+    questions = {}
+    with open(path_tests_data, newline='') as csvfile:
+        reader = csv.reader(csvfile)
+        next(reader)
+        for row in reader:
+            question, answer = row
+            questions[question] = answer
+
+    count = 0
+    for q, a in questions.items():
+        eval_oracle.add_prompt_expected_answer_pair(question, a)
+        complete_answer = lang_chain.invoke({"question": q})
+        index = complete_answer.find('[/INST]')
+        answer = complete_answer[index + len('[/INST]'):]
+        eval_oracle.verify_answer(answer, q)
+        count += 1
+        print(f'Processing answer for trace {count} of {len(questions)}...')
+
+    print('Validation process completed. Check the output file.')
+    eval_oracle.write_results_to_file()
+
 
 
 if __name__ == "__main__":
