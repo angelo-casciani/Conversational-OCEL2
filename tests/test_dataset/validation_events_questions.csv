@@ -1,0 +1,260 @@
+question,answer
+"What are the object types that are manipulated during ""event""?","Create Goods Receipt, Create Goods Receipt"
+"How many objects of type material are manipulated during ""event:1""?",4
+"How many objects of type purchase_requisition are manipulated during ""event:1""?",1
+"How many objects of type purchase_order are manipulated during ""event:100""?",1
+"How many objects of type quotation are manipulated during ""event:100""?",1
+"How many objects of type purchase_order are manipulated during ""event:1000""?",1
+"How many objects of type goods receipt are manipulated during ""event:1000""?",1
+"How many objects of type purchase_order are manipulated during ""event:1001""?",1
+"How many objects of type goods receipt are manipulated during ""event:1001""?",1
+"How many objects of type goods receipt are manipulated during ""event:10010""?",1
+"How many objects of type purchase_order are manipulated during ""event:10010""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10011""?",1
+"How many objects of type goods receipt are manipulated during ""event:10011""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10013""?",1
+"How many objects of type goods receipt are manipulated during ""event:10013""?",1
+"How many objects of type purchase_order are manipulated during ""event:10015""?",1
+"How many objects of type quotation are manipulated during ""event:10015""?",1
+"How many objects of type goods receipt are manipulated during ""event:10017""?",1
+"How many objects of type purchase_order are manipulated during ""event:10017""?",1
+"How many objects of type purchase_order are manipulated during ""event:10018""?",1
+"How many objects of type goods receipt are manipulated during ""event:10018""?",1
+"How many objects of type goods receipt are manipulated during ""event:10019""?",3
+"How many objects of type payment are manipulated during ""event:10019""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10019""?",1
+"How many objects of type purchase_order are manipulated during ""event:10019""?",1
+"How many objects of type payment are manipulated during ""event:1002""?",1
+"How many objects of type goods receipt are manipulated during ""event:1002""?",3
+"How many objects of type purchase_order are manipulated during ""event:1002""?",3
+"How many objects of type invoice receipt are manipulated during ""event:1002""?",1
+"How many objects of type purchase_order are manipulated during ""event:10020""?",1
+"How many objects of type quotation are manipulated during ""event:10020""?",1
+"How many objects of type quotation are manipulated during ""event:10021""?",1
+"How many objects of type purchase_order are manipulated during ""event:10021""?",1
+"How many objects of type purchase_order are manipulated during ""event:10022""?",1
+"How many objects of type quotation are manipulated during ""event:10022""?",1
+"How many objects of type purchase_order are manipulated during ""event:10023""?",1
+"How many objects of type quotation are manipulated during ""event:10023""?",1
+"How many objects of type quotation are manipulated during ""event:10024""?",1
+"How many objects of type purchase_order are manipulated during ""event:10024""?",1
+"How many objects of type quotation are manipulated during ""event:10025""?",1
+"How many objects of type purchase_requisition are manipulated during ""event:10025""?",1
+"How many objects of type purchase_order are manipulated during ""event:10026""?",1
+"How many objects of type quotation are manipulated during ""event:10026""?",1
+"How many objects of type goods receipt are manipulated during ""event:10027""?",1
+"How many objects of type purchase_order are manipulated during ""event:10027""?",1
+"How many objects of type purchase_order are manipulated during ""event:10028""?",1
+"How many objects of type goods receipt are manipulated during ""event:10028""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10028""?",1
+"How many objects of type payment are manipulated during ""event:10028""?",1
+"How many objects of type quotation are manipulated during ""event:10029""?",1
+"How many objects of type purchase_requisition are manipulated during ""event:10029""?",1
+"How many objects of type purchase_order are manipulated during ""event:1003""?",1
+"How many objects of type goods receipt are manipulated during ""event:1003""?",1
+"How many objects of type goods receipt are manipulated during ""event:10030""?",1
+"How many objects of type purchase_order are manipulated during ""event:10030""?",1
+"How many objects of type goods receipt are manipulated during ""event:10031""?",1
+"How many objects of type purchase_order are manipulated during ""event:10031""?",1
+"How many objects of type goods receipt are manipulated during ""event:1004""?",1
+"How many objects of type purchase_order are manipulated during ""event:1004""?",1
+"How many objects of type purchase_order are manipulated during ""event:1005""?",1
+"How many objects of type goods receipt are manipulated during ""event:1005""?",1
+"How many objects of type goods receipt are manipulated during ""event:1006""?",1
+"How many objects of type payment are manipulated during ""event:1006""?",1
+"How many objects of type purchase_order are manipulated during ""event:1006""?",1
+"How many objects of type invoice receipt are manipulated during ""event:1006""?",1
+"How many objects of type quotation are manipulated during ""event:10064""?",1
+"How many objects of type purchase_order are manipulated during ""event:10064""?",1
+"How many objects of type purchase_order are manipulated during ""event:10066""?",1
+"How many objects of type goods receipt are manipulated during ""event:10066""?",1
+"How many objects of type purchase_order are manipulated during ""event:10067""?",1
+"How many objects of type goods receipt are manipulated during ""event:10067""?",1
+"How many objects of type purchase_order are manipulated during ""event:1007""?",1
+"How many objects of type quotation are manipulated during ""event:1007""?",1
+"How many objects of type purchase_order are manipulated during ""event:10070""?",1
+"How many objects of type goods receipt are manipulated during ""event:10070""?",1
+"How many objects of type goods receipt are manipulated during ""event:10071""?",1
+"How many objects of type purchase_order are manipulated during ""event:10071""?",1
+"How many objects of type quotation are manipulated during ""event:10072""?",1
+"How many objects of type purchase_order are manipulated during ""event:10072""?",1
+"How many objects of type purchase_order are manipulated during ""event:10076""?",1
+"How many objects of type goods receipt are manipulated during ""event:10076""?",1
+"How many objects of type goods receipt are manipulated during ""event:10077""?",1
+"How many objects of type purchase_order are manipulated during ""event:10077""?",1
+"How many objects of type quotation are manipulated during ""event:10079""?",1
+"How many objects of type purchase_requisition are manipulated during ""event:10079""?",1
+"How many objects of type goods receipt are manipulated during ""event:1008""?",2
+"How many objects of type invoice receipt are manipulated during ""event:1008""?",1
+"How many objects of type payment are manipulated during ""event:1008""?",1
+"How many objects of type purchase_order are manipulated during ""event:1008""?",2
+"How many objects of type quotation are manipulated during ""event:10083""?",1
+"How many objects of type purchase_order are manipulated during ""event:10083""?",1
+"How many objects of type payment are manipulated during ""event:10085""?",1
+"How many objects of type goods receipt are manipulated during ""event:10085""?",3
+"How many objects of type purchase_order are manipulated during ""event:10085""?",3
+"How many objects of type invoice receipt are manipulated during ""event:10085""?",1
+"How many objects of type quotation are manipulated during ""event:10086""?",1
+"How many objects of type purchase_order are manipulated during ""event:10086""?",1
+"How many objects of type purchase_order are manipulated during ""event:10087""?",1
+"How many objects of type quotation are manipulated during ""event:10087""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10088""?",1
+"How many objects of type goods receipt are manipulated during ""event:10088""?",1
+"How many objects of type quotation are manipulated during ""event:10089""?",1
+"How many objects of type purchase_order are manipulated during ""event:10089""?",1
+"How many objects of type purchase_order are manipulated during ""event:1009""?",1
+"How many objects of type quotation are manipulated during ""event:1009""?",1
+"How many objects of type purchase_order are manipulated during ""event:10090""?",1
+"How many objects of type goods receipt are manipulated during ""event:10090""?",1
+"How many objects of type purchase_order are manipulated during ""event:10091""?",1
+"How many objects of type goods receipt are manipulated during ""event:10091""?",1
+"How many objects of type purchase_requisition are manipulated during ""event:10092""?",1
+"How many objects of type quotation are manipulated during ""event:10092""?",1
+"How many objects of type goods receipt are manipulated during ""event:10093""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10093""?",1
+"How many objects of type purchase_order are manipulated during ""event:10094""?",1
+"How many objects of type goods receipt are manipulated during ""event:10094""?",1
+"How many objects of type goods receipt are manipulated during ""event:10095""?",1
+"How many objects of type purchase_order are manipulated during ""event:10095""?",1
+"How many objects of type goods receipt are manipulated during ""event:10096""?",1
+"How many objects of type purchase_order are manipulated during ""event:10096""?",1
+"How many objects of type quotation are manipulated during ""event:10097""?",1
+"How many objects of type purchase_order are manipulated during ""event:10097""?",1
+"How many objects of type purchase_order are manipulated during ""event:10098""?",1
+"How many objects of type goods receipt are manipulated during ""event:10098""?",1
+"How many objects of type purchase_order are manipulated during ""event:10099""?",1
+"How many objects of type quotation are manipulated during ""event:10099""?",1
+"How many objects of type quotation are manipulated during ""event:101""?",1
+"How many objects of type purchase_order are manipulated during ""event:101""?",1
+"How many objects of type quotation are manipulated during ""event:1010""?",1
+"How many objects of type purchase_requisition are manipulated during ""event:1010""?",1
+"How many objects of type purchase_order are manipulated during ""event:10100""?",1
+"How many objects of type goods receipt are manipulated during ""event:10100""?",1
+"How many objects of type material are manipulated during ""event:1011""?",2
+"How many objects of type purchase_requisition are manipulated during ""event:1011""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10112""?",1
+"How many objects of type goods receipt are manipulated during ""event:10112""?",1
+"How many objects of type goods receipt are manipulated during ""event:10113""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10113""?",1
+"How many objects of type goods receipt are manipulated during ""event:10114""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10114""?",1
+"How many objects of type goods receipt are manipulated during ""event:10116""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10116""?",1
+"How many objects of type purchase_order are manipulated during ""event:10117""?",1
+"How many objects of type goods receipt are manipulated during ""event:10117""?",1
+"How many objects of type goods receipt are manipulated during ""event:10119""?",1
+"How many objects of type purchase_order are manipulated during ""event:10119""?",1
+"How many objects of type goods receipt are manipulated during ""event:1012""?",1
+"How many objects of type payment are manipulated during ""event:1012""?",1
+"How many objects of type purchase_order are manipulated during ""event:1012""?",1
+"How many objects of type invoice receipt are manipulated during ""event:1012""?",1
+"How many objects of type goods receipt are manipulated during ""event:10120""?",1
+"How many objects of type purchase_order are manipulated during ""event:10120""?",1
+"How many objects of type goods receipt are manipulated during ""event:10121""?",1
+"How many objects of type purchase_order are manipulated during ""event:10121""?",1
+"How many objects of type purchase_order are manipulated during ""event:10122""?",1
+"How many objects of type goods receipt are manipulated during ""event:10122""?",1
+"How many objects of type goods receipt are manipulated during ""event:10123""?",1
+"How many objects of type purchase_order are manipulated during ""event:10123""?",1
+"How many objects of type goods receipt are manipulated during ""event:10124""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10124""?",1
+"How many objects of type purchase_order are manipulated during ""event:10126""?",1
+"How many objects of type goods receipt are manipulated during ""event:10126""?",1
+"How many objects of type goods receipt are manipulated during ""event:10127""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10127""?",1
+"How many objects of type purchase_order are manipulated during ""event:10128""?",1
+"How many objects of type goods receipt are manipulated during ""event:10128""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10129""?",1
+"How many objects of type goods receipt are manipulated during ""event:10129""?",1
+"How many objects of type goods receipt are manipulated during ""event:1013""?",1
+"How many objects of type purchase_order are manipulated during ""event:1013""?",1
+"How many objects of type quotation are manipulated during ""event:10130""?",1
+"How many objects of type purchase_order are manipulated during ""event:10130""?",1
+"How many objects of type quotation are manipulated during ""event:10131""?",1
+"How many objects of type purchase_order are manipulated during ""event:10131""?",1
+"How many objects of type purchase_order are manipulated during ""event:10132""?",2
+"How many objects of type goods receipt are manipulated during ""event:10132""?",3
+"How many objects of type payment are manipulated during ""event:10132""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10132""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10133""?",1
+"How many objects of type goods receipt are manipulated during ""event:10133""?",1
+"How many objects of type goods receipt are manipulated during ""event:10134""?",1
+"How many objects of type purchase_order are manipulated during ""event:10134""?",1
+"How many objects of type goods receipt are manipulated during ""event:10135""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10135""?",1
+"How many objects of type quotation are manipulated during ""event:10136""?",1
+"How many objects of type purchase_order are manipulated during ""event:10136""?",1
+"How many objects of type goods receipt are manipulated during ""event:10137""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10137""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10138""?",1
+"How many objects of type goods receipt are manipulated during ""event:10138""?",1
+"How many objects of type goods receipt are manipulated during ""event:10139""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10139""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10140""?",1
+"How many objects of type goods receipt are manipulated during ""event:10140""?",1
+"How many objects of type purchase_order are manipulated during ""event:10141""?",1
+"How many objects of type goods receipt are manipulated during ""event:10141""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10156""?",1
+"How many objects of type goods receipt are manipulated during ""event:10156""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10157""?",1
+"How many objects of type goods receipt are manipulated during ""event:10157""?",1
+"How many objects of type goods receipt are manipulated during ""event:10158""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10158""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10159""?",1
+"How many objects of type goods receipt are manipulated during ""event:10159""?",1
+"How many objects of type goods receipt are manipulated during ""event:10160""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10160""?",1
+"How many objects of type goods receipt are manipulated during ""event:10161""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10161""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10162""?",1
+"How many objects of type goods receipt are manipulated during ""event:10162""?",1
+"How many objects of type goods receipt are manipulated during ""event:10166""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10166""?",1
+"How many objects of type goods receipt are manipulated during ""event:10168""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10168""?",1
+"How many objects of type purchase_order are manipulated during ""event:10169""?",1
+"How many objects of type goods receipt are manipulated during ""event:10169""?",1
+"How many objects of type purchase_order are manipulated during ""event:10170""?",1
+"How many objects of type goods receipt are manipulated during ""event:10170""?",1
+"How many objects of type goods receipt are manipulated during ""event:10171""?",1
+"How many objects of type purchase_order are manipulated during ""event:10171""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10172""?",1
+"How many objects of type goods receipt are manipulated during ""event:10172""?",1
+"How many objects of type goods receipt are manipulated during ""event:10173""?",1
+"How many objects of type purchase_order are manipulated during ""event:10173""?",1
+"How many objects of type purchase_order are manipulated during ""event:10174""?",1
+"How many objects of type goods receipt are manipulated during ""event:10174""?",1
+"How many objects of type purchase_order are manipulated during ""event:10175""?",1
+"How many objects of type goods receipt are manipulated during ""event:10175""?",1
+"How many objects of type purchase_order are manipulated during ""event:10176""?",1
+"How many objects of type goods receipt are manipulated during ""event:10176""?",1
+"How many objects of type purchase_order are manipulated during ""event:10177""?",1
+"How many objects of type quotation are manipulated during ""event:10177""?",1
+"How many objects of type purchase_order are manipulated during ""event:10178""?",1
+"How many objects of type goods receipt are manipulated during ""event:10178""?",1
+"How many objects of type purchase_order are manipulated during ""event:10179""?",1
+"How many objects of type quotation are manipulated during ""event:10179""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10180""?",1
+"How many objects of type goods receipt are manipulated during ""event:10180""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10181""?",1
+"How many objects of type purchase_order are manipulated during ""event:10181""?",2
+"How many objects of type goods receipt are manipulated during ""event:10181""?",4
+"How many objects of type payment are manipulated during ""event:10181""?",1
+"How many objects of type purchase_order are manipulated during ""event:10182""?",1
+"How many objects of type goods receipt are manipulated during ""event:10182""?",1
+"How many objects of type purchase_order are manipulated during ""event:10183""?",1
+"How many objects of type goods receipt are manipulated during ""event:10183""?",1
+"How many objects of type quotation are manipulated during ""event:10184""?",1
+"How many objects of type purchase_order are manipulated during ""event:10184""?",1
+"How many objects of type goods receipt are manipulated during ""event:10185""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10185""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10186""?",1
+"How many objects of type goods receipt are manipulated during ""event:10186""?",1
+"How many objects of type purchase_order are manipulated during ""event:10187""?",1
+"How many objects of type quotation are manipulated during ""event:10187""?",1
+"How many objects of type quotation are manipulated during ""event:10188""?",1
+"How many objects of type purchase_order are manipulated during ""event:10188""?",1
+"How many objects of type invoice receipt are manipulated during ""event:10189""?",1
+"How many objects of type goods receipt are manipulated during ""event:10189""?",1
+"How many objects of type goods receipt are manipulated during ""event:10190""?",1
+"How many objects of type purchase_order are manipulated during ""event:10190""?",1

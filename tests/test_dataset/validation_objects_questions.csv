@@ -1,0 +1,601 @@
+question,answer
+"What are the activities during the lifecycle of ocel:oid ""goods receipt:1004""?","Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment, Execute Payment, Create Goods Receipt"
+"What are the interacting objects in the lifecycle of ocel:oid ""goods receipt:1004""?","goods receipt:1006, payment:489, purchase_order:831, goods receipt:1005, invoice receipt:1004, purchase_order:832"
+"What are the start timestamp of the lifecycle of ocel:oid ""goods receipt:1004""?",2023-08-25 15:55:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""goods receipt:1004""?",2023-09-03 01:06:00+00:00 
+"What are the lifecycle duration of ocel:oid ""goods receipt:1004""?",724260.0 
+"What are the activities during the lifecycle of ocel:oid ""goods receipt:1013""?","Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment, Execute Payment, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""goods receipt:1013""?","purchase_order:834, payment:498, goods receipt:1014, invoice receipt:1019"
+"What are the start timestamp of the lifecycle of ocel:oid ""goods receipt:1013""?",2023-09-02 05:27:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""goods receipt:1013""?",2023-09-25 12:24:00+00:00 
+"What are the lifecycle duration of ocel:oid ""goods receipt:1013""?",2012220.0 
+"What are the activities during the lifecycle of ocel:oid ""goods receipt:1022""?","Create Goods Receipt, Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""goods receipt:1022""?","purchase_order:840, goods receipt:1024, goods receipt:1023, purchase_order:839, payment:503, invoice receipt:1022"
+"What are the start timestamp of the lifecycle of ocel:oid ""goods receipt:1022""?",2023-08-31 17:55:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""goods receipt:1022""?",2023-09-11 10:34:00+00:00 
+"What are the lifecycle duration of ocel:oid ""goods receipt:1022""?",923940.0 
+"What are the activities during the lifecycle of ocel:oid ""goods receipt:1031""?","Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""goods receipt:1031""?","goods receipt:1034, goods receipt:1032, payment:500, goods receipt:1033, purchase_order:849, purchase_order:850, purchase_order:851, invoice receipt:1027"
+"What are the start timestamp of the lifecycle of ocel:oid ""goods receipt:1031""?",2023-09-04 12:07:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""goods receipt:1031""?",2023-09-13 00:35:00+00:00 
+"What are the lifecycle duration of ocel:oid ""goods receipt:1031""?",736080.0 
+"What are the activities during the lifecycle of ocel:oid ""goods receipt:1040""?","Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""goods receipt:1040""?","goods receipt:1039, payment:504, goods receipt:1038, purchase_order:865, invoice receipt:1040"
+"What are the start timestamp of the lifecycle of ocel:oid ""goods receipt:1040""?",2023-09-07 16:52:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""goods receipt:1040""?",2023-09-13 10:19:00+00:00 
+"What are the lifecycle duration of ocel:oid ""goods receipt:1040""?",494820.0 
+"What are the activities during the lifecycle of ocel:oid ""goods receipt:105""?","Create Goods Receipt, Create Invoice Receipt, Create Goods Receipt, Perform Two-Way Match, Create Goods Receipt, Execute Payment, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""goods receipt:105""?","invoice receipt:106, goods receipt:107, payment:55, goods receipt:106, purchase_order:105, purchase_order:104, purchase_order:103"
+"What are the start timestamp of the lifecycle of ocel:oid ""goods receipt:105""?",2022-06-01 12:48:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""goods receipt:105""?",2022-06-09 08:45:00+00:00 
+"What are the lifecycle duration of ocel:oid ""goods receipt:105""?",676620.0 
+"What are the activities during the lifecycle of ocel:oid ""goods receipt:1059""?","Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""goods receipt:1059""?","purchase_order:871, purchase_order:873, goods receipt:1058, invoice receipt:1056, goods receipt:1060, payment:514, purchase_order:872"
+"What are the start timestamp of the lifecycle of ocel:oid ""goods receipt:1059""?",2023-09-12 09:33:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""goods receipt:1059""?",2023-09-21 18:17:00+00:00 
+"What are the lifecycle duration of ocel:oid ""goods receipt:1059""?",809040.0 
+"What are the activities during the lifecycle of ocel:oid ""goods receipt:1068""?","Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""goods receipt:1068""?","invoice receipt:1082, purchase_order:890, purchase_order:891, goods receipt:1070, purchase_order:889, goods receipt:1069, payment:520"
+"What are the start timestamp of the lifecycle of ocel:oid ""goods receipt:1068""?",2023-09-15 15:31:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""goods receipt:1068""?",2023-09-26 04:26:00+00:00 
+"What are the lifecycle duration of ocel:oid ""goods receipt:1068""?",910500.0 
+"What are the activities during the lifecycle of ocel:oid ""goods receipt:1077""?","Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""goods receipt:1077""?","invoice receipt:1103, purchase_order:906, payment:531"
+"What are the start timestamp of the lifecycle of ocel:oid ""goods receipt:1077""?",2023-09-28 01:42:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""goods receipt:1077""?",2023-10-03 01:05:00+00:00 
+"What are the lifecycle duration of ocel:oid ""goods receipt:1077""?",429780.0 
+"What are the activities during the lifecycle of ocel:oid ""goods receipt:1086""?","Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""goods receipt:1086""?","purchase_order:907, payment:524, invoice receipt:1087"
+"What are the start timestamp of the lifecycle of ocel:oid ""goods receipt:1086""?",2023-09-24 05:53:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""goods receipt:1086""?",2023-09-29 17:48:00+00:00 
+"What are the lifecycle duration of ocel:oid ""goods receipt:1086""?",474900.0 
+"What are the activities during the lifecycle of ocel:oid ""goods receipt:1095""?","Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment, Create Goods Receipt, Execute Payment, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""goods receipt:1095""?","payment:529, goods receipt:1096, purchase_order:915, purchase_order:916, purchase_order:913, goods receipt:1098, invoice receipt:1099, purchase_order:914, goods receipt:1097"
+"What are the start timestamp of the lifecycle of ocel:oid ""goods receipt:1095""?",2023-09-24 02:27:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""goods receipt:1095""?",2023-10-05 09:46:00+00:00 
+"What are the lifecycle duration of ocel:oid ""goods receipt:1095""?",976740.0 
+"What are the activities during the lifecycle of ocel:oid ""goods receipt:1103""?","Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""goods receipt:1103""?","payment:528, invoice receipt:1102, purchase_order:908"
+"What are the start timestamp of the lifecycle of ocel:oid ""goods receipt:1103""?",2023-09-28 00:07:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""goods receipt:1103""?",2023-09-29 17:48:00+00:00 
+"What are the lifecycle duration of ocel:oid ""goods receipt:1103""?",150060.0 
+"What are the activities during the lifecycle of ocel:oid ""goods receipt:1112""?","Create Goods Receipt, Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""goods receipt:1112""?","purchase_order:911, goods receipt:1113, payment:539, invoice receipt:1116, purchase_order:912, goods receipt:1114, goods receipt:1115"
+"What are the start timestamp of the lifecycle of ocel:oid ""goods receipt:1112""?",2023-10-05 10:18:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""goods receipt:1112""?",2023-10-16 18:34:00+00:00 
+"What are the lifecycle duration of ocel:oid ""goods receipt:1112""?",980160.0 
+"What are the activities during the lifecycle of ocel:oid ""goods receipt:1121""?","Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""goods receipt:1121""?","payment:538, invoice receipt:1112, purchase_order:927"
+"What are the start timestamp of the lifecycle of ocel:oid ""goods receipt:1121""?",2023-10-05 18:59:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""goods receipt:1121""?",2023-10-11 06:29:00+00:00 
+"What are the lifecycle duration of ocel:oid ""goods receipt:1121""?",473400.0 
+"What are the activities during the lifecycle of ocel:oid ""goods receipt:1130""?","Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment, Create Goods Receipt, Create Goods Receipt"
+"What are the interacting objects in the lifecycle of ocel:oid ""goods receipt:1130""?","purchase_order:935, invoice receipt:1133, purchase_order:937, goods receipt:1129, payment:542, purchase_order:936, goods receipt:1131"
+"What are the start timestamp of the lifecycle of ocel:oid ""goods receipt:1130""?",2023-10-13 14:32:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""goods receipt:1130""?",2023-10-21 11:39:00+00:00 
+"What are the lifecycle duration of ocel:oid ""goods receipt:1130""?",680820.0 
+"What are the activities during the lifecycle of ocel:oid ""goods receipt:114""?","Create Goods Receipt, Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""goods receipt:114""?","payment:62, invoice receipt:120, goods receipt:113, purchase_order:108, purchase_order:107"
+"What are the start timestamp of the lifecycle of ocel:oid ""goods receipt:114""?",2022-06-07 06:01:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""goods receipt:114""?",2022-06-11 03:46:00+00:00 
+"What are the lifecycle duration of ocel:oid ""goods receipt:114""?",337500.0 
+"What are the activities during the lifecycle of ocel:oid ""goods receipt:1149""?","Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""goods receipt:1149""?","payment:554, goods receipt:1150, purchase_order:953, invoice receipt:1150"
+"What are the start timestamp of the lifecycle of ocel:oid ""goods receipt:1149""?",2023-11-01 01:47:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""goods receipt:1149""?",2023-11-06 11:49:00+00:00 
+"What are the lifecycle duration of ocel:oid ""goods receipt:1149""?",468120.0 
+"What are the activities during the lifecycle of ocel:oid ""goods receipt:1158""?","Create Goods Receipt, Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""goods receipt:1158""?","purchase_order:956, goods receipt:1157, payment:563, invoice receipt:1169, purchase_order:957"
+"What are the start timestamp of the lifecycle of ocel:oid ""goods receipt:1158""?",2023-11-04 08:56:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""goods receipt:1158""?",2023-11-16 05:14:00+00:00 
+"What are the lifecycle duration of ocel:oid ""goods receipt:1158""?",1023480.0 
+"What are the activities during the lifecycle of ocel:oid ""goods receipt:1167""?","Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""goods receipt:1167""?","payment:561, goods receipt:1166, purchase_order:963, invoice receipt:1163, goods receipt:1165"
+"What are the start timestamp of the lifecycle of ocel:oid ""goods receipt:1167""?",2023-11-07 09:42:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""goods receipt:1167""?",2023-11-18 03:38:00+00:00 
+"What are the lifecycle duration of ocel:oid ""goods receipt:1167""?",928560.0 
+"What are the activities during the lifecycle of ocel:oid ""goods receipt:1176""?","Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""goods receipt:1176""?","payment:565, purchase_order:973, invoice receipt:1176"
+"What are the start timestamp of the lifecycle of ocel:oid ""goods receipt:1176""?",2023-11-10 23:48:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""goods receipt:1176""?",2023-11-22 23:34:00+00:00 
+"What are the lifecycle duration of ocel:oid ""goods receipt:1176""?",1035960.0 
+"What are the activities during the lifecycle of ocel:oid ""invoice receipt:1009""?","Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1009""?","goods receipt:1012, purchase_order:848, payment:490"
+"What are the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1009""?",2023-08-29 19:19:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1009""?",2023-09-08 07:20:00+00:00 
+"What are the lifecycle duration of ocel:oid ""invoice receipt:1009""?",820860.0 
+"What are the activities during the lifecycle of ocel:oid ""invoice receipt:103""?","Create Invoice Receipt, Perform Two-Way Match, Execute Payment, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""invoice receipt:103""?","purchase_order:100, goods receipt:104, payment:53"
+"What are the start timestamp of the lifecycle of ocel:oid ""invoice receipt:103""?",2022-06-03 13:33:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""invoice receipt:103""?",2022-06-15 02:07:00+00:00 
+"What are the lifecycle duration of ocel:oid ""invoice receipt:103""?",995640.0 
+"What are the activities during the lifecycle of ocel:oid ""invoice receipt:1053""?","Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Execute Payment, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1053""?","payment:509, goods receipt:1045, purchase_order:854, purchase_order:855, goods receipt:1046"
+"What are the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1053""?",2023-09-14 14:09:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1053""?",2023-09-21 14:45:00+00:00 
+"What are the lifecycle duration of ocel:oid ""invoice receipt:1053""?",606960.0 
+"What are the activities during the lifecycle of ocel:oid ""invoice receipt:1070""?","Create Invoice Receipt, Create Invoice Receipt, Perform Two-Way Match, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1070""?","payment:517, purchase_order:887, goods receipt:1062, goods receipt:1061, purchase_order:886"
+"What are the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1070""?",2023-09-20 16:51:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1070""?",2023-09-22 17:58:00+00:00 
+"What are the lifecycle duration of ocel:oid ""invoice receipt:1070""?",176820.0 
+"What are the activities during the lifecycle of ocel:oid ""invoice receipt:1095""?","Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1095""?","purchase_order:898, goods receipt:1101, payment:527, goods receipt:1102, purchase_order:896, goods receipt:1099, purchase_order:899, goods receipt:1100, purchase_order:897"
+"What are the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1095""?",2023-09-27 12:50:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1095""?",2023-09-29 06:13:00+00:00 
+"What are the lifecycle duration of ocel:oid ""invoice receipt:1095""?",148980.0 
+"What are the activities during the lifecycle of ocel:oid ""invoice receipt:1108""?","Create Invoice Receipt, Perform Two-Way Match, Execute Payment, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1108""?","payment:534, purchase_order:918, goods receipt:1108"
+"What are the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1108""?",2023-10-04 02:45:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1108""?",2023-10-09 08:22:00+00:00 
+"What are the lifecycle duration of ocel:oid ""invoice receipt:1108""?",452220.0 
+"What are the activities during the lifecycle of ocel:oid ""invoice receipt:1130""?","Create Invoice Receipt, Create Invoice Receipt, Create Invoice Receipt, Create Invoice Receipt, Perform Two-Way Match, Perform Two-Way Match, Perform Two-Way Match, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1130""?","purchase_order:934, purchase_order:932, goods receipt:1135, goods receipt:1133, purchase_order:933, goods receipt:1132, goods receipt:1134, payment:543"
+"What are the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1130""?",2023-10-14 04:53:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1130""?",2023-10-17 05:02:00+00:00 
+"What are the lifecycle duration of ocel:oid ""invoice receipt:1130""?",259740.0 
+"What are the activities during the lifecycle of ocel:oid ""invoice receipt:1150""?","Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1150""?","goods receipt:1149, payment:554, goods receipt:1150, purchase_order:953"
+"What are the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1150""?",2023-11-01 15:34:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1150""?",2023-11-06 11:49:00+00:00 
+"What are the lifecycle duration of ocel:oid ""invoice receipt:1150""?",418500.0 
+"What are the activities during the lifecycle of ocel:oid ""invoice receipt:117""?","Create Invoice Receipt, Create Invoice Receipt, Create Invoice Receipt, Perform Two-Way Match, Perform Two-Way Match, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""invoice receipt:117""?","purchase_order:99, purchase_order:97, payment:65, goods receipt:119, goods receipt:120, goods receipt:118, purchase_order:98, goods receipt:121"
+"What are the start timestamp of the lifecycle of ocel:oid ""invoice receipt:117""?",2022-06-09 00:58:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""invoice receipt:117""?",2022-06-15 01:51:00+00:00 
+"What are the lifecycle duration of ocel:oid ""invoice receipt:117""?",521580.0 
+"What are the activities during the lifecycle of ocel:oid ""invoice receipt:1194""?","Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Execute Payment, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1194""?","payment:569, purchase_order:995, purchase_order:994, goods receipt:1198, goods receipt:1197"
+"What are the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1194""?",2023-11-22 10:21:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1194""?",2023-11-29 07:30:00+00:00 
+"What are the lifecycle duration of ocel:oid ""invoice receipt:1194""?",594540.0 
+"What are the activities during the lifecycle of ocel:oid ""invoice receipt:1206""?","Create Invoice Receipt, Create Invoice Receipt, Perform Two-Way Match, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1206""?","purchase_order:972, goods receipt:1192, purchase_order:971, payment:578, goods receipt:1191"
+"What are the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1206""?",2023-11-27 21:17:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1206""?",2023-11-28 15:25:00+00:00 
+"What are the lifecycle duration of ocel:oid ""invoice receipt:1206""?",65280.0 
+"What are the activities during the lifecycle of ocel:oid ""invoice receipt:1223""?","Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1223""?","goods receipt:1217, purchase_order:1022, payment:587"
+"What are the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1223""?",2023-12-05 12:25:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1223""?",2023-12-14 00:34:00+00:00 
+"What are the lifecycle duration of ocel:oid ""invoice receipt:1223""?",734940.0 
+"What are the activities during the lifecycle of ocel:oid ""invoice receipt:124""?","Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""invoice receipt:124""?","purchase_order:102, goods receipt:112, payment:66"
+"What are the start timestamp of the lifecycle of ocel:oid ""invoice receipt:124""?",2022-06-11 15:10:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""invoice receipt:124""?",2022-06-13 11:12:00+00:00 
+"What are the lifecycle duration of ocel:oid ""invoice receipt:124""?",158520.0 
+"What are the activities during the lifecycle of ocel:oid ""invoice receipt:1261""?","Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1261""?","goods receipt:1262, purchase_order:1058, payment:604, goods receipt:1263, purchase_order:1057"
+"What are the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1261""?",2023-12-14 15:01:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1261""?",2023-12-19 23:40:00+00:00 
+"What are the lifecycle duration of ocel:oid ""invoice receipt:1261""?",463140.0 
+"What are the activities during the lifecycle of ocel:oid ""invoice receipt:1281""?","Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Execute Payment, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1281""?","payment:613, purchase_order:1068, purchase_order:1067, goods receipt:1280, goods receipt:1279"
+"What are the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1281""?",2023-12-25 20:43:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1281""?",2024-01-14 04:53:00+00:00 
+"What are the lifecycle duration of ocel:oid ""invoice receipt:1281""?",1671000.0 
+"What are the activities during the lifecycle of ocel:oid ""invoice receipt:130""?","Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""invoice receipt:130""?","goods receipt:131, payment:72, purchase_order:121"
+"What are the start timestamp of the lifecycle of ocel:oid ""invoice receipt:130""?",2022-06-20 22:35:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""invoice receipt:130""?",2022-06-28 14:59:00+00:00 
+"What are the lifecycle duration of ocel:oid ""invoice receipt:130""?",663840.0 
+"What are the activities during the lifecycle of ocel:oid ""invoice receipt:1313""?","Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1313""?","purchase_order:1090, purchase_order:1089, goods receipt:1322, goods receipt:1321, payment:629"
+"What are the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1313""?",2024-01-04 18:04:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1313""?",2024-01-11 14:48:00+00:00 
+"What are the lifecycle duration of ocel:oid ""invoice receipt:1313""?",593040.0 
+"What are the activities during the lifecycle of ocel:oid ""invoice receipt:1337""?","Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1337""?","goods receipt:1341, payment:639, purchase_order:1101"
+"What are the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1337""?",2024-01-12 12:17:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1337""?",2024-01-14 17:07:00+00:00 
+"What are the lifecycle duration of ocel:oid ""invoice receipt:1337""?",190200.0 
+"What are the activities during the lifecycle of ocel:oid ""invoice receipt:1363""?","Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Create Invoice Receipt, Perform Two-Way Match, Perform Two-Way Match, Execute Payment, Execute Payment, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1363""?","goods receipt:1353, goods receipt:1351, purchase_order:1122, goods receipt:1352, payment:648, purchase_order:1121"
+"What are the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1363""?",2024-01-25 11:04:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1363""?",2024-02-13 11:18:00+00:00 
+"What are the lifecycle duration of ocel:oid ""invoice receipt:1363""?",1642440.0 
+"What are the activities during the lifecycle of ocel:oid ""invoice receipt:1379""?","Create Invoice Receipt, Perform Two-Way Match, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1379""?","goods receipt:1388, purchase_order:1142, payment:659"
+"What are the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1379""?",2024-02-07 01:22:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1379""?",2024-02-15 14:38:00+00:00 
+"What are the lifecycle duration of ocel:oid ""invoice receipt:1379""?",738960.0 
+"What are the activities during the lifecycle of ocel:oid ""material:0""?","Create Purchase Requisition, Approve Purchase Requisition"
+"What are the interacting objects in the lifecycle of ocel:oid ""material:0""?","material:1, purchase_requisition:0:pr_trigger_0, material:2, material:3"
+"What are the start timestamp of the lifecycle of ocel:oid ""material:0""?",2022-04-01 09:26:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""material:0""?",2022-04-02 14:16:00+00:00 
+"What are the lifecycle duration of ocel:oid ""material:0""?",103800.0 
+"What are the activities during the lifecycle of ocel:oid ""material:1009""?","Create Purchase Requisition, Approve Purchase Requisition"
+"What are the interacting objects in the lifecycle of ocel:oid ""material:1009""?","purchase_requisition:408:pr_trigger_408, material:1006, material:1007, material:1008"
+"What are the start timestamp of the lifecycle of ocel:oid ""material:1009""?",2023-05-22 21:33:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""material:1009""?",2023-05-29 03:12:00+00:00 
+"What are the lifecycle duration of ocel:oid ""material:1009""?",538740.0 
+"What are the activities during the lifecycle of ocel:oid ""material:1018""?","Create Purchase Requisition, Approve Purchase Requisition"
+"What are the interacting objects in the lifecycle of ocel:oid ""material:1018""?","purchase_requisition:412:pr_trigger_412, material:1017"
+"What are the start timestamp of the lifecycle of ocel:oid ""material:1018""?",2023-05-29 08:18:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""material:1018""?",2023-06-07 17:21:00+00:00 
+"What are the lifecycle duration of ocel:oid ""material:1018""?",810180.0 
+"What are the activities during the lifecycle of ocel:oid ""material:1030""?","Create Purchase Requisition, Approve Purchase Requisition"
+"What are the interacting objects in the lifecycle of ocel:oid ""material:1030""?","material:1031, material:1029, purchase_requisition:417:pr_trigger_417"
+"What are the start timestamp of the lifecycle of ocel:oid ""material:1030""?",2023-05-31 08:27:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""material:1030""?",2023-06-01 11:46:00+00:00 
+"What are the lifecycle duration of ocel:oid ""material:1030""?",98340.0 
+"What are the activities during the lifecycle of ocel:oid ""material:104""?","Create Purchase Requisition, Delegate Purchase Requisition Approval"
+"What are the interacting objects in the lifecycle of ocel:oid ""material:104""?","material:103, purchase_requisition:43:pr_trigger_43, material:102"
+"What are the start timestamp of the lifecycle of ocel:oid ""material:104""?",2022-05-09 10:59:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""material:104""?",2022-05-09 11:13:00+00:00 
+"What are the lifecycle duration of ocel:oid ""material:104""?",840.0 
+"What are the activities during the lifecycle of ocel:oid ""material:1049""?","Create Purchase Requisition, Approve Purchase Requisition"
+"What are the interacting objects in the lifecycle of ocel:oid ""material:1049""?","material:1048, material:1047, purchase_requisition:424:pr_trigger_424"
+"What are the start timestamp of the lifecycle of ocel:oid ""material:1049""?",2023-06-08 07:23:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""material:1049""?",2023-06-09 18:11:00+00:00 
+"What are the lifecycle duration of ocel:oid ""material:1049""?",125280.0 
+"What are the activities during the lifecycle of ocel:oid ""material:1062""?","Create Purchase Requisition, Approve Purchase Requisition"
+"What are the interacting objects in the lifecycle of ocel:oid ""material:1062""?","material:1059, purchase_requisition:428:pr_trigger_428, material:1060, material:1061"
+"What are the start timestamp of the lifecycle of ocel:oid ""material:1062""?",2023-06-13 11:48:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""material:1062""?",2023-06-14 20:49:00+00:00 
+"What are the lifecycle duration of ocel:oid ""material:1062""?",118860.0 
+"What are the activities during the lifecycle of ocel:oid ""material:1071""?","Create Purchase Requisition, Approve Purchase Requisition"
+"What are the interacting objects in the lifecycle of ocel:oid ""material:1071""?","material:1070, purchase_requisition:432:pr_trigger_432"
+"What are the start timestamp of the lifecycle of ocel:oid ""material:1071""?",2023-06-19 11:29:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""material:1071""?",2023-06-23 14:43:00+00:00 
+"What are the lifecycle duration of ocel:oid ""material:1071""?",357240.0 
+"What are the activities during the lifecycle of ocel:oid ""material:1082""?","Create Purchase Requisition, Approve Purchase Requisition"
+"What are the interacting objects in the lifecycle of ocel:oid ""material:1082""?",purchase_requisition:437:pr_trigger_437
+"What are the start timestamp of the lifecycle of ocel:oid ""material:1082""?",2023-06-20 15:38:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""material:1082""?",2023-06-27 21:08:00+00:00 
+"What are the lifecycle duration of ocel:oid ""material:1082""?",624600.0 
+"What are the activities during the lifecycle of ocel:oid ""material:1096""?","Create Purchase Requisition, Approve Purchase Requisition"
+"What are the interacting objects in the lifecycle of ocel:oid ""material:1096""?","material:1095, purchase_requisition:442:pr_trigger_442"
+"What are the start timestamp of the lifecycle of ocel:oid ""material:1096""?",2023-06-27 01:27:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""material:1096""?",2023-06-30 07:08:00+00:00 
+"What are the lifecycle duration of ocel:oid ""material:1096""?",279660.0 
+"What are the activities during the lifecycle of ocel:oid ""material:111""?","Create Purchase Requisition, Approve Purchase Requisition"
+"What are the interacting objects in the lifecycle of ocel:oid ""material:111""?","purchase_requisition:47:pr_trigger_47, material:110"
+"What are the start timestamp of the lifecycle of ocel:oid ""material:111""?",2022-05-16 07:59:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""material:111""?",2022-05-17 22:17:00+00:00 
+"What are the lifecycle duration of ocel:oid ""material:111""?",137880.0 
+"What are the activities during the lifecycle of ocel:oid ""material:1119""?","Create Purchase Requisition, Approve Purchase Requisition"
+"What are the interacting objects in the lifecycle of ocel:oid ""material:1119""?","material:1118, purchase_requisition:452:pr_trigger_452"
+"What are the start timestamp of the lifecycle of ocel:oid ""material:1119""?",2023-07-05 08:03:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""material:1119""?",2023-07-07 09:33:00+00:00 
+"What are the lifecycle duration of ocel:oid ""material:1119""?",178200.0 
+"What are the activities during the lifecycle of ocel:oid ""material:1128""?","Create Purchase Requisition, Approve Purchase Requisition"
+"What are the interacting objects in the lifecycle of ocel:oid ""material:1128""?",purchase_requisition:456:pr_trigger_456
+"What are the start timestamp of the lifecycle of ocel:oid ""material:1128""?",2023-07-10 18:55:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""material:1128""?",2023-07-14 04:08:00+00:00 
+"What are the lifecycle duration of ocel:oid ""material:1128""?",292380.0 
+"What are the activities during the lifecycle of ocel:oid ""material:1150""?","Create Purchase Requisition, Approve Purchase Requisition"
+"What are the interacting objects in the lifecycle of ocel:oid ""material:1150""?","material:1148, purchase_requisition:465:pr_trigger_465, material:1149"
+"What are the start timestamp of the lifecycle of ocel:oid ""material:1150""?",2023-07-19 20:43:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""material:1150""?",2023-07-26 13:31:00+00:00 
+"What are the lifecycle duration of ocel:oid ""material:1150""?",578880.0 
+"What are the activities during the lifecycle of ocel:oid ""material:1162""?","Create Purchase Requisition, Approve Purchase Requisition"
+"What are the interacting objects in the lifecycle of ocel:oid ""material:1162""?","material:1163, purchase_requisition:472:pr_trigger_472"
+"What are the start timestamp of the lifecycle of ocel:oid ""material:1162""?",2023-07-24 08:52:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""material:1162""?",2023-07-25 08:44:00+00:00 
+"What are the lifecycle duration of ocel:oid ""material:1162""?",85920.0 
+"What are the activities during the lifecycle of ocel:oid ""material:1175""?","Create Purchase Requisition, Approve Purchase Requisition"
+"What are the interacting objects in the lifecycle of ocel:oid ""material:1175""?","purchase_requisition:478:pr_trigger_478, material:1174"
+"What are the start timestamp of the lifecycle of ocel:oid ""material:1175""?",2023-07-28 20:17:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""material:1175""?",2023-08-03 12:43:00+00:00 
+"What are the lifecycle duration of ocel:oid ""material:1175""?",491160.0 
+"What are the activities during the lifecycle of ocel:oid ""material:1184""?","Create Purchase Requisition, Approve Purchase Requisition"
+"What are the interacting objects in the lifecycle of ocel:oid ""material:1184""?","material:1183, purchase_requisition:483:pr_trigger_483"
+"What are the start timestamp of the lifecycle of ocel:oid ""material:1184""?",2023-08-04 16:39:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""material:1184""?",2023-08-16 20:23:00+00:00 
+"What are the lifecycle duration of ocel:oid ""material:1184""?",1050240.0 
+"What are the activities during the lifecycle of ocel:oid ""material:1194""?","Create Purchase Requisition, Approve Purchase Requisition"
+"What are the interacting objects in the lifecycle of ocel:oid ""material:1194""?","material:1195, material:1196, material:1197, purchase_requisition:487:pr_trigger_487"
+"What are the start timestamp of the lifecycle of ocel:oid ""material:1194""?",2023-08-07 13:39:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""material:1194""?",2023-08-13 11:50:00+00:00 
+"What are the lifecycle duration of ocel:oid ""material:1194""?",511860.0 
+"What are the activities during the lifecycle of ocel:oid ""material:1207""?","Create Purchase Requisition, Approve Purchase Requisition"
+"What are the interacting objects in the lifecycle of ocel:oid ""material:1207""?","material:1208, purchase_requisition:491:pr_trigger_491"
+"What are the start timestamp of the lifecycle of ocel:oid ""material:1207""?",2023-08-14 17:13:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""material:1207""?",2023-08-18 11:26:00+00:00 
+"What are the lifecycle duration of ocel:oid ""material:1207""?",324780.0 
+"What are the activities during the lifecycle of ocel:oid ""material:1216""?","Create Purchase Requisition, Approve Purchase Requisition"
+"What are the interacting objects in the lifecycle of ocel:oid ""material:1216""?","material:1217, purchase_requisition:494:pr_trigger_494, material:1214, material:1215"
+"What are the start timestamp of the lifecycle of ocel:oid ""material:1216""?",2023-08-15 13:59:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""material:1216""?",2023-08-18 06:15:00+00:00 
+"What are the lifecycle duration of ocel:oid ""material:1216""?",231360.0 
+"What are the activities during the lifecycle of ocel:oid ""payment:100""?","Execute Payment, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""payment:100""?","purchase_order:163, goods receipt:184, purchase_order:161, invoice receipt:203, goods receipt:185, goods receipt:186, purchase_order:162"
+"What are the start timestamp of the lifecycle of ocel:oid ""payment:100""?",2022-07-27 14:46:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""payment:100""?",2022-07-30 08:49:00+00:00 
+"What are the lifecycle duration of ocel:oid ""payment:100""?",237780.0 
+"What are the activities during the lifecycle of ocel:oid ""payment:11""?",Execute Payment
+"What are the interacting objects in the lifecycle of ocel:oid ""payment:11""?","goods receipt:16, purchase_order:16, goods receipt:15, invoice receipt:19"
+"What are the start timestamp of the lifecycle of ocel:oid ""payment:11""?",2022-05-07 15:39:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""payment:11""?",2022-05-07 15:39:00+00:00 
+"What are the lifecycle duration of ocel:oid ""payment:11""?",0.0 
+"What are the activities during the lifecycle of ocel:oid ""payment:119""?",Execute Payment
+"What are the interacting objects in the lifecycle of ocel:oid ""payment:119""?","goods receipt:245, purchase_order:210, purchase_order:209, purchase_order:208, goods receipt:246, goods receipt:247, invoice receipt:245"
+"What are the start timestamp of the lifecycle of ocel:oid ""payment:119""?",2022-08-15 00:14:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""payment:119""?",2022-08-15 00:14:00+00:00 
+"What are the lifecycle duration of ocel:oid ""payment:119""?",0.0 
+"What are the activities during the lifecycle of ocel:oid ""payment:128""?",Execute Payment
+"What are the interacting objects in the lifecycle of ocel:oid ""payment:128""?","invoice receipt:272, purchase_order:224, purchase_order:225, goods receipt:266, goods receipt:265"
+"What are the start timestamp of the lifecycle of ocel:oid ""payment:128""?",2022-08-20 07:58:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""payment:128""?",2022-08-20 07:58:00+00:00 
+"What are the lifecycle duration of ocel:oid ""payment:128""?",0.0 
+"What are the activities during the lifecycle of ocel:oid ""payment:137""?",Execute Payment
+"What are the interacting objects in the lifecycle of ocel:oid ""payment:137""?","purchase_order:237, invoice receipt:276, goods receipt:277"
+"What are the start timestamp of the lifecycle of ocel:oid ""payment:137""?",2022-08-26 10:17:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""payment:137""?",2022-08-26 10:17:00+00:00 
+"What are the lifecycle duration of ocel:oid ""payment:137""?",0.0 
+"What are the activities during the lifecycle of ocel:oid ""payment:146""?",Execute Payment
+"What are the interacting objects in the lifecycle of ocel:oid ""payment:146""?","invoice receipt:307, purchase_order:272, goods receipt:303"
+"What are the start timestamp of the lifecycle of ocel:oid ""payment:146""?",2022-09-11 13:55:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""payment:146""?",2022-09-11 13:55:00+00:00 
+"What are the lifecycle duration of ocel:oid ""payment:146""?",0.0 
+"What are the activities during the lifecycle of ocel:oid ""payment:155""?","Execute Payment, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""payment:155""?","purchase_order:286, goods receipt:323, invoice receipt:320"
+"What are the start timestamp of the lifecycle of ocel:oid ""payment:155""?",2022-09-28 05:01:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""payment:155""?",2022-10-01 01:22:00+00:00 
+"What are the lifecycle duration of ocel:oid ""payment:155""?",246060.0 
+"What are the activities during the lifecycle of ocel:oid ""payment:164""?","Execute Payment, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""payment:164""?","invoice receipt:343, purchase_order:294, goods receipt:338"
+"What are the start timestamp of the lifecycle of ocel:oid ""payment:164""?",2022-09-17 15:19:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""payment:164""?",2022-09-22 11:48:00+00:00 
+"What are the lifecycle duration of ocel:oid ""payment:164""?",419340.0 
+"What are the activities during the lifecycle of ocel:oid ""payment:173""?",Execute Payment
+"What are the interacting objects in the lifecycle of ocel:oid ""payment:173""?","purchase_order:310, invoice receipt:359, goods receipt:372"
+"What are the start timestamp of the lifecycle of ocel:oid ""payment:173""?",2022-09-22 21:13:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""payment:173""?",2022-09-22 21:13:00+00:00 
+"What are the lifecycle duration of ocel:oid ""payment:173""?",0.0 
+"What are the activities during the lifecycle of ocel:oid ""payment:182""?",Execute Payment
+"What are the interacting objects in the lifecycle of ocel:oid ""payment:182""?","purchase_order:318, invoice receipt:373, goods receipt:366"
+"What are the start timestamp of the lifecycle of ocel:oid ""payment:182""?",2022-09-25 00:12:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""payment:182""?",2022-09-25 00:12:00+00:00 
+"What are the lifecycle duration of ocel:oid ""payment:182""?",0.0 
+"What are the activities during the lifecycle of ocel:oid ""payment:191""?",Execute Payment
+"What are the interacting objects in the lifecycle of ocel:oid ""payment:191""?","invoice receipt:387, purchase_order:336, goods receipt:393"
+"What are the start timestamp of the lifecycle of ocel:oid ""payment:191""?",2022-09-30 08:55:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""payment:191""?",2022-09-30 08:55:00+00:00 
+"What are the lifecycle duration of ocel:oid ""payment:191""?",0.0 
+"What are the activities during the lifecycle of ocel:oid ""payment:20""?",Execute Payment
+"What are the interacting objects in the lifecycle of ocel:oid ""payment:20""?","invoice receipt:42, goods receipt:39, goods receipt:41, purchase_order:32, purchase_order:31, purchase_order:33, goods receipt:40"
+"What are the start timestamp of the lifecycle of ocel:oid ""payment:20""?",2022-05-12 19:07:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""payment:20""?",2022-05-12 19:07:00+00:00 
+"What are the lifecycle duration of ocel:oid ""payment:20""?",0.0 
+"What are the activities during the lifecycle of ocel:oid ""payment:209""?",Execute Payment
+"What are the interacting objects in the lifecycle of ocel:oid ""payment:209""?","purchase_order:352, goods receipt:419, purchase_order:353, goods receipt:420, invoice receipt:420"
+"What are the start timestamp of the lifecycle of ocel:oid ""payment:209""?",2022-10-24 13:15:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""payment:209""?",2022-10-24 13:15:00+00:00 
+"What are the lifecycle duration of ocel:oid ""payment:209""?",0.0 
+"What are the activities during the lifecycle of ocel:oid ""payment:218""?",Execute Payment
+"What are the interacting objects in the lifecycle of ocel:oid ""payment:218""?","invoice receipt:439, goods receipt:439, purchase_order:376"
+"What are the start timestamp of the lifecycle of ocel:oid ""payment:218""?",2022-10-26 21:11:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""payment:218""?",2022-10-26 21:11:00+00:00 
+"What are the lifecycle duration of ocel:oid ""payment:218""?",0.0 
+"What are the activities during the lifecycle of ocel:oid ""payment:227""?","Execute Payment, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""payment:227""?","goods receipt:457, purchase_order:389, invoice receipt:463"
+"What are the start timestamp of the lifecycle of ocel:oid ""payment:227""?",2022-11-14 22:50:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""payment:227""?",2022-11-22 11:42:00+00:00 
+"What are the lifecycle duration of ocel:oid ""payment:227""?",651120.0 
+"What are the activities during the lifecycle of ocel:oid ""payment:236""?","Execute Payment, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""payment:236""?","purchase_order:403, goods receipt:477, invoice receipt:477"
+"What are the start timestamp of the lifecycle of ocel:oid ""payment:236""?",2022-12-09 16:06:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""payment:236""?",2022-12-16 23:53:00+00:00 
+"What are the lifecycle duration of ocel:oid ""payment:236""?",632820.0 
+"What are the activities during the lifecycle of ocel:oid ""payment:245""?",Execute Payment
+"What are the interacting objects in the lifecycle of ocel:oid ""payment:245""?","goods receipt:485, purchase_order:414, invoice receipt:498"
+"What are the start timestamp of the lifecycle of ocel:oid ""payment:245""?",2022-12-17 10:32:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""payment:245""?",2022-12-17 10:32:00+00:00 
+"What are the lifecycle duration of ocel:oid ""payment:245""?",0.0 
+"What are the activities during the lifecycle of ocel:oid ""payment:254""?",Execute Payment
+"What are the interacting objects in the lifecycle of ocel:oid ""payment:254""?","goods receipt:502, invoice receipt:510, purchase_order:426"
+"What are the start timestamp of the lifecycle of ocel:oid ""payment:254""?",2022-12-30 16:07:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""payment:254""?",2022-12-30 16:07:00+00:00 
+"What are the lifecycle duration of ocel:oid ""payment:254""?",0.0 
+"What are the activities during the lifecycle of ocel:oid ""payment:263""?","Execute Payment, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""payment:263""?","purchase_order:438, purchase_order:440, purchase_order:439, invoice receipt:524, goods receipt:521, goods receipt:520, goods receipt:519"
+"What are the start timestamp of the lifecycle of ocel:oid ""payment:263""?",2023-01-13 04:03:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""payment:263""?",2023-01-19 06:44:00+00:00 
+"What are the lifecycle duration of ocel:oid ""payment:263""?",528060.0 
+"What are the activities during the lifecycle of ocel:oid ""payment:272""?",Execute Payment
+"What are the interacting objects in the lifecycle of ocel:oid ""payment:272""?","purchase_order:464, goods receipt:549, purchase_order:465, goods receipt:550, invoice receipt:548"
+"What are the start timestamp of the lifecycle of ocel:oid ""payment:272""?",2023-01-22 10:13:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""payment:272""?",2023-01-22 10:13:00+00:00 
+"What are the lifecycle duration of ocel:oid ""payment:272""?",0.0 
+"What are the activities during the lifecycle of ocel:oid ""purchase_order:1002""?","Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""purchase_order:1002""?","goods receipt:1213, payment:584, quotation:585, invoice receipt:1214"
+"What are the start timestamp of the lifecycle of ocel:oid ""purchase_order:1002""?",2023-11-20 21:28:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""purchase_order:1002""?",2023-11-30 22:18:00+00:00 
+"What are the lifecycle duration of ocel:oid ""purchase_order:1002""?",867000.0 
+"What are the activities during the lifecycle of ocel:oid ""purchase_order:1011""?","Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Execute Payment, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""purchase_order:1011""?","invoice receipt:1211, quotation:587, goods receipt:1214, payment:583"
+"What are the start timestamp of the lifecycle of ocel:oid ""purchase_order:1011""?",2023-11-24 23:38:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""purchase_order:1011""?",2023-12-01 16:27:00+00:00 
+"What are the lifecycle duration of ocel:oid ""purchase_order:1011""?",578940.0 
+"What are the activities during the lifecycle of ocel:oid ""purchase_order:1020""?","Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""purchase_order:1020""?","quotation:594, goods receipt:1223, purchase_order:1019, invoice receipt:1228, goods receipt:1224, payment:589"
+"What are the start timestamp of the lifecycle of ocel:oid ""purchase_order:1020""?",2023-11-29 08:05:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""purchase_order:1020""?",2023-12-08 03:49:00+00:00 
+"What are the lifecycle duration of ocel:oid ""purchase_order:1020""?",762240.0 
+"What are the activities during the lifecycle of ocel:oid ""purchase_order:103""?","Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""purchase_order:103""?","invoice receipt:106, goods receipt:107, payment:55, goods receipt:106, purchase_order:105, goods receipt:105, purchase_order:104, quotation:63"
+"What are the start timestamp of the lifecycle of ocel:oid ""purchase_order:103""?",2022-05-30 12:59:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""purchase_order:103""?",2022-06-09 08:45:00+00:00 
+"What are the lifecycle duration of ocel:oid ""purchase_order:103""?",848760.0 
+"What are the activities during the lifecycle of ocel:oid ""purchase_order:1039""?","Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""purchase_order:1039""?","goods receipt:1310, goods receipt:1307, quotation:607, payment:632, purchase_order:1038, purchase_order:1037, goods receipt:1308, purchase_order:1040, invoice receipt:1320, goods receipt:1309"
+"What are the start timestamp of the lifecycle of ocel:oid ""purchase_order:1039""?",2023-12-06 19:49:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""purchase_order:1039""?",2024-01-10 17:44:00+00:00 
+"What are the lifecycle duration of ocel:oid ""purchase_order:1039""?",3016500.0 
+"What are the activities during the lifecycle of ocel:oid ""purchase_order:1048""?","Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""purchase_order:1048""?","goods receipt:1289, quotation:612, purchase_order:1049, goods receipt:1291, goods receipt:1290, invoice receipt:1294, payment:619"
+"What are the start timestamp of the lifecycle of ocel:oid ""purchase_order:1048""?",2023-12-06 16:59:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""purchase_order:1048""?",2024-01-16 09:14:00+00:00 
+"What are the lifecycle duration of ocel:oid ""purchase_order:1048""?",3514500.0 
+"What are the activities during the lifecycle of ocel:oid ""purchase_order:1057""?","Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""purchase_order:1057""?","goods receipt:1262, purchase_order:1058, payment:604, invoice receipt:1261, goods receipt:1263, quotation:611"
+"What are the start timestamp of the lifecycle of ocel:oid ""purchase_order:1057""?",2023-12-09 03:01:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""purchase_order:1057""?",2023-12-19 23:40:00+00:00 
+"What are the lifecycle duration of ocel:oid ""purchase_order:1057""?",938340.0 
+"What are the activities during the lifecycle of ocel:oid ""purchase_order:1066""?","Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""purchase_order:1066""?","goods receipt:1274, quotation:617, goods receipt:1272, goods receipt:1273, payment:615, invoice receipt:1279"
+"What are the start timestamp of the lifecycle of ocel:oid ""purchase_order:1066""?",2023-12-15 18:46:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""purchase_order:1066""?",2024-01-05 05:37:00+00:00 
+"What are the lifecycle duration of ocel:oid ""purchase_order:1066""?",1767060.0 
+"What are the activities during the lifecycle of ocel:oid ""purchase_order:1075""?","Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""purchase_order:1075""?","purchase_order:1074, goods receipt:1306, payment:636, invoice receipt:1322, goods receipt:1305, quotation:625"
+"What are the start timestamp of the lifecycle of ocel:oid ""purchase_order:1075""?",2023-12-20 18:22:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""purchase_order:1075""?",2024-01-12 06:24:00+00:00 
+"What are the lifecycle duration of ocel:oid ""purchase_order:1075""?",1944120.0 
+"What are the activities during the lifecycle of ocel:oid ""purchase_order:1084""?","Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Execute Payment, Create Goods Receipt"
+"What are the interacting objects in the lifecycle of ocel:oid ""purchase_order:1084""?","purchase_order:1083, quotation:630, invoice receipt:1316, goods receipt:1318, goods receipt:1320, goods receipt:1319, payment:630, purchase_order:1082"
+"What are the start timestamp of the lifecycle of ocel:oid ""purchase_order:1084""?",2023-12-26 20:31:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""purchase_order:1084""?",2024-01-10 09:23:00+00:00 
+"What are the lifecycle duration of ocel:oid ""purchase_order:1084""?",1255920.0 
+"What are the activities during the lifecycle of ocel:oid ""purchase_order:1093""?","Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment, Create Goods Receipt"
+"What are the interacting objects in the lifecycle of ocel:oid ""purchase_order:1093""?","goods receipt:1324, payment:634, goods receipt:1323, invoice receipt:1327, goods receipt:1326, purchase_order:1095, goods receipt:1325, purchase_order:1094, quotation:633, purchase_order:1096"
+"What are the start timestamp of the lifecycle of ocel:oid ""purchase_order:1093""?",2023-12-27 10:55:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""purchase_order:1093""?",2024-01-15 07:42:00+00:00 
+"What are the lifecycle duration of ocel:oid ""purchase_order:1093""?",1630020.0 
+"What are the activities during the lifecycle of ocel:oid ""purchase_order:1101""?","Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""purchase_order:1101""?","quotation:631, goods receipt:1341, payment:639, invoice receipt:1337"
+"What are the start timestamp of the lifecycle of ocel:oid ""purchase_order:1101""?",2024-01-01 09:02:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""purchase_order:1101""?",2024-01-14 17:07:00+00:00 
+"What are the lifecycle duration of ocel:oid ""purchase_order:1101""?",1152300.0 
+"What are the activities during the lifecycle of ocel:oid ""purchase_order:1110""?","Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""purchase_order:1110""?","goods receipt:1336, purchase_order:1109, goods receipt:1335, payment:638, purchase_order:1111, goods receipt:1334, quotation:643, invoice receipt:1334"
+"What are the start timestamp of the lifecycle of ocel:oid ""purchase_order:1110""?",2024-01-04 00:20:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""purchase_order:1110""?",2024-01-17 23:09:00+00:00 
+"What are the lifecycle duration of ocel:oid ""purchase_order:1110""?",1205340.0 
+"What are the activities during the lifecycle of ocel:oid ""purchase_order:112""?","Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""purchase_order:112""?","quotation:69, invoice receipt:126, goods receipt:125, payment:68"
+"What are the start timestamp of the lifecycle of ocel:oid ""purchase_order:112""?",2022-06-07 03:52:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""purchase_order:112""?",2022-06-16 05:49:00+00:00 
+"What are the lifecycle duration of ocel:oid ""purchase_order:112""?",784620.0 
+"What are the activities during the lifecycle of ocel:oid ""purchase_order:1129""?","Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""purchase_order:1129""?","goods receipt:1360, payment:647, invoice receipt:1354, quotation:652, purchase_order:1128, goods receipt:1362, goods receipt:1361, goods receipt:1363"
+"What are the start timestamp of the lifecycle of ocel:oid ""purchase_order:1129""?",2024-01-18 13:03:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""purchase_order:1129""?",2024-01-30 10:43:00+00:00 
+"What are the lifecycle duration of ocel:oid ""purchase_order:1129""?",1028400.0 
+"What are the activities during the lifecycle of ocel:oid ""purchase_order:1138""?","Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""purchase_order:1138""?","purchase_order:1135, quotation:656, invoice receipt:1383, payment:662, goods receipt:1390, goods receipt:1391, purchase_order:1137, purchase_order:1136, goods receipt:1389, goods receipt:1392"
+"What are the start timestamp of the lifecycle of ocel:oid ""purchase_order:1138""?",2024-01-22 11:03:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""purchase_order:1138""?",2024-02-08 12:55:00+00:00 
+"What are the lifecycle duration of ocel:oid ""purchase_order:1138""?",1475520.0 
+"What are the activities during the lifecycle of ocel:oid ""purchase_order:1147""?","Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""purchase_order:1147""?","payment:675, quotation:663, invoice receipt:1398, goods receipt:1399"
+"What are the start timestamp of the lifecycle of ocel:oid ""purchase_order:1147""?",2024-02-04 01:08:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""purchase_order:1147""?",2024-02-19 13:39:00+00:00 
+"What are the lifecycle duration of ocel:oid ""purchase_order:1147""?",1341060.0 
+"What are the activities during the lifecycle of ocel:oid ""purchase_order:1156""?","Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""purchase_order:1156""?","quotation:672, purchase_order:1157, goods receipt:1406, invoice receipt:1403, payment:670, goods receipt:1407"
+"What are the start timestamp of the lifecycle of ocel:oid ""purchase_order:1156""?",2024-02-08 18:44:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""purchase_order:1156""?",2024-02-16 09:12:00+00:00 
+"What are the lifecycle duration of ocel:oid ""purchase_order:1156""?",656880.0 
+"What are the activities during the lifecycle of ocel:oid ""purchase_order:1165""?","Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment"
+"What are the interacting objects in the lifecycle of ocel:oid ""purchase_order:1165""?","purchase_order:1164, payment:683, goods receipt:1439, goods receipt:1438, quotation:670, goods receipt:1437, invoice receipt:1434, goods receipt:1436, purchase_order:1163"
+"What are the start timestamp of the lifecycle of ocel:oid ""purchase_order:1165""?",2024-02-12 13:43:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""purchase_order:1165""?",2024-03-05 06:10:00+00:00 
+"What are the lifecycle duration of ocel:oid ""purchase_order:1165""?",1873620.0 
+"What are the activities during the lifecycle of ocel:oid ""purchase_order:1174""?","Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment, Create Goods Receipt"
+"What are the interacting objects in the lifecycle of ocel:oid ""purchase_order:1174""?","purchase_order:1171, goods receipt:1424, purchase_order:1173, payment:680, purchase_order:1172, invoice receipt:1423, goods receipt:1421, goods receipt:1423, goods receipt:1422, quotation:681"
+"What are the start timestamp of the lifecycle of ocel:oid ""purchase_order:1174""?",2024-02-13 16:37:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""purchase_order:1174""?",2024-02-28 08:33:00+00:00 
+"What are the lifecycle duration of ocel:oid ""purchase_order:1174""?",1266960.0 
+"What are the activities during the lifecycle of ocel:oid ""quotation:1""?","Create Request for Quotation, Create Purchase Order, Approve Purchase Order"
+"What are the interacting objects in the lifecycle of ocel:oid ""quotation:1""?","purchase_order:4, purchase_requisition:1:pr_trigger_1"
+"What are the start timestamp of the lifecycle of ocel:oid ""quotation:1""?",2022-04-06 09:49:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""quotation:1""?",2022-04-09 08:41:00+00:00 
+"What are the lifecycle duration of ocel:oid ""quotation:1""?",255120.0 
+"What are the activities during the lifecycle of ocel:oid ""quotation:108""?","Create Request for Quotation, Create Purchase Order, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order, Approve Purchase Order"
+"What are the interacting objects in the lifecycle of ocel:oid ""quotation:108""?","purchase_requisition:107:pr_trigger_107, purchase_order:178, purchase_order:177, purchase_order:179"
+"What are the start timestamp of the lifecycle of ocel:oid ""quotation:108""?",2022-07-13 08:27:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""quotation:108""?",2022-07-17 22:04:00+00:00 
+"What are the lifecycle duration of ocel:oid ""quotation:108""?",394620.0 
+"What are the activities during the lifecycle of ocel:oid ""quotation:117""?","Create Request for Quotation, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order"
+"What are the interacting objects in the lifecycle of ocel:oid ""quotation:117""?","purchase_order:206, purchase_order:207, purchase_requisition:116:pr_trigger_116"
+"What are the start timestamp of the lifecycle of ocel:oid ""quotation:117""?",2022-07-24 14:13:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""quotation:117""?",2022-07-26 20:30:00+00:00 
+"What are the lifecycle duration of ocel:oid ""quotation:117""?",195420.0 
+"What are the activities during the lifecycle of ocel:oid ""quotation:126""?","Create Request for Quotation, Create Purchase Order, Approve Purchase Order"
+"What are the interacting objects in the lifecycle of ocel:oid ""quotation:126""?","purchase_requisition:127:pr_trigger_127, purchase_order:226"
+"What are the start timestamp of the lifecycle of ocel:oid ""quotation:126""?",2022-08-06 13:34:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""quotation:126""?",2022-08-09 21:21:00+00:00 
+"What are the lifecycle duration of ocel:oid ""quotation:126""?",287220.0 
+"What are the activities during the lifecycle of ocel:oid ""quotation:135""?","Create Request for Quotation, Create Purchase Order, Approve Purchase Order"
+"What are the interacting objects in the lifecycle of ocel:oid ""quotation:135""?","purchase_requisition:134:pr_trigger_134, purchase_order:238"
+"What are the start timestamp of the lifecycle of ocel:oid ""quotation:135""?",2022-08-14 21:25:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""quotation:135""?",2022-08-22 09:55:00+00:00 
+"What are the lifecycle duration of ocel:oid ""quotation:135""?",649800.0 
+"What are the activities during the lifecycle of ocel:oid ""quotation:144""?","Create Request for Quotation, Create Purchase Order, Approve Purchase Order"
+"What are the interacting objects in the lifecycle of ocel:oid ""quotation:144""?","purchase_requisition:146:pr_trigger_146, purchase_order:252"
+"What are the start timestamp of the lifecycle of ocel:oid ""quotation:144""?",2022-08-23 08:05:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""quotation:144""?",2022-08-29 15:01:00+00:00 
+"What are the lifecycle duration of ocel:oid ""quotation:144""?",543360.0 
+"What are the activities during the lifecycle of ocel:oid ""quotation:153""?","Create Request for Quotation, Create Purchase Order, Approve Purchase Order"
+"What are the interacting objects in the lifecycle of ocel:oid ""quotation:153""?","purchase_order:275, purchase_requisition:155:pr_trigger_155"
+"What are the start timestamp of the lifecycle of ocel:oid ""quotation:153""?",2022-08-31 23:19:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""quotation:153""?",2022-09-04 09:20:00+00:00 
+"What are the lifecycle duration of ocel:oid ""quotation:153""?",295260.0 
+"What are the activities during the lifecycle of ocel:oid ""quotation:162""?","Create Request for Quotation, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order"
+"What are the interacting objects in the lifecycle of ocel:oid ""quotation:162""?","purchase_requisition:161:pr_trigger_161, purchase_order:274, purchase_order:273"
+"What are the start timestamp of the lifecycle of ocel:oid ""quotation:162""?",2022-08-31 19:04:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""quotation:162""?",2022-09-03 15:34:00+00:00 
+"What are the lifecycle duration of ocel:oid ""quotation:162""?",246600.0 
+"What are the activities during the lifecycle of ocel:oid ""quotation:171""?","Create Request for Quotation, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Create Purchase Order, Approve Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order"
+"What are the interacting objects in the lifecycle of ocel:oid ""quotation:171""?","purchase_order:291, purchase_requisition:178:pr_trigger_178, purchase_order:289, purchase_order:292, purchase_order:290"
+"What are the start timestamp of the lifecycle of ocel:oid ""quotation:171""?",2022-09-06 14:33:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""quotation:171""?",2022-09-12 09:16:00+00:00 
+"What are the lifecycle duration of ocel:oid ""quotation:171""?",499380.0 
+"What are the activities during the lifecycle of ocel:oid ""quotation:180""?","Create Request for Quotation, Create Purchase Order, Create Purchase Order, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order, Approve Purchase Order, Approve Purchase Order"
+"What are the interacting objects in the lifecycle of ocel:oid ""quotation:180""?","purchase_requisition:175:pr_trigger_175, purchase_order:314, purchase_order:312, purchase_order:313, purchase_order:315"
+"What are the start timestamp of the lifecycle of ocel:oid ""quotation:180""?",2022-09-13 00:17:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""quotation:180""?",2022-09-16 17:26:00+00:00 
+"What are the lifecycle duration of ocel:oid ""quotation:180""?",320940.0 
+"What are the activities during the lifecycle of ocel:oid ""quotation:19""?","Create Request for Quotation, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order"
+"What are the interacting objects in the lifecycle of ocel:oid ""quotation:19""?","purchase_requisition:19:pr_trigger_19, purchase_order:28, purchase_order:29"
+"What are the start timestamp of the lifecycle of ocel:oid ""quotation:19""?",2022-04-25 07:14:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""quotation:19""?",2022-05-08 02:09:00+00:00 
+"What are the lifecycle duration of ocel:oid ""quotation:19""?",1104900.0 
+"What are the activities during the lifecycle of ocel:oid ""quotation:199""?","Create Request for Quotation, Create Purchase Order, Create Purchase Order, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order, Approve Purchase Order, Approve Purchase Order"
+"What are the interacting objects in the lifecycle of ocel:oid ""quotation:199""?","purchase_order:342, purchase_order:343, purchase_order:344, purchase_order:345, purchase_requisition:196:pr_trigger_196"
+"What are the start timestamp of the lifecycle of ocel:oid ""quotation:199""?",2022-09-29 08:57:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""quotation:199""?",2022-10-02 04:16:00+00:00 
+"What are the lifecycle duration of ocel:oid ""quotation:199""?",242340.0 
+"What are the activities during the lifecycle of ocel:oid ""quotation:207""?","Create Request for Quotation, Create Purchase Order, Approve Purchase Order"
+"What are the interacting objects in the lifecycle of ocel:oid ""quotation:207""?","purchase_requisition:202:pr_trigger_202, purchase_order:376"
+"What are the start timestamp of the lifecycle of ocel:oid ""quotation:207""?",2022-10-15 06:27:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""quotation:207""?",2022-10-20 14:36:00+00:00 
+"What are the lifecycle duration of ocel:oid ""quotation:207""?",461340.0 
+"What are the activities during the lifecycle of ocel:oid ""quotation:216""?","Create Request for Quotation, Create Purchase Order, Approve Purchase Order"
+"What are the interacting objects in the lifecycle of ocel:oid ""quotation:216""?","purchase_order:364, purchase_requisition:210:pr_trigger_210"
+"What are the start timestamp of the lifecycle of ocel:oid ""quotation:216""?",2022-10-09 09:26:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""quotation:216""?",2022-10-11 17:07:00+00:00 
+"What are the lifecycle duration of ocel:oid ""quotation:216""?",200460.0 
+"What are the activities during the lifecycle of ocel:oid ""quotation:225""?","Create Request for Quotation, Create Purchase Order, Approve Purchase Order"
+"What are the interacting objects in the lifecycle of ocel:oid ""quotation:225""?","purchase_order:381, purchase_requisition:226:pr_trigger_226"
+"What are the start timestamp of the lifecycle of ocel:oid ""quotation:225""?",2022-10-25 15:15:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""quotation:225""?",2022-10-26 20:43:00+00:00 
+"What are the lifecycle duration of ocel:oid ""quotation:225""?",106080.0 
+"What are the activities during the lifecycle of ocel:oid ""quotation:234""?","Create Request for Quotation, Create Purchase Order, Approve Purchase Order"
+"What are the interacting objects in the lifecycle of ocel:oid ""quotation:234""?","purchase_order:400, purchase_requisition:229:pr_trigger_229"
+"What are the start timestamp of the lifecycle of ocel:oid ""quotation:234""?",2022-11-15 22:15:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""quotation:234""?",2022-11-18 02:57:00+00:00 
+"What are the lifecycle duration of ocel:oid ""quotation:234""?",189720.0 
+"What are the activities during the lifecycle of ocel:oid ""quotation:243""?","Create Request for Quotation, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order"
+"What are the interacting objects in the lifecycle of ocel:oid ""quotation:243""?","purchase_requisition:242:pr_trigger_242, purchase_order:411, purchase_order:412, purchase_order:413"
+"What are the start timestamp of the lifecycle of ocel:oid ""quotation:243""?",2022-11-26 18:33:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""quotation:243""?",2022-12-02 22:10:00+00:00 
+"What are the lifecycle duration of ocel:oid ""quotation:243""?",531420.0 
+"What are the activities during the lifecycle of ocel:oid ""quotation:252""?","Create Request for Quotation, Create Purchase Order, Approve Purchase Order"
+"What are the interacting objects in the lifecycle of ocel:oid ""quotation:252""?","purchase_requisition:249:pr_trigger_249, purchase_order:433"
+"What are the start timestamp of the lifecycle of ocel:oid ""quotation:252""?",2022-12-15 13:19:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""quotation:252""?",2022-12-17 19:08:00+00:00 
+"What are the lifecycle duration of ocel:oid ""quotation:252""?",193740.0 
+"What are the activities during the lifecycle of ocel:oid ""quotation:261""?","Create Request for Quotation, Create Purchase Order, Approve Purchase Order"
+"What are the interacting objects in the lifecycle of ocel:oid ""quotation:261""?","purchase_order:441, purchase_requisition:266:pr_trigger_266"
+"What are the start timestamp of the lifecycle of ocel:oid ""quotation:261""?",2022-12-26 14:10:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""quotation:261""?",2022-12-29 17:18:00+00:00 
+"What are the lifecycle duration of ocel:oid ""quotation:261""?",270480.0 
+"What are the activities during the lifecycle of ocel:oid ""quotation:270""?","Create Request for Quotation, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order"
+"What are the interacting objects in the lifecycle of ocel:oid ""quotation:270""?","purchase_requisition:271:pr_trigger_271, purchase_order:463, purchase_order:462"
+"What are the start timestamp of the lifecycle of ocel:oid ""quotation:270""?",2023-01-05 20:41:00+00:00 
+"What are the end timestamp of the lifecycle of ocel:oid ""quotation:270""?",2023-01-17 12:20:00+00:00 
+"What are the lifecycle duration of ocel:oid ""quotation:270""?",1006740.0 
