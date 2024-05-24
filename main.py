@@ -11,6 +11,7 @@ import datetime
 import json
 import os
 import re
+from oracle import AnswerVerificationOracle
 
 """Initializing the Hugging Face Embedding Pipeline
 
@@ -215,7 +216,7 @@ def log_to_file(message, curr_datetime):
         file1.write(message)
 
 
-def produce_answer(question, curr_datetime, llm_chain, vectdb):
+def produce_answer(question, llm_chain, vectdb):
     sys_mess = "Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer."
 
     # Take the question and extract the metadata for the filtering if any.
@@ -252,11 +253,16 @@ def produce_answer(question, curr_datetime, llm_chain, vectdb):
     index = complete_answer.find('[/INST]')
     prompt = complete_answer[:index + len('[/INST]')]
     answer = complete_answer[index + len('[/INST]'):]
-    print(f'Prompt: {prompt}\n')
+    return prompt, answer
+
+
+def produce_answer_live(question, curr_datetime, model_chain, vectordb):
+    complete_prompt, answer = produce_answer(question, model_chain, vectordb)
+    print(f'Prompt: {complete_prompt}\n')
     print(f'Answer: {answer}\n')
     print('--------------------------------------------------')
 
-    log_to_file(f'Query: {sys_mess}\n{context}\n{question}\n\nAnswer: {answer}\n\n##########################\n\n',
+    log_to_file(f'Query: {complete_prompt}\n\nAnswer: {answer}\n\n##########################\n\n',
                 curr_datetime)
 
 
@@ -269,7 +275,7 @@ def live_prompting(model1, vect_db):
             print("Exiting the chat.")
             break
 
-        produce_answer(query, current_datetime, model1, vect_db)
+        produce_answer_live(query, current_datetime, model1, vect_db)
         print()
 
 
@@ -279,7 +285,7 @@ def delete_qdrant_collection():
     qdrant_client.close()
 
 
-def evaluate_rag_chain_zero_shot(eval_oracle, lang_chain, reference, traces_dict):
+def evaluate_rag_chain_zero_shot(eval_oracle, lang_chain, vect_db):
     path_tests_data = os.path.join('tests', 'test_dataset', 'validation_events_questions.csv')
     questions = {}
     with open(path_tests_data, newline='') as csvfile:
@@ -292,16 +298,13 @@ def evaluate_rag_chain_zero_shot(eval_oracle, lang_chain, reference, traces_dict
     count = 0
     for q, a in questions.items():
         eval_oracle.add_prompt_expected_answer_pair(question, a)
-        complete_answer = lang_chain.invoke({"question": q})
-        index = complete_answer.find('[/INST]')
-        answer = complete_answer[index + len('[/INST]'):]
+        prompt, answer = produce_answer(q, lang_chain, vect_db)
         eval_oracle.verify_answer(answer, q)
         count += 1
         print(f'Processing answer for trace {count} of {len(questions)}...')
 
     print('Validation process completed. Check the output file.')
     eval_oracle.write_results_to_file()
-
 
 
 if __name__ == "__main__":
@@ -315,11 +318,12 @@ if __name__ == "__main__":
 
     embed_model = initialize_embedding_model(embed_model_id, device)
 
-    index_ans = input("Maintain Vector Index?\ny - yes, maintain it.\nn - no, rebuild it.\n")
+    """index_ans = input("Maintain Vector Index?\ny - yes, maintain it.\nn - no, rebuild it.\n")
     if index_ans == 'y':
         index_bool = True
     else:
-        index_bool = False
+        index_bool = False"""
+    index_bool = True
 
     client = QdrantClient(url, grpc_port=grpc_port, prefer_grpc=True)
     qdrant = Qdrant(client, collection_name='llama-2-rag', embeddings=embed_model)
@@ -369,7 +373,10 @@ if __name__ == "__main__":
     prompt = PromptTemplate.from_template(template)
     chain = prompt | hf_pipeline
 
-    live_prompting(chain, qdrant)
+    # live_prompting(chain, qdrant)
+
+    oracle = AnswerVerificationOracle()
+    evaluate_rag_chain_zero_shot(oracle, chain, qdrant)
 
     collection_bool = False
     if collection_bool:
