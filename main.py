@@ -286,7 +286,7 @@ def delete_qdrant_collection():
 
 
 def evaluate_rag_chain_zero_shot(eval_oracle, lang_chain, vect_db):
-    path_tests_data = os.path.join('tests', 'test_dataset', 'validation_events_questions.csv')
+    path_tests_data = os.path.join('tests', 'test_dataset', 'validation_timestamps_questions.csv')
     questions = {}
     with open(path_tests_data, newline='') as csvfile:
         reader = csv.reader(csvfile)
@@ -297,9 +297,9 @@ def evaluate_rag_chain_zero_shot(eval_oracle, lang_chain, vect_db):
 
     count = 0
     for q, a in questions.items():
-        eval_oracle.add_prompt_expected_answer_pair(question, a)
+        eval_oracle.add_prompt_expected_answer_pair(q, a)
         prompt, answer = produce_answer(q, lang_chain, vect_db)
-        eval_oracle.verify_answer(answer, q)
+        eval_oracle.verify_answer(answer, prompt, True)
         count += 1
         print(f'Processing answer for trace {count} of {len(questions)}...')
 

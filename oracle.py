@@ -40,16 +40,20 @@ class AnswerVerificationOracle:
     This method checks whether the model's answer matches the expected answer for a given prompt.
     """
 
-    def verify_answer(self, model_answer, prompt):
+    def verify_answer(self, model_answer, prompt, expected_match):
+        index_i = prompt.find('<<QUESTION>>')
+        index_e = prompt.find('<</QUESTION>>')
+        question = prompt[index_i + len('<<QUESTION>>'):index_e].strip()
         result = {
             'prompt': prompt,
             'model_answer': model_answer,
             'expected_answer': None,
+            'expected_match': expected_match,
             'verification_result': None
         }
 
         for prompt_text, expected_answer in self.prompt_expected_answer_pairs:
-            if prompt_text == prompt:
+            if prompt_text == question:
                 result['expected_answer'] = expected_answer
                 result['verification_result'] = False
                 if ',' in expected_answer:
@@ -60,7 +64,6 @@ class AnswerVerificationOracle:
                 else:
                     if expected_answer.lower() in model_answer.lower():
                         result['verification_result'] = True
-                
                 """
                 if result['verification_result'] == False:
                     print(f'\n++++++++++++\nRAG Answer: {model_answer}\nExpected Answer: {expected_answer}.\n++++++++++++')
@@ -79,28 +82,28 @@ class AnswerVerificationOracle:
 
     def compute_stats(self):
         total_results = len(self.results)
-        correct_results = sum(int(result['verification_result']) for result in self.results)
+        correct_results = sum(int(result['verification_result']) == result['expected_match'] for result in self.results)
 
         self.accuracy = (correct_results / total_results) * 100 if total_results > 0 else 0
 
         for result in self.results:
             if result['verification_result']:
-                if result['expected_answer'] == 'yes':
+                if result['expected_match']:
                     self.true_positives += 1
                 else:
-                    self.true_negatives += 1
+                    self.false_positives += 1
             else:
-                if result['expected_answer'] == 'yes':
+                if result['expected_match']:
                     self.false_negatives += 1
                 else:
-                    self.false_positives += 1
+                    self.true_negatives += 1
 
         if self.true_positives + self.false_positives != 0:
             self.precision = self.true_positives / (self.true_positives + self.false_positives) * 100
         if self.true_positives + self.false_negatives != 0:
             self.recall = self.true_positives / (self.true_positives + self.false_negatives) * 100
         if self.precision + self.recall != 0:
-            self.f1score = 2 * (self.precision * self.recall) / (self.precision + self.recall)/100
+            self.f1score = 2 * (self.precision * self.recall) / (self.precision + self.recall) / 100
 
     """ Writing the verification results to a file.
 
@@ -130,4 +133,5 @@ class AnswerVerificationOracle:
                 file.write(f"Model Answer: {result['model_answer']}\n")
                 file.write(f"Expected Answer: {result['expected_answer']}\n")
                 file.write(f"Verification Result: {result['verification_result']}\n")
-                file.write("\n")
+                file.write(f"Expected Match: {result['expected_match']}\n")
+                file.write("\n#####################################################################################\n")
