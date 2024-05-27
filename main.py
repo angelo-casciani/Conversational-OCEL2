@@ -153,7 +153,7 @@ def retrieve_context(vector_index, query, search_filter='', key=''):
                 )
             ]
         )
-        retrieved = vector_index.similarity_search(query, filter=filter_, k=3)
+        retrieved += vector_index.similarity_search(query, filter=filter_, k=3)
     retrieved_text = ''
     for i in range(len(retrieved)):
         content = retrieved[i].page_content
