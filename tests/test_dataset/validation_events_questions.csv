@@ -315,65 +315,319 @@ question,answer
 "Are purchase_order, goods receipt the object types that are manipulated during ""event:10170""?",True
 "Are 1 the objects of type purchase_order that are manipulated during ""event:10170""?",True
 "Are 1 the objects of type goods receipt that are manipulated during ""event:10170""?",True
-"Are goods receipt, purchase_order the object types that are manipulated during ""event:10171""?",True
-"Are 1 the objects of type goods receipt that are manipulated during ""event:10171""?",True
-"Are 1 the objects of type purchase_order that are manipulated during ""event:10171""?",True
-"Are invoice receipt, goods receipt the object types that are manipulated during ""event:10172""?",True
-"Are 1 the objects of type invoice receipt that are manipulated during ""event:10172""?",True
-"Are 1 the objects of type goods receipt that are manipulated during ""event:10172""?",True
-"Are goods receipt, purchase_order the object types that are manipulated during ""event:10173""?",True
-"Are 1 the objects of type goods receipt that are manipulated during ""event:10173""?",True
-"Are 1 the objects of type purchase_order that are manipulated during ""event:10173""?",True
-"Are purchase_order, goods receipt the object types that are manipulated during ""event:10174""?",True
-"Are 1 the objects of type purchase_order that are manipulated during ""event:10174""?",True
-"Are 1 the objects of type goods receipt that are manipulated during ""event:10174""?",True
-"Are purchase_order, goods receipt the object types that are manipulated during ""event:10175""?",True
-"Are 1 the objects of type purchase_order that are manipulated during ""event:10175""?",True
-"Are 1 the objects of type goods receipt that are manipulated during ""event:10175""?",True
-"Are purchase_order, goods receipt the object types that are manipulated during ""event:10176""?",True
-"Are 1 the objects of type purchase_order that are manipulated during ""event:10176""?",True
-"Are 1 the objects of type goods receipt that are manipulated during ""event:10176""?",True
-"Are purchase_order, quotation the object types that are manipulated during ""event:10177""?",True
-"Are 1 the objects of type purchase_order that are manipulated during ""event:10177""?",True
-"Are 1 the objects of type quotation that are manipulated during ""event:10177""?",True
-"Are purchase_order, goods receipt the object types that are manipulated during ""event:10178""?",True
-"Are 1 the objects of type purchase_order that are manipulated during ""event:10178""?",True
-"Are 1 the objects of type goods receipt that are manipulated during ""event:10178""?",True
-"Are purchase_order, quotation the object types that are manipulated during ""event:10179""?",True
-"Are 1 the objects of type purchase_order that are manipulated during ""event:10179""?",True
-"Are 1 the objects of type quotation that are manipulated during ""event:10179""?",True
-"Are invoice receipt, goods receipt the object types that are manipulated during ""event:10180""?",True
-"Are 1 the objects of type invoice receipt that are manipulated during ""event:10180""?",True
-"Are 1 the objects of type goods receipt that are manipulated during ""event:10180""?",True
-"Are invoice receipt, purchase_order, goods receipt, payment the object types that are manipulated during ""event:10181""?",True
-"Are 1 the objects of type invoice receipt that are manipulated during ""event:10181""?",True
-"Are 2 the objects of type purchase_order that are manipulated during ""event:10181""?",True
-"Are 4 the objects of type goods receipt that are manipulated during ""event:10181""?",True
-"Are 1 the objects of type payment that are manipulated during ""event:10181""?",True
-"Are purchase_order, goods receipt the object types that are manipulated during ""event:10182""?",True
-"Are 1 the objects of type purchase_order that are manipulated during ""event:10182""?",True
-"Are 1 the objects of type goods receipt that are manipulated during ""event:10182""?",True
-"Are purchase_order, goods receipt the object types that are manipulated during ""event:10183""?",True
-"Are 1 the objects of type purchase_order that are manipulated during ""event:10183""?",True
-"Are 1 the objects of type goods receipt that are manipulated during ""event:10183""?",True
-"Are quotation, purchase_order the object types that are manipulated during ""event:10184""?",True
-"Are 1 the objects of type quotation that are manipulated during ""event:10184""?",True
-"Are 1 the objects of type purchase_order that are manipulated during ""event:10184""?",True
-"Are goods receipt, invoice receipt the object types that are manipulated during ""event:10185""?",True
-"Are 1 the objects of type goods receipt that are manipulated during ""event:10185""?",True
-"Are 1 the objects of type invoice receipt that are manipulated during ""event:10185""?",True
-"Are invoice receipt, goods receipt the object types that are manipulated during ""event:10186""?",True
-"Are 1 the objects of type invoice receipt that are manipulated during ""event:10186""?",True
-"Are 1 the objects of type goods receipt that are manipulated during ""event:10186""?",True
-"Are purchase_order, quotation the object types that are manipulated during ""event:10187""?",True
-"Are 1 the objects of type purchase_order that are manipulated during ""event:10187""?",True
-"Are 1 the objects of type quotation that are manipulated during ""event:10187""?",True
-"Are quotation, purchase_order the object types that are manipulated during ""event:10188""?",True
-"Are 1 the objects of type quotation that are manipulated during ""event:10188""?",True
-"Are 1 the objects of type purchase_order that are manipulated during ""event:10188""?",True
-"Are invoice receipt, goods receipt the object types that are manipulated during ""event:10189""?",True
-"Are 1 the objects of type invoice receipt that are manipulated during ""event:10189""?",True
-"Are 1 the objects of type goods receipt that are manipulated during ""event:10189""?",True
-"Are goods receipt, purchase_order the object types that are manipulated during ""event:10190""?",True
-"Are 1 the objects of type goods receipt that are manipulated during ""event:10190""?",True
-"Are 1 the objects of type purchase_order that are manipulated during ""event:10190""?",True
+"Are contract, project plan the object types that are manipulated during ""event:10161""?",False
+"Are 6 the objects of type contract that are manipulated during ""event:10161""?",False
+"Are 5 the objects of type project plan that are manipulated during ""event:10161""?",False
+"Are timesheet, shipment notice the object types that are manipulated during ""event:10085""?",False
+"Are 4 the objects of type timesheet that are manipulated during ""event:10085""?",False
+"Are 3 the objects of type shipment notice that are manipulated during ""event:10085""?",False
+"Are timesheet, project plan the object types that are manipulated during ""event:10027""?",False
+"Are 3 the objects of type timesheet that are manipulated during ""event:10027""?",False
+"Are 7 the objects of type project plan that are manipulated during ""event:10027""?",False
+"Are project plan, shipment notice the object types that are manipulated during ""event:10122""?",False
+"Are 8 the objects of type project plan that are manipulated during ""event:10122""?",False
+"Are 7 the objects of type shipment notice that are manipulated during ""event:10122""?",False
+"Are supplier order, forecast the object types that are manipulated during ""event:10066""?",False
+"Are 10 the objects of type supplier order that are manipulated during ""event:10066""?",False
+"Are 3 the objects of type forecast that are manipulated during ""event:10066""?",False
+"Are forecast, supplier order the object types that are manipulated during ""event:10024""?",False
+"Are 1 the objects of type forecast that are manipulated during ""event:10024""?",False
+"Are 10 the objects of type supplier order that are manipulated during ""event:10024""?",False
+"Are shipment notice, shipment notice the object types that are manipulated during ""event:1001""?",False
+"Are 2 the objects of type shipment notice that are manipulated during ""event:1001""?",False
+"Are 9 the objects of type shipment notice that are manipulated during ""event:1001""?",False
+"Are forecast, timesheet the object types that are manipulated during ""event:10161""?",False
+"Are 9 the objects of type forecast that are manipulated during ""event:10161""?",False
+"Are 2 the objects of type timesheet that are manipulated during ""event:10161""?",False
+"Are forecast, project plan the object types that are manipulated during ""event:100""?",False
+"Are 7 the objects of type forecast that are manipulated during ""event:100""?",False
+"Are 2 the objects of type project plan that are manipulated during ""event:100""?",False
+"Are timesheet, supplier order the object types that are manipulated during ""event:10087""?",False
+"Are 5 the objects of type timesheet that are manipulated during ""event:10087""?",False
+"Are 1 the objects of type supplier order that are manipulated during ""event:10087""?",False
+"Are contract, supplier order the object types that are manipulated during ""event:10156""?",False
+"Are 7 the objects of type contract that are manipulated during ""event:10156""?",False
+"Are 5 the objects of type supplier order that are manipulated during ""event:10156""?",False
+"Are supplier order, shipment notice the object types that are manipulated during ""event:10020""?",False
+"Are 6 the objects of type supplier order that are manipulated during ""event:10020""?",False
+"Are 1 the objects of type shipment notice that are manipulated during ""event:10020""?",False
+"Are service order, service order the object types that are manipulated during ""event:10067""?",False
+"Are 5 the objects of type service order that are manipulated during ""event:10067""?",False
+"Are compliance document, delivery note the object types that are manipulated during ""event:10132""?",False
+"Are 1 the objects of type compliance document that are manipulated during ""event:10132""?",False
+"Are 7 the objects of type delivery note that are manipulated during ""event:10132""?",False
+"Are expense report, approval request the object types that are manipulated during ""event:10066""?",False
+"Are 3 the objects of type expense report that are manipulated during ""event:10066""?",False
+"Are 9 the objects of type approval request that are manipulated during ""event:10066""?",False
+"Are delivery note, compliance document the object types that are manipulated during ""event:10156""?",False
+"Are 4 the objects of type delivery note that are manipulated during ""event:10156""?",False
+"Are 3 the objects of type compliance document that are manipulated during ""event:10156""?",False
+"Are timesheet, forecast the object types that are manipulated during ""event:10024""?",False
+"Are 1 the objects of type timesheet that are manipulated during ""event:10024""?",False
+"Are 2 the objects of type forecast that are manipulated during ""event:10024""?",False
+"Are approval request, approval request the object types that are manipulated during ""event:10157""?",False
+"Are 7 the objects of type approval request that are manipulated during ""event:10157""?",False
+"Are 9 the objects of type approval request that are manipulated during ""event:10157""?",False
+"Are service order, expense report the object types that are manipulated during ""event:10139""?",False
+"Are 7 the objects of type service order that are manipulated during ""event:10139""?",False
+"Are 8 the objects of type expense report that are manipulated during ""event:10139""?",False
+"Are work order, customer order the object types that are manipulated during ""event:1008""?",False
+"Are 3 the objects of type work order that are manipulated during ""event:1008""?",False
+"Are 9 the objects of type customer order that are manipulated during ""event:1008""?",False
+"Are service order, budget the object types that are manipulated during ""event:10131""?",False
+"Are 4 the objects of type service order that are manipulated during ""event:10131""?",False
+"Are 8 the objects of type budget that are manipulated during ""event:10131""?",False
+"Are delivery note, timesheet the object types that are manipulated during ""event:1000""?",False
+"Are 2 the objects of type delivery note that are manipulated during ""event:1000""?",False
+"Are 8 the objects of type timesheet that are manipulated during ""event:1000""?",False
+"Are shipment notice, approval request the object types that are manipulated during ""event:10096""?",False
+"Are 9 the objects of type shipment notice that are manipulated during ""event:10096""?",False
+"Are 2 the objects of type approval request that are manipulated during ""event:10096""?",False
+"Are project plan, expense report the object types that are manipulated during ""event:1012""?",False
+"Are 3 the objects of type project plan that are manipulated during ""event:1012""?",False
+"Are 10 the objects of type expense report that are manipulated during ""event:1012""?",False
+"Are compliance document, forecast the object types that are manipulated during ""event:1012""?",False
+"Are 5 the objects of type compliance document that are manipulated during ""event:1012""?",False
+"Are 4 the objects of type forecast that are manipulated during ""event:1012""?",False
+"Are customer order, shipment notice the object types that are manipulated during ""event:100""?",False
+"Are 1 the objects of type customer order that are manipulated during ""event:100""?",False
+"Are 5 the objects of type shipment notice that are manipulated during ""event:100""?",False
+"Are customer order, shipment notice the object types that are manipulated during ""event:10137""?",False
+"Are 1 the objects of type customer order that are manipulated during ""event:10137""?",False
+"Are 8 the objects of type shipment notice that are manipulated during ""event:10137""?",False
+"Are forecast, service order the object types that are manipulated during ""event:10134""?",False
+"Are 4 the objects of type forecast that are manipulated during ""event:10134""?",False
+"Are 5 the objects of type service order that are manipulated during ""event:10134""?",False
+"Are delivery note, contract the object types that are manipulated during ""event:1009""?",False
+"Are 7 the objects of type delivery note that are manipulated during ""event:1009""?",False
+"Are 6 the objects of type contract that are manipulated during ""event:1009""?",False
+"Are compliance document, work order the object types that are manipulated during ""event:10158""?",False
+"Are 6 the objects of type compliance document that are manipulated during ""event:10158""?",False
+"Are 5 the objects of type work order that are manipulated during ""event:10158""?",False
+"Are compliance document, approval request the object types that are manipulated during ""event:10095""?",False
+"Are 10 the objects of type compliance document that are manipulated during ""event:10095""?",False
+"Are 10 the objects of type approval request that are manipulated during ""event:10095""?",False
+"Are project plan, service order the object types that are manipulated during ""event:10122""?",False
+"Are 5 the objects of type project plan that are manipulated during ""event:10122""?",False
+"Are 2 the objects of type service order that are manipulated during ""event:10122""?",False
+"Are approval request, budget the object types that are manipulated during ""event:1011""?",False
+"Are 9 the objects of type approval request that are manipulated during ""event:1011""?",False
+"Are 8 the objects of type budget that are manipulated during ""event:1011""?",False
+"Are budget, contract the object types that are manipulated during ""event:10088""?",False
+"Are 10 the objects of type budget that are manipulated during ""event:10088""?",False
+"Are 2 the objects of type contract that are manipulated during ""event:10088""?",False
+"Are supplier order, timesheet the object types that are manipulated during ""event:10138""?",False
+"Are 4 the objects of type supplier order that are manipulated during ""event:10138""?",False
+"Are 8 the objects of type timesheet that are manipulated during ""event:10138""?",False
+"Are expense report, approval request the object types that are manipulated during ""event:10028""?",False
+"Are 8 the objects of type expense report that are manipulated during ""event:10028""?",False
+"Are 10 the objects of type approval request that are manipulated during ""event:10028""?",False
+"Are shipment notice, approval request the object types that are manipulated during ""event:10019""?",False
+"Are 8 the objects of type shipment notice that are manipulated during ""event:10019""?",False
+"Are 1 the objects of type approval request that are manipulated during ""event:10019""?",False
+"Are service order, budget the object types that are manipulated during ""event:10087""?",False
+"Are 7 the objects of type service order that are manipulated during ""event:10087""?",False
+"Are 8 the objects of type budget that are manipulated during ""event:10087""?",False
+"Are expense report, compliance document the object types that are manipulated during ""event:10025""?",False
+"Are 9 the objects of type expense report that are manipulated during ""event:10025""?",False
+"Are 4 the objects of type compliance document that are manipulated during ""event:10025""?",False
+"Are contract, project plan the object types that are manipulated during ""event:10018""?",False
+"Are 1 the objects of type contract that are manipulated during ""event:10018""?",False
+"Are 5 the objects of type project plan that are manipulated during ""event:10018""?",False
+"Are contract, service order the object types that are manipulated during ""event:10116""?",False
+"Are 9 the objects of type contract that are manipulated during ""event:10116""?",False
+"Are 6 the objects of type service order that are manipulated during ""event:10116""?",False
+"Are approval request, budget the object types that are manipulated during ""event:10066""?",False
+"Are 7 the objects of type approval request that are manipulated during ""event:10066""?",False
+"Are 3 the objects of type budget that are manipulated during ""event:10066""?",False
+"Are approval request, forecast the object types that are manipulated during ""event:10129""?",False
+"Are 1 the objects of type approval request that are manipulated during ""event:10129""?",False
+"Are 7 the objects of type forecast that are manipulated during ""event:10129""?",False
+"Are approval request, shipment notice the object types that are manipulated during ""event:10130""?",False
+"Are 8 the objects of type approval request that are manipulated during ""event:10130""?",False
+"Are 2 the objects of type shipment notice that are manipulated during ""event:10130""?",False
+"Are service order, shipment notice the object types that are manipulated during ""event:10085""?",False
+"Are 5 the objects of type service order that are manipulated during ""event:10085""?",False
+"Are 4 the objects of type shipment notice that are manipulated during ""event:10085""?",False
+"Are forecast, compliance document the object types that are manipulated during ""event:10092""?",False
+"Are 5 the objects of type forecast that are manipulated during ""event:10092""?",False
+"Are 9 the objects of type compliance document that are manipulated during ""event:10092""?",False
+"Are compliance document, compliance document the object types that are manipulated during ""event:10127""?",False
+"Are 4 the objects of type compliance document that are manipulated during ""event:10127""?",False
+"Are 6 the objects of type compliance document that are manipulated during ""event:10127""?",False
+"Are project plan, service order the object types that are manipulated during ""event:1012""?",False
+"Are 7 the objects of type project plan that are manipulated during ""event:1012""?",False
+"Are 1 the objects of type service order that are manipulated during ""event:1012""?",False
+"Are budget, work order the object types that are manipulated during ""event:10124""?",False
+"Are 9 the objects of type budget that are manipulated during ""event:10124""?",False
+"Are 7 the objects of type work order that are manipulated during ""event:10124""?",False
+"Are budget, forecast the object types that are manipulated during ""event:10169""?",False
+"Are 6 the objects of type budget that are manipulated during ""event:10169""?",False
+"Are 5 the objects of type forecast that are manipulated during ""event:10169""?",False
+"Are supplier order, work order the object types that are manipulated during ""event:10141""?",False
+"Are 9 the objects of type supplier order that are manipulated during ""event:10141""?",False
+"Are 4 the objects of type work order that are manipulated during ""event:10141""?",False
+"Are expense report, project plan the object types that are manipulated during ""event:10079""?",False
+"Are 3 the objects of type expense report that are manipulated during ""event:10079""?",False
+"Are 4 the objects of type project plan that are manipulated during ""event:10079""?",False
+"Are shipment notice, customer order the object types that are manipulated during ""event:10124""?",False
+"Are 4 the objects of type shipment notice that are manipulated during ""event:10124""?",False
+"Are budget, work order the object types that are manipulated during ""event:10156""?",False
+"Are purchase_order,, goods, receipt the object types that are manipulated during ""event:1005""?",False
+"Are 17 the objects of type purchase_order, that are manipulated during ""event:1005""?",False
+"Are 17 the objects of type goods that are manipulated during ""event:1005""?",False
+"Are 12 the objects of type receipt that are manipulated during ""event:1005""?",False
+"Are goods, receipt,, invoice, receipt the object types that are manipulated during ""event:10139""?",False
+"Are 20 the objects of type goods that are manipulated during ""event:10139""?",False
+"Are 19 the objects of type receipt, that are manipulated during ""event:10139""?",False
+"Are 18 the objects of type invoice that are manipulated during ""event:10139""?",False
+"Are 12 the objects of type receipt that are manipulated during ""event:10139""?",False
+"Are purchase_order,, goods, receipt the object types that are manipulated during ""event:10100""?",False
+"Are 14 the objects of type purchase_order, that are manipulated during ""event:10100""?",False
+"Are 13 the objects of type goods that are manipulated during ""event:10100""?",False
+"Are 17 the objects of type receipt that are manipulated during ""event:10100""?",False
+"Are goods, receipt,, invoice, receipt the object types that are manipulated during ""event:10137""?",False
+"Are 14 the objects of type goods that are manipulated during ""event:10137""?",False
+"Are 14 the objects of type receipt, that are manipulated during ""event:10137""?",False
+"Are 14 the objects of type invoice that are manipulated during ""event:10137""?",False
+"Are 18 the objects of type receipt that are manipulated during ""event:10137""?",False
+"Are invoice, receipt,, goods, receipt the object types that are manipulated during ""event:10013""?",False
+"Are 11 the objects of type invoice that are manipulated during ""event:10013""?",False
+"Are 16 the objects of type receipt, that are manipulated during ""event:10013""?",False
+"Are 17 the objects of type goods that are manipulated during ""event:10013""?",False
+"Are 18 the objects of type receipt that are manipulated during ""event:10013""?",False
+"Are 16 the objects of type purchase_order, that are manipulated during ""event:1005""?",False
+"Are 16 the objects of type goods that are manipulated during ""event:1005""?",False
+"Are 11 the objects of type receipt that are manipulated during ""event:1005""?",False
+"Are quotation,, purchase_order the object types that are manipulated during ""event:10021""?",False
+"Are 14 the objects of type quotation, that are manipulated during ""event:10021""?",False
+"Are 16 the objects of type purchase_order that are manipulated during ""event:10021""?",False
+"Are invoice, receipt,, goods, receipt the object types that are manipulated during ""event:10133""?",False
+"Are 15 the objects of type invoice that are manipulated during ""event:10133""?",False
+"Are 18 the objects of type receipt, that are manipulated during ""event:10133""?",False
+"Are 15 the objects of type goods that are manipulated during ""event:10133""?",False
+"Are 19 the objects of type receipt that are manipulated during ""event:10133""?",False
+"Are goods, receipt,, invoice, receipt the object types that are manipulated during ""event:10127""?",False
+"Are 17 the objects of type goods that are manipulated during ""event:10127""?",False
+"Are 15 the objects of type receipt, that are manipulated during ""event:10127""?",False
+"Are 19 the objects of type invoice that are manipulated during ""event:10127""?",False
+"Are 16 the objects of type receipt that are manipulated during ""event:10127""?",False
+"Are quotation,, purchase_order the object types that are manipulated during ""event:101""?",False
+"Are 18 the objects of type quotation, that are manipulated during ""event:101""?",False
+"Are 16 the objects of type purchase_order that are manipulated during ""event:101""?",False
+"Are invoice, receipt,, goods, receipt the object types that are manipulated during ""event:10162""?",False
+"Are 12 the objects of type invoice that are manipulated during ""event:10162""?",False
+"Are 17 the objects of type receipt, that are manipulated during ""event:10162""?",False
+"Are 15 the objects of type goods that are manipulated during ""event:10162""?",False
+"Are 14 the objects of type receipt that are manipulated during ""event:10162""?",False
+"Are purchase_order,, goods, receipt the object types that are manipulated during ""event:10067""?",False
+"Are 13 the objects of type purchase_order, that are manipulated during ""event:10067""?",False
+"Are 11 the objects of type goods that are manipulated during ""event:10067""?",False
+"Are 19 the objects of type receipt that are manipulated during ""event:10067""?",False
+"Are purchase_order,, goods, receipt the object types that are manipulated during ""event:10141""?",False
+"Are 10 the objects of type purchase_order, that are manipulated during ""event:10141""?",False
+"Are 16 the objects of type goods that are manipulated during ""event:10141""?",False
+"Are 13 the objects of type receipt that are manipulated during ""event:10141""?",False
+"Are payment,, goods, receipt,, purchase_order,, invoice, receipt the object types that are manipulated during ""event:1002""?",False
+"Are 16 the objects of type payment, that are manipulated during ""event:1002""?",False
+"Are 12 the objects of type goods that are manipulated during ""event:1002""?",False
+"Are 17 the objects of type receipt, that are manipulated during ""event:1002""?",False
+"Are 14 the objects of type purchase_order, that are manipulated during ""event:1002""?",False
+"Are 12 the objects of type invoice that are manipulated during ""event:1002""?",False
+"Are 14 the objects of type receipt that are manipulated during ""event:1002""?",False
+"Are purchase_order,, quotation the object types that are manipulated during ""event:10026""?",False
+"Are 15 the objects of type purchase_order, that are manipulated during ""event:10026""?",False
+"Are 17 the objects of type quotation that are manipulated during ""event:10026""?",False
+"Are purchase_order,, quotation the object types that are manipulated during ""event:10099""?",False
+"Are 15 the objects of type purchase_order, that are manipulated during ""event:10099""?",False
+"Are 19 the objects of type quotation that are manipulated during ""event:10099""?",False
+"Are goods, receipt,, invoice, receipt the object types that are manipulated during ""event:10113""?",False
+"Are 15 the objects of type goods that are manipulated during ""event:10113""?",False
+"Are 20 the objects of type receipt, that are manipulated during ""event:10113""?",False
+"Are 11 the objects of type invoice that are manipulated during ""event:10113""?",False
+"Are 20 the objects of type receipt that are manipulated during ""event:10113""?",False
+"Are invoice, receipt,, goods, receipt the object types that are manipulated during ""event:10129""?",False
+"Are 13 the objects of type invoice that are manipulated during ""event:10129""?",False
+"Are 18 the objects of type receipt, that are manipulated during ""event:10129""?",False
+"Are 18 the objects of type goods that are manipulated during ""event:10129""?",False
+"Are 12 the objects of type receipt that are manipulated during ""event:10129""?",False
+"Are goods, receipt,, payment,, invoice, receipt,, purchase_order the object types that are manipulated during ""event:10019""?",False
+"Are 15 the objects of type goods that are manipulated during ""event:10019""?",False
+"Are 11 the objects of type receipt, that are manipulated during ""event:10019""?",False
+"Are 14 the objects of type payment, that are manipulated during ""event:10019""?",False
+"Are 12 the objects of type invoice that are manipulated during ""event:10019""?",False
+"Are 12 the objects of type receipt, that are manipulated during ""event:10019""?",False
+"Are 12 the objects of type purchase_order that are manipulated during ""event:10019""?",False
+"Are 16 the objects of type purchase_order, that are manipulated during ""event:10141""?",False
+"Are 20 the objects of type goods that are manipulated during ""event:10141""?",False
+"Are goods, receipt,, purchase_order the object types that are manipulated during ""event:10030""?",False
+"Are 19 the objects of type goods that are manipulated during ""event:10030""?",False
+"Are 10 the objects of type receipt, that are manipulated during ""event:10030""?",False
+"Are 20 the objects of type purchase_order that are manipulated during ""event:10030""?",False
+"Are goods, receipt,, purchase_order the object types that are manipulated during ""event:1013""?",False
+"Are 13 the objects of type goods that are manipulated during ""event:1013""?",False
+"Are 19 the objects of type receipt, that are manipulated during ""event:1013""?",False
+"Are 10 the objects of type purchase_order that are manipulated during ""event:1013""?",False
+"Are purchase_order,, goods, receipt the object types that are manipulated during ""event:1003""?",False
+"Are 15 the objects of type purchase_order, that are manipulated during ""event:1003""?",False
+"Are 15 the objects of type goods that are manipulated during ""event:1003""?",False
+"Are 13 the objects of type receipt that are manipulated during ""event:1003""?",False
+"Are goods, receipt,, invoice, receipt the object types that are manipulated during ""event:10093""?",False
+"Are 15 the objects of type goods that are manipulated during ""event:10093""?",False
+"Are 12 the objects of type receipt, that are manipulated during ""event:10093""?",False
+"Are 11 the objects of type invoice that are manipulated during ""event:10093""?",False
+"Are 20 the objects of type receipt that are manipulated during ""event:10093""?",False
+"Are 12 the objects of type quotation, that are manipulated during ""event:101""?",False
+"Are 15 the objects of type purchase_order that are manipulated during ""event:101""?",False
+"Are quotation,, purchase_requisition the object types that are manipulated during ""event:10029""?",False
+"Are 19 the objects of type quotation, that are manipulated during ""event:10029""?",False
+"Are 18 the objects of type purchase_requisition that are manipulated during ""event:10029""?",False
+"Are quotation,, purchase_order the object types that are manipulated during ""event:10097""?",False
+"Are 10 the objects of type quotation, that are manipulated during ""event:10097""?",False
+"Are 17 the objects of type purchase_order that are manipulated during ""event:10097""?",False
+"Are purchase_order,, goods, receipt the object types that are manipulated during ""event:10076""?",False
+"Are 14 the objects of type purchase_order, that are manipulated during ""event:10076""?",False
+"Are 10 the objects of type goods that are manipulated during ""event:10076""?",False
+"Are 14 the objects of type receipt that are manipulated during ""event:10076""?",False
+"Are invoice, receipt,, goods, receipt the object types that are manipulated during ""event:10157""?",False
+"Are 16 the objects of type invoice that are manipulated during ""event:10157""?",False
+"Are 13 the objects of type receipt, that are manipulated during ""event:10157""?",False
+"Are 17 the objects of type goods that are manipulated during ""event:10157""?",False
+"Are 10 the objects of type receipt that are manipulated during ""event:10157""?",False
+"Are goods, receipt,, purchase_order the object types that are manipulated during ""event:10071""?",False
+"Are 19 the objects of type goods that are manipulated during ""event:10071""?",False
+"Are 17 the objects of type receipt, that are manipulated during ""event:10071""?",False
+"Are 12 the objects of type purchase_order that are manipulated during ""event:10071""?",False
+"Are purchase_order,, quotation the object types that are manipulated during ""event:100""?",False
+"Are 16 the objects of type purchase_order, that are manipulated during ""event:100""?",False
+"Are 16 the objects of type quotation that are manipulated during ""event:100""?",False
+"Are quotation,, purchase_order the object types that are manipulated during ""event:10130""?",False
+"Are 12 the objects of type quotation, that are manipulated during ""event:10130""?",False
+"Are 17 the objects of type purchase_order that are manipulated during ""event:10130""?",False
+"Are purchase_order,, goods, receipt the object types that are manipulated during ""event:10066""?",False
+"Are 15 the objects of type purchase_order, that are manipulated during ""event:10066""?",False
+"Are 10 the objects of type goods that are manipulated during ""event:10066""?",False
+"Are 20 the objects of type receipt that are manipulated during ""event:10066""?",False
+"Are goods, receipt,, invoice, receipt the object types that are manipulated during ""event:10160""?",False
+"Are 20 the objects of type goods that are manipulated during ""event:10160""?",False
+"Are 12 the objects of type receipt, that are manipulated during ""event:10160""?",False
+"Are 19 the objects of type invoice that are manipulated during ""event:10160""?",False
+"Are 13 the objects of type receipt that are manipulated during ""event:10160""?",False
+"Are quotation,, purchase_order the object types that are manipulated during ""event:10086""?",False
+"Are 12 the objects of type quotation, that are manipulated during ""event:10086""?",False
+"Are 17 the objects of type purchase_order that are manipulated during ""event:10086""?",False
+"Are goods, receipt,, invoice, receipt the object types that are manipulated during ""event:10114""?",False
+"Are 17 the objects of type goods that are manipulated during ""event:10114""?",False
+"Are 12 the objects of type receipt, that are manipulated during ""event:10114""?",False
+"Are 14 the objects of type invoice that are manipulated during ""event:10114""?",False
+"Are 12 the objects of type receipt that are manipulated during ""event:10114""?",False
+"Are purchase_order,, quotation the object types that are manipulated during ""event:10015""?",False
+"Are 16 the objects of type purchase_order, that are manipulated during ""event:10015""?",False
+"Are 15 the objects of type quotation that are manipulated during ""event:10015""?",False
+"Are goods, receipt,, invoice, receipt the object types that are manipulated during ""event:10158""?",False
+"Are 17 the objects of type goods that are manipulated during ""event:10158""?",False
+"Are 14 the objects of type receipt, that are manipulated during ""event:10158""?",False
+"Are purchase_order,, goods, receipt the object types that are manipulated during ""event:1000""?",False
+"Are purchase_order,, goods, receipt,, invoice, receipt,, payment the object types that are manipulated during ""event:10028""?",False
+"Are goods, receipt,, invoice, receipt the object types that are manipulated during ""event:10116""?",False
+"Are purchase_order,, goods, receipt the object types that are manipulated during ""event:10122""?",False

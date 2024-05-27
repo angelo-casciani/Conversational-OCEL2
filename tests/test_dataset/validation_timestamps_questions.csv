@@ -1,241 +1,481 @@
 question,answer
 "Are Create Request for Quotation, Create Request for Quotation the activities happening in the ocel:timestamp ""2022-04-05 21:53:00+00:00""?",True
-"Are purchase_requisition:0:pr_trigger_0, quotation:0 the ocel:oid manipulated in the ocel:timestamp ""2022-04-05 21:53:00+00:00""?",True
+"Are purchase_requisition:0:pr_trigger_0, quotation:0 the ocel:oid in the ocel:timestamp ""2022-04-05 21:53:00+00:00""?",True
+"Are Submit Timesheet, Review Expense Report the activities happening in the ocel:timestamp ""2022-04-05 21:53:00+00:00""?",False
+"Are purchase_requisition:79554:pr_trigger_79554, quotation:79554 the ocel:oid in the ocel:timestamp ""2022-04-05 21:53:00+00:00""?",False
 "Are Create Purchase Order, Create Purchase Order the activities happening in the ocel:timestamp ""2022-04-07 16:27:00+00:00""?",True
-"Are purchase_order:8, quotation:3 the ocel:oid manipulated in the ocel:timestamp ""2022-04-07 16:27:00+00:00""?",True
+"Are purchase_order:8, quotation:3 the ocel:oid in the ocel:timestamp ""2022-04-07 16:27:00+00:00""?",True
+"Are Close Service Order, Submit Expense Report the activities happening in the ocel:timestamp ""2022-04-07 16:27:00+00:00""?",False
+"Are purchase_order:18528, quotation:18528 the ocel:oid in the ocel:timestamp ""2022-04-07 16:27:00+00:00""?",False
 "Are Create Purchase Order, Create Purchase Order the activities happening in the ocel:timestamp ""2022-04-09 11:27:00+00:00""?",True
-"Are quotation:4, purchase_order:5 the ocel:oid manipulated in the ocel:timestamp ""2022-04-09 11:27:00+00:00""?",True
+"Are quotation:4, purchase_order:5 the ocel:oid in the ocel:timestamp ""2022-04-09 11:27:00+00:00""?",True
+"Are Close Project, Prepare Budget the activities happening in the ocel:timestamp ""2022-04-09 11:27:00+00:00""?",False
+"Are quotation:46434, purchase_order:46434 the ocel:oid in the ocel:timestamp ""2022-04-09 11:27:00+00:00""?",False
 "Are Create Purchase Order, Create Purchase Order the activities happening in the ocel:timestamp ""2022-04-11 14:56:00+00:00""?",True
-"Are quotation:8, purchase_order:12 the ocel:oid manipulated in the ocel:timestamp ""2022-04-11 14:56:00+00:00""?",True
+"Are quotation:8, purchase_order:12 the ocel:oid in the ocel:timestamp ""2022-04-11 14:56:00+00:00""?",True
+"Are Terminate Contract, Close Service Order the activities happening in the ocel:timestamp ""2022-04-11 14:56:00+00:00""?",False
+"Are quotation:51046, purchase_order:5104651046 the ocel:oid in the ocel:timestamp ""2022-04-11 14:56:00+00:00""?",False
 "Are Perform Two-Way Match, Perform Two-Way Match the activities happening in the ocel:timestamp ""2022-04-13 07:59:00+00:00""?",True
-"Are goods receipt:0, invoice receipt:2 the ocel:oid manipulated in the ocel:timestamp ""2022-04-13 07:59:00+00:00""?",True
+"Are goods receipt:0, invoice receipt:2 the ocel:oid in the ocel:timestamp ""2022-04-13 07:59:00+00:00""?",True
+"Are Close Service Order, Review Expense Report the activities happening in the ocel:timestamp ""2022-04-13 07:59:00+00:00""?",False
+"Are goods receipt:97546, invoice receipt:97546 the ocel:oid in the ocel:timestamp ""2022-04-13 07:59:00+00:00""?",False
 "Are Create Request for Quotation, Create Request for Quotation the activities happening in the ocel:timestamp ""2022-04-14 06:05:00+00:00""?",True
-"Are purchase_requisition:8:pr_trigger_8, quotation:7 the ocel:oid manipulated in the ocel:timestamp ""2022-04-14 06:05:00+00:00""?",True
+"Are purchase_requisition:8:pr_trigger_8, quotation:7 the ocel:oid in the ocel:timestamp ""2022-04-14 06:05:00+00:00""?",True
+"Are Initiate Project, Prepare Budget the activities happening in the ocel:timestamp ""2022-04-14 06:05:00+00:00""?",False
+"Are purchase_requisition:75900:pr_trigger_75900, quotation:75900 the ocel:oid in the ocel:timestamp ""2022-04-14 06:05:00+00:00""?",False
 "Are Perform Two-Way Match, Perform Two-Way Match the activities happening in the ocel:timestamp ""2022-04-15 14:04:00+00:00""?",True
-"Are goods receipt:3, invoice receipt:3 the ocel:oid manipulated in the ocel:timestamp ""2022-04-15 14:04:00+00:00""?",True
+"Are goods receipt:3, invoice receipt:3 the ocel:oid in the ocel:timestamp ""2022-04-15 14:04:00+00:00""?",True
+"Are Update Inventory, Conduct Audit the activities happening in the ocel:timestamp ""2022-04-15 14:04:00+00:00""?",False
+"Are goods receipt:34572, invoice receipt:34572 the ocel:oid in the ocel:timestamp ""2022-04-15 14:04:00+00:00""?",False
 "Are Approve Purchase Order, Approve Purchase Order the activities happening in the ocel:timestamp ""2022-04-16 10:56:00+00:00""?",True
-"Are quotation:4, purchase_order:5 the ocel:oid manipulated in the ocel:timestamp ""2022-04-16 10:56:00+00:00""?",True
+"Are quotation:4, purchase_order:5 the ocel:oid in the ocel:timestamp ""2022-04-16 10:56:00+00:00""?",True
+"Are Review Expense Report, Issue Refund the activities happening in the ocel:timestamp ""2022-04-16 10:56:00+00:00""?",False
+"Are quotation:63842, purchase_order:63842 the ocel:oid in the ocel:timestamp ""2022-04-16 10:56:00+00:00""?",False
 "Are Perform Two-Way Match, Perform Two-Way Match, Perform Two-Way Match, Perform Two-Way Match the activities happening in the ocel:timestamp ""2022-04-18 07:10:00+00:00""?",True
-"Are invoice receipt:4, goods receipt:6, invoice receipt:2, goods receipt:1 the ocel:oid manipulated in the ocel:timestamp ""2022-04-18 07:10:00+00:00""?",True
+"Are invoice receipt:4, goods receipt:6, invoice receipt:2, goods receipt:1 the ocel:oid in the ocel:timestamp ""2022-04-18 07:10:00+00:00""?",True
+"Are Renew Contract, Approve Service Order the activities happening in the ocel:timestamp ""2022-04-18 07:10:00+00:00""?",False
+"Are invoice receipt:63773, goods receipt:63773, invoice receipt:63773, goods receipt:63773 the ocel:oid in the ocel:timestamp ""2022-04-18 07:10:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-04-19 03:10:00+00:00""?",True
-"Are goods receipt:11, purchase_order:5 the ocel:oid manipulated in the ocel:timestamp ""2022-04-19 03:10:00+00:00""?",True
+"Are goods receipt:11, purchase_order:5 the ocel:oid in the ocel:timestamp ""2022-04-19 03:10:00+00:00""?",True
+"Are Conduct Audit, Renew Contract the activities happening in the ocel:timestamp ""2022-04-19 03:10:00+00:00""?",False
+"Are goods receipt:5027550275, purchase_order:50275 the ocel:oid in the ocel:timestamp ""2022-04-19 03:10:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-04-20 18:26:00+00:00""?",True
-"Are purchase_order:8, goods receipt:5 the ocel:oid manipulated in the ocel:timestamp ""2022-04-20 18:26:00+00:00""?",True
+"Are purchase_order:8, goods receipt:5 the ocel:oid in the ocel:timestamp ""2022-04-20 18:26:00+00:00""?",True
+"Are Complete Project Milestone, Update Inventory the activities happening in the ocel:timestamp ""2022-04-20 18:26:00+00:00""?",False
+"Are purchase_order:6437, goods receipt:6437 the ocel:oid in the ocel:timestamp ""2022-04-20 18:26:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-04-21 17:13:00+00:00""?",True
-"Are purchase_order:5, goods receipt:12 the ocel:oid manipulated in the ocel:timestamp ""2022-04-21 17:13:00+00:00""?",True
+"Are purchase_order:5, goods receipt:12 the ocel:oid in the ocel:timestamp ""2022-04-21 17:13:00+00:00""?",True
+"Are Complete Project Milestone, Terminate Contract the activities happening in the ocel:timestamp ""2022-04-21 17:13:00+00:00""?",False
+"Are purchase_order:22871, goods receipt:2287122871 the ocel:oid in the ocel:timestamp ""2022-04-21 17:13:00+00:00""?",False
 "Are Create Purchase Order, Create Purchase Order the activities happening in the ocel:timestamp ""2022-04-23 00:41:00+00:00""?",True
-"Are purchase_order:25, quotation:18 the ocel:oid manipulated in the ocel:timestamp ""2022-04-23 00:41:00+00:00""?",True
+"Are purchase_order:25, quotation:18 the ocel:oid in the ocel:timestamp ""2022-04-23 00:41:00+00:00""?",True
+"Are Review Expense Report, Conduct Audit the activities happening in the ocel:timestamp ""2022-04-23 00:41:00+00:00""?",False
+"Are purchase_order:84188418, quotation:84188418 the ocel:oid in the ocel:timestamp ""2022-04-23 00:41:00+00:00""?",False
 "Are Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-04-24 14:58:00+00:00""?",True
-"Are payment:1, invoice receipt:4, goods receipt:6, purchase_order:9 the ocel:oid manipulated in the ocel:timestamp ""2022-04-24 14:58:00+00:00""?",True
+"Are payment:1, invoice receipt:4, goods receipt:6, purchase_order:9 the ocel:oid in the ocel:timestamp ""2022-04-24 14:58:00+00:00""?",True
+"Are Submit Expense Report, Update Inventory the activities happening in the ocel:timestamp ""2022-04-24 14:58:00+00:00""?",False
+"Are payment:94257, invoice receipt:94257, goods receipt:94257, purchase_order:94257 the ocel:oid in the ocel:timestamp ""2022-04-24 14:58:00+00:00""?",False
 "Are Create Invoice Receipt, Create Invoice Receipt the activities happening in the ocel:timestamp ""2022-04-25 12:06:00+00:00""?",True
-"Are invoice receipt:13, goods receipt:21 the ocel:oid manipulated in the ocel:timestamp ""2022-04-25 12:06:00+00:00""?",True
+"Are invoice receipt:13, goods receipt:21 the ocel:oid in the ocel:timestamp ""2022-04-25 12:06:00+00:00""?",True
+"Are Create Contract, Approve Project the activities happening in the ocel:timestamp ""2022-04-25 12:06:00+00:00""?",False
+"Are invoice receipt:7714977149, goods receipt:7714977149 the ocel:oid in the ocel:timestamp ""2022-04-25 12:06:00+00:00""?",False
 "Are Approve Purchase Requisition, Approve Purchase Requisition, Approve Purchase Requisition, Approve Purchase Requisition the activities happening in the ocel:timestamp ""2022-04-26 08:48:00+00:00""?",True
-"Are purchase_requisition:22:pr_trigger_22, material:53, material:52, material:54 the ocel:oid manipulated in the ocel:timestamp ""2022-04-26 08:48:00+00:00""?",True
+"Are purchase_requisition:22:pr_trigger_22, material:53, material:52, material:54 the ocel:oid in the ocel:timestamp ""2022-04-26 08:48:00+00:00""?",True
+"Are Renew Contract, Conduct Audit the activities happening in the ocel:timestamp ""2022-04-26 08:48:00+00:00""?",False
+"Are purchase_requisition:9856598565:pr_trigger_9856598565, material:9856598565, material:9856598565, material:9856598565 the ocel:oid in the ocel:timestamp ""2022-04-26 08:48:00+00:00""?",False
 "Are Create Purchase Requisition, Create Purchase Requisition the activities happening in the ocel:timestamp ""2022-04-27 11:55:00+00:00""?",True
-"Are purchase_requisition:28:pr_trigger_28, material:68 the ocel:oid manipulated in the ocel:timestamp ""2022-04-27 11:55:00+00:00""?",True
+"Are purchase_requisition:28:pr_trigger_28, material:68 the ocel:oid in the ocel:timestamp ""2022-04-27 11:55:00+00:00""?",True
+"Are Conduct Audit, Close Service Order the activities happening in the ocel:timestamp ""2022-04-27 11:55:00+00:00""?",False
+"Are purchase_requisition:86458645:pr_trigger_86458645, material:86458645 the ocel:oid in the ocel:timestamp ""2022-04-27 11:55:00+00:00""?",False
 "Are Create Invoice Receipt, Create Invoice Receipt the activities happening in the ocel:timestamp ""2022-04-28 09:53:00+00:00""?",True
-"Are invoice receipt:15, goods receipt:20 the ocel:oid manipulated in the ocel:timestamp ""2022-04-28 09:53:00+00:00""?",True
+"Are invoice receipt:15, goods receipt:20 the ocel:oid in the ocel:timestamp ""2022-04-28 09:53:00+00:00""?",True
+"Are Conduct Audit, Issue Refund the activities happening in the ocel:timestamp ""2022-04-28 09:53:00+00:00""?",False
+"Are invoice receipt:5484954849, goods receipt:5484954849 the ocel:oid in the ocel:timestamp ""2022-04-28 09:53:00+00:00""?",False
 "Are Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-04-28 22:16:00+00:00""?",True
-"Are invoice receipt:3, purchase_order:4, goods receipt:3, payment:0 the ocel:oid manipulated in the ocel:timestamp ""2022-04-28 22:16:00+00:00""?",True
+"Are invoice receipt:3, purchase_order:4, goods receipt:3, payment:0 the ocel:oid in the ocel:timestamp ""2022-04-28 22:16:00+00:00""?",True
+"Are Close Project, Approve Budget the activities happening in the ocel:timestamp ""2022-04-28 22:16:00+00:00""?",False
+"Are invoice receipt:33366, purchase_order:33366, goods receipt:33366, payment:33366 the ocel:oid in the ocel:timestamp ""2022-04-28 22:16:00+00:00""?",False
 "Are Create Purchase Requisition, Create Purchase Requisition the activities happening in the ocel:timestamp ""2022-04-29 09:31:00+00:00""?",True
-"Are material:79, purchase_requisition:33:pr_trigger_33 the ocel:oid manipulated in the ocel:timestamp ""2022-04-29 09:31:00+00:00""?",True
+"Are material:79, purchase_requisition:33:pr_trigger_33 the ocel:oid in the ocel:timestamp ""2022-04-29 09:31:00+00:00""?",True
+"Are Submit Timesheet, Approve Timesheet the activities happening in the ocel:timestamp ""2022-04-29 09:31:00+00:00""?",False
+"Are material:5929559295, purchase_requisition:5929559295:pr_trigger_5929559295 the ocel:oid in the ocel:timestamp ""2022-04-29 09:31:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-04-29 23:34:00+00:00""?",True
-"Are purchase_order:11, goods receipt:24 the ocel:oid manipulated in the ocel:timestamp ""2022-04-29 23:34:00+00:00""?",True
+"Are purchase_order:11, goods receipt:24 the ocel:oid in the ocel:timestamp ""2022-04-29 23:34:00+00:00""?",True
+"Are Submit Expense Report, Review Expense Report the activities happening in the ocel:timestamp ""2022-04-29 23:34:00+00:00""?",False
+"Are purchase_order:6565665656, goods receipt:6565665656 the ocel:oid in the ocel:timestamp ""2022-04-29 23:34:00+00:00""?",False
 "Are Create Purchase Order, Create Purchase Order the activities happening in the ocel:timestamp ""2022-04-30 15:07:00+00:00""?",True
-"Are purchase_order:29, quotation:19 the ocel:oid manipulated in the ocel:timestamp ""2022-04-30 15:07:00+00:00""?",True
+"Are purchase_order:29, quotation:19 the ocel:oid in the ocel:timestamp ""2022-04-30 15:07:00+00:00""?",True
+"Are Approve Project, Approve Service Order the activities happening in the ocel:timestamp ""2022-04-30 15:07:00+00:00""?",False
+"Are purchase_order:4206242062, quotation:4206242062 the ocel:oid in the ocel:timestamp ""2022-04-30 15:07:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-05-01 16:56:00+00:00""?",True
-"Are purchase_order:26, goods receipt:28 the ocel:oid manipulated in the ocel:timestamp ""2022-05-01 16:56:00+00:00""?",True
+"Are purchase_order:26, goods receipt:28 the ocel:oid in the ocel:timestamp ""2022-05-01 16:56:00+00:00""?",True
+"Are Create Service Order, Sign Contract the activities happening in the ocel:timestamp ""2022-05-01 16:56:00+00:00""?",False
+"Are purchase_order:4094840948, goods receipt:4094840948 the ocel:oid in the ocel:timestamp ""2022-05-01 16:56:00+00:00""?",False
 "Are Approve Purchase Order, Approve Purchase Order the activities happening in the ocel:timestamp ""2022-05-02 14:08:00+00:00""?",True
-"Are quotation:24, purchase_order:38 the ocel:oid manipulated in the ocel:timestamp ""2022-05-02 14:08:00+00:00""?",True
+"Are quotation:24, purchase_order:38 the ocel:oid in the ocel:timestamp ""2022-05-02 14:08:00+00:00""?",True
+"Are Terminate Contract, Terminate Contract the activities happening in the ocel:timestamp ""2022-05-02 14:08:00+00:00""?",False
+"Are quotation:5315953159, purchase_order:5315953159 the ocel:oid in the ocel:timestamp ""2022-05-02 14:08:00+00:00""?",False
 "Are Create Request for Quotation, Create Request for Quotation the activities happening in the ocel:timestamp ""2022-05-02 20:31:00+00:00""?",True
-"Are quotation:31, purchase_requisition:20:pr_trigger_20 the ocel:oid manipulated in the ocel:timestamp ""2022-05-02 20:31:00+00:00""?",True
+"Are quotation:31, purchase_requisition:20:pr_trigger_20 the ocel:oid in the ocel:timestamp ""2022-05-02 20:31:00+00:00""?",True
+"Are Update Inventory, Create Contract the activities happening in the ocel:timestamp ""2022-05-02 20:31:00+00:00""?",False
+"Are quotation:2271022710, purchase_requisition:2271022710:pr_trigger_2271022710 the ocel:oid in the ocel:timestamp ""2022-05-02 20:31:00+00:00""?",False
 "Are Create Purchase Requisition, Create Purchase Requisition, Create Purchase Requisition, Create Purchase Requisition the activities happening in the ocel:timestamp ""2022-05-03 08:12:00+00:00""?",True
-"Are material:89, purchase_requisition:37:pr_trigger_37, material:87, material:88 the ocel:oid manipulated in the ocel:timestamp ""2022-05-03 08:12:00+00:00""?",True
+"Are material:89, purchase_requisition:37:pr_trigger_37, material:87, material:88 the ocel:oid in the ocel:timestamp ""2022-05-03 08:12:00+00:00""?",True
+"Are Review Expense Report, Terminate Contract the activities happening in the ocel:timestamp ""2022-05-03 08:12:00+00:00""?",False
+"Are material:77937793, purchase_requisition:77937793:pr_trigger_77937793, material:77937793, material:77937793 the ocel:oid in the ocel:timestamp ""2022-05-03 08:12:00+00:00""?",False
 "Are Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-05-03 13:58:00+00:00""?",True
-"Are payment:8, purchase_order:18, invoice receipt:15, goods receipt:20 the ocel:oid manipulated in the ocel:timestamp ""2022-05-03 13:58:00+00:00""?",True
+"Are payment:8, purchase_order:18, invoice receipt:15, goods receipt:20 the ocel:oid in the ocel:timestamp ""2022-05-03 13:58:00+00:00""?",True
+"Are Review Expense Report, Conduct Audit the activities happening in the ocel:timestamp ""2022-05-03 13:58:00+00:00""?",False
+"Are payment:32128, purchase_order:3212832128, invoice receipt:3212832128, goods receipt:3212832128 the ocel:oid in the ocel:timestamp ""2022-05-03 13:58:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-05-04 03:58:00+00:00""?",True
-"Are goods receipt:34, purchase_order:22 the ocel:oid manipulated in the ocel:timestamp ""2022-05-04 03:58:00+00:00""?",True
+"Are goods receipt:34, purchase_order:22 the ocel:oid in the ocel:timestamp ""2022-05-04 03:58:00+00:00""?",True
+"Are Complete Project Milestone, Issue Refund the activities happening in the ocel:timestamp ""2022-05-04 03:58:00+00:00""?",False
+"Are goods receipt:5000750007, purchase_order:5000750007 the ocel:oid in the ocel:timestamp ""2022-05-04 03:58:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-05-04 12:00:00+00:00""?",True
-"Are purchase_order:39, goods receipt:37 the ocel:oid manipulated in the ocel:timestamp ""2022-05-04 12:00:00+00:00""?",True
+"Are purchase_order:39, goods receipt:37 the ocel:oid in the ocel:timestamp ""2022-05-04 12:00:00+00:00""?",True
+"Are Complete Project Milestone, Approve Budget the activities happening in the ocel:timestamp ""2022-05-04 12:00:00+00:00""?",False
+"Are purchase_order:1968919689, goods receipt:1968919689 the ocel:oid in the ocel:timestamp ""2022-05-04 12:00:00+00:00""?",False
 "Are Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-05-05 08:01:00+00:00""?",True
-"Are goods receipt:17, payment:9, purchase_order:21, invoice receipt:14 the ocel:oid manipulated in the ocel:timestamp ""2022-05-05 08:01:00+00:00""?",True
+"Are goods receipt:17, payment:9, purchase_order:21, invoice receipt:14 the ocel:oid in the ocel:timestamp ""2022-05-05 08:01:00+00:00""?",True
+"Are Conduct Audit, Create Contract the activities happening in the ocel:timestamp ""2022-05-05 08:01:00+00:00""?",False
+"Are goods receipt:7496574965, payment:74965, purchase_order:7496574965, invoice receipt:7496574965 the ocel:oid in the ocel:timestamp ""2022-05-05 08:01:00+00:00""?",False
 "Are Create Request for Quotation, Create Request for Quotation the activities happening in the ocel:timestamp ""2022-05-05 20:02:00+00:00""?",True
-"Are quotation:32, purchase_requisition:23:pr_trigger_23 the ocel:oid manipulated in the ocel:timestamp ""2022-05-05 20:02:00+00:00""?",True
+"Are quotation:32, purchase_requisition:23:pr_trigger_23 the ocel:oid in the ocel:timestamp ""2022-05-05 20:02:00+00:00""?",True
+"Are Approve Timesheet, Renew Contract the activities happening in the ocel:timestamp ""2022-05-05 20:02:00+00:00""?",False
+"Are quotation:6146361463, purchase_requisition:6146361463:pr_trigger_6146361463 the ocel:oid in the ocel:timestamp ""2022-05-05 20:02:00+00:00""?",False
 "Are Create Invoice Receipt, Create Invoice Receipt the activities happening in the ocel:timestamp ""2022-05-06 09:36:00+00:00""?",True
-"Are goods receipt:33, invoice receipt:39 the ocel:oid manipulated in the ocel:timestamp ""2022-05-06 09:36:00+00:00""?",True
+"Are goods receipt:33, invoice receipt:39 the ocel:oid in the ocel:timestamp ""2022-05-06 09:36:00+00:00""?",True
+"Are Issue Refund, Review Expense Report the activities happening in the ocel:timestamp ""2022-05-06 09:36:00+00:00""?",False
+"Are goods receipt:6589065890, invoice receipt:6589065890 the ocel:oid in the ocel:timestamp ""2022-05-06 09:36:00+00:00""?",False
 "Are Create Purchase Order, Create Purchase Order the activities happening in the ocel:timestamp ""2022-05-06 19:52:00+00:00""?",True
-"Are purchase_order:47, quotation:30 the ocel:oid manipulated in the ocel:timestamp ""2022-05-06 19:52:00+00:00""?",True
+"Are purchase_order:47, quotation:30 the ocel:oid in the ocel:timestamp ""2022-05-06 19:52:00+00:00""?",True
+"Are Complete Project Milestone, Approve Timesheet the activities happening in the ocel:timestamp ""2022-05-06 19:52:00+00:00""?",False
+"Are purchase_order:5998959989, quotation:5998959989 the ocel:oid in the ocel:timestamp ""2022-05-06 19:52:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-05-07 13:00:00+00:00""?",True
-"Are goods receipt:41, purchase_order:31 the ocel:oid manipulated in the ocel:timestamp ""2022-05-07 13:00:00+00:00""?",True
+"Are goods receipt:41, purchase_order:31 the ocel:oid in the ocel:timestamp ""2022-05-07 13:00:00+00:00""?",True
+"Are Issue Refund, Complete Project Milestone the activities happening in the ocel:timestamp ""2022-05-07 13:00:00+00:00""?",False
+"Are goods receipt:3963139631, purchase_order:3963139631 the ocel:oid in the ocel:timestamp ""2022-05-07 13:00:00+00:00""?",False
 "Are Create Request for Quotation, Create Request for Quotation the activities happening in the ocel:timestamp ""2022-05-08 10:12:00+00:00""?",True
-"Are quotation:26, purchase_requisition:27:pr_trigger_27 the ocel:oid manipulated in the ocel:timestamp ""2022-05-08 10:12:00+00:00""?",True
+"Are quotation:26, purchase_requisition:27:pr_trigger_27 the ocel:oid in the ocel:timestamp ""2022-05-08 10:12:00+00:00""?",True
+"Are Review Expense Report, Create Service Order the activities happening in the ocel:timestamp ""2022-05-08 10:12:00+00:00""?",False
+"Are quotation:5355553555, purchase_requisition:5355553555:pr_trigger_5355553555 the ocel:oid in the ocel:timestamp ""2022-05-08 10:12:00+00:00""?",False
 "Are Create Purchase Requisition, Create Purchase Requisition, Create Purchase Requisition, Create Purchase Requisition the activities happening in the ocel:timestamp ""2022-05-09 10:59:00+00:00""?",True
-"Are material:103, material:104, purchase_requisition:43:pr_trigger_43, material:102 the ocel:oid manipulated in the ocel:timestamp ""2022-05-09 10:59:00+00:00""?",True
+"Are material:103, material:104, purchase_requisition:43:pr_trigger_43, material:102 the ocel:oid in the ocel:timestamp ""2022-05-09 10:59:00+00:00""?",True
+"Are Update Inventory, Sign Contract the activities happening in the ocel:timestamp ""2022-05-09 10:59:00+00:00""?",False
+"Are material:826558265582655, material:826558265582655, purchase_requisition:8265582655:pr_trigger_8265582655, material:826558265582655 the ocel:oid in the ocel:timestamp ""2022-05-09 10:59:00+00:00""?",False
 "Are Create Purchase Order, Create Purchase Order the activities happening in the ocel:timestamp ""2022-05-09 21:02:00+00:00""?",True
-"Are quotation:29, purchase_order:56 the ocel:oid manipulated in the ocel:timestamp ""2022-05-09 21:02:00+00:00""?",True
+"Are quotation:29, purchase_order:56 the ocel:oid in the ocel:timestamp ""2022-05-09 21:02:00+00:00""?",True
+"Are Update Inventory, Terminate Contract the activities happening in the ocel:timestamp ""2022-05-09 21:02:00+00:00""?",False
+"Are quotation:5150451504, purchase_order:5150451504 the ocel:oid in the ocel:timestamp ""2022-05-09 21:02:00+00:00""?",False
 "Are Approve Purchase Order, Approve Purchase Order the activities happening in the ocel:timestamp ""2022-05-10 11:28:00+00:00""?",True
-"Are purchase_order:49, quotation:37 the ocel:oid manipulated in the ocel:timestamp ""2022-05-10 11:28:00+00:00""?",True
+"Are purchase_order:49, quotation:37 the ocel:oid in the ocel:timestamp ""2022-05-10 11:28:00+00:00""?",True
+"Are Close Project, Submit Expense Report the activities happening in the ocel:timestamp ""2022-05-10 11:28:00+00:00""?",False
+"Are purchase_order:9573295732, quotation:9573295732 the ocel:oid in the ocel:timestamp ""2022-05-10 11:28:00+00:00""?",False
 "Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-05-10 19:28:00+00:00""?",True
-"Are invoice receipt:30, payment:14, goods receipt:32, purchase_order:30, goods receipt:31, goods receipt:30 the ocel:oid manipulated in the ocel:timestamp ""2022-05-10 19:28:00+00:00""?",True
+"Are invoice receipt:30, payment:14, goods receipt:32, purchase_order:30, goods receipt:31, goods receipt:30 the ocel:oid in the ocel:timestamp ""2022-05-10 19:28:00+00:00""?",True
+"Are Sign Contract, Review Expense Report the activities happening in the ocel:timestamp ""2022-05-10 19:28:00+00:00""?",False
+"Are invoice receipt:6337763377, payment:6337763377, goods receipt:6337763377, purchase_order:6337763377, goods receipt:6337763377, goods receipt:6337763377 the ocel:oid in the ocel:timestamp ""2022-05-10 19:28:00+00:00""?",False
 "Are Perform Two-Way Match, Perform Two-Way Match the activities happening in the ocel:timestamp ""2022-05-11 07:10:00+00:00""?",True
-"Are goods receipt:42, invoice receipt:37 the ocel:oid manipulated in the ocel:timestamp ""2022-05-11 07:10:00+00:00""?",True
+"Are goods receipt:42, invoice receipt:37 the ocel:oid in the ocel:timestamp ""2022-05-11 07:10:00+00:00""?",True
+"Are Renew Contract, Sign Contract the activities happening in the ocel:timestamp ""2022-05-11 07:10:00+00:00""?",False
+"Are goods receipt:1495814958, invoice receipt:1495814958 the ocel:oid in the ocel:timestamp ""2022-05-11 07:10:00+00:00""?",False
 "Are Approve Purchase Order, Approve Purchase Order the activities happening in the ocel:timestamp ""2022-05-11 23:25:00+00:00""?",True
-"Are quotation:29, purchase_order:56 the ocel:oid manipulated in the ocel:timestamp ""2022-05-11 23:25:00+00:00""?",True
+"Are quotation:29, purchase_order:56 the ocel:oid in the ocel:timestamp ""2022-05-11 23:25:00+00:00""?",True
+"Are Update Inventory, Update Inventory the activities happening in the ocel:timestamp ""2022-05-11 23:25:00+00:00""?",False
+"Are quotation:7798477984, purchase_order:7798477984 the ocel:oid in the ocel:timestamp ""2022-05-11 23:25:00+00:00""?",False
 "Are Approve Purchase Order, Approve Purchase Order the activities happening in the ocel:timestamp ""2022-05-12 14:26:00+00:00""?",True
-"Are purchase_order:62, quotation:36 the ocel:oid manipulated in the ocel:timestamp ""2022-05-12 14:26:00+00:00""?",True
+"Are purchase_order:62, quotation:36 the ocel:oid in the ocel:timestamp ""2022-05-12 14:26:00+00:00""?",True
+"Are Submit Timesheet, Approve Project the activities happening in the ocel:timestamp ""2022-05-12 14:26:00+00:00""?",False
+"Are purchase_order:36853685, quotation:36853685 the ocel:oid in the ocel:timestamp ""2022-05-12 14:26:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-05-12 22:56:00+00:00""?",True
-"Are goods receipt:61, purchase_order:47 the ocel:oid manipulated in the ocel:timestamp ""2022-05-12 22:56:00+00:00""?",True
+"Are goods receipt:61, purchase_order:47 the ocel:oid in the ocel:timestamp ""2022-05-12 22:56:00+00:00""?",True
+"Are Complete Project Milestone, Update Inventory the activities happening in the ocel:timestamp ""2022-05-12 22:56:00+00:00""?",False
+"Are goods receipt:2538825388, purchase_order:2538825388 the ocel:oid in the ocel:timestamp ""2022-05-12 22:56:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-05-13 09:34:00+00:00""?",True
-"Are goods receipt:56, purchase_order:42 the ocel:oid manipulated in the ocel:timestamp ""2022-05-13 09:34:00+00:00""?",True
+"Are goods receipt:56, purchase_order:42 the ocel:oid in the ocel:timestamp ""2022-05-13 09:34:00+00:00""?",True
+"Are Conduct Audit, Submit Timesheet the activities happening in the ocel:timestamp ""2022-05-13 09:34:00+00:00""?",False
+"Are goods receipt:3043330433, purchase_order:3043330433 the ocel:oid in the ocel:timestamp ""2022-05-13 09:34:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-05-14 05:32:00+00:00""?",True
-"Are goods receipt:64, purchase_order:61 the ocel:oid manipulated in the ocel:timestamp ""2022-05-14 05:32:00+00:00""?",True
+"Are goods receipt:64, purchase_order:61 the ocel:oid in the ocel:timestamp ""2022-05-14 05:32:00+00:00""?",True
+"Are Issue Refund, Issue Refund the activities happening in the ocel:timestamp ""2022-05-14 05:32:00+00:00""?",False
+"Are goods receipt:9604596045, purchase_order:9604596045 the ocel:oid in the ocel:timestamp ""2022-05-14 05:32:00+00:00""?",False
 "Are Approve Purchase Order, Approve Purchase Order the activities happening in the ocel:timestamp ""2022-05-15 00:41:00+00:00""?",True
-"Are purchase_order:57, quotation:29 the ocel:oid manipulated in the ocel:timestamp ""2022-05-15 00:41:00+00:00""?",True
+"Are purchase_order:57, quotation:29 the ocel:oid in the ocel:timestamp ""2022-05-15 00:41:00+00:00""?",True
+"Are Complete Project Milestone, Prepare Budget the activities happening in the ocel:timestamp ""2022-05-15 00:41:00+00:00""?",False
+"Are purchase_order:9855498554, quotation:9855498554 the ocel:oid in the ocel:timestamp ""2022-05-15 00:41:00+00:00""?",False
 "Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-05-15 23:44:00+00:00""?",True
-"Are goods receipt:43, goods receipt:42, invoice receipt:37, payment:21, purchase_order:25, purchase_order:24 the ocel:oid manipulated in the ocel:timestamp ""2022-05-15 23:44:00+00:00""?",True
+"Are goods receipt:43, goods receipt:42, invoice receipt:37, payment:21, purchase_order:25, purchase_order:24 the ocel:oid in the ocel:timestamp ""2022-05-15 23:44:00+00:00""?",True
+"Are Submit Timesheet, Conduct Audit the activities happening in the ocel:timestamp ""2022-05-15 23:44:00+00:00""?",False
+"Are goods receipt:4303943039, goods receipt:4303943039, invoice receipt:4303943039, payment:4303943039, purchase_order:4303943039, purchase_order:4303943039 the ocel:oid in the ocel:timestamp ""2022-05-15 23:44:00+00:00""?",False
 "Are Create Request for Quotation, Create Request for Quotation the activities happening in the ocel:timestamp ""2022-05-16 08:29:00+00:00""?",True
-"Are quotation:43, purchase_requisition:40:pr_trigger_40 the ocel:oid manipulated in the ocel:timestamp ""2022-05-16 08:29:00+00:00""?",True
+"Are quotation:43, purchase_requisition:40:pr_trigger_40 the ocel:oid in the ocel:timestamp ""2022-05-16 08:29:00+00:00""?",True
+"Are Update Inventory, Approve Service Order the activities happening in the ocel:timestamp ""2022-05-16 08:29:00+00:00""?",False
+"Are quotation:1362413624, purchase_requisition:1362413624:pr_trigger_1362413624 the ocel:oid in the ocel:timestamp ""2022-05-16 08:29:00+00:00""?",False
 "Are Create Purchase Requisition, Create Purchase Requisition the activities happening in the ocel:timestamp ""2022-05-16 15:08:00+00:00""?",True
-"Are purchase_requisition:50:pr_trigger_50, material:118 the ocel:oid manipulated in the ocel:timestamp ""2022-05-16 15:08:00+00:00""?",True
+"Are purchase_requisition:50:pr_trigger_50, material:118 the ocel:oid in the ocel:timestamp ""2022-05-16 15:08:00+00:00""?",True
+"Are Submit Expense Report, Issue Refund the activities happening in the ocel:timestamp ""2022-05-16 15:08:00+00:00""?",False
+"Are purchase_requisition:3788137881:pr_trigger_3788137881, material:378813788137881 the ocel:oid in the ocel:timestamp ""2022-05-16 15:08:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-05-17 02:18:00+00:00""?",True
-"Are goods receipt:71, purchase_order:66 the ocel:oid manipulated in the ocel:timestamp ""2022-05-17 02:18:00+00:00""?",True
+"Are goods receipt:71, purchase_order:66 the ocel:oid in the ocel:timestamp ""2022-05-17 02:18:00+00:00""?",True
+"Are Prepare Budget, Approve Timesheet the activities happening in the ocel:timestamp ""2022-05-17 02:18:00+00:00""?",False
+"Are goods receipt:9690996909, purchase_order:9690996909 the ocel:oid in the ocel:timestamp ""2022-05-17 02:18:00+00:00""?",False
 "Are Create Purchase Order, Create Purchase Order the activities happening in the ocel:timestamp ""2022-05-17 10:47:00+00:00""?",True
-"Are quotation:39, purchase_order:71 the ocel:oid manipulated in the ocel:timestamp ""2022-05-17 10:47:00+00:00""?",True
+"Are quotation:39, purchase_order:71 the ocel:oid in the ocel:timestamp ""2022-05-17 10:47:00+00:00""?",True
+"Are Review Expense Report, Close Service Order the activities happening in the ocel:timestamp ""2022-05-17 10:47:00+00:00""?",False
+"Are quotation:5953559535, purchase_order:5953559535 the ocel:oid in the ocel:timestamp ""2022-05-17 10:47:00+00:00""?",False
 "Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-05-17 18:32:00+00:00""?",True
-"Are goods receipt:54, purchase_order:49, payment:27, goods receipt:53, invoice receipt:62 the ocel:oid manipulated in the ocel:timestamp ""2022-05-17 18:32:00+00:00""?",True
+"Are goods receipt:54, purchase_order:49, payment:27, goods receipt:53, invoice receipt:62 the ocel:oid in the ocel:timestamp ""2022-05-17 18:32:00+00:00""?",True
+"Are Approve Timesheet, Approve Service Order the activities happening in the ocel:timestamp ""2022-05-17 18:32:00+00:00""?",False
+"Are goods receipt:45284528, purchase_order:45284528, payment:45284528, goods receipt:45284528, invoice receipt:45284528 the ocel:oid in the ocel:timestamp ""2022-05-17 18:32:00+00:00""?",False
 "Are Approve Purchase Order, Approve Purchase Order the activities happening in the ocel:timestamp ""2022-05-18 04:45:00+00:00""?",True
-"Are quotation:35, purchase_order:52 the ocel:oid manipulated in the ocel:timestamp ""2022-05-18 04:45:00+00:00""?",True
+"Are quotation:35, purchase_order:52 the ocel:oid in the ocel:timestamp ""2022-05-18 04:45:00+00:00""?",True
+"Are Sign Contract, Review Expense Report the activities happening in the ocel:timestamp ""2022-05-18 04:45:00+00:00""?",False
+"Are quotation:3781037810, purchase_order:3781037810 the ocel:oid in the ocel:timestamp ""2022-05-18 04:45:00+00:00""?",False
 "Are Create Invoice Receipt, Create Invoice Receipt the activities happening in the ocel:timestamp ""2022-05-18 15:35:00+00:00""?",True
-"Are goods receipt:72, invoice receipt:67 the ocel:oid manipulated in the ocel:timestamp ""2022-05-18 15:35:00+00:00""?",True
+"Are goods receipt:72, invoice receipt:67 the ocel:oid in the ocel:timestamp ""2022-05-18 15:35:00+00:00""?",True
+"Are Close Service Order, Update Inventory the activities happening in the ocel:timestamp ""2022-05-18 15:35:00+00:00""?",False
+"Are goods receipt:5500355003, invoice receipt:5500355003 the ocel:oid in the ocel:timestamp ""2022-05-18 15:35:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-05-19 03:45:00+00:00""?",True
-"Are purchase_order:56, goods receipt:67 the ocel:oid manipulated in the ocel:timestamp ""2022-05-19 03:45:00+00:00""?",True
+"Are purchase_order:56, goods receipt:67 the ocel:oid in the ocel:timestamp ""2022-05-19 03:45:00+00:00""?",True
+"Are Initiate Project, Initiate Project the activities happening in the ocel:timestamp ""2022-05-19 03:45:00+00:00""?",False
+"Are purchase_order:3067730677, goods receipt:3067730677 the ocel:oid in the ocel:timestamp ""2022-05-19 03:45:00+00:00""?",False
 "Are Create Invoice Receipt, Create Invoice Receipt the activities happening in the ocel:timestamp ""2022-05-19 11:36:00+00:00""?",True
-"Are invoice receipt:72, goods receipt:66 the ocel:oid manipulated in the ocel:timestamp ""2022-05-19 11:36:00+00:00""?",True
+"Are invoice receipt:72, goods receipt:66 the ocel:oid in the ocel:timestamp ""2022-05-19 11:36:00+00:00""?",True
+"Are Sign Contract, Submit Expense Report the activities happening in the ocel:timestamp ""2022-05-19 11:36:00+00:00""?",False
+"Are invoice receipt:1032910329, goods receipt:1032910329 the ocel:oid in the ocel:timestamp ""2022-05-19 11:36:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-05-19 19:25:00+00:00""?",True
-"Are goods receipt:77, purchase_order:67 the ocel:oid manipulated in the ocel:timestamp ""2022-05-19 19:25:00+00:00""?",True
+"Are goods receipt:77, purchase_order:67 the ocel:oid in the ocel:timestamp ""2022-05-19 19:25:00+00:00""?",True
+"Are Review Expense Report, Sign Contract the activities happening in the ocel:timestamp ""2022-05-19 19:25:00+00:00""?",False
+"Are goods receipt:2842828428, purchase_order:2842828428 the ocel:oid in the ocel:timestamp ""2022-05-19 19:25:00+00:00""?",False
 "Are Create Invoice Receipt, Create Invoice Receipt the activities happening in the ocel:timestamp ""2022-05-20 15:51:00+00:00""?",True
-"Are goods receipt:69, invoice receipt:72 the ocel:oid manipulated in the ocel:timestamp ""2022-05-20 15:51:00+00:00""?",True
+"Are goods receipt:69, invoice receipt:72 the ocel:oid in the ocel:timestamp ""2022-05-20 15:51:00+00:00""?",True
+"Are Approve Timesheet, Conduct Audit the activities happening in the ocel:timestamp ""2022-05-20 15:51:00+00:00""?",False
+"Are goods receipt:8782087820, invoice receipt:8782087820 the ocel:oid in the ocel:timestamp ""2022-05-20 15:51:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-05-21 10:29:00+00:00""?",True
-"Are purchase_order:75, goods receipt:78 the ocel:oid manipulated in the ocel:timestamp ""2022-05-21 10:29:00+00:00""?",True
+"Are purchase_order:75, goods receipt:78 the ocel:oid in the ocel:timestamp ""2022-05-21 10:29:00+00:00""?",True
+"Are Approve Timesheet, Create Service Order the activities happening in the ocel:timestamp ""2022-05-21 10:29:00+00:00""?",False
+"Are purchase_order:3635336353, goods receipt:3635336353 the ocel:oid in the ocel:timestamp ""2022-05-21 10:29:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-05-23 05:12:00+00:00""?",True
-"Are goods receipt:79, purchase_order:75 the ocel:oid manipulated in the ocel:timestamp ""2022-05-23 05:12:00+00:00""?",True
+"Are goods receipt:79, purchase_order:75 the ocel:oid in the ocel:timestamp ""2022-05-23 05:12:00+00:00""?",True
+"Are Close Service Order, Terminate Contract the activities happening in the ocel:timestamp ""2022-05-23 05:12:00+00:00""?",False
+"Are goods receipt:9925599255, purchase_order:9925599255 the ocel:oid in the ocel:timestamp ""2022-05-23 05:12:00+00:00""?",False
 "Are Approve Purchase Requisition, Approve Purchase Requisition, Approve Purchase Requisition, Approve Purchase Requisition the activities happening in the ocel:timestamp ""2022-05-23 12:55:00+00:00""?",True
-"Are material:138, material:137, material:139, purchase_requisition:57:pr_trigger_57 the ocel:oid manipulated in the ocel:timestamp ""2022-05-23 12:55:00+00:00""?",True
+"Are material:138, material:137, material:139, purchase_requisition:57:pr_trigger_57 the ocel:oid in the ocel:timestamp ""2022-05-23 12:55:00+00:00""?",True
+"Are Approve Purchase Requisition, Approve Purchase Requisition, Approve Purchase Requisition, Approve Purchase Requisition, Create Purchase Requisition the activities happening in the ocel:timestamp ""2022-04-24 14:58:00+00:00""?",False
+"Are material:79, purchase_requisition:33:pr_trigger_33 the ocel:oid in the ocel:timestamp ""2022-05-23 12:55:00+00:00""?",False
 "Are Create Invoice Receipt, Create Invoice Receipt the activities happening in the ocel:timestamp ""2022-05-24 02:26:00+00:00""?",True
-"Are goods receipt:75, invoice receipt:76 the ocel:oid manipulated in the ocel:timestamp ""2022-05-24 02:26:00+00:00""?",True
+"Are goods receipt:75, invoice receipt:76 the ocel:oid in the ocel:timestamp ""2022-05-24 02:26:00+00:00""?",True
+"Are Create Invoice Receipt, Create Invoice Receipt, Create Invoice Receipt the activities happening in the ocel:timestamp ""2022-05-17 18:32:00+00:00""?",False
+"Are goods receipt:56, purchase_order:42 the ocel:oid in the ocel:timestamp ""2022-05-24 02:26:00+00:00""?",False
 "Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-05-24 15:28:00+00:00""?",True
-"Are goods receipt:79, goods receipt:78, purchase_order:75, payment:38, invoice receipt:78 the ocel:oid manipulated in the ocel:timestamp ""2022-05-24 15:28:00+00:00""?",True
+"Are goods receipt:79, goods receipt:78, purchase_order:75, payment:38, invoice receipt:78 the ocel:oid in the ocel:timestamp ""2022-05-24 15:28:00+00:00""?",True
+"Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Create Purchase Order the activities happening in the ocel:timestamp ""2022-04-07 16:27:00+00:00""?",False
+"Are invoice receipt:30, payment:14, goods receipt:32, purchase_order:30, goods receipt:31, goods receipt:30 the ocel:oid in the ocel:timestamp ""2022-05-24 15:28:00+00:00""?",False
 "Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-05-24 21:24:00+00:00""?",True
-"Are purchase_order:52, goods receipt:76, goods receipt:75, payment:37, invoice receipt:76 the ocel:oid manipulated in the ocel:timestamp ""2022-05-24 21:24:00+00:00""?",True
+"Are purchase_order:52, goods receipt:76, goods receipt:75, payment:37, invoice receipt:76 the ocel:oid in the ocel:timestamp ""2022-05-24 21:24:00+00:00""?",True
+"Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Approve Purchase Requisition the activities happening in the ocel:timestamp ""2022-05-03 13:58:00+00:00""?",False
+"Are quotation:39, purchase_order:71 the ocel:oid in the ocel:timestamp ""2022-05-24 21:24:00+00:00""?",False
 "Are Create Request for Quotation, Create Request for Quotation the activities happening in the ocel:timestamp ""2022-05-25 10:35:00+00:00""?",True
-"Are quotation:55, purchase_requisition:42:pr_trigger_42 the ocel:oid manipulated in the ocel:timestamp ""2022-05-25 10:35:00+00:00""?",True
+"Are quotation:55, purchase_requisition:42:pr_trigger_42 the ocel:oid in the ocel:timestamp ""2022-05-25 10:35:00+00:00""?",True
+"Are Create Request for Quotation, Create Request for Quotation, Create Invoice Receipt the activities happening in the ocel:timestamp ""2022-05-24 15:28:00+00:00""?",False
+"Are invoice receipt:4, goods receipt:6, invoice receipt:2, goods receipt:1 the ocel:oid in the ocel:timestamp ""2022-05-25 10:35:00+00:00""?",False
 "Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-05-25 17:33:00+00:00""?",True
-"Are goods receipt:61, invoice receipt:57, payment:31, goods receipt:59, goods receipt:62, purchase_order:47, purchase_order:46, purchase_order:48, goods receipt:60, purchase_order:45 the ocel:oid manipulated in the ocel:timestamp ""2022-05-25 17:33:00+00:00""?",True
+"Are goods receipt:61, invoice receipt:57, payment:31, goods receipt:59, goods receipt:62, purchase_order:47, purchase_order:46, purchase_order:48, goods receipt:60, purchase_order:45 the ocel:oid in the ocel:timestamp ""2022-05-25 17:33:00+00:00""?",True
+"Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-05-24 21:24:00+00:00""?",False
+"Are purchase_order:5, goods receipt:12 the ocel:oid in the ocel:timestamp ""2022-05-25 17:33:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-05-26 14:18:00+00:00""?",True
-"Are goods receipt:91, purchase_order:70 the ocel:oid manipulated in the ocel:timestamp ""2022-05-26 14:18:00+00:00""?",True
+"Are goods receipt:91, purchase_order:70 the ocel:oid in the ocel:timestamp ""2022-05-26 14:18:00+00:00""?",True
+"Are Create Goods Receipt, Create Goods Receipt, Create Purchase Requisition the activities happening in the ocel:timestamp ""2022-04-14 06:05:00+00:00""?",False
+"Are invoice receipt:13, goods receipt:21 the ocel:oid in the ocel:timestamp ""2022-05-26 14:18:00+00:00""?",False
 "Are Create Request for Quotation, Create Request for Quotation the activities happening in the ocel:timestamp ""2022-05-27 07:18:00+00:00""?",True
-"Are purchase_requisition:52:pr_trigger_52, quotation:50 the ocel:oid manipulated in the ocel:timestamp ""2022-05-27 07:18:00+00:00""?",True
+"Are purchase_requisition:52:pr_trigger_52, quotation:50 the ocel:oid in the ocel:timestamp ""2022-05-27 07:18:00+00:00""?",True
+"Are Create Request for Quotation, Create Request for Quotation, Approve Purchase Requisition the activities happening in the ocel:timestamp ""2022-05-11 07:10:00+00:00""?",False
+"Are goods receipt:61, invoice receipt:57, payment:31, goods receipt:59, goods receipt:62, purchase_order:47, purchase_order:46, purchase_order:48, goods receipt:60, purchase_order:45 the ocel:oid in the ocel:timestamp ""2022-05-27 07:18:00+00:00""?",False
 "Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-05-27 15:35:00+00:00""?",True
-"Are purchase_order:54, invoice receipt:80, goods receipt:83, goods receipt:82, payment:39, purchase_order:53 the ocel:oid manipulated in the ocel:timestamp ""2022-05-27 15:35:00+00:00""?",True
+"Are purchase_order:54, invoice receipt:80, goods receipt:83, goods receipt:82, payment:39, purchase_order:53 the ocel:oid in the ocel:timestamp ""2022-05-27 15:35:00+00:00""?",True
+"Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Approve Purchase Requisition the activities happening in the ocel:timestamp ""2022-05-19 11:36:00+00:00""?",False
+"Are purchase_order:5, goods receipt:12 the ocel:oid in the ocel:timestamp ""2022-05-27 15:35:00+00:00""?",False
 "Are Create Purchase Order, Create Purchase Order the activities happening in the ocel:timestamp ""2022-05-28 10:35:00+00:00""?",True
-"Are purchase_order:95, quotation:50 the ocel:oid manipulated in the ocel:timestamp ""2022-05-28 10:35:00+00:00""?",True
+"Are purchase_order:95, quotation:50 the ocel:oid in the ocel:timestamp ""2022-05-28 10:35:00+00:00""?",True
+"Are Create Purchase Order, Create Purchase Order, Approve Purchase Order the activities happening in the ocel:timestamp ""2022-04-13 07:59:00+00:00""?",False
+"Are goods receipt:64, purchase_order:61 the ocel:oid in the ocel:timestamp ""2022-05-28 10:35:00+00:00""?",False
 "Are Approve Purchase Order, Approve Purchase Order the activities happening in the ocel:timestamp ""2022-05-29 00:19:00+00:00""?",True
-"Are purchase_order:92, quotation:58 the ocel:oid manipulated in the ocel:timestamp ""2022-05-29 00:19:00+00:00""?",True
+"Are purchase_order:92, quotation:58 the ocel:oid in the ocel:timestamp ""2022-05-29 00:19:00+00:00""?",True
+"Are Approve Purchase Order, Approve Purchase Order, Approve Purchase Requisition the activities happening in the ocel:timestamp ""2022-04-29 23:34:00+00:00""?",False
+"Are goods receipt:56, purchase_order:42 the ocel:oid in the ocel:timestamp ""2022-05-29 00:19:00+00:00""?",False
 "Are Approve Purchase Order, Approve Purchase Order the activities happening in the ocel:timestamp ""2022-05-29 11:41:00+00:00""?",True
-"Are quotation:55, purchase_order:87 the ocel:oid manipulated in the ocel:timestamp ""2022-05-29 11:41:00+00:00""?",True
+"Are quotation:55, purchase_order:87 the ocel:oid in the ocel:timestamp ""2022-05-29 11:41:00+00:00""?",True
+"Are Approve Purchase Order, Approve Purchase Order, Approve Purchase Requisition the activities happening in the ocel:timestamp ""2022-05-10 11:28:00+00:00""?",False
+"Are purchase_order:62, quotation:36 the ocel:oid in the ocel:timestamp ""2022-05-29 11:41:00+00:00""?",False
 "Are Perform Two-Way Match, Perform Two-Way Match the activities happening in the ocel:timestamp ""2022-05-30 09:27:00+00:00""?",True
-"Are goods receipt:84, invoice receipt:87 the ocel:oid manipulated in the ocel:timestamp ""2022-05-30 09:27:00+00:00""?",True
+"Are goods receipt:84, invoice receipt:87 the ocel:oid in the ocel:timestamp ""2022-05-30 09:27:00+00:00""?",True
+"Are Perform Two-Way Match, Perform Two-Way Match, Execute Payment the activities happening in the ocel:timestamp ""2022-05-16 08:29:00+00:00""?",False
+"Are goods receipt:11, purchase_order:5 the ocel:oid in the ocel:timestamp ""2022-05-30 09:27:00+00:00""?",False
 "Are Create Purchase Requisition, Create Purchase Requisition, Create Purchase Requisition, Create Purchase Requisition the activities happening in the ocel:timestamp ""2022-05-30 13:05:00+00:00""?",True
-"Are material:160, material:159, purchase_requisition:68:pr_trigger_68, material:161 the ocel:oid manipulated in the ocel:timestamp ""2022-05-30 13:05:00+00:00""?",True
+"Are material:160, material:159, purchase_requisition:68:pr_trigger_68, material:161 the ocel:oid in the ocel:timestamp ""2022-05-30 13:05:00+00:00""?",True
+"Are Create Purchase Requisition, Create Purchase Requisition, Create Purchase Requisition, Create Purchase Requisition, Create Invoice Receipt the activities happening in the ocel:timestamp ""2022-05-05 20:02:00+00:00""?",False
+"Are purchase_requisition:0:pr_trigger_0, quotation:0 the ocel:oid in the ocel:timestamp ""2022-05-30 13:05:00+00:00""?",False
 "Are Approve Purchase Order, Approve Purchase Order the activities happening in the ocel:timestamp ""2022-05-30 23:19:00+00:00""?",True
-"Are purchase_order:95, quotation:50 the ocel:oid manipulated in the ocel:timestamp ""2022-05-30 23:19:00+00:00""?",True
+"Are purchase_order:95, quotation:50 the ocel:oid in the ocel:timestamp ""2022-05-30 23:19:00+00:00""?",True
+"Are Approve Purchase Order, Approve Purchase Order, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-05-27 07:18:00+00:00""?",False
+"Are goods receipt:54, purchase_order:49, payment:27, goods receipt:53, invoice receipt:62 the ocel:oid in the ocel:timestamp ""2022-05-30 23:19:00+00:00""?",False
 "Are Approve Purchase Order, Approve Purchase Order the activities happening in the ocel:timestamp ""2022-05-31 11:34:00+00:00""?",True
-"Are purchase_order:103, quotation:63 the ocel:oid manipulated in the ocel:timestamp ""2022-05-31 11:34:00+00:00""?",True
+"Are purchase_order:103, quotation:63 the ocel:oid in the ocel:timestamp ""2022-05-31 11:34:00+00:00""?",True
+"Are Approve Purchase Order, Approve Purchase Order, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-05-30 13:05:00+00:00""?",False
+"Are quotation:4, purchase_order:5 the ocel:oid in the ocel:timestamp ""2022-05-31 11:34:00+00:00""?",False
 "Are Create Purchase Requisition, Create Purchase Requisition, Create Purchase Requisition, Create Purchase Requisition the activities happening in the ocel:timestamp ""2022-05-31 21:20:00+00:00""?",True
-"Are purchase_requisition:71:pr_trigger_71, material:169, material:168, material:167 the ocel:oid manipulated in the ocel:timestamp ""2022-05-31 21:20:00+00:00""?",True
+"Are purchase_requisition:71:pr_trigger_71, material:169, material:168, material:167 the ocel:oid in the ocel:timestamp ""2022-05-31 21:20:00+00:00""?",True
+"Are Create Purchase Requisition, Create Purchase Requisition, Create Purchase Requisition, Create Purchase Requisition, Create Request for Quotation the activities happening in the ocel:timestamp ""2022-04-30 15:07:00+00:00""?",False
+"Are quotation:32, purchase_requisition:23:pr_trigger_23 the ocel:oid in the ocel:timestamp ""2022-05-31 21:20:00+00:00""?",False
 "Are Create Purchase Requisition, Create Purchase Requisition, Create Purchase Requisition, Create Purchase Requisition the activities happening in the ocel:timestamp ""2022-06-01 14:04:00+00:00""?",True
-"Are material:171, material:170, purchase_requisition:72:pr_trigger_72, material:172 the ocel:oid manipulated in the ocel:timestamp ""2022-06-01 14:04:00+00:00""?",True
+"Are material:171, material:170, purchase_requisition:72:pr_trigger_72, material:172 the ocel:oid in the ocel:timestamp ""2022-06-01 14:04:00+00:00""?",True
+"Are Create Purchase Requisition, Create Purchase Requisition, Create Purchase Requisition, Create Purchase Requisition, Create Invoice Receipt the activities happening in the ocel:timestamp ""2022-05-09 10:59:00+00:00""?",False
+"Are purchase_order:103, quotation:63 the ocel:oid in the ocel:timestamp ""2022-06-01 14:04:00+00:00""?",False
 "Are Create Purchase Order, Create Purchase Order the activities happening in the ocel:timestamp ""2022-06-02 01:31:00+00:00""?",True
-"Are quotation:66, purchase_order:108 the ocel:oid manipulated in the ocel:timestamp ""2022-06-02 01:31:00+00:00""?",True
+"Are quotation:66, purchase_order:108 the ocel:oid in the ocel:timestamp ""2022-06-02 01:31:00+00:00""?",True
+"Are Create Purchase Order, Create Purchase Order, Approve Purchase Requisition the activities happening in the ocel:timestamp ""2022-05-30 13:05:00+00:00""?",False
+"Are purchase_order:95, quotation:50 the ocel:oid in the ocel:timestamp ""2022-06-02 01:31:00+00:00""?",False
 "Are Create Invoice Receipt, Create Invoice Receipt the activities happening in the ocel:timestamp ""2022-06-02 09:23:00+00:00""?",True
-"Are goods receipt:94, invoice receipt:95 the ocel:oid manipulated in the ocel:timestamp ""2022-06-02 09:23:00+00:00""?",True
+"Are goods receipt:94, invoice receipt:95 the ocel:oid in the ocel:timestamp ""2022-06-02 09:23:00+00:00""?",True
+"Are Create Invoice Receipt, Create Invoice Receipt, Create Request for Quotation the activities happening in the ocel:timestamp ""2022-05-20 15:51:00+00:00""?",False
+"Are purchase_order:95, quotation:50 the ocel:oid in the ocel:timestamp ""2022-06-02 09:23:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-06-02 17:29:00+00:00""?",True
-"Are purchase_order:103, goods receipt:107 the ocel:oid manipulated in the ocel:timestamp ""2022-06-02 17:29:00+00:00""?",True
+"Are purchase_order:103, goods receipt:107 the ocel:oid in the ocel:timestamp ""2022-06-02 17:29:00+00:00""?",True
+"Are Create Goods Receipt, Create Goods Receipt, Approve Purchase Requisition the activities happening in the ocel:timestamp ""2022-04-14 06:05:00+00:00""?",False
+"Are purchase_order:54, invoice receipt:80, goods receipt:83, goods receipt:82, payment:39, purchase_order:53 the ocel:oid in the ocel:timestamp ""2022-06-02 17:29:00+00:00""?",False
 "Are Perform Two-Way Match, Perform Two-Way Match the activities happening in the ocel:timestamp ""2022-06-03 13:43:00+00:00""?",True
-"Are invoice receipt:103, goods receipt:104 the ocel:oid manipulated in the ocel:timestamp ""2022-06-03 13:43:00+00:00""?",True
+"Are invoice receipt:103, goods receipt:104 the ocel:oid in the ocel:timestamp ""2022-06-03 13:43:00+00:00""?",True
+"Are Perform Two-Way Match, Perform Two-Way Match, Create Request for Quotation the activities happening in the ocel:timestamp ""2022-05-02 14:08:00+00:00""?",False
+"Are goods receipt:79, goods receipt:78, purchase_order:75, payment:38, invoice receipt:78 the ocel:oid in the ocel:timestamp ""2022-06-03 13:43:00+00:00""?",False
 "Are Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-06-04 05:04:00+00:00""?",True
-"Are purchase_order:82, goods receipt:95, invoice receipt:97, payment:49 the ocel:oid manipulated in the ocel:timestamp ""2022-06-04 05:04:00+00:00""?",True
+"Are purchase_order:82, goods receipt:95, invoice receipt:97, payment:49 the ocel:oid in the ocel:timestamp ""2022-06-04 05:04:00+00:00""?",True
+"Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Create Purchase Requisition the activities happening in the ocel:timestamp ""2022-04-28 22:16:00+00:00""?",False
+"Are quotation:66, purchase_order:108 the ocel:oid in the ocel:timestamp ""2022-06-04 05:04:00+00:00""?",False
 "Are Approve Purchase Requisition, Approve Purchase Requisition, Approve Purchase Requisition, Approve Purchase Requisition the activities happening in the ocel:timestamp ""2022-06-04 18:58:00+00:00""?",True
-"Are material:175, purchase_requisition:73:pr_trigger_73, material:174, material:173 the ocel:oid manipulated in the ocel:timestamp ""2022-06-04 18:58:00+00:00""?",True
+"Are material:175, purchase_requisition:73:pr_trigger_73, material:174, material:173 the ocel:oid in the ocel:timestamp ""2022-06-04 18:58:00+00:00""?",True
+"Are Approve Purchase Requisition, Approve Purchase Requisition, Approve Purchase Requisition, Approve Purchase Requisition, Approve Purchase Requisition the activities happening in the ocel:timestamp ""2022-05-31 21:20:00+00:00""?",False
+"Are goods receipt:77, purchase_order:67 the ocel:oid in the ocel:timestamp ""2022-06-04 18:58:00+00:00""?",False
 "Are Create Request for Quotation, Create Request for Quotation the activities happening in the ocel:timestamp ""2022-06-06 05:37:00+00:00""?",True
-"Are quotation:69, purchase_requisition:70:pr_trigger_70 the ocel:oid manipulated in the ocel:timestamp ""2022-06-06 05:37:00+00:00""?",True
+"Are quotation:69, purchase_requisition:70:pr_trigger_70 the ocel:oid in the ocel:timestamp ""2022-06-06 05:37:00+00:00""?",True
+"Are Create Request for Quotation, Create Request for Quotation, Create Purchase Order the activities happening in the ocel:timestamp ""2022-05-30 13:05:00+00:00""?",False
+"Are purchase_order:57, quotation:29 the ocel:oid in the ocel:timestamp ""2022-06-06 05:37:00+00:00""?",False
 "Are Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-06-06 19:19:00+00:00""?",True
-"Are goods receipt:108, invoice receipt:107, purchase_order:101, payment:57 the ocel:oid manipulated in the ocel:timestamp ""2022-06-06 19:19:00+00:00""?",True
+"Are goods receipt:108, invoice receipt:107, purchase_order:101, payment:57 the ocel:oid in the ocel:timestamp ""2022-06-06 19:19:00+00:00""?",True
+"Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-05-16 15:08:00+00:00""?",False
+"Are quotation:43, purchase_requisition:40:pr_trigger_40 the ocel:oid in the ocel:timestamp ""2022-06-06 19:19:00+00:00""?",False
 "Are Approve Purchase Order, Approve Purchase Order the activities happening in the ocel:timestamp ""2022-06-07 07:23:00+00:00""?",True
-"Are purchase_order:98, quotation:59 the ocel:oid manipulated in the ocel:timestamp ""2022-06-07 07:23:00+00:00""?",True
+"Are purchase_order:98, quotation:59 the ocel:oid in the ocel:timestamp ""2022-06-07 07:23:00+00:00""?",True
+"Are Approve Purchase Order, Approve Purchase Order, Create Invoice Receipt the activities happening in the ocel:timestamp ""2022-05-06 09:36:00+00:00""?",False
+"Are invoice receipt:72, goods receipt:66 the ocel:oid in the ocel:timestamp ""2022-06-07 07:23:00+00:00""?",False
 "Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-06-07 22:15:00+00:00""?",True
-"Are invoice receipt:106, goods receipt:107, payment:55, goods receipt:106, purchase_order:105, goods receipt:105, purchase_order:104, purchase_order:103 the ocel:oid manipulated in the ocel:timestamp ""2022-06-07 22:15:00+00:00""?",True
+"Are invoice receipt:106, goods receipt:107, payment:55, goods receipt:106, purchase_order:105, goods receipt:105, purchase_order:104, purchase_order:103 the ocel:oid in the ocel:timestamp ""2022-06-07 22:15:00+00:00""?",True
+"Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-04-14 06:05:00+00:00""?",False
+"Are goods receipt:41, purchase_order:31 the ocel:oid in the ocel:timestamp ""2022-06-07 22:15:00+00:00""?",False
 "Are Approve Purchase Requisition, Approve Purchase Requisition the activities happening in the ocel:timestamp ""2022-06-08 09:09:00+00:00""?",True
-"Are material:187, purchase_requisition:78:pr_trigger_78 the ocel:oid manipulated in the ocel:timestamp ""2022-06-08 09:09:00+00:00""?",True
+"Are material:187, purchase_requisition:78:pr_trigger_78 the ocel:oid in the ocel:timestamp ""2022-06-08 09:09:00+00:00""?",True
+"Are Approve Purchase Requisition, Approve Purchase Requisition, Create Purchase Order the activities happening in the ocel:timestamp ""2022-04-24 14:58:00+00:00""?",False
+"Are purchase_order:52, goods receipt:76, goods receipt:75, payment:37, invoice receipt:76 the ocel:oid in the ocel:timestamp ""2022-06-08 09:09:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-06-08 17:34:00+00:00""?",True
-"Are goods receipt:118, purchase_order:99 the ocel:oid manipulated in the ocel:timestamp ""2022-06-08 17:34:00+00:00""?",True
+"Are goods receipt:118, purchase_order:99 the ocel:oid in the ocel:timestamp ""2022-06-08 17:34:00+00:00""?",True
+"Are Create Goods Receipt, Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-04-26 08:48:00+00:00""?",False
+"Are goods receipt:3, invoice receipt:3 the ocel:oid in the ocel:timestamp ""2022-06-08 17:34:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-06-09 00:16:00+00:00""?",True
-"Are goods receipt:120, purchase_order:99 the ocel:oid manipulated in the ocel:timestamp ""2022-06-09 00:16:00+00:00""?",True
+"Are goods receipt:120, purchase_order:99 the ocel:oid in the ocel:timestamp ""2022-06-09 00:16:00+00:00""?",True
+"Are Create Goods Receipt, Create Goods Receipt, Create Purchase Requisition the activities happening in the ocel:timestamp ""2022-05-11 23:25:00+00:00""?",False
+"Are quotation:66, purchase_order:108 the ocel:oid in the ocel:timestamp ""2022-06-09 00:16:00+00:00""?",False
 "Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-06-09 08:11:00+00:00""?",True
-"Are invoice receipt:89, purchase_order:77, goods receipt:89, goods receipt:88, payment:48 the ocel:oid manipulated in the ocel:timestamp ""2022-06-09 08:11:00+00:00""?",True
+"Are invoice receipt:89, purchase_order:77, goods receipt:89, goods receipt:88, payment:48 the ocel:oid in the ocel:timestamp ""2022-06-09 08:11:00+00:00""?",True
+"Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Create Invoice Receipt the activities happening in the ocel:timestamp ""2022-05-12 14:26:00+00:00""?",False
+"Are goods receipt:34, purchase_order:22 the ocel:oid in the ocel:timestamp ""2022-06-09 08:11:00+00:00""?",False
 "Are Create Invoice Receipt, Create Invoice Receipt the activities happening in the ocel:timestamp ""2022-06-09 13:30:00+00:00""?",True
-"Are invoice receipt:123, goods receipt:123 the ocel:oid manipulated in the ocel:timestamp ""2022-06-09 13:30:00+00:00""?",True
+"Are invoice receipt:123, goods receipt:123 the ocel:oid in the ocel:timestamp ""2022-06-09 13:30:00+00:00""?",True
+"Are Create Invoice Receipt, Create Invoice Receipt, Create Purchase Requisition the activities happening in the ocel:timestamp ""2022-04-29 09:31:00+00:00""?",False
+"Are payment:1, invoice receipt:4, goods receipt:6, purchase_order:9 the ocel:oid in the ocel:timestamp ""2022-06-09 13:30:00+00:00""?",False
 "Are Approve Purchase Order, Approve Purchase Order the activities happening in the ocel:timestamp ""2022-06-10 03:10:00+00:00""?",True
-"Are quotation:69, purchase_order:112 the ocel:oid manipulated in the ocel:timestamp ""2022-06-10 03:10:00+00:00""?",True
+"Are quotation:69, purchase_order:112 the ocel:oid in the ocel:timestamp ""2022-06-10 03:10:00+00:00""?",True
+"Are Approve Purchase Order, Approve Purchase Order, Create Invoice Receipt the activities happening in the ocel:timestamp ""2022-05-25 10:35:00+00:00""?",False
+"Are quotation:55, purchase_requisition:42:pr_trigger_42 the ocel:oid in the ocel:timestamp ""2022-06-10 03:10:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-06-10 16:34:00+00:00""?",True
-"Are goods receipt:126, purchase_order:114 the ocel:oid manipulated in the ocel:timestamp ""2022-06-10 16:34:00+00:00""?",True
+"Are goods receipt:126, purchase_order:114 the ocel:oid in the ocel:timestamp ""2022-06-10 16:34:00+00:00""?",True
+"Are Create Goods Receipt, Create Goods Receipt, Approve Purchase Order the activities happening in the ocel:timestamp ""2022-05-28 10:35:00+00:00""?",False
+"Are purchase_order:25, quotation:18 the ocel:oid in the ocel:timestamp ""2022-06-10 16:34:00+00:00""?",False
 "Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-06-12 06:48:00+00:00""?",True
-"Are payment:64, purchase_order:109, goods receipt:115, purchase_order:110, goods receipt:116, invoice receipt:113 the ocel:oid manipulated in the ocel:timestamp ""2022-06-12 06:48:00+00:00""?",True
+"Are payment:64, purchase_order:109, goods receipt:115, purchase_order:110, goods receipt:116, invoice receipt:113 the ocel:oid in the ocel:timestamp ""2022-06-12 06:48:00+00:00""?",True
+"Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-04-28 22:16:00+00:00""?",False
+"Are goods receipt:64, purchase_order:61 the ocel:oid in the ocel:timestamp ""2022-06-12 06:48:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-06-13 12:31:00+00:00""?",True
-"Are purchase_order:91, goods receipt:124 the ocel:oid manipulated in the ocel:timestamp ""2022-06-13 12:31:00+00:00""?",True
+"Are purchase_order:91, goods receipt:124 the ocel:oid in the ocel:timestamp ""2022-06-13 12:31:00+00:00""?",True
+"Are Create Goods Receipt, Create Goods Receipt, Approve Purchase Order the activities happening in the ocel:timestamp ""2022-05-23 05:12:00+00:00""?",False
+"Are purchase_requisition:50:pr_trigger_50, material:118 the ocel:oid in the ocel:timestamp ""2022-06-13 12:31:00+00:00""?",False
 "Are Create Purchase Requisition, Create Purchase Requisition, Create Purchase Requisition, Create Purchase Requisition the activities happening in the ocel:timestamp ""2022-06-14 08:56:00+00:00""?",True
-"Are material:193, material:192, purchase_requisition:81:pr_trigger_81, material:191 the ocel:oid manipulated in the ocel:timestamp ""2022-06-14 08:56:00+00:00""?",True
+"Are material:193, material:192, purchase_requisition:81:pr_trigger_81, material:191 the ocel:oid in the ocel:timestamp ""2022-06-14 08:56:00+00:00""?",True
+"Are Create Purchase Requisition, Create Purchase Requisition, Create Purchase Requisition, Create Purchase Requisition, Create Request for Quotation the activities happening in the ocel:timestamp ""2022-05-07 13:00:00+00:00""?",False
+"Are quotation:26, purchase_requisition:27:pr_trigger_27 the ocel:oid in the ocel:timestamp ""2022-06-14 08:56:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-06-15 06:53:00+00:00""?",True
-"Are goods receipt:128, purchase_order:116 the ocel:oid manipulated in the ocel:timestamp ""2022-06-15 06:53:00+00:00""?",True
+"Are goods receipt:128, purchase_order:116 the ocel:oid in the ocel:timestamp ""2022-06-15 06:53:00+00:00""?",True
+"Are Create Goods Receipt, Create Goods Receipt, Create Request for Quotation the activities happening in the ocel:timestamp ""2022-05-12 22:56:00+00:00""?",False
+"Are material:160, material:159, purchase_requisition:68:pr_trigger_68, material:161 the ocel:oid in the ocel:timestamp ""2022-06-15 06:53:00+00:00""?",False
 "Are Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-06-16 05:49:00+00:00""?",True
-"Are purchase_order:112, goods receipt:125, payment:68, invoice receipt:126 the ocel:oid manipulated in the ocel:timestamp ""2022-06-16 05:49:00+00:00""?",True
+"Are purchase_order:112, goods receipt:125, payment:68, invoice receipt:126 the ocel:oid in the ocel:timestamp ""2022-06-16 05:49:00+00:00""?",True
+"Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Perform Two-Way Match the activities happening in the ocel:timestamp ""2022-05-25 17:33:00+00:00""?",False
+"Are purchase_order:82, goods receipt:95, invoice receipt:97, payment:49 the ocel:oid in the ocel:timestamp ""2022-06-16 05:49:00+00:00""?",False
 "Are Perform Two-Way Match, Perform Two-Way Match the activities happening in the ocel:timestamp ""2022-06-17 07:10:00+00:00""?",True
-"Are goods receipt:128, invoice receipt:128 the ocel:oid manipulated in the ocel:timestamp ""2022-06-17 07:10:00+00:00""?",True
+"Are goods receipt:128, invoice receipt:128 the ocel:oid in the ocel:timestamp ""2022-06-17 07:10:00+00:00""?",True
+"Are Perform Two-Way Match, Perform Two-Way Match, Approve Purchase Requisition the activities happening in the ocel:timestamp ""2022-06-08 09:09:00+00:00""?",False
+"Are goods receipt:71, purchase_order:66 the ocel:oid in the ocel:timestamp ""2022-06-17 07:10:00+00:00""?",False
 "Are Create Request for Quotation, Create Request for Quotation the activities happening in the ocel:timestamp ""2022-06-18 00:06:00+00:00""?",True
-"Are purchase_requisition:86:pr_trigger_86, quotation:83 the ocel:oid manipulated in the ocel:timestamp ""2022-06-18 00:06:00+00:00""?",True
+"Are purchase_requisition:86:pr_trigger_86, quotation:83 the ocel:oid in the ocel:timestamp ""2022-06-18 00:06:00+00:00""?",True
+"Are Create Request for Quotation, Create Request for Quotation, Approve Purchase Order the activities happening in the ocel:timestamp ""2022-05-15 00:41:00+00:00""?",False
+"Are goods receipt:61, purchase_order:47 the ocel:oid in the ocel:timestamp ""2022-06-18 00:06:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-06-19 05:34:00+00:00""?",True
-"Are goods receipt:132, purchase_order:125 the ocel:oid manipulated in the ocel:timestamp ""2022-06-19 05:34:00+00:00""?",True
+"Are goods receipt:132, purchase_order:125 the ocel:oid in the ocel:timestamp ""2022-06-19 05:34:00+00:00""?",True
+"Are Create Goods Receipt, Create Goods Receipt, Execute Payment the activities happening in the ocel:timestamp ""2022-05-18 04:45:00+00:00""?",False
+"Are purchase_order:57, quotation:29 the ocel:oid in the ocel:timestamp ""2022-06-19 05:34:00+00:00""?",False
 "Are Perform Two-Way Match, Perform Two-Way Match the activities happening in the ocel:timestamp ""2022-06-20 12:37:00+00:00""?",True
-"Are goods receipt:132, invoice receipt:131 the ocel:oid manipulated in the ocel:timestamp ""2022-06-20 12:37:00+00:00""?",True
+"Are goods receipt:132, invoice receipt:131 the ocel:oid in the ocel:timestamp ""2022-06-20 12:37:00+00:00""?",True
+"Are Perform Two-Way Match, Perform Two-Way Match, Approve Purchase Requisition the activities happening in the ocel:timestamp ""2022-05-11 07:10:00+00:00""?",False
+"Are purchase_requisition:71:pr_trigger_71, material:169, material:168, material:167 the ocel:oid in the ocel:timestamp ""2022-06-20 12:37:00+00:00""?",False
 "Are Create Invoice Receipt, Create Invoice Receipt the activities happening in the ocel:timestamp ""2022-06-20 22:35:00+00:00""?",True
-"Are goods receipt:131, invoice receipt:130 the ocel:oid manipulated in the ocel:timestamp ""2022-06-20 22:35:00+00:00""?",True
+"Are goods receipt:131, invoice receipt:130 the ocel:oid in the ocel:timestamp ""2022-06-20 22:35:00+00:00""?",True
+"Are Create Invoice Receipt, Create Invoice Receipt, Create Request for Quotation the activities happening in the ocel:timestamp ""2022-04-15 14:04:00+00:00""?",False
+"Are quotation:39, purchase_order:71 the ocel:oid in the ocel:timestamp ""2022-06-20 22:35:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-06-21 08:26:00+00:00""?",True
-"Are purchase_order:93, goods receipt:140 the ocel:oid manipulated in the ocel:timestamp ""2022-06-21 08:26:00+00:00""?",True
+"Are purchase_order:93, goods receipt:140 the ocel:oid in the ocel:timestamp ""2022-06-21 08:26:00+00:00""?",True
+"Are Create Goods Receipt, Create Goods Receipt, Create Purchase Requisition the activities happening in the ocel:timestamp ""2022-05-04 12:00:00+00:00""?",False
+"Are goods receipt:75, invoice receipt:76 the ocel:oid in the ocel:timestamp ""2022-06-21 08:26:00+00:00""?",False
 "Are Create Invoice Receipt, Create Invoice Receipt the activities happening in the ocel:timestamp ""2022-06-21 20:14:00+00:00""?",True
-"Are invoice receipt:138, goods receipt:141 the ocel:oid manipulated in the ocel:timestamp ""2022-06-21 20:14:00+00:00""?",True
+"Are invoice receipt:138, goods receipt:141 the ocel:oid in the ocel:timestamp ""2022-06-21 20:14:00+00:00""?",True
+"Are Create Invoice Receipt, Create Invoice Receipt, Approve Purchase Requisition the activities happening in the ocel:timestamp ""2022-05-04 12:00:00+00:00""?",False
+"Are goods receipt:3, invoice receipt:3 the ocel:oid in the ocel:timestamp ""2022-06-21 20:14:00+00:00""?",False
 "Are Create Request for Quotation, Create Request for Quotation the activities happening in the ocel:timestamp ""2022-06-22 07:51:00+00:00""?",True
-"Are quotation:87, purchase_requisition:92:pr_trigger_92 the ocel:oid manipulated in the ocel:timestamp ""2022-06-22 07:51:00+00:00""?",True
+"Are quotation:87, purchase_requisition:92:pr_trigger_92 the ocel:oid in the ocel:timestamp ""2022-06-22 07:51:00+00:00""?",True
+"Are Create Request for Quotation, Create Request for Quotation, Create Request for Quotation the activities happening in the ocel:timestamp ""2022-05-23 12:55:00+00:00""?",False
+"Are material:79, purchase_requisition:33:pr_trigger_33 the ocel:oid in the ocel:timestamp ""2022-06-22 07:51:00+00:00""?",False
 "Are Create Request for Quotation, Create Request for Quotation the activities happening in the ocel:timestamp ""2022-06-22 13:51:00+00:00""?",True
-"Are quotation:88, purchase_requisition:91:pr_trigger_91 the ocel:oid manipulated in the ocel:timestamp ""2022-06-22 13:51:00+00:00""?",True
+"Are quotation:88, purchase_requisition:91:pr_trigger_91 the ocel:oid in the ocel:timestamp ""2022-06-22 13:51:00+00:00""?",True
+"Are Create Request for Quotation, Create Request for Quotation, Create Request for Quotation the activities happening in the ocel:timestamp ""2022-05-19 03:45:00+00:00""?",False
+"Are purchase_order:62, quotation:36 the ocel:oid in the ocel:timestamp ""2022-06-22 13:51:00+00:00""?",False
 "Are Create Invoice Receipt, Create Invoice Receipt the activities happening in the ocel:timestamp ""2022-06-23 02:09:00+00:00""?",True
-"Are goods receipt:140, invoice receipt:135 the ocel:oid manipulated in the ocel:timestamp ""2022-06-23 02:09:00+00:00""?",True
+"Are goods receipt:140, invoice receipt:135 the ocel:oid in the ocel:timestamp ""2022-06-23 02:09:00+00:00""?",True
+"Are Create Invoice Receipt, Create Invoice Receipt, Approve Purchase Order the activities happening in the ocel:timestamp ""2022-05-31 21:20:00+00:00""?",False
+"Are goods receipt:128, invoice receipt:128 the ocel:oid in the ocel:timestamp ""2022-06-23 02:09:00+00:00""?",False
 "Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-06-23 09:17:00+00:00""?",True
-"Are purchase_order:119, goods receipt:141, goods receipt:142, purchase_order:120, payment:74, invoice receipt:138, goods receipt:143, purchase_order:118 the ocel:oid manipulated in the ocel:timestamp ""2022-06-23 09:17:00+00:00""?",True
+"Are purchase_order:119, goods receipt:141, goods receipt:142, purchase_order:120, payment:74, invoice receipt:138, goods receipt:143, purchase_order:118 the ocel:oid in the ocel:timestamp ""2022-06-23 09:17:00+00:00""?",True
+"Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Execute Payment, Perform Two-Way Match the activities happening in the ocel:timestamp ""2022-06-08 09:09:00+00:00""?",False
+"Are purchase_order:56, goods receipt:67 the ocel:oid in the ocel:timestamp ""2022-06-23 09:17:00+00:00""?",False
 "Are Create Invoice Receipt, Create Invoice Receipt the activities happening in the ocel:timestamp ""2022-06-23 20:33:00+00:00""?",True
-"Are invoice receipt:144, goods receipt:135 the ocel:oid manipulated in the ocel:timestamp ""2022-06-23 20:33:00+00:00""?",True
+"Are invoice receipt:144, goods receipt:135 the ocel:oid in the ocel:timestamp ""2022-06-23 20:33:00+00:00""?",True
+"Are Create Invoice Receipt, Create Invoice Receipt, Approve Purchase Order the activities happening in the ocel:timestamp ""2022-04-14 06:05:00+00:00""?",False
+"Are goods receipt:56, purchase_order:42 the ocel:oid in the ocel:timestamp ""2022-06-23 20:33:00+00:00""?",False
 "Are Create Purchase Order, Create Purchase Order the activities happening in the ocel:timestamp ""2022-06-24 10:54:00+00:00""?",True
-"Are quotation:84, purchase_order:130 the ocel:oid manipulated in the ocel:timestamp ""2022-06-24 10:54:00+00:00""?",True
+"Are quotation:84, purchase_order:130 the ocel:oid in the ocel:timestamp ""2022-06-24 10:54:00+00:00""?",True
+"Are Create Purchase Order, Create Purchase Order, Perform Two-Way Match the activities happening in the ocel:timestamp ""2022-05-02 20:31:00+00:00""?",False
+"Are goods receipt:84, invoice receipt:87 the ocel:oid in the ocel:timestamp ""2022-06-24 10:54:00+00:00""?",False
 "Are Create Purchase Order, Create Purchase Order the activities happening in the ocel:timestamp ""2022-06-24 20:10:00+00:00""?",True
-"Are purchase_order:147, quotation:94 the ocel:oid manipulated in the ocel:timestamp ""2022-06-24 20:10:00+00:00""?",True
+"Are purchase_order:147, quotation:94 the ocel:oid in the ocel:timestamp ""2022-06-24 20:10:00+00:00""?",True
+"Are Create Purchase Order, Create Purchase Order, Create Purchase Order the activities happening in the ocel:timestamp ""2022-05-31 21:20:00+00:00""?",False
+"Are goods receipt:17, payment:9, purchase_order:21, invoice receipt:14 the ocel:oid in the ocel:timestamp ""2022-06-24 20:10:00+00:00""?",False
 "Are Approve Purchase Order, Approve Purchase Order the activities happening in the ocel:timestamp ""2022-06-25 20:51:00+00:00""?",True
-"Are purchase_order:133, quotation:81 the ocel:oid manipulated in the ocel:timestamp ""2022-06-25 20:51:00+00:00""?",True
+"Are purchase_order:133, quotation:81 the ocel:oid in the ocel:timestamp ""2022-06-25 20:51:00+00:00""?",True
+"Are Approve Purchase Order, Approve Purchase Order, Perform Two-Way Match the activities happening in the ocel:timestamp ""2022-05-06 09:36:00+00:00""?",False
+"Are purchase_order:8, goods receipt:5 the ocel:oid in the ocel:timestamp ""2022-06-25 20:51:00+00:00""?",False
 "Are Create Purchase Order, Create Purchase Order the activities happening in the ocel:timestamp ""2022-06-26 17:01:00+00:00""?",True
-"Are purchase_order:148, quotation:94 the ocel:oid manipulated in the ocel:timestamp ""2022-06-26 17:01:00+00:00""?",True
+"Are purchase_order:148, quotation:94 the ocel:oid in the ocel:timestamp ""2022-06-26 17:01:00+00:00""?",True
+"Are Create Purchase Order, Create Purchase Order, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-06-10 03:10:00+00:00""?",False
+"Are payment:64, purchase_order:109, goods receipt:115, purchase_order:110, goods receipt:116, invoice receipt:113 the ocel:oid in the ocel:timestamp ""2022-06-26 17:01:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-06-27 19:27:00+00:00""?",True
-"Are purchase_order:130, goods receipt:152 the ocel:oid manipulated in the ocel:timestamp ""2022-06-27 19:27:00+00:00""?",True
+"Are purchase_order:130, goods receipt:152 the ocel:oid in the ocel:timestamp ""2022-06-27 19:27:00+00:00""?",True
+"Are Create Goods Receipt, Create Goods Receipt, Approve Purchase Order the activities happening in the ocel:timestamp ""2022-05-16 15:08:00+00:00""?",False
+"Are goods receipt:41, purchase_order:31 the ocel:oid in the ocel:timestamp ""2022-06-27 19:27:00+00:00""?",False
 "Are Execute Payment, Execute Payment, Execute Payment, Execute Payment the activities happening in the ocel:timestamp ""2022-06-28 14:59:00+00:00""?",True
-"Are invoice receipt:130, goods receipt:131, payment:72, purchase_order:121 the ocel:oid manipulated in the ocel:timestamp ""2022-06-28 14:59:00+00:00""?",True
+"Are invoice receipt:130, goods receipt:131, payment:72, purchase_order:121 the ocel:oid in the ocel:timestamp ""2022-06-28 14:59:00+00:00""?",True
+"Are Execute Payment, Execute Payment, Execute Payment, Execute Payment, Create Purchase Requisition the activities happening in the ocel:timestamp ""2022-06-09 00:16:00+00:00""?",False
+"Are goods receipt:77, purchase_order:67 the ocel:oid in the ocel:timestamp ""2022-06-28 14:59:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-06-29 04:41:00+00:00""?",True
-"Are purchase_order:128, goods receipt:147 the ocel:oid manipulated in the ocel:timestamp ""2022-06-29 04:41:00+00:00""?",True
+"Are purchase_order:128, goods receipt:147 the ocel:oid in the ocel:timestamp ""2022-06-29 04:41:00+00:00""?",True
+"Are Create Goods Receipt, Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-04-14 06:05:00+00:00""?",False
+"Are goods receipt:108, invoice receipt:107, purchase_order:101, payment:57 the ocel:oid in the ocel:timestamp ""2022-06-29 04:41:00+00:00""?",False
 "Are Create Goods Receipt, Create Goods Receipt the activities happening in the ocel:timestamp ""2022-06-29 12:26:00+00:00""?",True
-"Are goods receipt:164, purchase_order:139 the ocel:oid manipulated in the ocel:timestamp ""2022-06-29 12:26:00+00:00""?",True
+"Are goods receipt:164, purchase_order:139 the ocel:oid in the ocel:timestamp ""2022-06-29 12:26:00+00:00""?",True
+"Are Create Goods Receipt, Create Goods Receipt, Create Invoice Receipt the activities happening in the ocel:timestamp ""2022-05-19 11:36:00+00:00""?",False
+"Are goods receipt:3, invoice receipt:3 the ocel:oid in the ocel:timestamp ""2022-06-29 12:26:00+00:00""?",False

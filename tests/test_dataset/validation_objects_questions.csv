@@ -4,598 +4,1198 @@ question,answer
 "Is 2023-08-25 15:55:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1004""?",True
 "Is 2023-09-03 01:06:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1004""?",True
 "Is 724260.0 the lifecycle duration of ocel:oid ""goods receipt:1004""?",True
+"Are the activities Complete Project Milestone, Terminate Contract, Approve Budget included the lifecycle of ocel:oid ""goods receipt:1004""?",False
+"Are the objects goods receipt:64895648956489564895, payment:648956489564895, purchase_order:648956489564895, goods receipt:64895648956489564895, invoice receipt:64895648956489564895, purchase_order:648956489564895 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1004""?",False
+"Is 2023-08-26 16:56:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1004""?",False
+"Is 2023-09-04 02:07:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1004""?",False
+"Is 319906319906319906319906319906319906.319906 the lifecycle duration of ocel:oid ""goods receipt:1004""?",False
 "Are the activities Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment, Execute Payment, Execute Payment included the lifecycle of ocel:oid ""goods receipt:1013""?",True
 "Are the objects purchase_order:834, payment:498, goods receipt:1014, invoice receipt:1019 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1013""?",True
 "Is 2023-09-02 05:27:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1013""?",True
 "Is 2023-09-25 12:24:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1013""?",True
 "Is 2012220.0 the lifecycle duration of ocel:oid ""goods receipt:1013""?",True
+"Are the activities Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment, Execute Payment, Execute Payment included the lifecycle of ocel:oid ""goods receipt:10822108221082210822""?",False
+"Are the objects purchase_order:834, payment:498, goods receipt:1014, invoice receipt:1019 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:10822108221082210822""?",False
+"Is 2023-09-02 05:27:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:10822108221082210822""?",False
+"Is 2023-09-25 12:24:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:10822108221082210822""?",False
+"Is 2012220.0 the lifecycle duration of ocel:oid ""goods receipt:10822108221082210822""?",False
 "Are the activities Create Goods Receipt, Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:1022""?",True
 "Are the objects purchase_order:840, goods receipt:1024, goods receipt:1023, purchase_order:839, payment:503, invoice receipt:1022 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1022""?",True
 "Is 2023-08-31 17:55:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1022""?",True
 "Is 2023-09-11 10:34:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1022""?",True
 "Is 923940.0 the lifecycle duration of ocel:oid ""goods receipt:1022""?",True
+"Are the activities Approve Budget, Initiate Project, Complete Project Milestone included the lifecycle of ocel:oid ""goods receipt:1022""?",False
+"Are the objects purchase_order:594695946959469, goods receipt:59469594695946959469, goods receipt:59469594695946959469, purchase_order:594695946959469, payment:594695946959469, invoice receipt:59469594695946959469 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1022""?",False
+"Is 2023-09-01 18:56:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1022""?",False
+"Is 2023-09-12 11:35:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1022""?",False
+"Is 545224545224545224545224545224545224.545224 the lifecycle duration of ocel:oid ""goods receipt:1022""?",False
 "Are the activities Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:1031""?",True
 "Are the objects goods receipt:1034, goods receipt:1032, payment:500, goods receipt:1033, purchase_order:849, purchase_order:850, purchase_order:851, invoice receipt:1027 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1031""?",True
 "Is 2023-09-04 12:07:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1031""?",True
 "Is 2023-09-13 00:35:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1031""?",True
 "Is 736080.0 the lifecycle duration of ocel:oid ""goods receipt:1031""?",True
+"Are the activities Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:25526255262552625526""?",False
+"Are the objects goods receipt:1034, goods receipt:1032, payment:500, goods receipt:1033, purchase_order:849, purchase_order:850, purchase_order:851, invoice receipt:1027 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:25526255262552625526""?",False
+"Is 2023-09-04 12:07:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:25526255262552625526""?",False
+"Is 2023-09-13 00:35:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:25526255262552625526""?",False
+"Is 736080.0 the lifecycle duration of ocel:oid ""goods receipt:25526255262552625526""?",False
 "Are the activities Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:1040""?",True
 "Are the objects goods receipt:1039, payment:504, goods receipt:1038, purchase_order:865, invoice receipt:1040 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1040""?",True
 "Is 2023-09-07 16:52:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1040""?",True
 "Is 2023-09-13 10:19:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1040""?",True
 "Is 494820.0 the lifecycle duration of ocel:oid ""goods receipt:1040""?",True
+"Are the activities Approve Project, Create Contract, Close Project included the lifecycle of ocel:oid ""goods receipt:1040""?",False
+"Are the objects goods receipt:64961649616496164961, payment:649616496164961, goods receipt:64961649616496164961, purchase_order:649616496164961, invoice receipt:64961649616496164961 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1040""?",False
+"Is 2023-09-08 17:53:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1040""?",False
+"Is 2023-09-14 11:20:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1040""?",False
+"Is 936941936941936941936941936941936941.936941 the lifecycle duration of ocel:oid ""goods receipt:1040""?",False
 "Are the activities Create Goods Receipt, Create Invoice Receipt, Create Goods Receipt, Perform Two-Way Match, Create Goods Receipt, Execute Payment, Execute Payment included the lifecycle of ocel:oid ""goods receipt:105""?",True
 "Are the objects invoice receipt:106, goods receipt:107, payment:55, goods receipt:106, purchase_order:105, purchase_order:104, purchase_order:103 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:105""?",True
 "Is 2022-06-01 12:48:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:105""?",True
 "Is 2022-06-09 08:45:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:105""?",True
 "Is 676620.0 the lifecycle duration of ocel:oid ""goods receipt:105""?",True
+"Are the activities Create Goods Receipt, Create Invoice Receipt, Create Goods Receipt, Perform Two-Way Match, Create Goods Receipt, Execute Payment, Execute Payment included the lifecycle of ocel:oid ""goods receipt:722767227672276""?",False
+"Are the objects invoice receipt:106, goods receipt:107, payment:55, goods receipt:106, purchase_order:105, purchase_order:104, purchase_order:103 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:722767227672276""?",False
+"Is 2022-06-01 12:48:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:722767227672276""?",False
+"Is 2022-06-09 08:45:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:722767227672276""?",False
+"Is 676620.0 the lifecycle duration of ocel:oid ""goods receipt:722767227672276""?",False
 "Are the activities Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:1059""?",True
 "Are the objects purchase_order:871, purchase_order:873, goods receipt:1058, invoice receipt:1056, goods receipt:1060, payment:514, purchase_order:872 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1059""?",True
 "Is 2023-09-12 09:33:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1059""?",True
 "Is 2023-09-21 18:17:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1059""?",True
 "Is 809040.0 the lifecycle duration of ocel:oid ""goods receipt:1059""?",True
+"Are the activities Renew Contract, Review Expense Report, Submit Timesheet included the lifecycle of ocel:oid ""goods receipt:1059""?",False
+"Are the objects purchase_order:482384823848238, purchase_order:482384823848238, goods receipt:48238482384823848238, invoice receipt:48238482384823848238, goods receipt:48238482384823848238, payment:482384823848238, purchase_order:482384823848238 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1059""?",False
+"Is 2023-09-13 10:34:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1059""?",False
+"Is 2023-09-22 19:18:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1059""?",False
+"Is 292183292183292183292183292183292183.292183 the lifecycle duration of ocel:oid ""goods receipt:1059""?",False
 "Are the activities Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:1068""?",True
 "Are the objects invoice receipt:1082, purchase_order:890, purchase_order:891, goods receipt:1070, purchase_order:889, goods receipt:1069, payment:520 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1068""?",True
 "Is 2023-09-15 15:31:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1068""?",True
 "Is 2023-09-26 04:26:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1068""?",True
 "Is 910500.0 the lifecycle duration of ocel:oid ""goods receipt:1068""?",True
+"Are the activities Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:78827788277882778827""?",False
+"Are the objects invoice receipt:1082, purchase_order:890, purchase_order:891, goods receipt:1070, purchase_order:889, goods receipt:1069, payment:520 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:78827788277882778827""?",False
+"Is 2023-09-15 15:31:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:78827788277882778827""?",False
+"Is 2023-09-26 04:26:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:78827788277882778827""?",False
+"Is 910500.0 the lifecycle duration of ocel:oid ""goods receipt:78827788277882778827""?",False
 "Are the activities Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:1077""?",True
 "Are the objects invoice receipt:1103, purchase_order:906, payment:531 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1077""?",True
 "Is 2023-09-28 01:42:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1077""?",True
 "Is 2023-10-03 01:05:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1077""?",True
 "Is 429780.0 the lifecycle duration of ocel:oid ""goods receipt:1077""?",True
+"Are the activities Close Project, Create Contract, Approve Budget included the lifecycle of ocel:oid ""goods receipt:1077""?",False
+"Are the objects invoice receipt:72477724777247772477, purchase_order:724777247772477, payment:724777247772477 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1077""?",False
+"Is 2023-09-29 02:43:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1077""?",False
+"Is 2023-10-04 02:06:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1077""?",False
+"Is 557684557684557684557684557684557684.557684 the lifecycle duration of ocel:oid ""goods receipt:1077""?",False
 "Are the activities Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:1086""?",True
 "Are the objects purchase_order:907, payment:524, invoice receipt:1087 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1086""?",True
 "Is 2023-09-24 05:53:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1086""?",True
 "Is 2023-09-29 17:48:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1086""?",True
 "Is 474900.0 the lifecycle duration of ocel:oid ""goods receipt:1086""?",True
+"Are the activities Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:59053590535905359053""?",False
+"Are the objects purchase_order:907, payment:524, invoice receipt:1087 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:59053590535905359053""?",False
+"Is 2023-09-24 05:53:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:59053590535905359053""?",False
+"Is 2023-09-29 17:48:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:59053590535905359053""?",False
+"Is 474900.0 the lifecycle duration of ocel:oid ""goods receipt:59053590535905359053""?",False
 "Are the activities Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment, Create Goods Receipt, Execute Payment, Execute Payment included the lifecycle of ocel:oid ""goods receipt:1095""?",True
 "Are the objects payment:529, goods receipt:1096, purchase_order:915, purchase_order:916, purchase_order:913, goods receipt:1098, invoice receipt:1099, purchase_order:914, goods receipt:1097 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1095""?",True
 "Is 2023-09-24 02:27:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1095""?",True
 "Is 2023-10-05 09:46:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1095""?",True
 "Is 976740.0 the lifecycle duration of ocel:oid ""goods receipt:1095""?",True
+"Are the activities Terminate Contract, Renew Contract, Approve Service Order included the lifecycle of ocel:oid ""goods receipt:1095""?",False
+"Are the objects payment:695136951369513, goods receipt:69513695136951369513, purchase_order:695136951369513, purchase_order:695136951369513, purchase_order:695136951369513, goods receipt:69513695136951369513, invoice receipt:69513695136951369513, purchase_order:695136951369513, goods receipt:69513695136951369513 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1095""?",False
+"Is 2023-09-25 03:28:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1095""?",False
+"Is 2023-10-06 10:47:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1095""?",False
+"Is 370774370774370774370774370774370774.370774 the lifecycle duration of ocel:oid ""goods receipt:1095""?",False
 "Are the activities Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:1103""?",True
 "Are the objects payment:528, invoice receipt:1102, purchase_order:908 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1103""?",True
 "Is 2023-09-28 00:07:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1103""?",True
 "Is 2023-09-29 17:48:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1103""?",True
 "Is 150060.0 the lifecycle duration of ocel:oid ""goods receipt:1103""?",True
+"Are the activities Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:29445294452944529445""?",False
+"Are the objects payment:528, invoice receipt:1102, purchase_order:908 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:29445294452944529445""?",False
+"Is 2023-09-28 00:07:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:29445294452944529445""?",False
+"Is 2023-09-29 17:48:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:29445294452944529445""?",False
+"Is 150060.0 the lifecycle duration of ocel:oid ""goods receipt:29445294452944529445""?",False
 "Are the activities Create Goods Receipt, Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:1112""?",True
 "Are the objects purchase_order:911, goods receipt:1113, payment:539, invoice receipt:1116, purchase_order:912, goods receipt:1114, goods receipt:1115 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1112""?",True
 "Is 2023-10-05 10:18:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1112""?",True
 "Is 2023-10-16 18:34:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1112""?",True
 "Is 980160.0 the lifecycle duration of ocel:oid ""goods receipt:1112""?",True
+"Are the activities Create Service Order, Terminate Contract, Approve Budget included the lifecycle of ocel:oid ""goods receipt:1112""?",False
+"Are the objects purchase_order:335503355033550, goods receipt:33550335503355033550, payment:335503355033550, invoice receipt:33550335503355033550, purchase_order:335503355033550, goods receipt:33550335503355033550, goods receipt:33550335503355033550 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1112""?",False
+"Is 2023-10-06 11:19:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1112""?",False
+"Is 2023-10-17 19:35:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1112""?",False
+"Is 558893558893558893558893558893558893.558893 the lifecycle duration of ocel:oid ""goods receipt:1112""?",False
 "Are the activities Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:1121""?",True
 "Are the objects payment:538, invoice receipt:1112, purchase_order:927 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1121""?",True
 "Is 2023-10-05 18:59:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1121""?",True
 "Is 2023-10-11 06:29:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1121""?",True
 "Is 473400.0 the lifecycle duration of ocel:oid ""goods receipt:1121""?",True
+"Are the activities Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:92134921349213492134""?",False
+"Are the objects payment:538, invoice receipt:1112, purchase_order:927 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:92134921349213492134""?",False
+"Is 2023-10-05 18:59:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:92134921349213492134""?",False
+"Is 2023-10-11 06:29:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:92134921349213492134""?",False
+"Is 473400.0 the lifecycle duration of ocel:oid ""goods receipt:92134921349213492134""?",False
 "Are the activities Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment, Create Goods Receipt, Create Goods Receipt included the lifecycle of ocel:oid ""goods receipt:1130""?",True
 "Are the objects purchase_order:935, invoice receipt:1133, purchase_order:937, goods receipt:1129, payment:542, purchase_order:936, goods receipt:1131 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1130""?",True
 "Is 2023-10-13 14:32:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1130""?",True
 "Is 2023-10-21 11:39:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1130""?",True
 "Is 680820.0 the lifecycle duration of ocel:oid ""goods receipt:1130""?",True
+"Are the activities Initiate Project, Approve Service Order, Update Inventory included the lifecycle of ocel:oid ""goods receipt:1130""?",False
+"Are the objects purchase_order:325603256032560, invoice receipt:32560325603256032560, purchase_order:325603256032560, goods receipt:32560325603256032560, payment:325603256032560, purchase_order:325603256032560, goods receipt:32560325603256032560 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1130""?",False
+"Is 2023-10-14 15:33:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1130""?",False
+"Is 2023-10-22 12:40:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1130""?",False
+"Is 826016826016826016826016826016826016.826016 the lifecycle duration of ocel:oid ""goods receipt:1130""?",False
 "Are the activities Create Goods Receipt, Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:114""?",True
 "Are the objects payment:62, invoice receipt:120, goods receipt:113, purchase_order:108, purchase_order:107 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:114""?",True
 "Is 2022-06-07 06:01:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:114""?",True
 "Is 2022-06-11 03:46:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:114""?",True
 "Is 337500.0 the lifecycle duration of ocel:oid ""goods receipt:114""?",True
+"Are the activities Create Goods Receipt, Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:700287002870028""?",False
+"Are the objects payment:62, invoice receipt:120, goods receipt:113, purchase_order:108, purchase_order:107 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:700287002870028""?",False
+"Is 2022-06-07 06:01:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:700287002870028""?",False
+"Is 2022-06-11 03:46:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:700287002870028""?",False
+"Is 337500.0 the lifecycle duration of ocel:oid ""goods receipt:700287002870028""?",False
 "Are the activities Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:1149""?",True
 "Are the objects payment:554, goods receipt:1150, purchase_order:953, invoice receipt:1150 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1149""?",True
 "Is 2023-11-01 01:47:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1149""?",True
 "Is 2023-11-06 11:49:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1149""?",True
 "Is 468120.0 the lifecycle duration of ocel:oid ""goods receipt:1149""?",True
+"Are the activities Close Project, Approve Timesheet, Prepare Budget included the lifecycle of ocel:oid ""goods receipt:1149""?",False
+"Are the objects payment:661416614166141, goods receipt:66141661416614166141, purchase_order:661416614166141, invoice receipt:66141661416614166141 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1149""?",False
+"Is 2023-11-02 02:48:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1149""?",False
+"Is 2023-11-07 12:50:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1149""?",False
+"Is 573838573838573838573838573838573838.573838 the lifecycle duration of ocel:oid ""goods receipt:1149""?",False
 "Are the activities Create Goods Receipt, Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:1158""?",True
 "Are the objects purchase_order:956, goods receipt:1157, payment:563, invoice receipt:1169, purchase_order:957 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1158""?",True
 "Is 2023-11-04 08:56:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1158""?",True
 "Is 2023-11-16 05:14:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1158""?",True
 "Is 1023480.0 the lifecycle duration of ocel:oid ""goods receipt:1158""?",True
+"Are the activities Create Goods Receipt, Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:72706727067270672706""?",False
+"Are the objects purchase_order:956, goods receipt:1157, payment:563, invoice receipt:1169, purchase_order:957 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:72706727067270672706""?",False
+"Is 2023-11-04 08:56:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:72706727067270672706""?",False
+"Is 2023-11-16 05:14:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:72706727067270672706""?",False
+"Is 1023480.0 the lifecycle duration of ocel:oid ""goods receipt:72706727067270672706""?",False
 "Are the activities Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:1167""?",True
 "Are the objects payment:561, goods receipt:1166, purchase_order:963, invoice receipt:1163, goods receipt:1165 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1167""?",True
 "Is 2023-11-07 09:42:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1167""?",True
 "Is 2023-11-18 03:38:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1167""?",True
 "Is 928560.0 the lifecycle duration of ocel:oid ""goods receipt:1167""?",True
+"Are the activities Review Expense Report, Submit Expense Report, Renew Contract included the lifecycle of ocel:oid ""goods receipt:1167""?",False
+"Are the objects payment:148991489914899, goods receipt:14899148991489914899, purchase_order:148991489914899, invoice receipt:14899148991489914899, goods receipt:14899148991489914899 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1167""?",False
+"Is 2023-11-08 10:43:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1167""?",False
+"Is 2023-11-19 04:39:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1167""?",False
+"Is 623458623458623458623458623458623458.623458 the lifecycle duration of ocel:oid ""goods receipt:1167""?",False
 "Are the activities Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:1176""?",True
 "Are the objects payment:565, purchase_order:973, invoice receipt:1176 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:1176""?",True
 "Is 2023-11-10 23:48:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:1176""?",True
 "Is 2023-11-22 23:34:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:1176""?",True
 "Is 1035960.0 the lifecycle duration of ocel:oid ""goods receipt:1176""?",True
+"Are the activities Create Goods Receipt, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""goods receipt:51053510535105351053""?",False
+"Are the objects payment:565, purchase_order:973, invoice receipt:1176 among the interacting objects in the lifecycle of ocel:oid ""goods receipt:51053510535105351053""?",False
+"Is 2023-11-10 23:48:00+00:00 the start timestamp of the lifecycle of ocel:oid ""goods receipt:51053510535105351053""?",False
+"Is 2023-11-22 23:34:00+00:00 the end timestamp of the lifecycle of ocel:oid ""goods receipt:51053510535105351053""?",False
+"Is 1035960.0 the lifecycle duration of ocel:oid ""goods receipt:51053510535105351053""?",False
 "Are the activities Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:1009""?",True
 "Are the objects goods receipt:1012, purchase_order:848, payment:490 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1009""?",True
 "Is 2023-08-29 19:19:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1009""?",True
 "Is 2023-09-08 07:20:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1009""?",True
 "Is 820860.0 the lifecycle duration of ocel:oid ""invoice receipt:1009""?",True
+"Are the activities Issue Refund, Create Service Order, Review Expense Report included the lifecycle of ocel:oid ""invoice receipt:1009""?",False
+"Are the objects goods receipt:76472764727647276472, purchase_order:764727647276472, payment:764727647276472 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1009""?",False
+"Is 2023-08-30 20:20:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1009""?",False
+"Is 2023-09-09 08:21:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1009""?",False
+"Is 524641524641524641524641524641524641.524641 the lifecycle duration of ocel:oid ""invoice receipt:1009""?",False
 "Are the activities Create Invoice Receipt, Perform Two-Way Match, Execute Payment, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:103""?",True
 "Are the objects purchase_order:100, goods receipt:104, payment:53 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:103""?",True
 "Is 2022-06-03 13:33:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:103""?",True
 "Is 2022-06-15 02:07:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:103""?",True
 "Is 995640.0 the lifecycle duration of ocel:oid ""invoice receipt:103""?",True
+"Are the activities Create Invoice Receipt, Perform Two-Way Match, Execute Payment, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:575757575757""?",False
+"Are the objects purchase_order:100, goods receipt:104, payment:53 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:575757575757""?",False
+"Is 2022-06-03 13:33:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:575757575757""?",False
+"Is 2022-06-15 02:07:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:575757575757""?",False
+"Is 995640.0 the lifecycle duration of ocel:oid ""invoice receipt:575757575757""?",False
 "Are the activities Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Execute Payment, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:1053""?",True
 "Are the objects payment:509, goods receipt:1045, purchase_order:854, purchase_order:855, goods receipt:1046 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1053""?",True
 "Is 2023-09-14 14:09:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1053""?",True
 "Is 2023-09-21 14:45:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1053""?",True
 "Is 606960.0 the lifecycle duration of ocel:oid ""invoice receipt:1053""?",True
+"Are the activities Prepare Budget, Complete Project Milestone, Close Service Order included the lifecycle of ocel:oid ""invoice receipt:1053""?",False
+"Are the objects payment:347433474334743, goods receipt:34743347433474334743, purchase_order:347433474334743, purchase_order:347433474334743, goods receipt:34743347433474334743 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1053""?",False
+"Is 2023-09-15 15:10:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1053""?",False
+"Is 2023-09-22 15:46:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1053""?",False
+"Is 160584160584160584160584160584160584.160584 the lifecycle duration of ocel:oid ""invoice receipt:1053""?",False
 "Are the activities Create Invoice Receipt, Create Invoice Receipt, Perform Two-Way Match, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:1070""?",True
 "Are the objects payment:517, purchase_order:887, goods receipt:1062, goods receipt:1061, purchase_order:886 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1070""?",True
 "Is 2023-09-20 16:51:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1070""?",True
 "Is 2023-09-22 17:58:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1070""?",True
 "Is 176820.0 the lifecycle duration of ocel:oid ""invoice receipt:1070""?",True
+"Are the activities Create Invoice Receipt, Create Invoice Receipt, Perform Two-Way Match, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:95503955039550395503""?",False
+"Are the objects payment:517, purchase_order:887, goods receipt:1062, goods receipt:1061, purchase_order:886 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:95503955039550395503""?",False
+"Is 2023-09-20 16:51:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:95503955039550395503""?",False
+"Is 2023-09-22 17:58:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:95503955039550395503""?",False
+"Is 176820.0 the lifecycle duration of ocel:oid ""invoice receipt:95503955039550395503""?",False
 "Are the activities Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:1095""?",True
 "Are the objects purchase_order:898, goods receipt:1101, payment:527, goods receipt:1102, purchase_order:896, goods receipt:1099, purchase_order:899, goods receipt:1100, purchase_order:897 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1095""?",True
 "Is 2023-09-27 12:50:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1095""?",True
 "Is 2023-09-29 06:13:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1095""?",True
 "Is 148980.0 the lifecycle duration of ocel:oid ""invoice receipt:1095""?",True
+"Are the activities Conduct Audit, Complete Project Milestone, Approve Project included the lifecycle of ocel:oid ""invoice receipt:1095""?",False
+"Are the objects purchase_order:732273227322, goods receipt:7322732273227322, payment:732273227322, goods receipt:7322732273227322, purchase_order:732273227322, goods receipt:7322732273227322, purchase_order:732273227322, goods receipt:7322732273227322, purchase_order:732273227322 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1095""?",False
+"Is 2023-09-28 13:51:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1095""?",False
+"Is 2023-09-30 07:14:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1095""?",False
+"Is 204281204281204281204281204281204281.204281 the lifecycle duration of ocel:oid ""invoice receipt:1095""?",False
 "Are the activities Create Invoice Receipt, Perform Two-Way Match, Execute Payment, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:1108""?",True
 "Are the objects payment:534, purchase_order:918, goods receipt:1108 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1108""?",True
 "Is 2023-10-04 02:45:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1108""?",True
 "Is 2023-10-09 08:22:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1108""?",True
 "Is 452220.0 the lifecycle duration of ocel:oid ""invoice receipt:1108""?",True
+"Are the activities Create Invoice Receipt, Perform Two-Way Match, Execute Payment, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:57352573525735257352""?",False
+"Are the objects payment:534, purchase_order:918, goods receipt:1108 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:57352573525735257352""?",False
+"Is 2023-10-04 02:45:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:57352573525735257352""?",False
+"Is 2023-10-09 08:22:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:57352573525735257352""?",False
+"Is 452220.0 the lifecycle duration of ocel:oid ""invoice receipt:57352573525735257352""?",False
 "Are the activities Create Invoice Receipt, Create Invoice Receipt, Create Invoice Receipt, Create Invoice Receipt, Perform Two-Way Match, Perform Two-Way Match, Perform Two-Way Match, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:1130""?",True
 "Are the objects purchase_order:934, purchase_order:932, goods receipt:1135, goods receipt:1133, purchase_order:933, goods receipt:1132, goods receipt:1134, payment:543 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1130""?",True
 "Is 2023-10-14 04:53:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1130""?",True
 "Is 2023-10-17 05:02:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1130""?",True
 "Is 259740.0 the lifecycle duration of ocel:oid ""invoice receipt:1130""?",True
+"Are the activities Renew Contract, Initiate Project, Create Contract included the lifecycle of ocel:oid ""invoice receipt:1130""?",False
+"Are the objects purchase_order:933129331293312, purchase_order:933129331293312, goods receipt:93312933129331293312, goods receipt:93312933129331293312, purchase_order:933129331293312, goods receipt:93312933129331293312, goods receipt:93312933129331293312, payment:933129331293312 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1130""?",False
+"Is 2023-10-15 05:54:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1130""?",False
+"Is 2023-10-18 06:03:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1130""?",False
+"Is 899901899901899901899901899901899901.899901 the lifecycle duration of ocel:oid ""invoice receipt:1130""?",False
 "Are the activities Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:1150""?",True
 "Are the objects goods receipt:1149, payment:554, goods receipt:1150, purchase_order:953 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1150""?",True
 "Is 2023-11-01 15:34:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1150""?",True
 "Is 2023-11-06 11:49:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1150""?",True
 "Is 418500.0 the lifecycle duration of ocel:oid ""invoice receipt:1150""?",True
+"Are the activities Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:87947879478794787947""?",False
+"Are the objects goods receipt:1149, payment:554, goods receipt:1150, purchase_order:953 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:87947879478794787947""?",False
+"Is 2023-11-01 15:34:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:87947879478794787947""?",False
+"Is 2023-11-06 11:49:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:87947879478794787947""?",False
+"Is 418500.0 the lifecycle duration of ocel:oid ""invoice receipt:87947879478794787947""?",False
 "Are the activities Create Invoice Receipt, Create Invoice Receipt, Create Invoice Receipt, Perform Two-Way Match, Perform Two-Way Match, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:117""?",True
 "Are the objects purchase_order:99, purchase_order:97, payment:65, goods receipt:119, goods receipt:120, goods receipt:118, purchase_order:98, goods receipt:121 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:117""?",True
 "Is 2022-06-09 00:58:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:117""?",True
 "Is 2022-06-15 01:51:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:117""?",True
 "Is 521580.0 the lifecycle duration of ocel:oid ""invoice receipt:117""?",True
+"Are the activities Submit Expense Report, Conduct Audit, Submit Expense Report included the lifecycle of ocel:oid ""invoice receipt:117""?",False
+"Are the objects purchase_order:9638296382, purchase_order:9638296382, payment:9638296382, goods receipt:963829638296382, goods receipt:963829638296382, goods receipt:963829638296382, purchase_order:9638296382, goods receipt:963829638296382 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:117""?",False
+"Is 2022-06-10 01:59:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:117""?",False
+"Is 2022-06-16 02:52:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:117""?",False
+"Is 348868348868348868348868348868348868.348868 the lifecycle duration of ocel:oid ""invoice receipt:117""?",False
 "Are the activities Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Execute Payment, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:1194""?",True
 "Are the objects payment:569, purchase_order:995, purchase_order:994, goods receipt:1198, goods receipt:1197 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1194""?",True
 "Is 2023-11-22 10:21:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1194""?",True
 "Is 2023-11-29 07:30:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1194""?",True
 "Is 594540.0 the lifecycle duration of ocel:oid ""invoice receipt:1194""?",True
+"Are the activities Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Execute Payment, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:11361113611136111361""?",False
+"Are the objects payment:569, purchase_order:995, purchase_order:994, goods receipt:1198, goods receipt:1197 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:11361113611136111361""?",False
+"Is 2023-11-22 10:21:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:11361113611136111361""?",False
+"Is 2023-11-29 07:30:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:11361113611136111361""?",False
+"Is 594540.0 the lifecycle duration of ocel:oid ""invoice receipt:11361113611136111361""?",False
 "Are the activities Create Invoice Receipt, Create Invoice Receipt, Perform Two-Way Match, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:1206""?",True
 "Are the objects purchase_order:972, goods receipt:1192, purchase_order:971, payment:578, goods receipt:1191 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1206""?",True
 "Is 2023-11-27 21:17:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1206""?",True
 "Is 2023-11-28 15:25:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1206""?",True
 "Is 65280.0 the lifecycle duration of ocel:oid ""invoice receipt:1206""?",True
+"Are the activities Approve Budget, Submit Timesheet, Review Expense Report included the lifecycle of ocel:oid ""invoice receipt:1206""?",False
+"Are the objects purchase_order:267132671326713, goods receipt:26713267132671326713, purchase_order:267132671326713, payment:267132671326713, goods receipt:26713267132671326713 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1206""?",False
+"Is 2023-11-28 22:18:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1206""?",False
+"Is 2023-11-29 16:26:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1206""?",False
+"Is 240931240931240931240931240931.240931 the lifecycle duration of ocel:oid ""invoice receipt:1206""?",False
 "Are the activities Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:1223""?",True
 "Are the objects goods receipt:1217, purchase_order:1022, payment:587 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1223""?",True
 "Is 2023-12-05 12:25:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1223""?",True
 "Is 2023-12-14 00:34:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1223""?",True
 "Is 734940.0 the lifecycle duration of ocel:oid ""invoice receipt:1223""?",True
+"Are the activities Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:58444584445844458444""?",False
+"Are the objects goods receipt:1217, purchase_order:1022, payment:587 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:58444584445844458444""?",False
+"Is 2023-12-05 12:25:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:58444584445844458444""?",False
+"Is 2023-12-14 00:34:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:58444584445844458444""?",False
+"Is 734940.0 the lifecycle duration of ocel:oid ""invoice receipt:58444584445844458444""?",False
 "Are the activities Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:124""?",True
 "Are the objects purchase_order:102, goods receipt:112, payment:66 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:124""?",True
 "Is 2022-06-11 15:10:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:124""?",True
 "Is 2022-06-13 11:12:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:124""?",True
 "Is 158520.0 the lifecycle duration of ocel:oid ""invoice receipt:124""?",True
+"Are the activities Update Inventory, Close Project, Review Expense Report included the lifecycle of ocel:oid ""invoice receipt:124""?",False
+"Are the objects purchase_order:713007130071300, goods receipt:713007130071300, payment:7130071300 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:124""?",False
+"Is 2022-06-12 16:11:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:124""?",False
+"Is 2022-06-14 12:13:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:124""?",False
+"Is 598140598140598140598140598140598140.598140 the lifecycle duration of ocel:oid ""invoice receipt:124""?",False
 "Are the activities Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:1261""?",True
 "Are the objects goods receipt:1262, purchase_order:1058, payment:604, goods receipt:1263, purchase_order:1057 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1261""?",True
 "Is 2023-12-14 15:01:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1261""?",True
 "Is 2023-12-19 23:40:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1261""?",True
 "Is 463140.0 the lifecycle duration of ocel:oid ""invoice receipt:1261""?",True
+"Are the activities Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:45984459844598445984""?",False
+"Are the objects goods receipt:1262, purchase_order:1058, payment:604, goods receipt:1263, purchase_order:1057 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:45984459844598445984""?",False
+"Is 2023-12-14 15:01:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:45984459844598445984""?",False
+"Is 2023-12-19 23:40:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:45984459844598445984""?",False
+"Is 463140.0 the lifecycle duration of ocel:oid ""invoice receipt:45984459844598445984""?",False
 "Are the activities Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Execute Payment, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:1281""?",True
 "Are the objects payment:613, purchase_order:1068, purchase_order:1067, goods receipt:1280, goods receipt:1279 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1281""?",True
 "Is 2023-12-25 20:43:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1281""?",True
 "Is 2024-01-14 04:53:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1281""?",True
 "Is 1671000.0 the lifecycle duration of ocel:oid ""invoice receipt:1281""?",True
+"Are the activities Terminate Contract, Review Expense Report, Sign Contract included the lifecycle of ocel:oid ""invoice receipt:1281""?",False
+"Are the objects payment:131171311713117, purchase_order:13117131171311713117, purchase_order:13117131171311713117, goods receipt:13117131171311713117, goods receipt:13117131171311713117 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1281""?",False
+"Is 2023-12-26 21:44:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1281""?",False
+"Is 2024-01-15 05:54:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1281""?",False
+"Is 605307605307605307605307605307605307605307.605307 the lifecycle duration of ocel:oid ""invoice receipt:1281""?",False
 "Are the activities Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:130""?",True
 "Are the objects goods receipt:131, payment:72, purchase_order:121 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:130""?",True
 "Is 2022-06-20 22:35:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:130""?",True
 "Is 2022-06-28 14:59:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:130""?",True
 "Is 663840.0 the lifecycle duration of ocel:oid ""invoice receipt:130""?",True
+"Are the activities Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:429744297442974""?",False
+"Are the objects goods receipt:131, payment:72, purchase_order:121 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:429744297442974""?",False
+"Is 2022-06-20 22:35:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:429744297442974""?",False
+"Is 2022-06-28 14:59:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:429744297442974""?",False
+"Is 663840.0 the lifecycle duration of ocel:oid ""invoice receipt:429744297442974""?",False
 "Are the activities Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:1313""?",True
 "Are the objects purchase_order:1090, purchase_order:1089, goods receipt:1322, goods receipt:1321, payment:629 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1313""?",True
 "Is 2024-01-04 18:04:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1313""?",True
 "Is 2024-01-11 14:48:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1313""?",True
 "Is 593040.0 the lifecycle duration of ocel:oid ""invoice receipt:1313""?",True
+"Are the activities Create Service Order, Complete Project Milestone, Submit Timesheet included the lifecycle of ocel:oid ""invoice receipt:1313""?",False
+"Are the objects purchase_order:33620336203362033620, purchase_order:33620336203362033620, goods receipt:33620336203362033620, goods receipt:33620336203362033620, payment:336203362033620 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1313""?",False
+"Is 2024-01-05 19:05:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1313""?",False
+"Is 2024-01-12 15:49:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1313""?",False
+"Is 211297211297211297211297211297211297.211297 the lifecycle duration of ocel:oid ""invoice receipt:1313""?",False
 "Are the activities Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:1337""?",True
 "Are the objects goods receipt:1341, payment:639, purchase_order:1101 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1337""?",True
 "Is 2024-01-12 12:17:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1337""?",True
 "Is 2024-01-14 17:07:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1337""?",True
 "Is 190200.0 the lifecycle duration of ocel:oid ""invoice receipt:1337""?",True
+"Are the activities Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:39453394533945339453""?",False
+"Are the objects goods receipt:1341, payment:639, purchase_order:1101 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:39453394533945339453""?",False
+"Is 2024-01-12 12:17:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:39453394533945339453""?",False
+"Is 2024-01-14 17:07:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:39453394533945339453""?",False
+"Is 190200.0 the lifecycle duration of ocel:oid ""invoice receipt:39453394533945339453""?",False
 "Are the activities Create Invoice Receipt, Perform Two-Way Match, Create Invoice Receipt, Create Invoice Receipt, Perform Two-Way Match, Perform Two-Way Match, Execute Payment, Execute Payment, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:1363""?",True
 "Are the objects goods receipt:1353, goods receipt:1351, purchase_order:1122, goods receipt:1352, payment:648, purchase_order:1121 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1363""?",True
 "Is 2024-01-25 11:04:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1363""?",True
 "Is 2024-02-13 11:18:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1363""?",True
 "Is 1642440.0 the lifecycle duration of ocel:oid ""invoice receipt:1363""?",True
+"Are the activities Conduct Audit, Prepare Budget, Initiate Project included the lifecycle of ocel:oid ""invoice receipt:1363""?",False
+"Are the objects goods receipt:32198321983219832198, goods receipt:32198321983219832198, purchase_order:32198321983219832198, goods receipt:32198321983219832198, payment:321983219832198, purchase_order:32198321983219832198 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1363""?",False
+"Is 2024-01-26 12:05:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1363""?",False
+"Is 2024-02-14 12:19:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1363""?",False
+"Is 822480822480822480822480822480822480822480.822480 the lifecycle duration of ocel:oid ""invoice receipt:1363""?",False
 "Are the activities Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:1379""?",True
 "Are the objects goods receipt:1388, purchase_order:1142, payment:659 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:1379""?",True
 "Is 2024-02-07 01:22:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:1379""?",True
 "Is 2024-02-15 14:38:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:1379""?",True
 "Is 738960.0 the lifecycle duration of ocel:oid ""invoice receipt:1379""?",True
+"Are the activities Create Invoice Receipt, Perform Two-Way Match, Execute Payment included the lifecycle of ocel:oid ""invoice receipt:49911499114991149911""?",False
+"Are the objects goods receipt:1388, purchase_order:1142, payment:659 among the interacting objects in the lifecycle of ocel:oid ""invoice receipt:49911499114991149911""?",False
+"Is 2024-02-07 01:22:00+00:00 the start timestamp of the lifecycle of ocel:oid ""invoice receipt:49911499114991149911""?",False
+"Is 2024-02-15 14:38:00+00:00 the end timestamp of the lifecycle of ocel:oid ""invoice receipt:49911499114991149911""?",False
+"Is 738960.0 the lifecycle duration of ocel:oid ""invoice receipt:49911499114991149911""?",False
 "Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:0""?",True
 "Are the objects material:1, purchase_requisition:0:pr_trigger_0, material:2, material:3 among the interacting objects in the lifecycle of ocel:oid ""material:0""?",True
 "Is 2022-04-01 09:26:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:0""?",True
 "Is 2022-04-02 14:16:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:0""?",True
 "Is 103800.0 the lifecycle duration of ocel:oid ""material:0""?",True
+"Are the activities Prepare Budget, Approve Budget, Approve Project included the lifecycle of ocel:oid ""material:0""?",False
+"Are the objects material:84770, purchase_requisition:84770:pr_trigger_84770, material:84770, material:84770 among the interacting objects in the lifecycle of ocel:oid ""material:0""?",False
+"Is 2022-04-02 10:27:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:0""?",False
+"Is 2022-04-03 15:17:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:0""?",False
+"Is 536118536118536118536118536118536118.536118 the lifecycle duration of ocel:oid ""material:0""?",False
 "Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:1009""?",True
 "Are the objects purchase_requisition:408:pr_trigger_408, material:1006, material:1007, material:1008 among the interacting objects in the lifecycle of ocel:oid ""material:1009""?",True
 "Is 2023-05-22 21:33:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1009""?",True
 "Is 2023-05-29 03:12:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1009""?",True
 "Is 538740.0 the lifecycle duration of ocel:oid ""material:1009""?",True
+"Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:80532805328053280532""?",False
+"Are the objects purchase_requisition:408:pr_trigger_408, material:1006, material:1007, material:1008 among the interacting objects in the lifecycle of ocel:oid ""material:80532805328053280532""?",False
+"Is 2023-05-22 21:33:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:80532805328053280532""?",False
+"Is 2023-05-29 03:12:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:80532805328053280532""?",False
+"Is 538740.0 the lifecycle duration of ocel:oid ""material:80532805328053280532""?",False
 "Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:1018""?",True
 "Are the objects purchase_requisition:412:pr_trigger_412, material:1017 among the interacting objects in the lifecycle of ocel:oid ""material:1018""?",True
 "Is 2023-05-29 08:18:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1018""?",True
 "Is 2023-06-07 17:21:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1018""?",True
 "Is 810180.0 the lifecycle duration of ocel:oid ""material:1018""?",True
+"Are the activities Create Service Order, Close Service Order, Prepare Budget included the lifecycle of ocel:oid ""material:1018""?",False
+"Are the objects purchase_requisition:237462374623746:pr_trigger_237462374623746, material:23746237462374623746 among the interacting objects in the lifecycle of ocel:oid ""material:1018""?",False
+"Is 2023-05-30 09:19:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1018""?",False
+"Is 2023-06-08 18:22:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1018""?",False
+"Is 839089839089839089839089839089839089.839089 the lifecycle duration of ocel:oid ""material:1018""?",False
 "Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:1030""?",True
 "Are the objects material:1031, material:1029, purchase_requisition:417:pr_trigger_417 among the interacting objects in the lifecycle of ocel:oid ""material:1030""?",True
 "Is 2023-05-31 08:27:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1030""?",True
 "Is 2023-06-01 11:46:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1030""?",True
 "Is 98340.0 the lifecycle duration of ocel:oid ""material:1030""?",True
+"Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:27873278732787327873""?",False
+"Are the objects material:1031, material:1029, purchase_requisition:417:pr_trigger_417 among the interacting objects in the lifecycle of ocel:oid ""material:27873278732787327873""?",False
+"Is 2023-05-31 08:27:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:27873278732787327873""?",False
+"Is 2023-06-01 11:46:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:27873278732787327873""?",False
+"Is 98340.0 the lifecycle duration of ocel:oid ""material:27873278732787327873""?",False
 "Are the activities Create Purchase Requisition, Delegate Purchase Requisition Approval included the lifecycle of ocel:oid ""material:104""?",True
 "Are the objects material:103, purchase_requisition:43:pr_trigger_43, material:102 among the interacting objects in the lifecycle of ocel:oid ""material:104""?",True
 "Is 2022-05-09 10:59:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:104""?",True
 "Is 2022-05-09 11:13:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:104""?",True
 "Is 840.0 the lifecycle duration of ocel:oid ""material:104""?",True
+"Are the activities Submit Timesheet, Sign Contract, Sign Contract included the lifecycle of ocel:oid ""material:104""?",False
+"Are the objects material:506845068450684, purchase_requisition:5068450684:pr_trigger_5068450684, material:506845068450684 among the interacting objects in the lifecycle of ocel:oid ""material:104""?",False
+"Is 2022-05-10 12:00:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:104""?",False
+"Is 2022-05-10 12:14:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:104""?",False
+"Is 543693543693543693.543693 the lifecycle duration of ocel:oid ""material:104""?",False
 "Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:1049""?",True
 "Are the objects material:1048, material:1047, purchase_requisition:424:pr_trigger_424 among the interacting objects in the lifecycle of ocel:oid ""material:1049""?",True
 "Is 2023-06-08 07:23:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1049""?",True
 "Is 2023-06-09 18:11:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1049""?",True
 "Is 125280.0 the lifecycle duration of ocel:oid ""material:1049""?",True
+"Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:37845378453784537845""?",False
+"Are the objects material:1048, material:1047, purchase_requisition:424:pr_trigger_424 among the interacting objects in the lifecycle of ocel:oid ""material:37845378453784537845""?",False
+"Is 2023-06-08 07:23:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:37845378453784537845""?",False
+"Is 2023-06-09 18:11:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:37845378453784537845""?",False
+"Is 125280.0 the lifecycle duration of ocel:oid ""material:37845378453784537845""?",False
 "Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:1062""?",True
 "Are the objects material:1059, purchase_requisition:428:pr_trigger_428, material:1060, material:1061 among the interacting objects in the lifecycle of ocel:oid ""material:1062""?",True
 "Is 2023-06-13 11:48:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1062""?",True
 "Is 2023-06-14 20:49:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1062""?",True
 "Is 118860.0 the lifecycle duration of ocel:oid ""material:1062""?",True
+"Are the activities Close Service Order, Complete Project Milestone, Submit Timesheet included the lifecycle of ocel:oid ""material:1062""?",False
+"Are the objects material:27212272122721227212, purchase_requisition:272122721227212:pr_trigger_272122721227212, material:27212272122721227212, material:27212272122721227212 among the interacting objects in the lifecycle of ocel:oid ""material:1062""?",False
+"Is 2023-06-14 12:49:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1062""?",False
+"Is 2023-06-15 21:50:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1062""?",False
+"Is 633286633286633286633286633286633286.633286 the lifecycle duration of ocel:oid ""material:1062""?",False
 "Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:1071""?",True
 "Are the objects material:1070, purchase_requisition:432:pr_trigger_432 among the interacting objects in the lifecycle of ocel:oid ""material:1071""?",True
 "Is 2023-06-19 11:29:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1071""?",True
 "Is 2023-06-23 14:43:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1071""?",True
 "Is 357240.0 the lifecycle duration of ocel:oid ""material:1071""?",True
+"Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:36018360183601836018""?",False
+"Are the objects material:1070, purchase_requisition:432:pr_trigger_432 among the interacting objects in the lifecycle of ocel:oid ""material:36018360183601836018""?",False
+"Is 2023-06-19 11:29:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:36018360183601836018""?",False
+"Is 2023-06-23 14:43:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:36018360183601836018""?",False
+"Is 357240.0 the lifecycle duration of ocel:oid ""material:36018360183601836018""?",False
 "Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:1082""?",True
 "Are the objects purchase_requisition:437:pr_trigger_437 among the interacting objects in the lifecycle of ocel:oid ""material:1082""?",True
 "Is 2023-06-20 15:38:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1082""?",True
 "Is 2023-06-27 21:08:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1082""?",True
 "Is 624600.0 the lifecycle duration of ocel:oid ""material:1082""?",True
+"Are the activities Renew Contract, Review Expense Report, Initiate Project included the lifecycle of ocel:oid ""material:1082""?",False
+"Are the objects purchase_requisition:919439194391943:pr_trigger_919439194391943 among the interacting objects in the lifecycle of ocel:oid ""material:1082""?",False
+"Is 2023-06-21 16:39:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1082""?",False
+"Is 2023-06-28 22:09:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1082""?",False
+"Is 540388540388540388540388540388540388.540388 the lifecycle duration of ocel:oid ""material:1082""?",False
 "Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:1096""?",True
 "Are the objects material:1095, purchase_requisition:442:pr_trigger_442 among the interacting objects in the lifecycle of ocel:oid ""material:1096""?",True
 "Is 2023-06-27 01:27:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1096""?",True
 "Is 2023-06-30 07:08:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1096""?",True
 "Is 279660.0 the lifecycle duration of ocel:oid ""material:1096""?",True
+"Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:62083620836208362083""?",False
+"Are the objects material:1095, purchase_requisition:442:pr_trigger_442 among the interacting objects in the lifecycle of ocel:oid ""material:62083620836208362083""?",False
+"Is 2023-06-27 01:27:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:62083620836208362083""?",False
+"Is 2023-06-30 07:08:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:62083620836208362083""?",False
+"Is 279660.0 the lifecycle duration of ocel:oid ""material:62083620836208362083""?",False
 "Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:111""?",True
 "Are the objects purchase_requisition:47:pr_trigger_47, material:110 among the interacting objects in the lifecycle of ocel:oid ""material:111""?",True
 "Is 2022-05-16 07:59:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:111""?",True
 "Is 2022-05-17 22:17:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:111""?",True
 "Is 137880.0 the lifecycle duration of ocel:oid ""material:111""?",True
+"Are the activities Sign Contract, Initiate Project, Initiate Project included the lifecycle of ocel:oid ""material:111""?",False
+"Are the objects purchase_requisition:4786747867:pr_trigger_4786747867, material:478674786747867 among the interacting objects in the lifecycle of ocel:oid ""material:111""?",False
+"Is 2022-05-17 09:00:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:111""?",False
+"Is 2022-05-18 23:18:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:111""?",False
+"Is 793190793190793190793190793190793190.793190 the lifecycle duration of ocel:oid ""material:111""?",False
 "Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:1119""?",True
 "Are the objects material:1118, purchase_requisition:452:pr_trigger_452 among the interacting objects in the lifecycle of ocel:oid ""material:1119""?",True
 "Is 2023-07-05 08:03:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1119""?",True
 "Is 2023-07-07 09:33:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1119""?",True
 "Is 178200.0 the lifecycle duration of ocel:oid ""material:1119""?",True
+"Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:90526905269052690526""?",False
+"Are the objects material:1118, purchase_requisition:452:pr_trigger_452 among the interacting objects in the lifecycle of ocel:oid ""material:90526905269052690526""?",False
+"Is 2023-07-05 08:03:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:90526905269052690526""?",False
+"Is 2023-07-07 09:33:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:90526905269052690526""?",False
+"Is 178200.0 the lifecycle duration of ocel:oid ""material:90526905269052690526""?",False
 "Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:1128""?",True
 "Are the objects purchase_requisition:456:pr_trigger_456 among the interacting objects in the lifecycle of ocel:oid ""material:1128""?",True
 "Is 2023-07-10 18:55:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1128""?",True
 "Is 2023-07-14 04:08:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1128""?",True
 "Is 292380.0 the lifecycle duration of ocel:oid ""material:1128""?",True
+"Are the activities Initiate Project, Update Inventory, Prepare Budget included the lifecycle of ocel:oid ""material:1128""?",False
+"Are the objects purchase_requisition:177251772517725:pr_trigger_177251772517725 among the interacting objects in the lifecycle of ocel:oid ""material:1128""?",False
+"Is 2023-07-11 19:56:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1128""?",False
+"Is 2023-07-15 05:09:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1128""?",False
+"Is 134992134992134992134992134992134992.134992 the lifecycle duration of ocel:oid ""material:1128""?",False
 "Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:1150""?",True
 "Are the objects material:1148, purchase_requisition:465:pr_trigger_465, material:1149 among the interacting objects in the lifecycle of ocel:oid ""material:1150""?",True
 "Is 2023-07-19 20:43:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1150""?",True
 "Is 2023-07-26 13:31:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1150""?",True
 "Is 578880.0 the lifecycle duration of ocel:oid ""material:1150""?",True
+"Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:30603306033060330603""?",False
+"Are the objects material:1148, purchase_requisition:465:pr_trigger_465, material:1149 among the interacting objects in the lifecycle of ocel:oid ""material:30603306033060330603""?",False
+"Is 2023-07-19 20:43:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:30603306033060330603""?",False
+"Is 2023-07-26 13:31:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:30603306033060330603""?",False
+"Is 578880.0 the lifecycle duration of ocel:oid ""material:30603306033060330603""?",False
 "Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:1162""?",True
 "Are the objects material:1163, purchase_requisition:472:pr_trigger_472 among the interacting objects in the lifecycle of ocel:oid ""material:1162""?",True
 "Is 2023-07-24 08:52:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1162""?",True
 "Is 2023-07-25 08:44:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1162""?",True
 "Is 85920.0 the lifecycle duration of ocel:oid ""material:1162""?",True
+"Are the activities Approve Project, Review Expense Report, Initiate Project included the lifecycle of ocel:oid ""material:1162""?",False
+"Are the objects material:55283552835528355283, purchase_requisition:552835528355283:pr_trigger_552835528355283 among the interacting objects in the lifecycle of ocel:oid ""material:1162""?",False
+"Is 2023-07-25 09:53:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1162""?",False
+"Is 2023-07-26 09:45:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1162""?",False
+"Is 789462789462789462789462789462.789462 the lifecycle duration of ocel:oid ""material:1162""?",False
 "Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:1175""?",True
 "Are the objects purchase_requisition:478:pr_trigger_478, material:1174 among the interacting objects in the lifecycle of ocel:oid ""material:1175""?",True
 "Is 2023-07-28 20:17:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1175""?",True
 "Is 2023-08-03 12:43:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1175""?",True
 "Is 491160.0 the lifecycle duration of ocel:oid ""material:1175""?",True
+"Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:90654906549065490654""?",False
+"Are the objects purchase_requisition:478:pr_trigger_478, material:1174 among the interacting objects in the lifecycle of ocel:oid ""material:90654906549065490654""?",False
+"Is 2023-07-28 20:17:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:90654906549065490654""?",False
+"Is 2023-08-03 12:43:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:90654906549065490654""?",False
+"Is 491160.0 the lifecycle duration of ocel:oid ""material:90654906549065490654""?",False
 "Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:1184""?",True
 "Are the objects material:1183, purchase_requisition:483:pr_trigger_483 among the interacting objects in the lifecycle of ocel:oid ""material:1184""?",True
 "Is 2023-08-04 16:39:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1184""?",True
 "Is 2023-08-16 20:23:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1184""?",True
 "Is 1050240.0 the lifecycle duration of ocel:oid ""material:1184""?",True
+"Are the activities Review Expense Report, Close Project, Prepare Budget included the lifecycle of ocel:oid ""material:1184""?",False
+"Are the objects material:66629666296662966629, purchase_requisition:666296662966629:pr_trigger_666296662966629 among the interacting objects in the lifecycle of ocel:oid ""material:1184""?",False
+"Is 2023-08-05 17:40:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1184""?",False
+"Is 2023-08-17 21:24:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1184""?",False
+"Is 649555649555649555649555649555649555649555.649555 the lifecycle duration of ocel:oid ""material:1184""?",False
 "Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:1194""?",True
 "Are the objects material:1195, material:1196, material:1197, purchase_requisition:487:pr_trigger_487 among the interacting objects in the lifecycle of ocel:oid ""material:1194""?",True
 "Is 2023-08-07 13:39:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1194""?",True
 "Is 2023-08-13 11:50:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1194""?",True
 "Is 511860.0 the lifecycle duration of ocel:oid ""material:1194""?",True
+"Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:54436544365443654436""?",False
+"Are the objects material:1195, material:1196, material:1197, purchase_requisition:487:pr_trigger_487 among the interacting objects in the lifecycle of ocel:oid ""material:54436544365443654436""?",False
+"Is 2023-08-07 13:39:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:54436544365443654436""?",False
+"Is 2023-08-13 11:50:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:54436544365443654436""?",False
+"Is 511860.0 the lifecycle duration of ocel:oid ""material:54436544365443654436""?",False
 "Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:1207""?",True
 "Are the objects material:1208, purchase_requisition:491:pr_trigger_491 among the interacting objects in the lifecycle of ocel:oid ""material:1207""?",True
 "Is 2023-08-14 17:13:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1207""?",True
 "Is 2023-08-18 11:26:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1207""?",True
 "Is 324780.0 the lifecycle duration of ocel:oid ""material:1207""?",True
+"Are the activities Conduct Audit, Conduct Audit, Close Service Order included the lifecycle of ocel:oid ""material:1207""?",False
+"Are the objects material:77766777667776677766, purchase_requisition:777667776677766:pr_trigger_777667776677766 among the interacting objects in the lifecycle of ocel:oid ""material:1207""?",False
+"Is 2023-08-15 18:14:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1207""?",False
+"Is 2023-08-19 12:27:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1207""?",False
+"Is 712801712801712801712801712801712801.712801 the lifecycle duration of ocel:oid ""material:1207""?",False
 "Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:1216""?",True
 "Are the objects material:1217, purchase_requisition:494:pr_trigger_494, material:1214, material:1215 among the interacting objects in the lifecycle of ocel:oid ""material:1216""?",True
 "Is 2023-08-15 13:59:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:1216""?",True
 "Is 2023-08-18 06:15:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:1216""?",True
 "Is 231360.0 the lifecycle duration of ocel:oid ""material:1216""?",True
+"Are the activities Create Purchase Requisition, Approve Purchase Requisition included the lifecycle of ocel:oid ""material:64960649606496064960""?",False
+"Are the objects material:1217, purchase_requisition:494:pr_trigger_494, material:1214, material:1215 among the interacting objects in the lifecycle of ocel:oid ""material:64960649606496064960""?",False
+"Is 2023-08-15 13:59:00+00:00 the start timestamp of the lifecycle of ocel:oid ""material:64960649606496064960""?",False
+"Is 2023-08-18 06:15:00+00:00 the end timestamp of the lifecycle of ocel:oid ""material:64960649606496064960""?",False
+"Is 231360.0 the lifecycle duration of ocel:oid ""material:64960649606496064960""?",False
 "Are the activities Execute Payment, Execute Payment included the lifecycle of ocel:oid ""payment:100""?",True
 "Are the objects purchase_order:163, goods receipt:184, purchase_order:161, invoice receipt:203, goods receipt:185, goods receipt:186, purchase_order:162 among the interacting objects in the lifecycle of ocel:oid ""payment:100""?",True
 "Is 2022-07-27 14:46:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:100""?",True
 "Is 2022-07-30 08:49:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:100""?",True
 "Is 237780.0 the lifecycle duration of ocel:oid ""payment:100""?",True
+"Are the activities Terminate Contract, Terminate Contract, Close Project included the lifecycle of ocel:oid ""payment:100""?",False
+"Are the objects purchase_order:359533595335953, goods receipt:359533595335953, purchase_order:359533595335953, invoice receipt:359533595335953, goods receipt:359533595335953, goods receipt:359533595335953, purchase_order:359533595335953 among the interacting objects in the lifecycle of ocel:oid ""payment:100""?",False
+"Is 2022-07-28 15:47:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:100""?",False
+"Is 2022-07-31 09:50:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:100""?",False
+"Is 966970966970966970966970966970966970.966970 the lifecycle duration of ocel:oid ""payment:100""?",False
 "Are the activities Execute Payment included the lifecycle of ocel:oid ""payment:11""?",True
 "Are the objects goods receipt:16, purchase_order:16, goods receipt:15, invoice receipt:19 among the interacting objects in the lifecycle of ocel:oid ""payment:11""?",True
 "Is 2022-05-07 15:39:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:11""?",True
 "Is 2022-05-07 15:39:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:11""?",True
 "Is 0.0 the lifecycle duration of ocel:oid ""payment:11""?",True
+"Are the activities Execute Payment included the lifecycle of ocel:oid ""payment:3105231052""?",False
+"Are the objects goods receipt:16, purchase_order:16, goods receipt:15, invoice receipt:19 among the interacting objects in the lifecycle of ocel:oid ""payment:3105231052""?",False
+"Is 2022-05-07 15:39:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:3105231052""?",False
+"Is 2022-05-07 15:39:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:3105231052""?",False
+"Is 0.0 the lifecycle duration of ocel:oid ""payment:3105231052""?",False
 "Are the activities Execute Payment included the lifecycle of ocel:oid ""payment:119""?",True
 "Are the objects goods receipt:245, purchase_order:210, purchase_order:209, purchase_order:208, goods receipt:246, goods receipt:247, invoice receipt:245 among the interacting objects in the lifecycle of ocel:oid ""payment:119""?",True
 "Is 2022-08-15 00:14:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:119""?",True
 "Is 2022-08-15 00:14:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:119""?",True
 "Is 0.0 the lifecycle duration of ocel:oid ""payment:119""?",True
+"Are the activities Approve Service Order, Conduct Audit, Approve Service Order included the lifecycle of ocel:oid ""payment:119""?",False
+"Are the objects goods receipt:258772587725877, purchase_order:258772587725877, purchase_order:258772587725877, purchase_order:258772587725877, goods receipt:258772587725877, goods receipt:258772587725877, invoice receipt:258772587725877 among the interacting objects in the lifecycle of ocel:oid ""payment:119""?",False
+"Is 2022-08-16 01:15:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:119""?",False
+"Is 2022-08-16 01:15:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:119""?",False
+"Is 173401.173401 the lifecycle duration of ocel:oid ""payment:119""?",False
 "Are the activities Execute Payment included the lifecycle of ocel:oid ""payment:128""?",True
 "Are the objects invoice receipt:272, purchase_order:224, purchase_order:225, goods receipt:266, goods receipt:265 among the interacting objects in the lifecycle of ocel:oid ""payment:128""?",True
 "Is 2022-08-20 07:58:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:128""?",True
 "Is 2022-08-20 07:58:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:128""?",True
 "Is 0.0 the lifecycle duration of ocel:oid ""payment:128""?",True
+"Are the activities Execute Payment included the lifecycle of ocel:oid ""payment:914089140891408""?",False
+"Are the objects invoice receipt:272, purchase_order:224, purchase_order:225, goods receipt:266, goods receipt:265 among the interacting objects in the lifecycle of ocel:oid ""payment:914089140891408""?",False
+"Is 2022-08-20 07:58:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:914089140891408""?",False
+"Is 2022-08-20 07:58:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:914089140891408""?",False
+"Is 0.0 the lifecycle duration of ocel:oid ""payment:914089140891408""?",False
 "Are the activities Execute Payment included the lifecycle of ocel:oid ""payment:137""?",True
 "Are the objects purchase_order:237, invoice receipt:276, goods receipt:277 among the interacting objects in the lifecycle of ocel:oid ""payment:137""?",True
 "Is 2022-08-26 10:17:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:137""?",True
 "Is 2022-08-26 10:17:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:137""?",True
 "Is 0.0 the lifecycle duration of ocel:oid ""payment:137""?",True
+"Are the activities Conduct Audit, Renew Contract, Prepare Budget included the lifecycle of ocel:oid ""payment:137""?",False
+"Are the objects purchase_order:962796279627, invoice receipt:962796279627, goods receipt:962796279627 among the interacting objects in the lifecycle of ocel:oid ""payment:137""?",False
+"Is 2022-08-27 11:18:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:137""?",False
+"Is 2022-08-27 11:18:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:137""?",False
+"Is 742878.742878 the lifecycle duration of ocel:oid ""payment:137""?",False
 "Are the activities Execute Payment included the lifecycle of ocel:oid ""payment:146""?",True
 "Are the objects invoice receipt:307, purchase_order:272, goods receipt:303 among the interacting objects in the lifecycle of ocel:oid ""payment:146""?",True
 "Is 2022-09-11 13:55:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:146""?",True
 "Is 2022-09-11 13:55:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:146""?",True
 "Is 0.0 the lifecycle duration of ocel:oid ""payment:146""?",True
+"Are the activities Execute Payment included the lifecycle of ocel:oid ""payment:950489504895048""?",False
+"Are the objects invoice receipt:307, purchase_order:272, goods receipt:303 among the interacting objects in the lifecycle of ocel:oid ""payment:950489504895048""?",False
+"Is 2022-09-11 13:55:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:950489504895048""?",False
+"Is 2022-09-11 13:55:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:950489504895048""?",False
+"Is 0.0 the lifecycle duration of ocel:oid ""payment:950489504895048""?",False
 "Are the activities Execute Payment, Execute Payment included the lifecycle of ocel:oid ""payment:155""?",True
 "Are the objects purchase_order:286, goods receipt:323, invoice receipt:320 among the interacting objects in the lifecycle of ocel:oid ""payment:155""?",True
 "Is 2022-09-28 05:01:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:155""?",True
 "Is 2022-10-01 01:22:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:155""?",True
 "Is 246060.0 the lifecycle duration of ocel:oid ""payment:155""?",True
+"Are the activities Conduct Audit, Sign Contract, Issue Refund included the lifecycle of ocel:oid ""payment:155""?",False
+"Are the objects purchase_order:229232292322923, goods receipt:229232292322923, invoice receipt:229232292322923 among the interacting objects in the lifecycle of ocel:oid ""payment:155""?",False
+"Is 2022-09-29 06:02:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:155""?",False
+"Is 2022-10-02 02:23:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:155""?",False
+"Is 157729157729157729157729157729157729.157729 the lifecycle duration of ocel:oid ""payment:155""?",False
 "Are the activities Execute Payment, Execute Payment included the lifecycle of ocel:oid ""payment:164""?",True
 "Are the objects invoice receipt:343, purchase_order:294, goods receipt:338 among the interacting objects in the lifecycle of ocel:oid ""payment:164""?",True
 "Is 2022-09-17 15:19:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:164""?",True
 "Is 2022-09-22 11:48:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:164""?",True
 "Is 419340.0 the lifecycle duration of ocel:oid ""payment:164""?",True
+"Are the activities Execute Payment, Execute Payment included the lifecycle of ocel:oid ""payment:970097009700""?",False
+"Are the objects invoice receipt:343, purchase_order:294, goods receipt:338 among the interacting objects in the lifecycle of ocel:oid ""payment:970097009700""?",False
+"Is 2022-09-17 15:19:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:970097009700""?",False
+"Is 2022-09-22 11:48:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:970097009700""?",False
+"Is 419340.0 the lifecycle duration of ocel:oid ""payment:970097009700""?",False
 "Are the activities Execute Payment included the lifecycle of ocel:oid ""payment:173""?",True
 "Are the objects purchase_order:310, invoice receipt:359, goods receipt:372 among the interacting objects in the lifecycle of ocel:oid ""payment:173""?",True
 "Is 2022-09-22 21:13:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:173""?",True
 "Is 2022-09-22 21:13:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:173""?",True
 "Is 0.0 the lifecycle duration of ocel:oid ""payment:173""?",True
+"Are the activities Close Service Order, Close Project, Approve Budget included the lifecycle of ocel:oid ""payment:173""?",False
+"Are the objects purchase_order:732187321873218, invoice receipt:732187321873218, goods receipt:732187321873218 among the interacting objects in the lifecycle of ocel:oid ""payment:173""?",False
+"Is 2022-09-23 22:14:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:173""?",False
+"Is 2022-09-23 22:14:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:173""?",False
+"Is 765038.765038 the lifecycle duration of ocel:oid ""payment:173""?",False
 "Are the activities Execute Payment included the lifecycle of ocel:oid ""payment:182""?",True
 "Are the objects purchase_order:318, invoice receipt:373, goods receipt:366 among the interacting objects in the lifecycle of ocel:oid ""payment:182""?",True
 "Is 2022-09-25 00:12:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:182""?",True
 "Is 2022-09-25 00:12:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:182""?",True
 "Is 0.0 the lifecycle duration of ocel:oid ""payment:182""?",True
+"Are the activities Execute Payment included the lifecycle of ocel:oid ""payment:962599625996259""?",False
+"Are the objects purchase_order:318, invoice receipt:373, goods receipt:366 among the interacting objects in the lifecycle of ocel:oid ""payment:962599625996259""?",False
+"Is 2022-09-25 00:12:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:962599625996259""?",False
+"Is 2022-09-25 00:12:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:962599625996259""?",False
+"Is 0.0 the lifecycle duration of ocel:oid ""payment:962599625996259""?",False
 "Are the activities Execute Payment included the lifecycle of ocel:oid ""payment:191""?",True
 "Are the objects invoice receipt:387, purchase_order:336, goods receipt:393 among the interacting objects in the lifecycle of ocel:oid ""payment:191""?",True
 "Is 2022-09-30 08:55:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:191""?",True
 "Is 2022-09-30 08:55:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:191""?",True
 "Is 0.0 the lifecycle duration of ocel:oid ""payment:191""?",True
+"Are the activities Create Service Order, Approve Timesheet, Terminate Contract included the lifecycle of ocel:oid ""payment:191""?",False
+"Are the objects invoice receipt:556265562655626, purchase_order:556265562655626, goods receipt:556265562655626 among the interacting objects in the lifecycle of ocel:oid ""payment:191""?",False
+"Is 2022-10-01 09:56:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:191""?",False
+"Is 2022-10-01 09:56:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:191""?",False
+"Is 347188.347188 the lifecycle duration of ocel:oid ""payment:191""?",False
 "Are the activities Execute Payment included the lifecycle of ocel:oid ""payment:20""?",True
 "Are the objects invoice receipt:42, goods receipt:39, goods receipt:41, purchase_order:32, purchase_order:31, purchase_order:33, goods receipt:40 among the interacting objects in the lifecycle of ocel:oid ""payment:20""?",True
 "Is 2022-05-12 19:07:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:20""?",True
 "Is 2022-05-12 19:07:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:20""?",True
 "Is 0.0 the lifecycle duration of ocel:oid ""payment:20""?",True
+"Are the activities Execute Payment included the lifecycle of ocel:oid ""payment:3750137501""?",False
+"Are the objects invoice receipt:42, goods receipt:39, goods receipt:41, purchase_order:32, purchase_order:31, purchase_order:33, goods receipt:40 among the interacting objects in the lifecycle of ocel:oid ""payment:3750137501""?",False
+"Is 2022-05-12 19:07:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:3750137501""?",False
+"Is 2022-05-12 19:07:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:3750137501""?",False
+"Is 0.0 the lifecycle duration of ocel:oid ""payment:3750137501""?",False
 "Are the activities Execute Payment included the lifecycle of ocel:oid ""payment:209""?",True
 "Are the objects purchase_order:352, goods receipt:419, purchase_order:353, goods receipt:420, invoice receipt:420 among the interacting objects in the lifecycle of ocel:oid ""payment:209""?",True
 "Is 2022-10-24 13:15:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:209""?",True
 "Is 2022-10-24 13:15:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:209""?",True
 "Is 0.0 the lifecycle duration of ocel:oid ""payment:209""?",True
+"Are the activities Complete Project Milestone, Approve Project, Approve Service Order included the lifecycle of ocel:oid ""payment:209""?",False
+"Are the objects purchase_order:976497649764, goods receipt:976497649764, purchase_order:976497649764, goods receipt:976497649764, invoice receipt:976497649764 among the interacting objects in the lifecycle of ocel:oid ""payment:209""?",False
+"Is 2022-10-25 14:16:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:209""?",False
+"Is 2022-10-25 14:16:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:209""?",False
+"Is 788975.788975 the lifecycle duration of ocel:oid ""payment:209""?",False
 "Are the activities Execute Payment included the lifecycle of ocel:oid ""payment:218""?",True
 "Are the objects invoice receipt:439, goods receipt:439, purchase_order:376 among the interacting objects in the lifecycle of ocel:oid ""payment:218""?",True
 "Is 2022-10-26 21:11:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:218""?",True
 "Is 2022-10-26 21:11:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:218""?",True
 "Is 0.0 the lifecycle duration of ocel:oid ""payment:218""?",True
+"Are the activities Execute Payment included the lifecycle of ocel:oid ""payment:630026300263002""?",False
+"Are the objects invoice receipt:439, goods receipt:439, purchase_order:376 among the interacting objects in the lifecycle of ocel:oid ""payment:630026300263002""?",False
+"Is 2022-10-26 21:11:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:630026300263002""?",False
+"Is 2022-10-26 21:11:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:630026300263002""?",False
+"Is 0.0 the lifecycle duration of ocel:oid ""payment:630026300263002""?",False
 "Are the activities Execute Payment, Execute Payment included the lifecycle of ocel:oid ""payment:227""?",True
 "Are the objects goods receipt:457, purchase_order:389, invoice receipt:463 among the interacting objects in the lifecycle of ocel:oid ""payment:227""?",True
 "Is 2022-11-14 22:50:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:227""?",True
 "Is 2022-11-22 11:42:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:227""?",True
 "Is 651120.0 the lifecycle duration of ocel:oid ""payment:227""?",True
+"Are the activities Prepare Budget, Sign Contract, Conduct Audit included the lifecycle of ocel:oid ""payment:227""?",False
+"Are the objects goods receipt:887458874588745, purchase_order:887458874588745, invoice receipt:887458874588745 among the interacting objects in the lifecycle of ocel:oid ""payment:227""?",False
+"Is 2022-11-15 23:51:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:227""?",False
+"Is 2022-11-23 12:43:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:227""?",False
+"Is 531766531766531766531766531766531766.531766 the lifecycle duration of ocel:oid ""payment:227""?",False
 "Are the activities Execute Payment, Execute Payment included the lifecycle of ocel:oid ""payment:236""?",True
 "Are the objects purchase_order:403, goods receipt:477, invoice receipt:477 among the interacting objects in the lifecycle of ocel:oid ""payment:236""?",True
 "Is 2022-12-09 16:06:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:236""?",True
 "Is 2022-12-16 23:53:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:236""?",True
 "Is 632820.0 the lifecycle duration of ocel:oid ""payment:236""?",True
+"Are the activities Execute Payment, Execute Payment included the lifecycle of ocel:oid ""payment:764437644376443""?",False
+"Are the objects purchase_order:403, goods receipt:477, invoice receipt:477 among the interacting objects in the lifecycle of ocel:oid ""payment:764437644376443""?",False
+"Is 2022-12-09 16:06:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:764437644376443""?",False
+"Is 2022-12-16 23:53:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:764437644376443""?",False
+"Is 632820.0 the lifecycle duration of ocel:oid ""payment:764437644376443""?",False
 "Are the activities Execute Payment included the lifecycle of ocel:oid ""payment:245""?",True
 "Are the objects goods receipt:485, purchase_order:414, invoice receipt:498 among the interacting objects in the lifecycle of ocel:oid ""payment:245""?",True
 "Is 2022-12-17 10:32:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:245""?",True
 "Is 2022-12-17 10:32:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:245""?",True
 "Is 0.0 the lifecycle duration of ocel:oid ""payment:245""?",True
+"Are the activities Review Expense Report, Initiate Project, Renew Contract included the lifecycle of ocel:oid ""payment:245""?",False
+"Are the objects goods receipt:795147951479514, purchase_order:795147951479514, invoice receipt:795147951479514 among the interacting objects in the lifecycle of ocel:oid ""payment:245""?",False
+"Is 2022-12-18 11:33:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:245""?",False
+"Is 2022-12-18 11:33:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:245""?",False
+"Is 666362.666362 the lifecycle duration of ocel:oid ""payment:245""?",False
 "Are the activities Execute Payment included the lifecycle of ocel:oid ""payment:254""?",True
 "Are the objects goods receipt:502, invoice receipt:510, purchase_order:426 among the interacting objects in the lifecycle of ocel:oid ""payment:254""?",True
 "Is 2022-12-30 16:07:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:254""?",True
 "Is 2022-12-30 16:07:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:254""?",True
 "Is 0.0 the lifecycle duration of ocel:oid ""payment:254""?",True
+"Are the activities Execute Payment included the lifecycle of ocel:oid ""payment:329533295332953""?",False
+"Are the objects goods receipt:502, invoice receipt:510, purchase_order:426 among the interacting objects in the lifecycle of ocel:oid ""payment:329533295332953""?",False
+"Is 2022-12-30 16:07:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:329533295332953""?",False
+"Is 2022-12-30 16:07:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:329533295332953""?",False
+"Is 0.0 the lifecycle duration of ocel:oid ""payment:329533295332953""?",False
 "Are the activities Execute Payment, Execute Payment included the lifecycle of ocel:oid ""payment:263""?",True
 "Are the objects purchase_order:438, purchase_order:440, purchase_order:439, invoice receipt:524, goods receipt:521, goods receipt:520, goods receipt:519 among the interacting objects in the lifecycle of ocel:oid ""payment:263""?",True
 "Is 2023-01-13 04:03:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:263""?",True
 "Is 2023-01-19 06:44:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:263""?",True
 "Is 528060.0 the lifecycle duration of ocel:oid ""payment:263""?",True
+"Are the activities Approve Project, Close Service Order, Prepare Budget included the lifecycle of ocel:oid ""payment:263""?",False
+"Are the objects purchase_order:863908639086390, purchase_order:863908639086390, purchase_order:863908639086390, invoice receipt:863908639086390, goods receipt:863908639086390, goods receipt:863908639086390, goods receipt:863908639086390 among the interacting objects in the lifecycle of ocel:oid ""payment:263""?",False
+"Is 2023-01-14 05:04:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:263""?",False
+"Is 2023-01-20 07:45:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:263""?",False
+"Is 663152663152663152663152663152663152.663152 the lifecycle duration of ocel:oid ""payment:263""?",False
 "Are the activities Execute Payment included the lifecycle of ocel:oid ""payment:272""?",True
 "Are the objects purchase_order:464, goods receipt:549, purchase_order:465, goods receipt:550, invoice receipt:548 among the interacting objects in the lifecycle of ocel:oid ""payment:272""?",True
 "Is 2023-01-22 10:13:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:272""?",True
 "Is 2023-01-22 10:13:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:272""?",True
 "Is 0.0 the lifecycle duration of ocel:oid ""payment:272""?",True
+"Are the activities Execute Payment included the lifecycle of ocel:oid ""payment:607656076560765""?",False
+"Are the objects purchase_order:464, goods receipt:549, purchase_order:465, goods receipt:550, invoice receipt:548 among the interacting objects in the lifecycle of ocel:oid ""payment:607656076560765""?",False
+"Is 2023-01-22 10:13:00+00:00 the start timestamp of the lifecycle of ocel:oid ""payment:607656076560765""?",False
+"Is 2023-01-22 10:13:00+00:00 the end timestamp of the lifecycle of ocel:oid ""payment:607656076560765""?",False
+"Is 0.0 the lifecycle duration of ocel:oid ""payment:607656076560765""?",False
 "Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Execute Payment included the lifecycle of ocel:oid ""purchase_order:1002""?",True
 "Are the objects goods receipt:1213, payment:584, quotation:585, invoice receipt:1214 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1002""?",True
 "Is 2023-11-20 21:28:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1002""?",True
 "Is 2023-11-30 22:18:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1002""?",True
 "Is 867000.0 the lifecycle duration of ocel:oid ""purchase_order:1002""?",True
+"Are the activities Approve Project, Issue Refund, Update Inventory included the lifecycle of ocel:oid ""purchase_order:1002""?",False
+"Are the objects goods receipt:65509655096550965509, payment:655096550965509, quotation:655096550965509, invoice receipt:65509655096550965509 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1002""?",False
+"Is 2023-11-21 22:29:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1002""?",False
+"Is 2023-12-01 23:19:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1002""?",False
+"Is 590661590661590661590661590661590661.590661 the lifecycle duration of ocel:oid ""purchase_order:1002""?",False
 "Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Execute Payment, Execute Payment included the lifecycle of ocel:oid ""purchase_order:1011""?",True
 "Are the objects invoice receipt:1211, quotation:587, goods receipt:1214, payment:583 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1011""?",True
 "Is 2023-11-24 23:38:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1011""?",True
 "Is 2023-12-01 16:27:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1011""?",True
 "Is 578940.0 the lifecycle duration of ocel:oid ""purchase_order:1011""?",True
+"Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Execute Payment, Execute Payment included the lifecycle of ocel:oid ""purchase_order:81694816948169481694""?",False
+"Are the objects invoice receipt:1211, quotation:587, goods receipt:1214, payment:583 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:81694816948169481694""?",False
+"Is 2023-11-24 23:38:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:81694816948169481694""?",False
+"Is 2023-12-01 16:27:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:81694816948169481694""?",False
+"Is 578940.0 the lifecycle duration of ocel:oid ""purchase_order:81694816948169481694""?",False
 "Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Execute Payment included the lifecycle of ocel:oid ""purchase_order:1020""?",True
 "Are the objects quotation:594, goods receipt:1223, purchase_order:1019, invoice receipt:1228, goods receipt:1224, payment:589 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1020""?",True
 "Is 2023-11-29 08:05:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1020""?",True
 "Is 2023-12-08 03:49:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1020""?",True
 "Is 762240.0 the lifecycle duration of ocel:oid ""purchase_order:1020""?",True
+"Are the activities Conduct Audit, Create Contract, Approve Service Order included the lifecycle of ocel:oid ""purchase_order:1020""?",False
+"Are the objects quotation:213682136821368, goods receipt:21368213682136821368, purchase_order:21368213682136821368, invoice receipt:21368213682136821368, goods receipt:21368213682136821368, payment:213682136821368 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1020""?",False
+"Is 2023-11-30 09:06:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1020""?",False
+"Is 2023-12-09 04:50:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1020""?",False
+"Is 717450717450717450717450717450717450.717450 the lifecycle duration of ocel:oid ""purchase_order:1020""?",False
 "Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment, Execute Payment included the lifecycle of ocel:oid ""purchase_order:103""?",True
 "Are the objects invoice receipt:106, goods receipt:107, payment:55, goods receipt:106, purchase_order:105, goods receipt:105, purchase_order:104, quotation:63 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:103""?",True
 "Is 2022-05-30 12:59:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:103""?",True
 "Is 2022-06-09 08:45:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:103""?",True
 "Is 848760.0 the lifecycle duration of ocel:oid ""purchase_order:103""?",True
+"Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment, Execute Payment included the lifecycle of ocel:oid ""purchase_order:779127791277912""?",False
+"Are the objects invoice receipt:106, goods receipt:107, payment:55, goods receipt:106, purchase_order:105, goods receipt:105, purchase_order:104, quotation:63 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:779127791277912""?",False
+"Is 2022-05-30 12:59:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:779127791277912""?",False
+"Is 2022-06-09 08:45:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:779127791277912""?",False
+"Is 848760.0 the lifecycle duration of ocel:oid ""purchase_order:779127791277912""?",False
 "Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment included the lifecycle of ocel:oid ""purchase_order:1039""?",True
 "Are the objects goods receipt:1310, goods receipt:1307, quotation:607, payment:632, purchase_order:1038, purchase_order:1037, goods receipt:1308, purchase_order:1040, invoice receipt:1320, goods receipt:1309 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1039""?",True
 "Is 2023-12-06 19:49:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1039""?",True
 "Is 2024-01-10 17:44:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1039""?",True
 "Is 3016500.0 the lifecycle duration of ocel:oid ""purchase_order:1039""?",True
+"Are the activities Close Project, Approve Service Order, Initiate Project included the lifecycle of ocel:oid ""purchase_order:1039""?",False
+"Are the objects goods receipt:46256462564625646256, goods receipt:46256462564625646256, quotation:462564625646256, payment:462564625646256, purchase_order:46256462564625646256, purchase_order:46256462564625646256, goods receipt:46256462564625646256, purchase_order:46256462564625646256, invoice receipt:46256462564625646256, goods receipt:46256462564625646256 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1039""?",False
+"Is 2023-12-07 20:50:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1039""?",False
+"Is 2024-01-11 18:45:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1039""?",False
+"Is 571489571489571489571489571489571489571489.571489 the lifecycle duration of ocel:oid ""purchase_order:1039""?",False
 "Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment, Execute Payment included the lifecycle of ocel:oid ""purchase_order:1048""?",True
 "Are the objects goods receipt:1289, quotation:612, purchase_order:1049, goods receipt:1291, goods receipt:1290, invoice receipt:1294, payment:619 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1048""?",True
 "Is 2023-12-06 16:59:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1048""?",True
 "Is 2024-01-16 09:14:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1048""?",True
 "Is 3514500.0 the lifecycle duration of ocel:oid ""purchase_order:1048""?",True
+"Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment, Execute Payment included the lifecycle of ocel:oid ""purchase_order:57984579845798457984""?",False
+"Are the objects goods receipt:1289, quotation:612, purchase_order:1049, goods receipt:1291, goods receipt:1290, invoice receipt:1294, payment:619 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:57984579845798457984""?",False
+"Is 2023-12-06 16:59:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:57984579845798457984""?",False
+"Is 2024-01-16 09:14:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:57984579845798457984""?",False
+"Is 3514500.0 the lifecycle duration of ocel:oid ""purchase_order:57984579845798457984""?",False
 "Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Execute Payment included the lifecycle of ocel:oid ""purchase_order:1057""?",True
 "Are the objects goods receipt:1262, purchase_order:1058, payment:604, invoice receipt:1261, goods receipt:1263, quotation:611 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1057""?",True
 "Is 2023-12-09 03:01:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1057""?",True
 "Is 2023-12-19 23:40:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1057""?",True
 "Is 938340.0 the lifecycle duration of ocel:oid ""purchase_order:1057""?",True
+"Are the activities Complete Project Milestone, Create Contract, Close Service Order included the lifecycle of ocel:oid ""purchase_order:1057""?",False
+"Are the objects goods receipt:69092690926909269092, purchase_order:69092690926909269092, payment:690926909269092, invoice receipt:69092690926909269092, goods receipt:69092690926909269092, quotation:690926909269092 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1057""?",False
+"Is 2023-12-10 04:02:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1057""?",False
+"Is 2023-12-21 00:41:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1057""?",False
+"Is 383299383299383299383299383299383299.383299 the lifecycle duration of ocel:oid ""purchase_order:1057""?",False
 "Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment included the lifecycle of ocel:oid ""purchase_order:1066""?",True
 "Are the objects goods receipt:1274, quotation:617, goods receipt:1272, goods receipt:1273, payment:615, invoice receipt:1279 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1066""?",True
 "Is 2023-12-15 18:46:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1066""?",True
 "Is 2024-01-05 05:37:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1066""?",True
 "Is 1767060.0 the lifecycle duration of ocel:oid ""purchase_order:1066""?",True
+"Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment included the lifecycle of ocel:oid ""purchase_order:29750297502975029750""?",False
+"Are the objects goods receipt:1274, quotation:617, goods receipt:1272, goods receipt:1273, payment:615, invoice receipt:1279 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:29750297502975029750""?",False
+"Is 2023-12-15 18:46:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:29750297502975029750""?",False
+"Is 2024-01-05 05:37:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:29750297502975029750""?",False
+"Is 1767060.0 the lifecycle duration of ocel:oid ""purchase_order:29750297502975029750""?",False
 "Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Execute Payment included the lifecycle of ocel:oid ""purchase_order:1075""?",True
 "Are the objects purchase_order:1074, goods receipt:1306, payment:636, invoice receipt:1322, goods receipt:1305, quotation:625 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1075""?",True
 "Is 2023-12-20 18:22:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1075""?",True
 "Is 2024-01-12 06:24:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1075""?",True
 "Is 1944120.0 the lifecycle duration of ocel:oid ""purchase_order:1075""?",True
+"Are the activities Sign Contract, Renew Contract, Close Project included the lifecycle of ocel:oid ""purchase_order:1075""?",False
+"Are the objects purchase_order:42585425854258542585, goods receipt:42585425854258542585, payment:425854258542585, invoice receipt:42585425854258542585, goods receipt:42585425854258542585, quotation:425854258542585 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1075""?",False
+"Is 2023-12-21 19:23:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1075""?",False
+"Is 2024-01-13 07:25:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1075""?",False
+"Is 747296747296747296747296747296747296747296.747296 the lifecycle duration of ocel:oid ""purchase_order:1075""?",False
 "Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Execute Payment, Create Goods Receipt included the lifecycle of ocel:oid ""purchase_order:1084""?",True
 "Are the objects purchase_order:1083, quotation:630, invoice receipt:1316, goods receipt:1318, goods receipt:1320, goods receipt:1319, payment:630, purchase_order:1082 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1084""?",True
 "Is 2023-12-26 20:31:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1084""?",True
 "Is 2024-01-10 09:23:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1084""?",True
 "Is 1255920.0 the lifecycle duration of ocel:oid ""purchase_order:1084""?",True
+"Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Execute Payment, Create Goods Receipt included the lifecycle of ocel:oid ""purchase_order:82147821478214782147""?",False
+"Are the objects purchase_order:1083, quotation:630, invoice receipt:1316, goods receipt:1318, goods receipt:1320, goods receipt:1319, payment:630, purchase_order:1082 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:82147821478214782147""?",False
+"Is 2023-12-26 20:31:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:82147821478214782147""?",False
+"Is 2024-01-10 09:23:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:82147821478214782147""?",False
+"Is 1255920.0 the lifecycle duration of ocel:oid ""purchase_order:82147821478214782147""?",False
 "Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment, Create Goods Receipt included the lifecycle of ocel:oid ""purchase_order:1093""?",True
 "Are the objects goods receipt:1324, payment:634, goods receipt:1323, invoice receipt:1327, goods receipt:1326, purchase_order:1095, goods receipt:1325, purchase_order:1094, quotation:633, purchase_order:1096 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1093""?",True
 "Is 2023-12-27 10:55:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1093""?",True
 "Is 2024-01-15 07:42:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1093""?",True
 "Is 1630020.0 the lifecycle duration of ocel:oid ""purchase_order:1093""?",True
+"Are the activities Initiate Project, Approve Project, Create Contract included the lifecycle of ocel:oid ""purchase_order:1093""?",False
+"Are the objects goods receipt:90735907359073590735, payment:907359073590735, goods receipt:90735907359073590735, invoice receipt:90735907359073590735, goods receipt:90735907359073590735, purchase_order:90735907359073590735, goods receipt:90735907359073590735, purchase_order:90735907359073590735, quotation:907359073590735, purchase_order:90735907359073590735 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1093""?",False
+"Is 2023-12-28 11:56:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1093""?",False
+"Is 2024-01-16 08:43:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1093""?",False
+"Is 216184216184216184216184216184216184216184.216184 the lifecycle duration of ocel:oid ""purchase_order:1093""?",False
 "Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Execute Payment included the lifecycle of ocel:oid ""purchase_order:1101""?",True
 "Are the objects quotation:631, goods receipt:1341, payment:639, invoice receipt:1337 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1101""?",True
 "Is 2024-01-01 09:02:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1101""?",True
 "Is 2024-01-14 17:07:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1101""?",True
 "Is 1152300.0 the lifecycle duration of ocel:oid ""purchase_order:1101""?",True
+"Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Execute Payment included the lifecycle of ocel:oid ""purchase_order:43417434174341743417""?",False
+"Are the objects quotation:631, goods receipt:1341, payment:639, invoice receipt:1337 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:43417434174341743417""?",False
+"Is 2024-01-01 09:02:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:43417434174341743417""?",False
+"Is 2024-01-14 17:07:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:43417434174341743417""?",False
+"Is 1152300.0 the lifecycle duration of ocel:oid ""purchase_order:43417434174341743417""?",False
 "Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment, Execute Payment included the lifecycle of ocel:oid ""purchase_order:1110""?",True
 "Are the objects goods receipt:1336, purchase_order:1109, goods receipt:1335, payment:638, purchase_order:1111, goods receipt:1334, quotation:643, invoice receipt:1334 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1110""?",True
 "Is 2024-01-04 00:20:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1110""?",True
 "Is 2024-01-17 23:09:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1110""?",True
 "Is 1205340.0 the lifecycle duration of ocel:oid ""purchase_order:1110""?",True
+"Are the activities Submit Timesheet, Renew Contract, Create Contract included the lifecycle of ocel:oid ""purchase_order:1110""?",False
+"Are the objects goods receipt:15501155011550115501, purchase_order:15501155011550115501, goods receipt:15501155011550115501, payment:155011550115501, purchase_order:15501155011550115501, goods receipt:15501155011550115501, quotation:155011550115501, invoice receipt:15501155011550115501 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1110""?",False
+"Is 2024-01-05 01:21:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1110""?",False
+"Is 2024-01-19 00:10:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1110""?",False
+"Is 369334369334369334369334369334369334369334.369334 the lifecycle duration of ocel:oid ""purchase_order:1110""?",False
 "Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Execute Payment included the lifecycle of ocel:oid ""purchase_order:112""?",True
 "Are the objects quotation:69, invoice receipt:126, goods receipt:125, payment:68 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:112""?",True
 "Is 2022-06-07 03:52:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:112""?",True
 "Is 2022-06-16 05:49:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:112""?",True
 "Is 784620.0 the lifecycle duration of ocel:oid ""purchase_order:112""?",True
+"Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Execute Payment included the lifecycle of ocel:oid ""purchase_order:643196431964319""?",False
+"Are the objects quotation:69, invoice receipt:126, goods receipt:125, payment:68 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:643196431964319""?",False
+"Is 2022-06-07 03:52:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:643196431964319""?",False
+"Is 2022-06-16 05:49:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:643196431964319""?",False
+"Is 784620.0 the lifecycle duration of ocel:oid ""purchase_order:643196431964319""?",False
 "Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment included the lifecycle of ocel:oid ""purchase_order:1129""?",True
 "Are the objects goods receipt:1360, payment:647, invoice receipt:1354, quotation:652, purchase_order:1128, goods receipt:1362, goods receipt:1361, goods receipt:1363 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1129""?",True
 "Is 2024-01-18 13:03:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1129""?",True
 "Is 2024-01-30 10:43:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1129""?",True
 "Is 1028400.0 the lifecycle duration of ocel:oid ""purchase_order:1129""?",True
+"Are the activities Prepare Budget, Approve Budget, Initiate Project included the lifecycle of ocel:oid ""purchase_order:1129""?",False
+"Are the objects goods receipt:59955599555995559955, payment:599555995559955, invoice receipt:59955599555995559955, quotation:599555995559955, purchase_order:59955599555995559955, goods receipt:59955599555995559955, goods receipt:59955599555995559955, goods receipt:59955599555995559955 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1129""?",False
+"Is 2024-01-19 14:04:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1129""?",False
+"Is 2024-01-31 11:44:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1129""?",False
+"Is 264359264359264359264359264359264359264359.264359 the lifecycle duration of ocel:oid ""purchase_order:1129""?",False
 "Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment included the lifecycle of ocel:oid ""purchase_order:1138""?",True
 "Are the objects purchase_order:1135, quotation:656, invoice receipt:1383, payment:662, goods receipt:1390, goods receipt:1391, purchase_order:1137, purchase_order:1136, goods receipt:1389, goods receipt:1392 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1138""?",True
 "Is 2024-01-22 11:03:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1138""?",True
 "Is 2024-02-08 12:55:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1138""?",True
 "Is 1475520.0 the lifecycle duration of ocel:oid ""purchase_order:1138""?",True
+"Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment included the lifecycle of ocel:oid ""purchase_order:42743427434274342743""?",False
+"Are the objects purchase_order:1135, quotation:656, invoice receipt:1383, payment:662, goods receipt:1390, goods receipt:1391, purchase_order:1137, purchase_order:1136, goods receipt:1389, goods receipt:1392 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:42743427434274342743""?",False
+"Is 2024-01-22 11:03:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:42743427434274342743""?",False
+"Is 2024-02-08 12:55:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:42743427434274342743""?",False
+"Is 1475520.0 the lifecycle duration of ocel:oid ""purchase_order:42743427434274342743""?",False
 "Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Execute Payment included the lifecycle of ocel:oid ""purchase_order:1147""?",True
 "Are the objects payment:675, quotation:663, invoice receipt:1398, goods receipt:1399 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1147""?",True
 "Is 2024-02-04 01:08:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1147""?",True
 "Is 2024-02-19 13:39:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1147""?",True
 "Is 1341060.0 the lifecycle duration of ocel:oid ""purchase_order:1147""?",True
+"Are the activities Terminate Contract, Update Inventory, Prepare Budget included the lifecycle of ocel:oid ""purchase_order:1147""?",False
+"Are the objects payment:975409754097540, quotation:975409754097540, invoice receipt:97540975409754097540, goods receipt:97540975409754097540 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1147""?",False
+"Is 2024-02-05 02:09:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1147""?",False
+"Is 2024-02-20 14:40:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1147""?",False
+"Is 469918469918469918469918469918469918469918.469918 the lifecycle duration of ocel:oid ""purchase_order:1147""?",False
 "Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Execute Payment included the lifecycle of ocel:oid ""purchase_order:1156""?",True
 "Are the objects quotation:672, purchase_order:1157, goods receipt:1406, invoice receipt:1403, payment:670, goods receipt:1407 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1156""?",True
 "Is 2024-02-08 18:44:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1156""?",True
 "Is 2024-02-16 09:12:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1156""?",True
 "Is 656880.0 the lifecycle duration of ocel:oid ""purchase_order:1156""?",True
+"Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Execute Payment included the lifecycle of ocel:oid ""purchase_order:18348183481834818348""?",False
+"Are the objects quotation:672, purchase_order:1157, goods receipt:1406, invoice receipt:1403, payment:670, goods receipt:1407 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:18348183481834818348""?",False
+"Is 2024-02-08 18:44:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:18348183481834818348""?",False
+"Is 2024-02-16 09:12:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:18348183481834818348""?",False
+"Is 656880.0 the lifecycle duration of ocel:oid ""purchase_order:18348183481834818348""?",False
 "Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment included the lifecycle of ocel:oid ""purchase_order:1165""?",True
 "Are the objects purchase_order:1164, payment:683, goods receipt:1439, goods receipt:1438, quotation:670, goods receipt:1437, invoice receipt:1434, goods receipt:1436, purchase_order:1163 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1165""?",True
 "Is 2024-02-12 13:43:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1165""?",True
 "Is 2024-03-05 06:10:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1165""?",True
 "Is 1873620.0 the lifecycle duration of ocel:oid ""purchase_order:1165""?",True
+"Are the activities Approve Service Order, Close Service Order, Update Inventory included the lifecycle of ocel:oid ""purchase_order:1165""?",False
+"Are the objects purchase_order:20120201202012020120, payment:201202012020120, goods receipt:20120201202012020120, goods receipt:20120201202012020120, quotation:201202012020120, goods receipt:20120201202012020120, invoice receipt:20120201202012020120, goods receipt:20120201202012020120, purchase_order:20120201202012020120 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1165""?",False
+"Is 2024-02-13 14:44:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1165""?",False
+"Is 2024-03-06 07:11:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1165""?",False
+"Is 286694286694286694286694286694286694286694.286694 the lifecycle duration of ocel:oid ""purchase_order:1165""?",False
 "Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment, Create Goods Receipt included the lifecycle of ocel:oid ""purchase_order:1174""?",True
 "Are the objects purchase_order:1171, goods receipt:1424, purchase_order:1173, payment:680, purchase_order:1172, invoice receipt:1423, goods receipt:1421, goods receipt:1423, goods receipt:1422, quotation:681 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:1174""?",True
 "Is 2024-02-13 16:37:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:1174""?",True
 "Is 2024-02-28 08:33:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:1174""?",True
 "Is 1266960.0 the lifecycle duration of ocel:oid ""purchase_order:1174""?",True
+"Are the activities Create Purchase Order, Approve Purchase Order, Create Goods Receipt, Create Goods Receipt, Create Goods Receipt, Execute Payment, Create Goods Receipt included the lifecycle of ocel:oid ""purchase_order:47677476774767747677""?",False
+"Are the objects purchase_order:1171, goods receipt:1424, purchase_order:1173, payment:680, purchase_order:1172, invoice receipt:1423, goods receipt:1421, goods receipt:1423, goods receipt:1422, quotation:681 among the interacting objects in the lifecycle of ocel:oid ""purchase_order:47677476774767747677""?",False
+"Is 2024-02-13 16:37:00+00:00 the start timestamp of the lifecycle of ocel:oid ""purchase_order:47677476774767747677""?",False
+"Is 2024-02-28 08:33:00+00:00 the end timestamp of the lifecycle of ocel:oid ""purchase_order:47677476774767747677""?",False
+"Is 1266960.0 the lifecycle duration of ocel:oid ""purchase_order:47677476774767747677""?",False
 "Are the activities Create Request for Quotation, Create Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:1""?",True
 "Are the objects purchase_order:4, purchase_requisition:1:pr_trigger_1 among the interacting objects in the lifecycle of ocel:oid ""quotation:1""?",True
 "Is 2022-04-06 09:49:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:1""?",True
 "Is 2022-04-09 08:41:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:1""?",True
 "Is 255120.0 the lifecycle duration of ocel:oid ""quotation:1""?",True
+"Are the activities Submit Expense Report, Prepare Budget, Complete Project Milestone included the lifecycle of ocel:oid ""quotation:1""?",False
+"Are the objects purchase_order:44754, purchase_requisition:44754:pr_trigger_44754 among the interacting objects in the lifecycle of ocel:oid ""quotation:1""?",False
+"Is 2022-04-07 10:50:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:1""?",False
+"Is 2022-04-10 09:42:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:1""?",False
+"Is 136133136133136133136133136133136133.136133 the lifecycle duration of ocel:oid ""quotation:1""?",False
 "Are the activities Create Request for Quotation, Create Purchase Order, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:108""?",True
 "Are the objects purchase_requisition:107:pr_trigger_107, purchase_order:178, purchase_order:177, purchase_order:179 among the interacting objects in the lifecycle of ocel:oid ""quotation:108""?",True
 "Is 2022-07-13 08:27:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:108""?",True
 "Is 2022-07-17 22:04:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:108""?",True
 "Is 394620.0 the lifecycle duration of ocel:oid ""quotation:108""?",True
+"Are the activities Create Request for Quotation, Create Purchase Order, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:698516985169851""?",False
+"Are the objects purchase_requisition:107:pr_trigger_107, purchase_order:178, purchase_order:177, purchase_order:179 among the interacting objects in the lifecycle of ocel:oid ""quotation:698516985169851""?",False
+"Is 2022-07-13 08:27:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:698516985169851""?",False
+"Is 2022-07-17 22:04:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:698516985169851""?",False
+"Is 394620.0 the lifecycle duration of ocel:oid ""quotation:698516985169851""?",False
 "Are the activities Create Request for Quotation, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:117""?",True
 "Are the objects purchase_order:206, purchase_order:207, purchase_requisition:116:pr_trigger_116 among the interacting objects in the lifecycle of ocel:oid ""quotation:117""?",True
 "Is 2022-07-24 14:13:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:117""?",True
 "Is 2022-07-26 20:30:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:117""?",True
 "Is 195420.0 the lifecycle duration of ocel:oid ""quotation:117""?",True
+"Are the activities Submit Expense Report, Update Inventory, Submit Timesheet included the lifecycle of ocel:oid ""quotation:117""?",False
+"Are the objects purchase_order:682576825768257, purchase_order:682576825768257, purchase_requisition:682576825768257:pr_trigger_682576825768257 among the interacting objects in the lifecycle of ocel:oid ""quotation:117""?",False
+"Is 2022-07-25 15:14:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:117""?",False
+"Is 2022-07-27 21:31:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:117""?",False
+"Is 861723861723861723861723861723861723.861723 the lifecycle duration of ocel:oid ""quotation:117""?",False
 "Are the activities Create Request for Quotation, Create Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:126""?",True
 "Are the objects purchase_requisition:127:pr_trigger_127, purchase_order:226 among the interacting objects in the lifecycle of ocel:oid ""quotation:126""?",True
 "Is 2022-08-06 13:34:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:126""?",True
 "Is 2022-08-09 21:21:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:126""?",True
 "Is 287220.0 the lifecycle duration of ocel:oid ""quotation:126""?",True
+"Are the activities Create Request for Quotation, Create Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:531435314353143""?",False
+"Are the objects purchase_requisition:127:pr_trigger_127, purchase_order:226 among the interacting objects in the lifecycle of ocel:oid ""quotation:531435314353143""?",False
+"Is 2022-08-06 13:34:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:531435314353143""?",False
+"Is 2022-08-09 21:21:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:531435314353143""?",False
+"Is 287220.0 the lifecycle duration of ocel:oid ""quotation:531435314353143""?",False
 "Are the activities Create Request for Quotation, Create Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:135""?",True
 "Are the objects purchase_requisition:134:pr_trigger_134, purchase_order:238 among the interacting objects in the lifecycle of ocel:oid ""quotation:135""?",True
 "Is 2022-08-14 21:25:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:135""?",True
 "Is 2022-08-22 09:55:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:135""?",True
 "Is 649800.0 the lifecycle duration of ocel:oid ""quotation:135""?",True
+"Are the activities Create Service Order, Initiate Project, Approve Budget included the lifecycle of ocel:oid ""quotation:135""?",False
+"Are the objects purchase_requisition:215802158021580:pr_trigger_215802158021580, purchase_order:215802158021580 among the interacting objects in the lifecycle of ocel:oid ""quotation:135""?",False
+"Is 2022-08-15 22:26:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:135""?",False
+"Is 2022-08-23 10:56:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:135""?",False
+"Is 963374963374963374963374963374963374.963374 the lifecycle duration of ocel:oid ""quotation:135""?",False
 "Are the activities Create Request for Quotation, Create Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:144""?",True
 "Are the objects purchase_requisition:146:pr_trigger_146, purchase_order:252 among the interacting objects in the lifecycle of ocel:oid ""quotation:144""?",True
 "Is 2022-08-23 08:05:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:144""?",True
 "Is 2022-08-29 15:01:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:144""?",True
 "Is 543360.0 the lifecycle duration of ocel:oid ""quotation:144""?",True
+"Are the activities Create Request for Quotation, Create Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:849798497984979""?",False
+"Are the objects purchase_requisition:146:pr_trigger_146, purchase_order:252 among the interacting objects in the lifecycle of ocel:oid ""quotation:849798497984979""?",False
+"Is 2022-08-23 08:05:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:849798497984979""?",False
+"Is 2022-08-29 15:01:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:849798497984979""?",False
+"Is 543360.0 the lifecycle duration of ocel:oid ""quotation:849798497984979""?",False
 "Are the activities Create Request for Quotation, Create Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:153""?",True
 "Are the objects purchase_order:275, purchase_requisition:155:pr_trigger_155 among the interacting objects in the lifecycle of ocel:oid ""quotation:153""?",True
 "Is 2022-08-31 23:19:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:153""?",True
 "Is 2022-09-04 09:20:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:153""?",True
 "Is 295260.0 the lifecycle duration of ocel:oid ""quotation:153""?",True
+"Are the activities Approve Budget, Conduct Audit, Submit Timesheet included the lifecycle of ocel:oid ""quotation:153""?",False
+"Are the objects purchase_order:189891898918989, purchase_requisition:189891898918989:pr_trigger_189891898918989 among the interacting objects in the lifecycle of ocel:oid ""quotation:153""?",False
+"Is 2022-09-02 00:20:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:153""?",False
+"Is 2022-09-05 10:21:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:153""?",False
+"Is 861153861153861153861153861153861153.861153 the lifecycle duration of ocel:oid ""quotation:153""?",False
 "Are the activities Create Request for Quotation, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:162""?",True
 "Are the objects purchase_requisition:161:pr_trigger_161, purchase_order:274, purchase_order:273 among the interacting objects in the lifecycle of ocel:oid ""quotation:162""?",True
 "Is 2022-08-31 19:04:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:162""?",True
 "Is 2022-09-03 15:34:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:162""?",True
 "Is 246600.0 the lifecycle duration of ocel:oid ""quotation:162""?",True
+"Are the activities Create Request for Quotation, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:995889958899588""?",False
+"Are the objects purchase_requisition:161:pr_trigger_161, purchase_order:274, purchase_order:273 among the interacting objects in the lifecycle of ocel:oid ""quotation:995889958899588""?",False
+"Is 2022-08-31 19:04:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:995889958899588""?",False
+"Is 2022-09-03 15:34:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:995889958899588""?",False
+"Is 246600.0 the lifecycle duration of ocel:oid ""quotation:995889958899588""?",False
 "Are the activities Create Request for Quotation, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Create Purchase Order, Approve Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:171""?",True
 "Are the objects purchase_order:291, purchase_requisition:178:pr_trigger_178, purchase_order:289, purchase_order:292, purchase_order:290 among the interacting objects in the lifecycle of ocel:oid ""quotation:171""?",True
 "Is 2022-09-06 14:33:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:171""?",True
 "Is 2022-09-12 09:16:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:171""?",True
 "Is 499380.0 the lifecycle duration of ocel:oid ""quotation:171""?",True
+"Are the activities Close Project, Renew Contract, Initiate Project included the lifecycle of ocel:oid ""quotation:171""?",False
+"Are the objects purchase_order:240412404124041, purchase_requisition:240412404124041:pr_trigger_240412404124041, purchase_order:240412404124041, purchase_order:240412404124041, purchase_order:240412404124041 among the interacting objects in the lifecycle of ocel:oid ""quotation:171""?",False
+"Is 2022-09-07 15:34:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:171""?",False
+"Is 2022-09-13 10:17:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:171""?",False
+"Is 759248759248759248759248759248759248.759248 the lifecycle duration of ocel:oid ""quotation:171""?",False
 "Are the activities Create Request for Quotation, Create Purchase Order, Create Purchase Order, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order, Approve Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:180""?",True
 "Are the objects purchase_requisition:175:pr_trigger_175, purchase_order:314, purchase_order:312, purchase_order:313, purchase_order:315 among the interacting objects in the lifecycle of ocel:oid ""quotation:180""?",True
 "Is 2022-09-13 00:17:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:180""?",True
 "Is 2022-09-16 17:26:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:180""?",True
 "Is 320940.0 the lifecycle duration of ocel:oid ""quotation:180""?",True
+"Are the activities Create Request for Quotation, Create Purchase Order, Create Purchase Order, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order, Approve Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:339133391333913""?",False
+"Are the objects purchase_requisition:175:pr_trigger_175, purchase_order:314, purchase_order:312, purchase_order:313, purchase_order:315 among the interacting objects in the lifecycle of ocel:oid ""quotation:339133391333913""?",False
+"Is 2022-09-13 00:17:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:339133391333913""?",False
+"Is 2022-09-16 17:26:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:339133391333913""?",False
+"Is 320940.0 the lifecycle duration of ocel:oid ""quotation:339133391333913""?",False
 "Are the activities Create Request for Quotation, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:19""?",True
 "Are the objects purchase_requisition:19:pr_trigger_19, purchase_order:28, purchase_order:29 among the interacting objects in the lifecycle of ocel:oid ""quotation:19""?",True
 "Is 2022-04-25 07:14:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:19""?",True
 "Is 2022-05-08 02:09:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:19""?",True
 "Is 1104900.0 the lifecycle duration of ocel:oid ""quotation:19""?",True
+"Are the activities Conduct Audit, Approve Budget, Issue Refund included the lifecycle of ocel:oid ""quotation:19""?",False
+"Are the objects purchase_requisition:6956669566:pr_trigger_6956669566, purchase_order:6956669566, purchase_order:6956669566 among the interacting objects in the lifecycle of ocel:oid ""quotation:19""?",False
+"Is 2022-04-26 08:15:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:19""?",False
+"Is 2022-05-09 03:10:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:19""?",False
+"Is 755652755652755652755652755652755652755652.755652 the lifecycle duration of ocel:oid ""quotation:19""?",False
 "Are the activities Create Request for Quotation, Create Purchase Order, Create Purchase Order, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order, Approve Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:199""?",True
 "Are the objects purchase_order:342, purchase_order:343, purchase_order:344, purchase_order:345, purchase_requisition:196:pr_trigger_196 among the interacting objects in the lifecycle of ocel:oid ""quotation:199""?",True
 "Is 2022-09-29 08:57:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:199""?",True
 "Is 2022-10-02 04:16:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:199""?",True
 "Is 242340.0 the lifecycle duration of ocel:oid ""quotation:199""?",True
+"Are the activities Create Request for Quotation, Create Purchase Order, Create Purchase Order, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order, Approve Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:558245582455824""?",False
+"Are the objects purchase_order:342, purchase_order:343, purchase_order:344, purchase_order:345, purchase_requisition:196:pr_trigger_196 among the interacting objects in the lifecycle of ocel:oid ""quotation:558245582455824""?",False
+"Is 2022-09-29 08:57:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:558245582455824""?",False
+"Is 2022-10-02 04:16:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:558245582455824""?",False
+"Is 242340.0 the lifecycle duration of ocel:oid ""quotation:558245582455824""?",False
 "Are the activities Create Request for Quotation, Create Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:207""?",True
 "Are the objects purchase_requisition:202:pr_trigger_202, purchase_order:376 among the interacting objects in the lifecycle of ocel:oid ""quotation:207""?",True
 "Is 2022-10-15 06:27:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:207""?",True
 "Is 2022-10-20 14:36:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:207""?",True
 "Is 461340.0 the lifecycle duration of ocel:oid ""quotation:207""?",True
+"Are the activities Renew Contract, Create Service Order, Submit Expense Report included the lifecycle of ocel:oid ""quotation:207""?",False
+"Are the objects purchase_requisition:292962929629296:pr_trigger_292962929629296, purchase_order:292962929629296 among the interacting objects in the lifecycle of ocel:oid ""quotation:207""?",False
+"Is 2022-10-16 07:28:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:207""?",False
+"Is 2022-10-21 15:37:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:207""?",False
+"Is 814356814356814356814356814356814356.814356 the lifecycle duration of ocel:oid ""quotation:207""?",False
 "Are the activities Create Request for Quotation, Create Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:216""?",True
 "Are the objects purchase_order:364, purchase_requisition:210:pr_trigger_210 among the interacting objects in the lifecycle of ocel:oid ""quotation:216""?",True
 "Is 2022-10-09 09:26:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:216""?",True
 "Is 2022-10-11 17:07:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:216""?",True
 "Is 200460.0 the lifecycle duration of ocel:oid ""quotation:216""?",True
+"Are the activities Create Request for Quotation, Create Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:100141001410014""?",False
+"Are the objects purchase_order:364, purchase_requisition:210:pr_trigger_210 among the interacting objects in the lifecycle of ocel:oid ""quotation:100141001410014""?",False
+"Is 2022-10-09 09:26:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:100141001410014""?",False
+"Is 2022-10-11 17:07:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:100141001410014""?",False
+"Is 200460.0 the lifecycle duration of ocel:oid ""quotation:100141001410014""?",False
 "Are the activities Create Request for Quotation, Create Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:225""?",True
 "Are the objects purchase_order:381, purchase_requisition:226:pr_trigger_226 among the interacting objects in the lifecycle of ocel:oid ""quotation:225""?",True
 "Is 2022-10-25 15:15:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:225""?",True
 "Is 2022-10-26 20:43:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:225""?",True
 "Is 106080.0 the lifecycle duration of ocel:oid ""quotation:225""?",True
+"Are the activities Review Expense Report, Approve Budget, Approve Service Order included the lifecycle of ocel:oid ""quotation:225""?",False
+"Are the objects purchase_order:818088180881808, purchase_requisition:818088180881808:pr_trigger_818088180881808 among the interacting objects in the lifecycle of ocel:oid ""quotation:225""?",False
+"Is 2022-10-26 16:16:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:225""?",False
+"Is 2022-10-27 21:44:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:225""?",False
+"Is 815586815586815586815586815586815586.815586 the lifecycle duration of ocel:oid ""quotation:225""?",False
 "Are the activities Create Request for Quotation, Create Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:234""?",True
 "Are the objects purchase_order:400, purchase_requisition:229:pr_trigger_229 among the interacting objects in the lifecycle of ocel:oid ""quotation:234""?",True
 "Is 2022-11-15 22:15:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:234""?",True
 "Is 2022-11-18 02:57:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:234""?",True
 "Is 189720.0 the lifecycle duration of ocel:oid ""quotation:234""?",True
+"Are the activities Create Request for Quotation, Create Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:461024610246102""?",False
+"Are the objects purchase_order:400, purchase_requisition:229:pr_trigger_229 among the interacting objects in the lifecycle of ocel:oid ""quotation:461024610246102""?",False
+"Is 2022-11-15 22:15:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:461024610246102""?",False
+"Is 2022-11-18 02:57:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:461024610246102""?",False
+"Is 189720.0 the lifecycle duration of ocel:oid ""quotation:461024610246102""?",False
 "Are the activities Create Request for Quotation, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:243""?",True
 "Are the objects purchase_requisition:242:pr_trigger_242, purchase_order:411, purchase_order:412, purchase_order:413 among the interacting objects in the lifecycle of ocel:oid ""quotation:243""?",True
 "Is 2022-11-26 18:33:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:243""?",True
 "Is 2022-12-02 22:10:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:243""?",True
 "Is 531420.0 the lifecycle duration of ocel:oid ""quotation:243""?",True
+"Are the activities Submit Expense Report, Prepare Budget, Complete Project Milestone included the lifecycle of ocel:oid ""quotation:243""?",False
+"Are the objects purchase_requisition:277022770227702:pr_trigger_277022770227702, purchase_order:277022770227702, purchase_order:277022770227702, purchase_order:277022770227702 among the interacting objects in the lifecycle of ocel:oid ""quotation:243""?",False
+"Is 2022-11-27 19:34:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:243""?",False
+"Is 2022-12-03 23:11:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:243""?",False
+"Is 675334675334675334675334675334675334.675334 the lifecycle duration of ocel:oid ""quotation:243""?",False
 "Are the activities Create Request for Quotation, Create Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:252""?",True
 "Are the objects purchase_requisition:249:pr_trigger_249, purchase_order:433 among the interacting objects in the lifecycle of ocel:oid ""quotation:252""?",True
 "Is 2022-12-15 13:19:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:252""?",True
 "Is 2022-12-17 19:08:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:252""?",True
 "Is 193740.0 the lifecycle duration of ocel:oid ""quotation:252""?",True
+"Are the activities Create Request for Quotation, Create Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:978197819781""?",False
+"Are the objects purchase_requisition:249:pr_trigger_249, purchase_order:433 among the interacting objects in the lifecycle of ocel:oid ""quotation:978197819781""?",False
+"Is 2022-12-15 13:19:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:978197819781""?",False
+"Is 2022-12-17 19:08:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:978197819781""?",False
+"Is 193740.0 the lifecycle duration of ocel:oid ""quotation:978197819781""?",False
 "Are the activities Create Request for Quotation, Create Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:261""?",True
 "Are the objects purchase_order:441, purchase_requisition:266:pr_trigger_266 among the interacting objects in the lifecycle of ocel:oid ""quotation:261""?",True
 "Is 2022-12-26 14:10:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:261""?",True
 "Is 2022-12-29 17:18:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:261""?",True
 "Is 270480.0 the lifecycle duration of ocel:oid ""quotation:261""?",True
+"Are the activities Submit Timesheet, Approve Timesheet, Complete Project Milestone included the lifecycle of ocel:oid ""quotation:261""?",False
+"Are the objects purchase_order:620216202162021, purchase_requisition:620216202162021:pr_trigger_620216202162021 among the interacting objects in the lifecycle of ocel:oid ""quotation:261""?",False
+"Is 2022-12-27 15:11:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:261""?",False
+"Is 2022-12-30 18:19:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:261""?",False
+"Is 904987904987904987904987904987904987.904987 the lifecycle duration of ocel:oid ""quotation:261""?",False
 "Are the activities Create Request for Quotation, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:270""?",True
 "Are the objects purchase_requisition:271:pr_trigger_271, purchase_order:463, purchase_order:462 among the interacting objects in the lifecycle of ocel:oid ""quotation:270""?",True
 "Is 2023-01-05 20:41:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:270""?",True
 "Is 2023-01-17 12:20:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:270""?",True
 "Is 1006740.0 the lifecycle duration of ocel:oid ""quotation:270""?",True
+"Are the activities Create Request for Quotation, Create Purchase Order, Create Purchase Order, Approve Purchase Order, Approve Purchase Order included the lifecycle of ocel:oid ""quotation:818318183181831""?",False
+"Are the objects purchase_requisition:271:pr_trigger_271, purchase_order:463, purchase_order:462 among the interacting objects in the lifecycle of ocel:oid ""quotation:818318183181831""?",False
+"Is 2023-01-05 20:41:00+00:00 the start timestamp of the lifecycle of ocel:oid ""quotation:818318183181831""?",False
+"Is 2023-01-17 12:20:00+00:00 the end timestamp of the lifecycle of ocel:oid ""quotation:818318183181831""?",False
+"Is 1006740.0 the lifecycle duration of ocel:oid ""quotation:818318183181831""?",False
