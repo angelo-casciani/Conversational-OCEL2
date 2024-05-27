@@ -143,9 +143,8 @@ def intelligent_chunking_json(json_dict):
 
 
 def retrieve_context(vector_index, query, search_filter='', key=''):
-    if search_filter == '':
-        retrieved = vector_index.similarity_search(query, k=3)
-    else:
+    retrieved = vector_index.similarity_search(query, k=3)
+    if search_filter != '':
         filter_ = models.Filter(
             must=[
                 models.FieldCondition(

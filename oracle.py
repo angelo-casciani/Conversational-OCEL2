@@ -59,7 +59,7 @@ class AnswerVerificationOracle:
                 if ',' in expected_answer:
                     result['verification_result'] = True
                     for word in expected_answer.split(','):
-                        if word.strip(' .,').lower() not in model_answer:
+                        if word.strip(' .,').lower() not in model_answer.lower():
                             result['verification_result'] = False
                 else:
                     if expected_answer.lower() in model_answer.lower():
