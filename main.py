@@ -216,7 +216,7 @@ def log_to_file(message, curr_datetime):
 
 
 def produce_answer(question, llm_chain, vectdb):
-    sys_mess = "Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer."
+    sys_mess = "Use the following pieces of context to answer with 'True' or 'False' the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer."
 
     # Take the question and extract the metadata for the filtering if any.
     # Pattern in the question: metadata_key "metadata_value", while for events "event:id_num"
@@ -298,7 +298,7 @@ def evaluate_rag_chain_zero_shot(eval_oracle, lang_chain, vect_db):
     for q, a in questions.items():
         eval_oracle.add_prompt_expected_answer_pair(q, a)
         prompt, answer = produce_answer(q, lang_chain, vect_db)
-        eval_oracle.verify_answer(answer, prompt, True)
+        eval_oracle.verify_answer(answer, prompt)
         count += 1
         print(f'Processing answer for trace {count} of {len(questions)}...')
 

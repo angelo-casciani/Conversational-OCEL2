@@ -1,121 +1,121 @@
 question,answer
-"What are the attribute names in the log?","Amount (DMBTR), Credit Amount (BSEG-WRBTR), Debit Amount (BSEG-DMBTR), Delivery Date (EKPO-BEDAT), Document Type (EKKO-BSART), Invoice Receipt (MSEG-WEAHR), Material (EKPO-MATNR), Movement Type (MSEG-BWART), Net Price (EKPO-NETPR), Payment Block (RSEG-ZLSPR), Payment Method (ZLSCH), Plant (EKPO-WERKS), Posting Date (MKPF-BLDAT), Purchasing Group (EBAN-EKGRP), Purchasing Group (EKKO-EKGRP), Purchasing Organization (EBAN-EKORG), Purchasing Organization (EKKO-EKORG), Quantity (EKPO-MENGE), RFQ Type (EBAN-BSART), Release Indicator (EBAN-FRGZU), Release Status (EKKO-FRGZU), Storage Location (EKPO-LGORT), Vendor (EBAN-LIFNR), Vendor (EKKO-LIFNR), lifecycle, new_value, resource"
-"What is the number of events in the log?",14671
-"What is the number of objects in the log?",9054
-"What is the number of activities in the log?",10
-"What is the number of object types in the log?",7
-"What is the number of events-objects relationships in the log?",35927
-"How many occurrences of the activity Create Goods Receipt are in the log?",4042
-"How many occurrences of the activity Create Invoice Receipt are in the log?",1941
-"How many occurrences of the activity Perform Two-Way Match are in the log?",1941
-"How many occurrences of the activity Create Purchase Order are in the log?",1598
-"How many occurrences of the activity Approve Purchase Order are in the log?",1598
-"How many occurrences of the activity Execute Payment are in the log?",1166
-"How many occurrences of the activity Create Request for Quotation are in the log?",927
-"How many occurrences of the activity Create Purchase Requisition are in the log?",729
-"How many occurrences of the activity Approve Purchase Requisition are in the log?",607
-"How many occurrences of the activity Delegate Purchase Requisition Approval are in the log?",122
-"How many occurrences of the object type goods receipt are in the log?",1941
-"How many occurrences of the object type material are in the log?",1807
-"How many occurrences of the object type purchase_order are in the log?",1598
-"How many occurrences of the object type invoice receipt are in the log?",927
-"How many occurrences of the object type payment are in the log?",927
-"How many occurrences of the object type purchase_requisition are in the log?",927
-"How many occurrences of the object type quotation are in the log?",927
-"What is the earliest event timestamp in the log?",2022-04-01 09:26:00+00:00
-"What is the latest event timestamp in the log?",2024-10-31 20:28:00+00:00
-"What is the total duration of the process in the log?",944 days 11:02:00
-"What is the minimum Credit Amount (BSEG-WRBTR) value for the object type invoice receipt?",200
-"What is the event with the minimum Credit Amount (BSEG-WRBTR) value for the object type invoice receipt?",event:27340
-"What is the object with the minimum Credit Amount (BSEG-WRBTR) value for the object type invoice receipt?",invoice receipt:1802
-"What is the maximum Credit Amount (BSEG-WRBTR) value for the object type invoice receipt?",375050
-"What is the event with the maximum Credit Amount (BSEG-WRBTR) value for the object type invoice receipt?",event:19684
-"What is the object with the maximum Credit Amount (BSEG-WRBTR) value for the object type invoice receipt?",invoice receipt:1282
-"What is the average Credit Amount (BSEG-WRBTR) value for the object type invoice receipt?",63966.24
-"What is the minimum Debit Amount (BSEG-DMBTR) value for the object type invoice receipt?",200
-"What is the event with the minimum Debit Amount (BSEG-DMBTR) value for the object type invoice receipt?",event:27340
-"What is the object with the minimum Debit Amount (BSEG-DMBTR) value for the object type invoice receipt?",invoice receipt:1802
-"What is the maximum Debit Amount (BSEG-DMBTR) value for the object type invoice receipt?",375050
-"What is the event with the maximum Debit Amount (BSEG-DMBTR) value for the object type invoice receipt?",event:19684
-"What is the object with the maximum Debit Amount (BSEG-DMBTR) value for the object type invoice receipt?",invoice receipt:1282
-"What is the average Debit Amount (BSEG-DMBTR) value for the object type invoice receipt?",63966.24
-"What is the minimum Net Price (EKPO-NETPR) value for the object type material?",100
-"What is the event with the minimum Net Price (EKPO-NETPR) value for the object type material?",event:15
-"What is the object with the minimum Net Price (EKPO-NETPR) value for the object type material?",material:12
-"What is the maximum Net Price (EKPO-NETPR) value for the object type material?",1500
-"What is the event with the maximum Net Price (EKPO-NETPR) value for the object type material?",event:19
-"What is the object with the maximum Net Price (EKPO-NETPR) value for the object type material?",material:9
-"What is the average Net Price (EKPO-NETPR) value for the object type material?",794.85
-"What is the minimum Quantity (EKPO-MENGE) value for the object type material?",1
-"What is the event with the minimum Quantity (EKPO-MENGE) value for the object type material?",event:801
-"What is the object with the minimum Quantity (EKPO-MENGE) value for the object type material?",material:103
-"What is the maximum Quantity (EKPO-MENGE) value for the object type material?",100
-"What is the event with the maximum Quantity (EKPO-MENGE) value for the object type material?",event:2727
-"What is the object with the maximum Quantity (EKPO-MENGE) value for the object type material?",material:246
-"What is the average Quantity (EKPO-MENGE) value for the object type material?",50.6
-"What is the minimum Amount (DMBTR) value for the object type payment?",200
-"What is the event with the minimum Amount (DMBTR) value for the object type payment?",event:27503
-"What is the object with the minimum Amount (DMBTR) value for the object type payment?",payment:861
-"What is the maximum Amount (DMBTR) value for the object type payment?",375050
-"What is the event with the maximum Amount (DMBTR) value for the object type payment?",event:19842
-"What is the object with the maximum Amount (DMBTR) value for the object type payment?",payment:614
-"What is the average Amount (DMBTR) value for the object type payment?",63358.83
-"What is the set of activities for the object type purchase_order?","Create Purchase Order, Create Goods Receipt, Execute Payment, Approve Purchase Order"
-"What is the set of activities for the object type quotation?","Create Purchase Order, Create Request for Quotation, Approve Purchase Order"
-"What is the set of activities for the object type material?","Approve Purchase Requisition, Delegate Purchase Requisition Approval, Create Purchase Requisition"
-"What is the set of activities for the object type purchase_requisition?","Delegate Purchase Requisition Approval, Approve Purchase Requisition, Create Request for Quotation, Create Purchase Requisition"
-"What is the set of activities for the object type goods receipt?","Perform Two-Way Match, Create Goods Receipt, Create Invoice Receipt, Execute Payment"
-"What is the set of activities for the object type invoice receipt?","Perform Two-Way Match, Create Invoice Receipt, Execute Payment"
-"What is the set of activities for the object type payment?","Execute Payment"
-"What are the object types in the log?","goods receipt, invoice receipt, material, payment, purchase_order, purchase_requisition, quotation"
-"What are the resources manipulating an object of type goods receipt?","Warehouse Department, Finance/Account Department"
-"Does the resource Warehouse Department manipulating an object of type goods receipt work from Monday to Sunday?",yes
-"Does the resource Finance/Account Department manipulating an object of type goods receipt work from Monday to Sunday?",yes
-"What are the resources manipulating an object of type invoice receipt?",Finance/Account Department
-"Does the resource Finance/Account Department manipulating an object of type invoice receipt work from Monday to Sunday?",yes
-"What are the resources manipulating an object of type material?","Manufacturing Department, Procurement Requisition Manager"
-"Does the resource Manufacturing Department manipulating an object of type material work from Monday to Sunday?",yes
-"Does the resource Procurement Requisition Manager manipulating an object of type material work from Monday to Sunday?",yes
-"What are the resources manipulating an object of type payment?",Finance/Account Department
-"Does the resource Finance/Account Department manipulating an object of type payment work from Monday to Sunday?",yes
-"What are the resources manipulating an object of type ?","Procurement Department, Procurement Order Manager, Warehouse Department, Finance/Account Department"
-"Does the resource Finance/Account Department manipulating an object of type purchase_order work from Monday to Sunday?",yes
-"Does the resource Procurement Department manipulating an object of type purchase_order work from Monday to Sunday?",yes
-"Does the resource Procurement Order Manager manipulating an object of type purchase_order work from Monday to Sunday?",yes
-"Does the resource Warehouse Department manipulating an object of type purchase_order work from Monday to Sunday?",yes
-"What are the resources manipulating an object of type purchase_requisition?","Manufacturing Department, Procurement Requisition Manager, Procurement Department"
-"Does the resource Manufacturing Department manipulating an object of type purchase_requisition work from Monday to Sunday?",yes
-"Does the resource Procurement Department manipulating an object of type purchase_requisition work from Monday to Sunday?",yes
-"Does the resource Procurement Requisition Manager manipulating an object of type purchase_requisition work from Monday to Sunday?",yes
-"What are the resources manipulating an object of type quotation?","Procurement Department, Procurement Order Manager"
-"Does the resource Procurement Department manipulating an object of type quotation work from Monday to Sunday?",yes
-"Does the resource Procurement Order Manager manipulating an object of type quotation work from Monday to Sunday?",yes
-"What are the possible values for the attribute Movement Type (MSEG-BWART) of an object of type goods receipt?",101
-"What are the possible values for the attribute Invoice Receipt (MSEG-WEAHR) of an object of type goods receipt?",X
-"What are the possible values for the attribute Material (EKPO-MATNR) of an object of type material?","SPEEDOMETER, LOCK, BIKE_BELL, PUMP, BIKE_SPOKE, BIKE_BRAKE, BIKE_WHEEL, LIGHT_REAR, BIKE_FRAME, CASSETTE, CHAINRING, PEDAL, DERAILLEUR, CRANKSET, CABLE, HELMET_S, HELMET_M, CHAIN, SHIFT_LEVER, BIKE_HANDLE, BIKE_RIM, VALVE, TUBE_26, TIRE_26, WHEEL_HUB, RIM_TAPE, TIRE_28, JACKET_M, HELMET_L, GLOVES_M, PANTS_S, JACKET_S, GLOVES_S, GLOVES_L, JACKET_L, PEDAL_STRAP, SPOKE, NIPPLE, BOTTLE_CAGE, HUB_BEARING, LIGHT_FRONT, BIKE_PEDAL, BIKE_FORK, MIRROR, BIKE_SEAT, BRAKE_LEVER, WATER_BOTTLE, TUBE_28, BOTTOM_BRACKET, BIKE_CHAIN"
-"What are the possible values for the attribute Plant (EKPO-WERKS) of an object of type material?","4000, 2000, 5000, 1000, 3000"
-"What are the possible values for the attribute Storage Location (EKPO-LGORT) of an object of type material?","0001, 0002, 0005, 0004, 0003"
-"What are the possible values for the attribute Payment Method (ZLSCH) of an object of type payment?","A: Bank TransferB: Check, C: Bank Collection, D:Direct Debit"
-"What are the possible values for the attribute Document Type (EKKO-BSART) of an object of type purchase_order?",Standard PO (NB)
-"What are the possible values for the attribute Vendor (EKKO-LIFNR) of an object of type purchase_order?","Bottle Bosses Co, Precision Gears Ltd, Chainring Champions Inc, Durable Bike Seats Inc, Brake Bosses Ltd, Tire Titans Ltd, Cable Creators Inc, Secure Locks Co, Tube Traders Inc, Strap Stars Inc, Safety Gear Ltd, Quality Helmets Co, Cassette Captains Co, Lock Lords Ltd, Crankset Kings Ltd, Valve Ventures Co, Helmet Heroes Inc, Pants Providers Inc, Hub Heroes Ltd, Cage Creators Ltd, Rider Apparel Co, Cycle Parts Manufacturing, Wheel Wizards Co, Lever Legends Ltd, Rim Royals Ltd, Spoke Suppliers Inc, Road Protection Corp, Bell Barons Inc, Speedometer Specialists Co, Reliable Tyres Ltd, Comfort Clothing Inc, Nipple Navigators Co, Jacket Junction Co, Cycling Accessory Corp, Safety Suppliers Ltd, Cycling Style Ltd, Cycle Component Corp, Bearing Barons Inc, Pedal Providers Co, Derailleur Dynamos Co, Pump Pros Inc, Lighting Legends Co, Advanced Bike Frames Inc, Chain Chiefs Ltd, Glove Masters Ltd, Mirror Makers Ltd, Bracket Barons Inc, Bike Components Corp, Efficient Lighting Solutions Ltd, Professional Cycling Products']"
-"What are the possible values for the attribute Release Status (EKKO-FRGZU) of an object of type purchase_order?",Fully Approved
-"What are the possible values for the attribute Purchasing Organization (EKKO-EKORG) of an object of type purchase_order?","Global Bike Inc"
-"What are the possible values for the attribute Purchasing Group (EKKO-EKGRP) of an object of type purchase_order?","003, 001, 005, 004, 002"
-"What are the possible values for the attribute Release Indicator (EBAN-FRGZU) of an object of type purchase_requisition?",Released
-"What are the possible values for the attribute Purchasing Group (EBAN-EKGRP) of an object of type purchase_requisition?","003, 001, 005, 004, 002"
-"What are the possible values for the attribute Vendor (EBAN-LIFNR) of an object of type quotation?","Precision Gears Ltd, Bottle Bosses Co, Durable Bike Seats Inc, Brake Bosses Ltd, Chainring Champions Inc, Tire Titans Ltd, Cable Creators Inc, Secure Locks Co, Tube Traders Inc, Strap Stars Inc, Safety Gear Ltd, Quality Helmets Co, Lock Lords Ltd, Cassette Captains Co, Crankset Kings Ltd, Valve Ventures Co, Helmet Heroes Inc, Pants Providers Inc, Hub Heroes Ltd, Cage Creators Ltd, Cycle Parts Manufacturing, Rider Apparel Co, Wheel Wizards Co, Rim Royals Ltd, Lever Legends Ltd, Spoke Suppliers Inc, Reliable Tyres Ltd, Road Protection Corp, Speedometer Specialists Co, Bell Barons Inc, Comfort Clothing Inc, Nipple Navigators Co, Jacket Junction Co, Cycling Accessory Corp, Safety Suppliers Ltd, Cycling Style Ltd, Bearing Barons Inc, Cycle Component Corp, Derailleur Dynamos Co, Pedal Providers Co, Pump Pros Inc, Lighting Legends Co, Advanced Bike Frames Inc, Chain Chiefs Ltd, Glove Masters Ltd, Mirror Makers Ltd, Bracket Barons Inc, Bike Components Corp, Efficient Lighting Solutions Ltd, Professional Cycling Products"
-"What are the possible values for the attribute RFQ Type (EBAN-BSART) of an object of type quotation?",AN
-"What are the possible values for the attribute Purchasing Organization (EBAN-EKORG) of an object of type quotation?",Global Bike Inc
-"What are the possible values for the attribute Purchasing Group (EBAN-EKGRP) of an object of type quotation?","001, 003, 005, 004, 002"
-"What is the minimum Posting Date (MKPF-BLDAT) value for an object of type goods receipt?",2022-04-20 16:22:00
-"What is the event with the minimum Posting Date (MKPF-BLDAT) value for the object type goods receipt?",event:132
-"What is the object with the minimum Posting Date (MKPF-BLDAT) value for the object type goods receipt?",goods receipt:3
-"What is the maximum Posting Date (MKPF-BLDAT) value for an object of type goods receipt?",2024-11-09 17:22:00
-"What is the event with the maximum Posting Date (MKPF-BLDAT) value for the object type goods receipt?",event:29272
-"What is the object with the maximum Posting Date (MKPF-BLDAT) value for the object type goods receipt?",goods receipt:1931
-"What is the minimum Delivery Date (EKPO-BEDAT) value for an object of type material?",2023-10-03 09:30:10.235467
-"What is the event with the minimum Delivery Date (EKPO-BEDAT) value for the object type material?",event:1
-"What is the object with the minimum Delivery Date (EKPO-BEDAT) value for the object type material?",material:1
-"What is the maximum Delivery Date (EKPO-BEDAT) value for an object of type material?",2023-11-01 09:30:31.077911
-"What is the event with the maximum Delivery Date (EKPO-BEDAT) value for the object type material?",event:28053
-"What is the object with the maximum Delivery Date (EKPO-BEDAT) value for the object type material?",material:2243
+"Are Amount (DMBTR), Credit Amount (BSEG-WRBTR), Debit Amount (BSEG-DMBTR), Delivery Date (EKPO-BEDAT), Document Type (EKKO-BSART), Invoice Receipt (MSEG-WEAHR), Material (EKPO-MATNR), Movement Type (MSEG-BWART), Net Price (EKPO-NETPR), Payment Block (RSEG-ZLSPR), Payment Method (ZLSCH), Plant (EKPO-WERKS), Posting Date (MKPF-BLDAT), Purchasing Group (EBAN-EKGRP), Purchasing Group (EKKO-EKGRP), Purchasing Organization (EBAN-EKORG), Purchasing Organization (EKKO-EKORG), Quantity (EKPO-MENGE), RFQ Type (EBAN-BSART), Release Indicator (EBAN-FRGZU), Release Status (EKKO-FRGZU), Storage Location (EKPO-LGORT), Vendor (EBAN-LIFNR), Vendor (EKKO-LIFNR), lifecycle, new_value, resource the attribute names in the log?","True"
+"Is 14671 the number of events in the log?","True"
+"Is 9054 the number of objects in the log?","True"
+"Is 10 the number of activities in the log?","True"
+"Is 7 the number of object types in the log?","True"
+"Is 35927 the number of events-objects relationships in the log?","True"
+"Are there 4042 occurrences of the activity Create Goods Receipt are in the log?","True"
+"Are there 1941 occurrences of the activity Create Invoice Receipt are in the log?","True"
+"Are there 1941 occurrences of the activity Perform Two-Way Match are in the log?","True"
+"Are there 1598 occurrences of the activity Create Purchase Order are in the log?","True"
+"Are there 1598 occurrences of the activity Approve Purchase Order are in the log?","True"
+"Are there 1166 occurrences of the activity Execute Payment are in the log?","True"
+"Are there 927 occurrences of the activity Create Request for Quotation are in the log?","True"
+"Are there 729 occurrences of the activity Create Purchase Requisition are in the log?","True"
+"Are there 607 occurrences of the activity Approve Purchase Requisition are in the log?","True"
+"Are there 122 occurrences of the activity Delegate Purchase Requisition Approval are in the log?","True"
+"Are there 1941 occurrences of the object type goods receipt are in the log?","True"
+"Are there 1807 occurrences of the object type material are in the log?","True"
+"Are there 1598 occurrences of the object type purchase_order are in the log?","True"
+"Are there 927 occurrences of the object type invoice receipt are in the log?","True"
+"Are there 927 occurrences of the object type payment are in the log?","True"
+"Are there 927 occurrences of the object type purchase_requisition are in the log?","True"
+"Are there 927 occurrences of the object type quotation are in the log?","True"
+"Is 2022-04-01 09:26:00+00:00 the earliest event timestamp in the log?","True"
+"Is 2024-10-31 20:28:00+00:00 the latest event timestamp in the log?","True"
+"Is 944 days 11:02:00 the total duration of the process in the log?","True"
+"Is 200 the minimum Credit Amount (BSEG-WRBTR) value for the object type invoice receipt?","True"
+"Is event:27340 the event with the minimum Credit Amount (BSEG-WRBTR) value for the object type invoice receipt?","True"
+"Is invoice receipt:1802 the object with the minimum Credit Amount (BSEG-WRBTR) value for the object type invoice receipt?","True"
+"Is 375050 the maximum Credit Amount (BSEG-WRBTR) value for the object type invoice receipt?","True"
+"Is event:19684 the event with the maximum Credit Amount (BSEG-WRBTR) value for the object type invoice receipt?","True"
+"Is invoice receipt:1282 the object with the maximum Credit Amount (BSEG-WRBTR) value for the object type invoice receipt?","True"
+"Is 63966.24 the average Credit Amount (BSEG-WRBTR) value for the object type invoice receipt?","True"
+"Is 200 the minimum Debit Amount (BSEG-DMBTR) value for the object type invoice receipt?","True"
+"Is event:27340 the event with the minimum Debit Amount (BSEG-DMBTR) value for the object type invoice receipt?","True"
+"Is invoice receipt:1802 the object with the minimum Debit Amount (BSEG-DMBTR) value for the object type invoice receipt?","True"
+"Is 375050 the maximum Debit Amount (BSEG-DMBTR) value for the object type invoice receipt?","True"
+"Is event:19684 the event with the maximum Debit Amount (BSEG-DMBTR) value for the object type invoice receipt?","True"
+"Is invoice receipt:1282 the object with the maximum Debit Amount (BSEG-DMBTR) value for the object type invoice receipt?","True"
+"Is 63966.24 the average Debit Amount (BSEG-DMBTR) value for the object type invoice receipt?","True"
+"Is 100 the minimum Net Price (EKPO-NETPR) value for the object type material?","True"
+"Is event:15 the event with the minimum Net Price (EKPO-NETPR) value for the object type material?","True"
+"Is material:12 the object with the minimum Net Price (EKPO-NETPR) value for the object type material?","True"
+"Is 1500 the maximum Net Price (EKPO-NETPR) value for the object type material?","True"
+"Is event:19 the event with the maximum Net Price (EKPO-NETPR) value for the object type material?","True"
+"Is material:9 the object with the maximum Net Price (EKPO-NETPR) value for the object type material?","True"
+"Is 794.85 the average Net Price (EKPO-NETPR) value for the object type material?","True"
+"Is 1 the minimum Quantity (EKPO-MENGE) value for the object type material?","True"
+"Is event:801 the event with the minimum Quantity (EKPO-MENGE) value for the object type material?","True"
+"Is material:103 the object with the minimum Quantity (EKPO-MENGE) value for the object type material?","True"
+"Is 100 the maximum Quantity (EKPO-MENGE) value for the object type material?","True"
+"Is event:2727 the event with the maximum Quantity (EKPO-MENGE) value for the object type material?","True"
+"Is material:246 the object with the maximum Quantity (EKPO-MENGE) value for the object type material?","True"
+"Is 50.6 the average Quantity (EKPO-MENGE) value for the object type material?","True"
+"Is 200 the minimum Amount (DMBTR) value for the object type payment?","True"
+"Is event:27503 the event with the minimum Amount (DMBTR) value for the object type payment?","True"
+"Is payment:861 the object with the minimum Amount (DMBTR) value for the object type payment?","True"
+"Is 375050 the maximum Amount (DMBTR) value for the object type payment?","True"
+"Is event:19842 the event with the maximum Amount (DMBTR) value for the object type payment?","True"
+"Is payment:614 the object with the maximum Amount (DMBTR) value for the object type payment?","True"
+"Is 63358.83 the average Amount (DMBTR) value for the object type payment?","True"
+"Is Create Purchase Order, Create Goods Receipt, Execute Payment, Approve Purchase Order the set of activities for the object type purchase_order?","True"
+"Is Create Purchase Order, Create Request for Quotation, Approve Purchase Order the set of activities for the object type quotation?","True"
+"Is Approve Purchase Requisition, Delegate Purchase Requisition Approval, Create Purchase Requisition the set of activities for the object type material?","True"
+"Is Delegate Purchase Requisition Approval, Approve Purchase Requisition, Create Request for Quotation, Create Purchase Requisition the set of activities for the object type purchase_requisition?","True"
+"Is Perform Two-Way Match, Create Goods Receipt, Create Invoice Receipt, Execute Payment the set of activities for the object type goods receipt?","True"
+"Is Perform Two-Way Match, Create Invoice Receipt, Execute Payment the set of activities for the object type invoice receipt?","True"
+"Is Execute Payment the activity for the object type payment?","True"
+"Are goods receipt, invoice receipt, material, payment, purchase_order, purchase_requisition, quotation the object types in the log?","True"
+"Are Warehouse Department, Finance/Account Department the resources manipulating an object of type goods receipt?","True"
+"Does the resource Warehouse Department manipulating an object of type goods receipt work from Monday to Sunday?","True"
+"Does the resource Finance/Account Department manipulating an object of type goods receipt work from Monday to Sunday?","True"
+"Are Finance/Account Department the resources manipulating an object of type invoice receipt?","True"
+"Does the resource Finance/Account Department manipulating an object of type invoice receipt work from Monday to Sunday?","True"
+"Are Manufacturing Department, Procurement Requisition Manager the resources manipulating an object of type material?","True"
+"Does the resource Manufacturing Department manipulating an object of type material work from Monday to Sunday?","True"
+"Does the resource Procurement Requisition Manager manipulating an object of type material work from Monday to Sunday?","True"
+"Are Finance/Account Department the resources manipulating an object of type payment?","True"
+"Does the resource Finance/Account Department manipulating an object of type payment work from Monday to Sunday?","True"
+"Are Procurement Department, Procurement Order Manager, Warehouse Department, Finance/Account Department the resources manipulating an object of type ?","True"
+"Does the resource Finance/Account Department manipulating an object of type purchase_order work from Monday to Sunday?","True"
+"Does the resource Procurement Department manipulating an object of type purchase_order work from Monday to Sunday?","True"
+"Does the resource Procurement Order Manager manipulating an object of type purchase_order work from Monday to Sunday?","True"
+"Does the resource Warehouse Department manipulating an object of type purchase_order work from Monday to Sunday?","True"
+"Are Manufacturing Department, Procurement Requisition Manager, Procurement Department the resources manipulating an object of type purchase_requisition?","True"
+"Does the resource Manufacturing Department manipulating an object of type purchase_requisition work from Monday to Sunday?","True"
+"Does the resource Procurement Department manipulating an object of type purchase_requisition work from Monday to Sunday?","True"
+"Does the resource Procurement Requisition Manager manipulating an object of type purchase_requisition work from Monday to Sunday?","True"
+"Are Procurement Department, Procurement Order Manager the resources manipulating an object of type quotation?","True"
+"Does the resource Procurement Department manipulating an object of type quotation work from Monday to Sunday?","True"
+"Does the resource Procurement Order Manager manipulating an object of type quotation work from Monday to Sunday?","True"
+"Is 101 the possible value for the attribute Movement Type (MSEG-BWART) of an object of type goods receipt?","True"
+"Is X the possible value for the attribute Invoice Receipt (MSEG-WEAHR) of an object of type goods receipt?","True"
+"Are SPEEDOMETER, LOCK, BIKE_BELL, PUMP, BIKE_SPOKE, BIKE_BRAKE, BIKE_WHEEL, LIGHT_REAR, BIKE_FRAME, CASSETTE, CHAINRING, PEDAL, DERAILLEUR, CRANKSET, CABLE, HELMET_S, HELMET_M, CHAIN, SHIFT_LEVER, BIKE_HANDLE, BIKE_RIM, VALVE, TUBE_26, TIRE_26, WHEEL_HUB, RIM_TAPE, TIRE_28, JACKET_M, HELMET_L, GLOVES_M, PANTS_S, JACKET_S, GLOVES_S, GLOVES_L, JACKET_L, PEDAL_STRAP, SPOKE, NIPPLE, BOTTLE_CAGE, HUB_BEARING, LIGHT_FRONT, BIKE_PEDAL, BIKE_FORK, MIRROR, BIKE_SEAT, BRAKE_LEVER, WATER_BOTTLE, TUBE_28, BOTTOM_BRACKET, BIKE_CHAIN the possible values for the attribute Material (EKPO-MATNR) of an object of type material?","True"
+"Are 4000, 2000, 5000, 1000, 3000 the possible values for the attribute Plant (EKPO-WERKS) of an object of type material?","True"
+"Are 0001, 0002, 0005, 0004, 0003 the possible values for the attribute Storage Location (EKPO-LGORT) of an object of type material?","True"
+"Are A: Bank Transfer, B: Check, C: Bank Collection, D: Direct Debit the possible values for the attribute Payment Method (ZLSCH) of an object of type payment?","True"
+"Is Standard PO (NB) the possible value for the attribute Document Type (EKKO-BSART) of an object of type purchase_order?","True"
+"Are Bottle Bosses Co, Precision Gears Ltd, Chainring Champions Inc, Durable Bike Seats Inc, Brake Bosses Ltd, Tire Titans Ltd, Cable Creators Inc, Secure Locks Co, Tube Traders Inc, Strap Stars Inc, Safety Gear Ltd, Quality Helmets Co, Cassette Captains Co, Lock Lords Ltd, Crankset Kings Ltd, Valve Ventures Co, Helmet Heroes Inc, Pants Providers Inc, Hub Heroes Ltd, Cage Creators Ltd, Rider Apparel Co, Cycle Parts Manufacturing, Wheel Wizards Co, Lever Legends Ltd, Rim Royals Ltd, Spoke Suppliers Inc, Road Protection Corp, Bell Barons Inc, Speedometer Specialists Co, Reliable Tyres Ltd, Comfort Clothing Inc, Nipple Navigators Co, Jacket Junction Co, Cycling Accessory Corp, Safety Suppliers Ltd, Cycling Style Ltd, Cycle Component Corp, Bearing Barons Inc, Pedal Providers Co, Derailleur Dynamos Co, Pump Pros Inc, Lighting Legends Co, Advanced Bike Frames Inc, Chain Chiefs Ltd, Glove Masters Ltd, Mirror Makers Ltd, Bracket Barons Inc, Bike Components Corp, Efficient Lighting Solutions Ltd, Professional Cycling Products the possible values for the attribute Vendor (EKKO-LIFNR) of an object of type purchase_order?","True"
+"Is Fully Approved the possible value for the attribute Release Status (EKKO-FRGZU) of an object of type purchase_order?","True"
+"Is Global Bike Inc the possible value for the attribute Purchasing Organization (EKKO-EKORG) of an object of type purchase_order?","True"
+"Are 003, 001, 005, 004, 002 the possible values for the attribute Purchasing Group (EKKO-EKGRP) of an object of type purchase_order?","True"
+"Is Released the possible value for the attribute Release Indicator (EBAN-FRGZU) of an object of type purchase_requisition?","True"
+"Are 003, 001, 005, 004, 002 the possible values for the attribute Purchasing Group (EBAN-EKGRP) of an object of type purchase_requisition?","True"
+"Are Precision Gears Ltd, Bottle Bosses Co, Durable Bike Seats Inc, Brake Bosses Ltd, Chainring Champions Inc, Tire Titans Ltd, Cable Creators Inc, Secure Locks Co, Tube Traders Inc, Strap Stars Inc, Safety Gear Ltd, Quality Helmets Co, Lock Lords Ltd, Cassette Captains Co, Crankset Kings Ltd, Valve Ventures Co, Helmet Heroes Inc, Pants Providers Inc, Hub Heroes Ltd, Cage Creators Ltd, Cycle Parts Manufacturing, Rider Apparel Co, Wheel Wizards Co, Rim Royals Ltd, Lever Legends Ltd, Spoke Suppliers Inc, Reliable Tyres Ltd, Road Protection Corp, Speedometer Specialists Co, Bell Barons Inc, Comfort Clothing Inc, Nipple Navigators Co, Jacket Junction Co, Cycling Accessory Corp, Safety Suppliers Ltd, Cycling Style Ltd, Bearing Barons Inc, Cycle Component Corp, Derailleur Dynamos Co, Pedal Providers Co, Pump Pros Inc, Lighting Legends Co, Advanced Bike Frames Inc, Chain Chiefs Ltd, Glove Masters Ltd, Mirror Makers Ltd, Bracket Barons Inc, Bike Components Corp, Efficient Lighting Solutions Ltd, Professional Cycling Products the possible values for the attribute Vendor (EBAN-LIFNR) of an object of type quotation?","True"
+"Is AN the possible value for the attribute RFQ Type (EBAN-BSART) of an object of type quotation?","True"
+"Is Global Bike Inc the possible value for the attribute Purchasing Organization (EBAN-EKORG) of an object of type quotation?","True"
+"Are 001, 003, 005, 004, 002 the possible values for the attribute Purchasing Group (EBAN-EKGRP) of an object of type quotation?","True"
+"Is 2022-04-20 16:22:00 the minimum Posting Date (MKPF-BLDAT) value for an object of type goods receipt?","True"
+"Is event:132 the event with the minimum Posting Date (MKPF-BLDAT) value for the object type goods receipt?","True"
+"Is goods receipt:3 the object with the minimum Posting Date (MKPF-BLDAT) value for the object type goods receipt?","True"
+"Is 2024-11-09 17:22:00 the maximum Posting Date (MKPF-BLDAT) value for an object of type goods receipt?","True"
+"Is event:29272 the event with the maximum Posting Date (MKPF-BLDAT) value for the object type goods receipt?","True"
+"Is goods receipt:1931 the object with the maximum Posting Date (MKPF-BLDAT) value for the object type goods receipt?","True"
+"Is 2023-10-03 09:30:10.235467 the minimum Delivery Date (EKPO-BEDAT) value for an object of type material?","True"
+"Is event:1 the event with the minimum Delivery Date (EKPO-BEDAT) value for the object type material?","True"
+"Is material:1 the object with the minimum Delivery Date (EKPO-BEDAT) value for the object type material?","True"
+"Is 2023-11-01 09:30:31.077911 the maximum Delivery Date (EKPO-BEDAT) value for an object of type material?","True"
+"Is event:28053 the event with the maximum Delivery Date (EKPO-BEDAT) value for the object type material?","True"
+"Is material:2243 the object with the maximum Delivery Date (EKPO-BEDAT) value for the object type material?","True"

@@ -30,9 +30,9 @@ class AnswerVerificationOracle:
     def add_prompt_expected_answer_pair(self, prompt, expected_answer):
         """Add a prompt-expected answer pair to the oracle."""
         self.prompt_expected_answer_pairs.append((prompt, expected_answer))
-        if expected_answer == "yes":
+        if expected_answer == "True":
             self.positives += 1
-        elif expected_answer == "no":
+        elif expected_answer == "False":
             self.negatives += 1
 
     """ Verifying the answer correctness.
@@ -40,7 +40,7 @@ class AnswerVerificationOracle:
     This method checks whether the model's answer matches the expected answer for a given prompt.
     """
 
-    def verify_answer(self, model_answer, prompt, expected_match):
+    def verify_answer(self, model_answer, prompt):
         index_i = prompt.find('<<QUESTION>>')
         index_e = prompt.find('<</QUESTION>>')
         question = prompt[index_i + len('<<QUESTION>>'):index_e].strip()
@@ -48,7 +48,6 @@ class AnswerVerificationOracle:
             'prompt': prompt,
             'model_answer': model_answer,
             'expected_answer': None,
-            'expected_match': expected_match,
             'verification_result': None
         }
 
@@ -56,13 +55,8 @@ class AnswerVerificationOracle:
             if prompt_text == question:
                 result['expected_answer'] = expected_answer
                 result['verification_result'] = False
-                if ',' in expected_answer:
-                    result['verification_result'] = True
-                    for word in expected_answer.split(','):
-                        if word.strip(' .,').lower() not in model_answer.lower():
-                            result['verification_result'] = False
-                else:
-                    if expected_answer.lower() in model_answer.lower():
+                for word in model_answer.split():
+                    if expected_answer.lower() in word.strip(' .,').lower():
                         result['verification_result'] = True
                 """
                 if result['verification_result'] == False:
@@ -82,21 +76,21 @@ class AnswerVerificationOracle:
 
     def compute_stats(self):
         total_results = len(self.results)
-        correct_results = sum(int(result['verification_result']) == result['expected_match'] for result in self.results)
+        correct_results = sum(int(result['verification_result']) for result in self.results)
 
         self.accuracy = (correct_results / total_results) * 100 if total_results > 0 else 0
 
         for result in self.results:
             if result['verification_result']:
-                if result['expected_match']:
+                if result['expected_answer'] == 'True':
                     self.true_positives += 1
                 else:
-                    self.false_positives += 1
+                    self.true_negatives += 1
             else:
-                if result['expected_match']:
+                if result['expected_answer'] == 'True':
                     self.false_negatives += 1
                 else:
-                    self.true_negatives += 1
+                    self.false_positives += 1
 
         if self.true_positives + self.false_positives != 0:
             self.precision = self.true_positives / (self.true_positives + self.false_positives) * 100
@@ -133,5 +127,4 @@ class AnswerVerificationOracle:
                 file.write(f"Model Answer: {result['model_answer']}\n")
                 file.write(f"Expected Answer: {result['expected_answer']}\n")
                 file.write(f"Verification Result: {result['verification_result']}\n")
-                file.write(f"Expected Match: {result['expected_match']}\n")
                 file.write("\n#####################################################################################\n")
