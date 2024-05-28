@@ -287,8 +287,8 @@ def delete_qdrant_collection():
     qdrant_client.close()
 
 
-def evaluate_rag_chain_zero_shot(eval_oracle, lang_chain, vect_db):
-    path_tests_data = os.path.join('tests', 'test_dataset', 'validation_timestamps_questions.csv')
+def evaluate_rag_chain_zero_shot(eval_oracle, lang_chain, vect_db, filename):
+    path_tests_data = os.path.join('tests', 'test_dataset', filename)
     questions = {}
     with open(path_tests_data, newline='') as csvfile:
         reader = csv.reader(csvfile)
@@ -378,7 +378,16 @@ if __name__ == "__main__":
     # live_prompting(chain, qdrant)
 
     oracle = AnswerVerificationOracle()
-    evaluate_rag_chain_zero_shot(oracle, chain, qdrant)
+    filepath1 = 'validation_dataset.csv'
+    filepath2 = 'validation_events_questions.csv'
+    filepath3 = 'validation_objects_questions.csv'
+    filepath4 = 'validation_questions_global_info.csv'
+    filepath5 = 'validation_timestamps_questions.csv'
+    evaluate_rag_chain_zero_shot(oracle, chain, qdrant, filepath1)
+    evaluate_rag_chain_zero_shot(oracle, chain, qdrant, filepath2)
+    evaluate_rag_chain_zero_shot(oracle, chain, qdrant, filepath3)
+    evaluate_rag_chain_zero_shot(oracle, chain, qdrant, filepath4)
+    evaluate_rag_chain_zero_shot(oracle, chain, qdrant, filepath5)
 
     collection_bool = False
     if collection_bool:
