@@ -153,7 +153,9 @@ def retrieve_context(vector_index, query, search_filter='', key=''):
                 )
             ]
         )
-        retrieved += vector_index.similarity_search(query, filter=filter_, k=3)
+        results = vector_index.similarity_search(query, filter=filter_, k=3)
+        if results[0].page_content != '':
+            retrieved = results
     retrieved_text = ''
     for i in range(len(retrieved)):
         content = retrieved[i].page_content
@@ -216,7 +218,8 @@ def log_to_file(message, curr_datetime):
 
 
 def produce_answer(question, llm_chain, vectdb):
-    sys_mess = "Use the following pieces of context to answer with 'True' or 'False' the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer."
+    # sys_mess = "Use the following pieces of context to answer with 'True' or 'False' the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer."
+    sys_mess = "Use the following pieces of context to answer with 'True' or 'False' the question at the end."
 
     # Take the question and extract the metadata for the filtering if any.
     # Pattern in the question: metadata_key "metadata_value", while for events "event:id_num"
