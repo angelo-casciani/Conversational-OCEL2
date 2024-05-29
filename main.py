@@ -383,11 +383,11 @@ if __name__ == "__main__":
     filepath3 = 'validation_objects_questions.csv'
     filepath4 = 'validation_questions_global_info.csv'
     filepath5 = 'validation_timestamps_questions.csv'
-    #evaluate_rag_chain_zero_shot(oracle, chain, qdrant, filepath1)
-    #evaluate_rag_chain_zero_shot(oracle, chain, qdrant, filepath2)
-    evaluate_rag_chain_zero_shot(oracle, chain, qdrant, filepath3)
-    #evaluate_rag_chain_zero_shot(oracle, chain, qdrant, filepath4)
-    #evaluate_rag_chain_zero_shot(oracle, chain, qdrant, filepath5)
+    # evaluate_rag_chain_zero_shot(oracle, chain, qdrant, filepath1)
+    # evaluate_rag_chain_zero_shot(oracle, chain, qdrant, filepath2)
+    # evaluate_rag_chain_zero_shot(oracle, chain, qdrant, filepath3)
+    # evaluate_rag_chain_zero_shot(oracle, chain, qdrant, filepath4)
+    evaluate_rag_chain_zero_shot(oracle, chain, qdrant, filepath5)
 
     collection_bool = False
     if collection_bool:
