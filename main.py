@@ -11,6 +11,7 @@ import datetime
 import json
 import os
 import re
+import subprocess
 from oracle import AnswerVerificationOracle
 
 """Initializing the Hugging Face Embedding Pipeline
@@ -208,15 +209,6 @@ def initialize_pipeline(model_identifier, hf_auth):
     return generate_text
 
 
-def log_to_file(message, curr_datetime):
-    folder = 'tests'
-    sub_folder = 'outputs'
-    filename = f"output_{curr_datetime}.txt"
-    filepath = os.path.join(folder, sub_folder, filename)
-    with open(filepath, 'a') as file1:
-        file1.write(message)
-
-
 def produce_answer(question, llm_chain, vectdb):
     # sys_mess = "Use the following pieces of context to answer with 'True' or 'False' the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer."
     sys_mess = "Use the following pieces of context to answer with 'True' or 'False' the question at the end."
@@ -258,29 +250,6 @@ def produce_answer(question, llm_chain, vectdb):
     return prompt, answer
 
 
-def produce_answer_live(question, curr_datetime, model_chain, vectordb):
-    complete_prompt, answer = produce_answer(question, model_chain, vectordb)
-    print(f'Prompt: {complete_prompt}\n')
-    print(f'Answer: {answer}\n')
-    print('--------------------------------------------------')
-
-    log_to_file(f'Query: {complete_prompt}\n\nAnswer: {answer}\n\n##########################\n\n',
-                curr_datetime)
-
-
-def live_prompting(model1, vect_db):
-    current_datetime = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    while True:
-        query = input('Insert the query (type "quit" to exit): ')
-
-        if query.lower() == 'quit':
-            print("Exiting the chat.")
-            break
-
-        produce_answer_live(query, current_datetime, model1, vect_db)
-        print()
-
-
 def delete_qdrant_collection():
     qdrant_client = QdrantClient(url="192.168.1.240:6333", grpc_port=6334, prefer_grpc=True)
     qdrant_client.delete_collection('llama-2-rag')
@@ -288,7 +257,7 @@ def delete_qdrant_collection():
 
 
 def evaluate_rag_chain_zero_shot(eval_oracle, lang_chain, vect_db, filename):
-    path_tests_data = os.path.join('tests', 'test_dataset', filename)
+    path_tests_data = filename
     questions = {}
     with open(path_tests_data, newline='') as csvfile:
         reader = csv.reader(csvfile)
@@ -320,27 +289,32 @@ if __name__ == "__main__":
 
     embed_model = initialize_embedding_model(embed_model_id, device)
 
-    """index_ans = input("Maintain Vector Index?\ny - yes, maintain it.\nn - no, rebuild it.\n")
-    if index_ans == 'y':
-        index_bool = True
-    else:
-        index_bool = False"""
-    index_bool = True
+    index_ans = input("Create vector collection?\ny - yes, create it for the first time/rebuild it;\nn - no, maintain it.\n")
+    index_bool = False
+    while index_ans.lower() not in ['y','n']:
+        if index_ans == 'y':
+            index_bool = True
+        elif index_ans == 'n':
+            index_bool = False
+        else:
+            print("Insert a valid choice!")
+            print("Rebuild vector collection?\ny - yes, rebuild it/create it for the first time.\nn - no, maintain it.\n")
 
     client = QdrantClient(url, grpc_port=grpc_port, prefer_grpc=True)
     qdrant = Qdrant(client, collection_name='llama-2-rag', embeddings=embed_model)
 
     if index_bool:
-        print("Using existing vector index.")
-    else:
+        result = subprocess.run(['python', 'preprocessing.py'], capture_output=True, text=True)
+        print(result.stdout)
+        print(result.stderr)
         id = 0
-        print("Building and populating the vector index... (1/3)")
+        print("Building and populating the vector collection... (1/3)")
         files = os.listdir(os.path.join('data', 'execution'))
         for f in files:
             if f.endswith('.txt'):
                 content = load_process_representation(f)
                 qdrant = store_vectorized_info(content, f, embed_model, url, grpc_port)
-        print(f"Populating the vector index... (2/3)")
+        print(f"Populating the vector collection... (2/3)")
         files_to_chunk = os.listdir(os.path.join('data', 'execution', 'to_chunk'))
         jsonfile = 'objects_ot_count.txt'
         for f in files_to_chunk:
@@ -350,47 +324,80 @@ if __name__ == "__main__":
             elif f == jsonfile:
                 file_path = os.path.join('data', 'execution', 'to_chunk', jsonfile)
                 with open(file_path, 'r') as jsonf:
-                    print(f"Populating the vector index... (3/3)")
+                    print(f"Populating the vector collection... (3/3)")
                     j_dict = json.load(jsonf)
                     j_chunks = intelligent_chunking_json(j_dict)
                     id = store_vectorized_chunks(j_chunks, f, embed_model, client, id)
+        print(f"vector collection successfully created and initialized!")
+    else:
+        print("Using existing vector collection.")
 
-    print(f"Vector index successfully created and initialized!")
-    #model_id = 'meta-llama/Llama-2-13b-chat-hf'
-    #model_id = 'meta-llama/Meta-Llama-3-8B-Instruct'
-    model_id = 'meta-llama/Llama-2-7b-chat-hf'
+    model_choice = input("Choose the language model to use:\na - Llama 2 7B;\nb - Llama 2 13B;\nc - Llama 3 8B.\n")
+    model_id = 'MODEL'
+    while model_choice.lower() not in ['a','b','c']:
+        if model_choice == 'a':
+            model_id = 'meta-llama/Llama-2-7b-chat-hf'
+        elif model_choice == 'b':
+            model_id = 'meta-llama/Llama-2-13b-chat-hf'
+        elif model_choice == 'c':
+            model_id = 'meta-llama/Meta-Llama-3-8B-Instruct'
+        else:
+            print("Insert a valid choice!")
+            model_choice = input("Choose the language model to use:\na - Llama 2 7B;\nb - Llama 2 13B;\nc - Llama 3 8B.\n")
+
     pipeline = initialize_pipeline(model_id, hf_token)
     hf_pipeline = HuggingFacePipeline(pipeline=pipeline)
 
     template = """<s>[INST]
-    <<SYS>>
-    {system_message}
-    <</SYS>>
-    <<CONTEXT>>
-    {context}
-    <</CONTEXT>>
-    <<QUESTION>>
-    {question}
-    <</QUESTION>>
-    <<ANSWER>> [/INST]"""
+                    <<SYS>>
+                    {system_message}
+                    <</SYS>>
+                    <<CONTEXT>>
+                    {context}
+                    <</CONTEXT>>
+                    <<QUESTION>>
+                    {question}
+                    <</QUESTION>>
+                    <<ANSWER>> [/INST]"""
 
     prompt = PromptTemplate.from_template(template)
     chain = prompt | hf_pipeline
 
-    # live_prompting(chain, qdrant)
-
     oracle = AnswerVerificationOracle()
-    filepath1 = 'validation_dataset.csv'
-    filepath2 = 'validation_events_questions.csv'
-    filepath3 = 'validation_objects_questions.csv'
-    filepath4 = 'validation_questions_global_info.csv'
-    filepath5 = 'validation_timestamps_questions.csv'
-    evaluate_rag_chain_zero_shot(oracle, chain, qdrant, filepath1)
-    # evaluate_rag_chain_zero_shot(oracle, chain, qdrant, filepath2)
-    # evaluate_rag_chain_zero_shot(oracle, chain, qdrant, filepath3)
-    # evaluate_rag_chain_zero_shot(oracle, chain, qdrant, filepath4)
-    # evaluate_rag_chain_zero_shot(oracle, chain, qdrant, filepath5)
+    filepaths = [ 
+                'validation_dataset.csv',
+                'validation_questions_global_info.csv',
+                'validation_events_questions.csv',
+                'validation_objects_questions.csv',
+                'validation_timestamps_questions.csv'
+                ]
 
+    eval_choice = input("Choose the dataset (based on the P2P OCEL 2.0 log) for the evaluation:\na - Complete Dataset;\nb - Global Stats Dataset;\nc - Event Dataset;\nd - Object Dataset;\ne - Timestamp Dataset.\n").lower()
+    while eval_choice not in ['a','b','c','d','e']:
+        if eval_choice == 'a':
+            evaluate_rag_chain_zero_shot(oracle, chain, qdrant, os.path.join('tests', 'test_dataset', filepaths[0]))
+        elif eval_choice == 'b':
+            evaluate_rag_chain_zero_shot(oracle, chain, qdrant, os.path.join('tests', 'test_dataset', 'divided_dataset', filepaths[1]))
+        elif eval_choice == 'c':
+            evaluate_rag_chain_zero_shot(oracle, chain, qdrant, os.path.join('tests', 'test_dataset', 'divided_dataset', filepaths[2]))
+        elif eval_choice == 'd':
+            evaluate_rag_chain_zero_shot(oracle, chain, qdrant, os.path.join('tests', 'test_dataset', 'divided_dataset', filepaths[3]))
+        elif eval_choice == 'e':
+            evaluate_rag_chain_zero_shot(oracle, chain, qdrant, os.path.join('tests', 'test_dataset', 'divided_dataset', filepaths[4]))
+        else:
+            print("Insert a valid choice!")
+            eval_choice = input("Choose the dataset (based on the P2P OCEL 2.0 log) for the evaluation:\na - Complete Dataset;\nb - Global Stats Dataset;\nc - Event Dataset;\nd - Object Dataset;\ne - Timestamp Dataset.\n").lower()
+    
+    indexd_choice = input("Maintain vector collection?\ny - yes, maintain it.\nn - no, delete it.\n").lower()
     collection_bool = False
-    if collection_bool:
+    while indexd_choice.lower() not in ['y','n']:
+        if indexd_choice == 'y':
+            collection_bool = True
+        elif indexd_choice == 'n':
+            collection_bool = False
+        else:
+            print("Insert a valid choice!")
+            indexd_choice = input("Maintain vector collection?\ny - yes, maintain it.\nn - no, delete it.\n").lower()
+    
+    if not(collection_bool):
         delete_qdrant_collection()

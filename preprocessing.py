@@ -21,45 +21,6 @@ def get_resources_flat(log):
 
 
 def get_resource_calendar(log):
-    """
-    log['time:timestamp'] = pd.to_datetime(log['time:timestamp'])
-
-    # Extract weekday, day name, hour, and minute
-    log['weekday'] = log['time:timestamp'].dt.weekday
-    log['dayname'] = log['time:timestamp'].dt.day_name()
-    log['hour'] = log['time:timestamp'].dt.hour
-    log['minute'] = log['time:timestamp'].dt.minute
-
-    # Group by resource, weekday, and day name and calculate min and max working hours within the same day
-    working_hours = log.groupby(['resource', 'weekday', 'dayname']).agg(min_hour=('hour', 'min'), max_hour=('hour', 'max'), min_minute=('minute', 'min'), max_minute=('minute', 'max'))
-
-    # Calculate the minimum working time within the same day
-    working_hours['min_time'] = working_hours['min_hour'].astype(str) + ':' + working_hours['min_minute'].astype(str).str.zfill(2)
-
-    # Calculate the maximum working time within the same day
-    working_hours['max_time'] = working_hours['max_hour'].astype(str) + ':' + working_hours['max_minute'].astype(str).str.zfill(2)
-
-    # Drop redundant columns
-    working_hours = working_hours.drop(columns=['min_hour', 'max_hour', 'min_minute', 'max_minute'])
-
-    # Reset index to make resource, weekday, and dayname columns regular columns
-    working_hours = working_hours.reset_index()
-    return working_hours
-    """
-
-    """
-    log = log[log['lifecycle'] == 'complete']
-    log['time:timestamp'] = pd.to_datetime(log['time:timestamp'])
-
-    log['weekday'] = log['time:timestamp'].dt.weekday
-    log['dayname'] = log['time:timestamp'].dt.day_name()
-    min_times = log.groupby(['resource', log['weekday'], log['dayname']])['time:timestamp'].min().dt.round('30min').dt.time
-    max_times = log.groupby(['resource', log['weekday'], log['dayname']])['time:timestamp'].max().dt.round('30min').dt.time
-    resourceTimes = pd.DataFrame({'min_time': min_times, 'max_time': max_times})
-
-    return resourceTimes
-
-    """
     log = log[log['lifecycle'] == 'complete']
     log['time:timestamp'] = pd.to_datetime(log['time:timestamp'])
 
@@ -151,10 +112,6 @@ if __name__ == "__main__":
 
     path = os.path.join("data", "ocel2-p2p.json")
     ocel = pm4py.read_ocel2(path)
-
-    # Discover and view the DFG with the frequency annotation
-    # ocdfg = pm4py.discover_ocdfg(ocel)
-    # pm4py.view_ocdfg(ocdfg, format="svg")
 
     # Basic Statistics
     filename = os.path.join('data', 'execution', 'basic_stats.txt')
