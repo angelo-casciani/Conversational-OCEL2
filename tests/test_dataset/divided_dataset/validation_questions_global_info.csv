@@ -1,27 +1,27 @@
 question,answer
 "Are Amount (DMBTR), Credit Amount (BSEG-WRBTR), Debit Amount (BSEG-DMBTR), Delivery Date (EKPO-BEDAT), Document Type (EKKO-BSART), Invoice Receipt (MSEG-WEAHR), Material (EKPO-MATNR), Movement Type (MSEG-BWART), Net Price (EKPO-NETPR), Payment Block (RSEG-ZLSPR), Payment Method (ZLSCH), Plant (EKPO-WERKS), Posting Date (MKPF-BLDAT), Purchasing Group (EBAN-EKGRP), Purchasing Group (EKKO-EKGRP), Purchasing Organization (EBAN-EKORG), Purchasing Organization (EKKO-EKORG), Quantity (EKPO-MENGE), RFQ Type (EBAN-BSART), Release Indicator (EBAN-FRGZU), Release Status (EKKO-FRGZU), Storage Location (EKPO-LGORT), Vendor (EBAN-LIFNR), Vendor (EKKO-LIFNR), lifecycle, new_value, resource the attribute names in the log?",True
-Is 14671 the number of events in the log?,True
-Is 9054 the number of objects in the log?,True
-Is 10 the number of activities in the log?,True
-Is 7 the number of object types in the log?,True
-Is 35927 the number of events-objects relationships in the log?,True
-Are there 4042 occurrences of the activity Create Goods Receipt are in the log?,True
-Are there 1941 occurrences of the activity Create Invoice Receipt are in the log?,True
-Are there 1941 occurrences of the activity Perform Two-Way Match are in the log?,True
-Are there 1598 occurrences of the activity Create Purchase Order are in the log?,True
-Are there 1598 occurrences of the activity Approve Purchase Order are in the log?,True
-Are there 1166 occurrences of the activity Execute Payment are in the log?,True
-Are there 927 occurrences of the activity Create Request for Quotation are in the log?,True
-Are there 729 occurrences of the activity Create Purchase Requisition are in the log?,True
-Are there 607 occurrences of the activity Approve Purchase Requisition are in the log?,True
-Are there 122 occurrences of the activity Delegate Purchase Requisition Approval are in the log?,True
-Are there 1941 occurrences of the object type goods receipt are in the log?,True
-Are there 1807 occurrences of the object type material are in the log?,True
-Are there 1598 occurrences of the object type purchase_order are in the log?,True
-Are there 927 occurrences of the object type invoice receipt are in the log?,True
-Are there 927 occurrences of the object type payment are in the log?,True
-Are there 927 occurrences of the object type purchase_requisition are in the log?,True
-Are there 927 occurrences of the object type quotation are in the log?,True
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Is 14671 the number of events in the log?",True
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Is 9054 the number of objects in the log?",True
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Is 10 the number of activities in the log?",True
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Is 7 the number of object types in the log?",True
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Is 35927 the number of events-objects relationships in the log?",True
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 4042 occurrences of the activity Create Goods Receipt are in the log?",True
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 1941 occurrences of the activity Create Invoice Receipt are in the log?",True
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 1941 occurrences of the activity Perform Two-Way Match are in the log?",True
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 1598 occurrences of the activity Create Purchase Order are in the log?",True
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 1598 occurrences of the activity Approve Purchase Order are in the log?",True
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 1166 occurrences of the activity Execute Payment are in the log?",True
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 927 occurrences of the activity Create Request for Quotation are in the log?",True
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 729 occurrences of the activity Create Purchase Requisition are in the log?",True
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 607 occurrences of the activity Approve Purchase Requisition are in the log?",True
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 122 occurrences of the activity Delegate Purchase Requisition Approval are in the log?",True
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 1941 occurrences of the object type goods receipt are in the log?",True
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 1807 occurrences of the object type material are in the log?",True
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 1598 occurrences of the object type purchase_order are in the log?",True
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 927 occurrences of the object type invoice receipt are in the log?",True
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 927 occurrences of the object type payment are in the log?",True
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 927 occurrences of the object type purchase_requisition are in the log?",True
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 927 occurrences of the object type quotation are in the log?",True
 Is 2022-04-01 09:26:00+00:00 the earliest event timestamp in the log?,True
 Is 2024-10-31 20:28:00+00:00 the latest event timestamp in the log?,True
 Is 944 days 11:02:00 the total duration of the process in the log?,True
@@ -120,28 +120,28 @@ Is 2023-11-01 09:30:31.077911 the maximum Delivery Date (EKPO-BEDAT) value for a
 Is event:28053 the event with the maximum Delivery Date (EKPO-BEDAT) value for the object type material?,True
 Is material:2243 the object with the maximum Delivery Date (EKPO-BEDAT) value for the object type material?,True
 "Are Amount (DMBTR), Credit Amount (BSEG-WRBTR), Debit Amount (BSEG-DMBTR), Delivery Date (EKPO-BEDAT), Document Type (EKKO-BSART), Invoice Receipt (MSEG-WEAHR), Material (EKPO-MATNR), Movement Type (MSEG-BWART), Net Price (EKPO-NETPR), Payment Block (RSEG-ZLSPR), Payment Method (ZLSCH), Plant (EKPO-WERKS), Posting Date (MKPF-BLDAT), Purchasing Group (EBAN-EKGRP), Purchasing Group (EKKO-EKGRP), Purchasing Organization (EBAN-EKORG), Purchasing Organization (EKKO-EKORG), Quantity (EKPO-MENGE), RFQ Type (EBAN-BSART), Release Indicator (EBAN-FRGZU), Release Status (EKKO-FRGZU), Storage Location (EKPO-LGORT), Vendor (EBAN-LIFNR), Vendor (EKKO-LIFNR), lifecycle, new_value, resource the attribute names in the log?",False
-Is 33333 the number of events in the log?,False
-Is 7138 the number of objects in the log?,False
-Is 14 the number of activities in the log?,False
-Is 4 the number of object types in the log?,False
-Is 51545 the number of events-objects relationships in the log?,False
-Are there 5434 occurrences of the activity Create Goods Receipt are in the log?,False
-Are there 3333 occurrences of the activity Create Invoice Receipt are in the log?,False
-Are there 1111 occurrences of the activity Perform Two-Way Match are in the log?,False
-Are there 3244 occurrences of the activity Create Purchase Order are in the log?,False
-Are there 2412 occurrences of the activity Approve Purchase Order are in the log?,False
-Are there 4232 occurrences of the activity Execute Payment are in the log?,False
-Are there 432 occurrences of the activity Create Request for Quotation are in the log?,False
-Are there 443 occurrences of the activity Create Purchase Requisition are in the log?,False
-Are there 757 occurrences of the activity Approve Purchase Requisition are in the log?,False
-Are there 432 occurrences of the activity Delegate Purchase Requisition Approval are in the log?,False
-Are there 3565 occurrences of the object type goods receipt are in the log?,False
-Are there 3365 occurrences of the object type material are in the log?,False
-Are there 4355 occurrences of the object type purchase_order are in the log?,False
-Are there 524 occurrences of the object type invoice receipt are in the log?,False
-Are there 444 occurrences of the object type payment are in the log?,False
-Are there 441 occurrences of the object type purchase_requisition are in the log?,False
-Are there 223 occurrences of the object type quotation are in the log?,False
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Is 33333 the number of events in the log?",False
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Is 7138 the number of objects in the log?",False
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Is 14 the number of activities in the log?",False
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Is 4 the number of object types in the log?",False
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Is 51545 the number of events-objects relationships in the log?",False
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 5434 occurrences of the activity Create Goods Receipt are in the log?",False
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 3333 occurrences of the activity Create Invoice Receipt are in the log?",False
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 1111 occurrences of the activity Perform Two-Way Match are in the log?",False
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 3244 occurrences of the activity Create Purchase Order are in the log?",False
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 2412 occurrences of the activity Approve Purchase Order are in the log?",False
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 4232 occurrences of the activity Execute Payment are in the log?",False
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 432 occurrences of the activity Create Request for Quotation are in the log?",False
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 443 occurrences of the activity Create Purchase Requisition are in the log?",False
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 757 occurrences of the activity Approve Purchase Requisition are in the log?",False
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 432 occurrences of the activity Delegate Purchase Requisition Approval are in the log?",False
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 3565 occurrences of the object type goods receipt are in the log?",False
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 3365 occurrences of the object type material are in the log?",False
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 4355 occurrences of the object type purchase_order are in the log?",False
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 524 occurrences of the object type invoice receipt are in the log?",False
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 444 occurrences of the object type payment are in the log?",False
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 441 occurrences of the object type purchase_requisition are in the log?",False
+"Provide details about the number of events, objects, activities, and their relationships in the OCEL 2.0 log. Are there 223 occurrences of the object type quotation are in the log?",False
 Is 2017-03-21 15:26:00+00:00 the earliest event timestamp in the log?,False
 Is 2027-02-31 21:28:00+00:00 the latest event timestamp in the log?,False
 Is 314 days 11:33:00 the total duration of the process in the log?,False

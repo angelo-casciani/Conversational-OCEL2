@@ -40,10 +40,15 @@ class AnswerVerificationOracle:
     This method checks whether the model's answer matches the expected answer for a given prompt.
     """
 
-    def verify_answer(self, model_answer, prompt):
-        index_i = prompt.find('<<QUESTION>>')
-        index_e = prompt.find('<</QUESTION>>')
-        question = prompt[index_i + len('<<QUESTION>>'):index_e].strip()
+    def verify_answer(self, model_answer, prompt, llama3=False):
+        if llama3:
+            index_i = prompt.find('<|start_question_id|>')
+            index_e = prompt.find('<|end_question_id|>')
+            question = prompt[index_i + len('<|start_question_id|>'):index_e].strip()
+        else:
+            index_i = prompt.find('<<QUESTION>>')
+            index_e = prompt.find('<</QUESTION>>')
+            question = prompt[index_i + len('<<QUESTION>>'):index_e].strip()
         result = {
             'prompt': prompt,
             'model_answer': model_answer,

@@ -197,19 +197,35 @@ def initialize_pipeline(model_identifier, hf_auth):
         token=hf_auth
     )
 
-    generate_text = pipeline(
-        model=model, tokenizer=tokenizer,
-        return_full_text=True,
-        task='text-generation',
-        do_sample=True,
-        max_new_tokens=512,
-        repetition_penalty=1.1
-    )
+    if model_identifier == 'meta-llama/Meta-Llama-3-8B-Instruct':
+        terminators = [
+            tokenizer.eos_token_id,
+            tokenizer.convert_tokens_to_ids("<|eot_id|>")
+        ]
+        generate_text = pipeline(
+            model=model, tokenizer=tokenizer,
+            return_full_text=True,
+            task='text-generation',
+            eos_token_id=terminators,
+            pad_token_id=tokenizer.eos_token_id,
+            do_sample=True,
+            max_new_tokens=256,
+            repetition_penalty=1.1
+        )
+    else:
+        generate_text = pipeline(
+            model=model, tokenizer=tokenizer,
+            return_full_text=True,
+            task='text-generation',
+            do_sample=True,
+            max_new_tokens=512,
+            repetition_penalty=1.1
+        )
 
     return generate_text
 
 
-def produce_answer(question, llm_chain, vectdb, live=False):
+def produce_answer(question, llm_chain, vectdb, choice, live=False):
     sys_mess = "Use the following pieces of context to answer with 'True' or 'False' the question at the end."
     if live:
         sys_mess = "Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer."
@@ -245,9 +261,14 @@ def produce_answer(question, llm_chain, vectdb, live=False):
     complete_answer = llm_chain.invoke({"question": question,
                                         "system_message": sys_mess,
                                         "context": context})
-    index = complete_answer.find('[/INST]')
-    prompt = complete_answer[:index + len('[/INST]')]
-    answer = complete_answer[index + len('[/INST]'):]
+    if choice == 'c':
+        index = complete_answer.find('<|start_header_id|>assistant<|end_header_id|>')
+        prompt = complete_answer[:index + len('<|start_header_id|>assistant<|end_header_id|>')]
+        answer = complete_answer[index + len('<|start_header_id|>assistant<|end_header_id|>'):]
+    else:
+        index = complete_answer.find('[/INST]')
+        prompt = complete_answer[:index + len('[/INST]')]
+        answer = complete_answer[index + len('[/INST]'):]
     return prompt, answer
 
 
@@ -257,7 +278,7 @@ def delete_qdrant_collection():
     qdrant_client.close()
 
 
-def evaluate_rag_chain_zero_shot(eval_oracle, lang_chain, vect_db, filename):
+def evaluate_rag_chain_zero_shot(eval_oracle, lang_chain, vect_db, choice, filename):
     path_tests_data = filename
     questions = {}
     with open(path_tests_data, newline='') as csvfile:
@@ -270,8 +291,11 @@ def evaluate_rag_chain_zero_shot(eval_oracle, lang_chain, vect_db, filename):
     count = 0
     for q, a in questions.items():
         eval_oracle.add_prompt_expected_answer_pair(q, a)
-        prompt, answer = produce_answer(q, lang_chain, vect_db)
-        eval_oracle.verify_answer(answer, prompt)
+        prompt, answer = produce_answer(q, lang_chain, vect_db, choice)
+        if choice == 'c':
+            eval_oracle.verify_answer(answer, prompt, True)
+        else:
+            eval_oracle.verify_answer(answer, prompt)
         count += 1
         print(f'Processing answer for trace {count} of {len(questions)}...')
 
@@ -288,8 +312,8 @@ def log_to_file(message, curr_datetime):
         file1.write(message)
 
 
-def produce_answer_live(question, curr_datetime, model_chain, vectordb):
-    complete_prompt, answer = produce_answer(question, model_chain, vectordb, True)
+def produce_answer_live(question, curr_datetime, model_chain, vectordb, choice):
+    complete_prompt, answer = produce_answer(question, model_chain, vectordb, choice, True)
     print(f'Prompt: {complete_prompt}\n')
     print(f'Answer: {answer}\n')
     print('--------------------------------------------------')
@@ -298,7 +322,7 @@ def produce_answer_live(question, curr_datetime, model_chain, vectordb):
                 curr_datetime)
 
 
-def live_prompting(model1, vect_db):
+def live_prompting(model1, vect_db, choice):
     current_datetime = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     while True:
         query = input('Insert the query (type "quit" to exit): ')
@@ -307,16 +331,14 @@ def live_prompting(model1, vect_db):
             print("Exiting the chat.")
             break
 
-        produce_answer_live(query, current_datetime, model1, vect_db)
+        produce_answer_live(query, current_datetime, model1, vect_db, choice)
         print()
 
 
 if __name__ == "__main__":
     device = f'cuda:{cuda.current_device()}' if cuda.is_available() else 'cpu'
     load_dotenv()
-    # HuggingFace Token
     hf_token = os.getenv('HF_TOKEN')
-    # Qdrant Credentials
     url = os.getenv('QDRANT_URL')
     grpc_port = int(os.getenv('QDRANT_GRPC_PORT'))
 
@@ -392,7 +414,22 @@ if __name__ == "__main__":
                     <</QUESTION>>
                     <<ANSWER>> [/INST]"""
 
-    prompt = PromptTemplate.from_template(template)
+    template_llama3 = """<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+    
+    {system_message}<|eot_id|>
+    <|start_header_id|>user<|end_header_id|>
+    
+    <|start_context_id|>
+    {context}
+    <|end_context_id|>
+    <|start_question_id|>
+    {question}
+    <|end_question_id|><|eot_id|><|start_header_id|>assistant<|end_header_id|>"""
+
+    if model_choice == 'c':
+        prompt = PromptTemplate.from_template(template_llama3)
+    else:
+        prompt = PromptTemplate.from_template(template)
     chain = prompt | hf_pipeline
 
     oracle = AnswerVerificationOracle()
@@ -410,21 +447,21 @@ if __name__ == "__main__":
         eval_choice = input(
             "Choose the dataset (based on the P2P OCEL 2.0 log) for the evaluation or chat with the log:\na - Complete Dataset;\nb - Global Stats Dataset;\nc - Event Dataset;\nd - Object Dataset;\ne - Timestamp Dataset;\nf - live chat.\n").lower()
     if eval_choice == 'a':
-        evaluate_rag_chain_zero_shot(oracle, chain, qdrant, os.path.join('tests', 'test_dataset', filepaths[0]))
+        evaluate_rag_chain_zero_shot(oracle, chain, qdrant, model_choice, os.path.join('tests', 'test_dataset', filepaths[0]))
     elif eval_choice == 'b':
-        evaluate_rag_chain_zero_shot(oracle, chain, qdrant,
+        evaluate_rag_chain_zero_shot(oracle, chain, qdrant, model_choice,
                                      os.path.join('tests', 'test_dataset', 'divided_dataset', filepaths[1]))
     elif eval_choice == 'c':
-        evaluate_rag_chain_zero_shot(oracle, chain, qdrant,
+        evaluate_rag_chain_zero_shot(oracle, chain, qdrant, model_choice,
                                      os.path.join('tests', 'test_dataset', 'divided_dataset', filepaths[2]))
     elif eval_choice == 'd':
-        evaluate_rag_chain_zero_shot(oracle, chain, qdrant,
+        evaluate_rag_chain_zero_shot(oracle, chain, qdrant, model_choice,
                                      os.path.join('tests', 'test_dataset', 'divided_dataset', filepaths[3]))
     elif eval_choice == 'e':
-        evaluate_rag_chain_zero_shot(oracle, chain, qdrant,
+        evaluate_rag_chain_zero_shot(oracle, chain, qdrant, model_choice,
                                      os.path.join('tests', 'test_dataset', 'divided_dataset', filepaths[4]))
     else:
-        live_prompting(chain, qdrant)
+        live_prompting(chain, qdrant, model_choice)
 
     indexd_choice = input("Maintain vector collection?\ny - yes, maintain it.\nn - no, delete it.\n").lower()
     while indexd_choice.lower() not in ['y','n']:
