@@ -144,7 +144,7 @@ def intelligent_chunking_json(json_dict):
 
 
 def retrieve_context(vector_index, query, search_filter='', key=''):
-    retrieved = vector_index.similarity_search(query, k=3)
+    retrieved = vector_index.similarity_search(query, k=15)
     if search_filter != '':
         filter_ = models.Filter(
             must=[
@@ -154,7 +154,7 @@ def retrieve_context(vector_index, query, search_filter='', key=''):
                 )
             ]
         )
-        meta_retrieved = vector_index.similarity_search(query, filter=filter_, k=3)
+        meta_retrieved = vector_index.similarity_search(query, filter=filter_, k=15)
         if len(meta_retrieved) > 0:
             retrieved = meta_retrieved
     retrieved_text = ''
