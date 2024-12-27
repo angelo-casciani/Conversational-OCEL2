@@ -9,6 +9,12 @@ This dataset functions as a benchmark for evaluating the effectiveness of conver
 
 ## Installation
 
+(Optional) Set up a conda environment for the project.
+```bash
+conda create -n rag_next_activity python=3.10 --yes
+conda activate rag_next_activity
+```
+
 To install the required Python packages for this project, you can use *pip* along with the *requirements.txt* file.
 
 First, you need to clone the repository:
@@ -30,23 +36,37 @@ Please note that this software leverages open-source LLMs reported in the table:
 
 | Model | HuggingFace Link |
 |-----------|-----------|
-| Llama 2 7B | [HF link](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf) |
-| Llama 2 13B | [HF link](https://huggingface.co/meta-llama/Llama-2-13b-chat-hf) |
-| Llama 3 8B | [HF link](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct) |
+| meta-llama/Meta-Llama-3-8B-Instruct | [HF link](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct) |
+| meta-llama/Meta-Llama-3.1-8B-Instruct | [HF link](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct) |
+| meta-llama/Llama-3.2-1B-Instruct | [HF Link](https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct)|
+| meta-llama/Llama-3.2-3B-Instruct | [HF link](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) |
+| mistralai/Mistral-7B-Instruct-v0.2 | [HF link](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2) |
+| mistralai/Mistral-7B-Instruct-v0.3 | [HF link](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3) |
+| mistralai/Mistral-Nemo-Instruct-2407 | [HF link](https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407) |
+| mistralai/Ministral-8B-Instruct-2410 | [HF link](https://huggingface.co/mistralai/Ministral-8B-Instruct-2410) |
+| Qwen/Qwen2.5-7B-Instruct | [HF link](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct) |
+| google/gemma-2-9b-it | [HF link](https://huggingface.co/google/gemma-2-9b-it) |
+| gpt-4o-mini | [OpenAI link](https://platform.openai.com/docs/models) |
 
 Request in advance the permission to use each Llama model for your HuggingFace account.
+Retrive your OpenAI API key to use the supported GPT model.
 
 Please note that each of the selected models have specific requirements in terms of GPU availability.
 It is recommended to have access to a GPU-enabled environment meeting at least the minimum requirements for these models to run the software effectively.
 
 ## Running the Project
 Before running the project, it is necessary to insert in the *.env* file:
-- your personal HuggingFace token (request the permission to use the Llama models for this token in advance);
-- the URL and the gRPC port of your Qdrant instance.
+- your personal *HuggingFace token* (request the permission to use the Llama models for this token in advance);
+- the *URL* and the *gRPC port* of your *Qdrant* instance.
 
-Eventually, you can proceed by going in the project directory and executing the following command:
+Eventually, you can proceed by going in the project directory and run the project in the preferred configuration.
 ```bash
-python3 main.py
+python3 src/main.py
+```
+
+To run an evaluation for the simulation (*evaluation-simulation*), for the verification (*evaluation-verification*), or for the routing (*evaluation-routing*):
+```bash
+python3 main.py --llm_id Qwen/Qwen2.5-7B-Instruct --modality evaluation-simulation --max_new_tokens 512
 ```
 
 It is possible to upload a different OCEL 2.0 log (in JSON) in the *data* folder, deleting the provided *ocel2-p2p.json* log.
