@@ -85,12 +85,12 @@ def format_df_value(val, name):
     return f'{name}: {val} | '
 
 def delete_files_no_info():
-    files = os.listdir(os.path.join('data', 'execution'))
+    files = os.listdir(os.path.join(directory))
     criteria = ('date_attributes', 'string_attributes', 'numeric_attributes')
 
     for file in files:
         if file.startswith(criteria) and file.endswith('.txt'):
-            file_path = os.path.join('data', 'execution', file)
+            file_path = os.path.join(directory, file)
             try:
                 with open(file_path, 'r') as f:
                     lines = f.readlines()
@@ -105,16 +105,16 @@ def delete_files_no_info():
 
 
 if __name__ == "__main__":
-    directory = os.path.join('data', 'execution')
+    directory = os.path.join(os.path.dirname(__file__), '..', 'data', 'execution')
     if not os.path.exists(directory):
         os.makedirs(directory)
     empty_execution_data(directory)
 
-    path = os.path.join("data", "ocel2-p2p.json")
+    path = os.path.join(os.path.dirname(__file__), '..', "data", "ocel2-p2p.json")
     ocel = pm4py.read_ocel2(path)
 
     # Basic Statistics
-    filename = os.path.join('data', 'execution', 'basic_stats.txt')
+    filename = os.path.join(directory, 'basic_stats.txt')
     with open(filename, 'w') as file:
         file.write(f'OCEL2.0 basic statistics.\n')
         print(ocel, file=file)
@@ -126,14 +126,14 @@ if __name__ == "__main__":
     # Names of the attributes in the log
     attribute_names = pm4py.ocel_get_attribute_names(ocel)
     attributes_as_string = ', '.join(attribute_names)
-    with open(os.path.join('data', 'execution', 'attribute_names.txt'), 'w') as file:
+    with open(os.path.join(directory, 'attribute_names.txt'), 'w') as file:
         file.write(f'OCEL2.0 object types, a list containing the attribute names.\n')
         file.write(attributes_as_string)
 
     # Object Types
     object_types = pm4py.ocel_get_object_types(ocel)
     obj_as_string = ', '.join(object_types)
-    with open(os.path.join('data', 'execution', 'object_types.txt'), 'w') as file:
+    with open(os.path.join(directory, 'object_types.txt'), 'w') as file:
         file.write(f'OCEL2.0 object types: a list containing the object types.\n')
         file.write(obj_as_string)
 
@@ -141,7 +141,7 @@ if __name__ == "__main__":
     object_type_activities = pm4py.ocel_object_type_activities(ocel)
     dict_serializable = {key: list(value) for key, value in object_type_activities.items()}
     dict_as_string = json.dumps(dict_serializable)
-    with open(os.path.join('data', 'execution', 'object_type_activities.txt'), 'w') as file:
+    with open(os.path.join(directory, 'object_type_activities.txt'), 'w') as file:
         file.write(
             f'OCEL2.0 object type activities: the set of activities for each object type.\n')
         file.write(dict_as_string)
@@ -149,20 +149,20 @@ if __name__ == "__main__":
     # Number of related objects to the event for each event identifier and object type
     ocel_objects_ot_count = pm4py.ocel_objects_ot_count(ocel)
     dict_as_string = json.dumps(ocel_objects_ot_count)
-    with open(os.path.join('data', 'execution', 'to_chunk', 'objects_ot_count.txt'), 'w') as file:
+    with open(os.path.join(directory, 'to_chunk', 'objects_ot_count.txt'), 'w') as file:
         #file.write(f'OCEL2.0 objects ot count: number of related objects to the event for each event identifier and object type.\n')
         file.write(dict_as_string)
 
     # Temporal info
     temporal_summary = pm4py.ocel_temporal_summary(ocel)
     formatted_columns = {col: lambda x, name=col: format_df_value(x, name) for col in temporal_summary.columns}
-    with open(os.path.join('data', 'execution', 'to_chunk', 'temporal_summary.txt'), 'w') as file:
+    with open(os.path.join(directory, 'to_chunk', 'temporal_summary.txt'), 'w') as file:
         file.write(f'OCEL2.0 temporal summary: the events happening in a specific timestamp and the objects on which they operate.\n')
         file.write(temporal_summary.to_string(formatters=formatted_columns, index=False))
 
     # Temporal Process Wide Info
     earliest, latest, total = compute_times(temporal_summary)
-    with open(os.path.join('data', 'execution', 'temporal_process_info.txt'), 'w') as file:
+    with open(os.path.join(directory, 'temporal_process_info.txt'), 'w') as file:
         file.write(f'Earliest event timestamp: {earliest}\n')
         file.write(f'Latest event timestamp: {latest}\n')
         file.write(f'Total duration: {total}\n')
@@ -170,13 +170,13 @@ if __name__ == "__main__":
     # Object summary
     objects_summary = pm4py.ocel_objects_summary(ocel)
     formatted_columns = {col: lambda x, name=col: format_df_value(x, name) for col in objects_summary.columns}
-    with open(os.path.join('data', 'execution', 'to_chunk', 'object_summary.txt'), 'w') as file:
+    with open(os.path.join(directory, 'to_chunk', 'object_summary.txt'), 'w') as file:
         file.write(
             f'OCEL2.0 object summary: info on the objects with the events related to the object, the start/end timestamps and duration of the object lifecycle, and the other objects interacting with the given object.\n')
         file.write(objects_summary.to_string(formatters=formatted_columns, index=False))
 
     # Operations on a flattened log for each object type
-    with open(os.path.join('data', 'execution', 'object_types.txt'), 'r') as file:
+    with open(os.path.join(directory, 'object_types.txt'), 'r') as file:
         next(file)
         second_line = next(file)
         obj_types_list = second_line.split(",")
@@ -201,7 +201,7 @@ if __name__ == "__main__":
         resources = get_resources_flat(flattened_log)
         calendar = get_resource_calendar(flattened_log)
         filename = f'resources_{obj_type.replace(" ", "_")}.txt'
-        with open(os.path.join('data', 'execution', filename), 'w') as file:
+        with open(os.path.join(directory, filename), 'w') as file:
             # file.write(flattened_log.to_string())
             file.write(
                 f'Resources and their working calendar for the OCEL2.0 event log flattened on the object type "{obj_type}".\n')
@@ -209,7 +209,7 @@ if __name__ == "__main__":
             file.write(f'The working calendar of these resources is as follows:\n {calendar}\n')
         # Other Attributes Stats
         filename = f'numeric_attributes_stats_{obj_type.replace(" ", "_")}.txt'
-        with open(os.path.join('data', 'execution', filename), 'w') as file:
+        with open(os.path.join(directory, filename), 'w') as file:
             file.write(
                 f'Statistics about the numeric attribute values for the OCEL2.0 event log flattened on the object type "{obj_type}".\n')
             for num_attr in numeric_attributes:
@@ -224,7 +224,7 @@ if __name__ == "__main__":
                     avg = round(avg, 2)
                     file.write(f'"{num_attr}"\nMinimum: {min_val} with object {min_case_name} in event {min_ocel_eid} - Maximum: {max_val} with object {max_case_name} in event {max_ocel_eid}  - Average: {avg}\n')
         filename = f'string_attributes_stats_{obj_type.replace(" ", "_")}.txt'
-        with open(os.path.join('data', 'execution', filename), 'w') as file:
+        with open(os.path.join(directory, filename), 'w') as file:
             file.write(
                 f'Statistics about the string attribute values for the OCEL2.0 event log flattened on the object type "{obj_type}".\n')
             for str_attr in string_attributes:
@@ -232,7 +232,7 @@ if __name__ == "__main__":
                 if not (pd.isna(values).any()):
                     file.write(f'"{str_attr}"\nValues: {values}\n')
         filename = f'date_attributes_stats_{obj_type.replace(" ", "_")}.txt'
-        with open(os.path.join('data', 'execution', filename), 'w') as file:
+        with open(os.path.join(directory, filename), 'w') as file:
             file.write(
                 f'Statistics about the date attribute values for the OCEL2.0 event log flattened on the object type "{obj_type}".\n')
             for date_attr in date_attributes:

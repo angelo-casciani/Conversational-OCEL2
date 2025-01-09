@@ -1,5 +1,7 @@
 import os
 import re
+
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from qdrant_client import QdrantClient, models
 from qdrant_client.http.models import Distance, VectorParams
 from langchain_qdrant import Qdrant
@@ -29,13 +31,14 @@ def store_vectorized_info(file_content, filename, qdrant_client, embed_model, co
 
     for document in all_splits:
         chunk = document.page_content
+        print(chunk)
         metadata = {'page_content': chunk, 'name': f'{source} Chunk {identifier}'}
         point = models.PointStruct(
             id=identifier,
             vector=embed_model.embed_documents([chunk])[0],
             payload=metadata
         )
-        print(f'Processing point for trace {identifier + 1} of {len(all_splits)}...')
+        print(f'Processing point {identifier + 1} of {len(all_splits)}...')
         points.append(point)
         identifier += 1
 
@@ -81,7 +84,7 @@ def store_vectorized_chunks(chunks_to_save, filename, qdrant_client, embed_model
         meta_search = 'ocel:timestamp'
 
     points = []
-    identifier += 1
+    identifier = 0
 
     for chunk in chunks_to_save:
         match = re.search(pattern, chunk)
@@ -90,7 +93,8 @@ def store_vectorized_chunks(chunks_to_save, filename, qdrant_client, embed_model
                 meta_value = match.group(0).strip()
             else:
                 meta_value = match.group(1).strip()
-        else: meta_value = ''
+        else:
+            meta_value = ''
         metadata = {'page_content': chunk, 'name': f'{source} Chunk {identifier}', meta_search: meta_value}
         point = models.PointStruct(
             id=identifier,
@@ -99,6 +103,8 @@ def store_vectorized_chunks(chunks_to_save, filename, qdrant_client, embed_model
         )
         points.append(point)
         identifier += 1
+        print(f'Processing point {identifier} of {len(chunks_to_save)}...')
+
 
     print("Created points for this phase!")
     qdrant_client.upsert(
@@ -108,7 +114,7 @@ def store_vectorized_chunks(chunks_to_save, filename, qdrant_client, embed_model
 
     return identifier
 
-        
+
 def intelligent_chunking_json(json_dict):
     chunks_list = []
     items = list(json_dict.items())
@@ -139,19 +145,10 @@ def retrieve_context(vector_index, query, num_chunks, key=None, search_filter=No
     retrieved_text = ''
     for i in range(len(retrieved)):
         content = retrieved[i].page_content
-        retrieved_text += f'\n{i+1}. {content}'
+        retrieved_text += f'\n{i + 1}. {content}'
 
     return retrieved_text
 
 
 def delete_qdrant_collection(q_client, q_collection_name):
     q_client.delete_collection(q_collection_name)
-
-
-
-
-    
-
-
-
-

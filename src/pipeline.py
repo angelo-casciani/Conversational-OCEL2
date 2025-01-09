@@ -11,7 +11,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline, BitsAndB
 from torch import bfloat16
 
 from oracle import AnswerVerificationOracle
-from utility import load_csv_questions, log_to_file
+from utility import log_to_file
 from vector_store import retrieve_context
 
 llama3_models = ['meta-llama/Meta-Llama-3-8B-Instruct', 'meta-llama/Meta-Llama-3.1-8B-Instruct',
@@ -165,7 +165,7 @@ def produce_answer(question, model_id, llm_chain, vectdb, num_chunks, info_run):
     with open(path_prompts, 'r') as prompt_file:
         prompts = json.load(prompt_file)
 
-    if modality.contains('evaluation'):
+    if 'evaluation' in modality:
         sys_mess = prompts.get('system_message-eval', '')
     else:
         sys_mess = prompts.get('system_message-live', '')
