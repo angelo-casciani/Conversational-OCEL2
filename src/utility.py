@@ -7,9 +7,6 @@ import random
 import sys
 
 
-csv.field_size_limit(sys.maxsize)
-
-
 def seed_everything(seed=10):
     random.seed(seed)
     os.environ['PYTHONHASHSEED'] = str(seed)
@@ -30,6 +27,13 @@ def str2bool(v):
         return False
     else:
         raise argparse.ArgumentTypeError('Boolean value expected.')
+
+
+def load_process_representation(filename):
+    filepath = os.path.join(os.path.dirname(__file__), '..', 'data', 'execution', filename)
+    with open(filepath, 'r') as file:
+        file_content = file.read()
+        return file_content
 
 
 def load_csv_questions(filename):

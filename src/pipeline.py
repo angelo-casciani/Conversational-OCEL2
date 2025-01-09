@@ -2,6 +2,7 @@ import datetime
 import json
 import os
 import random
+import re
 
 from langchain_huggingface import HuggingFacePipeline, HuggingFaceEmbeddings
 from langchain_core.prompts import PromptTemplate
@@ -10,7 +11,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline, BitsAndB
 from torch import bfloat16
 
 from oracle import AnswerVerificationOracle
-from utility import log_to_file
+from utility import load_csv_questions, log_to_file
 from vector_store import retrieve_context
 
 llama3_models = ['meta-llama/Meta-Llama-3-8B-Instruct', 'meta-llama/Meta-Llama-3.1-8B-Instruct',
@@ -159,15 +160,44 @@ def initialize_chain(model_id, hf_auth, openai_auth, max_new_tokens):
 
 
 def produce_answer(question, model_id, llm_chain, vectdb, num_chunks, info_run):
-    # modality = info_run['Evaluation Modality']
+    modality = info_run['Evaluation Modality']
     path_prompts = os.path.join(os.path.dirname(__file__), 'prompts.json')
     with open(path_prompts, 'r') as prompt_file:
         prompts = json.load(prompt_file)
-    sys_mess = prompts.get('system_message', '')
-    sys_mess += prompts.get('evaluation-attributes', '').replace('REPLACE', info_run['Event Attributes']).replace(
-        'ACTIVITIES', info_run['Activities'])
 
-    context = retrieve_context(vectdb, question, num_chunks)
+    if modality.contains('evaluation'):
+        sys_mess = prompts.get('system_message-eval', '')
+    else:
+        sys_mess = prompts.get('system_message-live', '')
+    
+    # Take the question and extract the metadata for the filtering if any.
+    # Pattern in the question: metadata_key "metadata_value", while for events "event:id_num"
+    pattern_oid = r'ocel:oid\s*"([^"]+)"'
+    match_oid = re.search(pattern_oid, question)
+    meta_value_oid = match_oid.group(1).strip() if match_oid else ''
+    meta_search_oid = 'ocel:oid'
+
+    pattern_ts = r'ocel:timestamp\s*"([^"]+)"'
+    match_ts = re.search(pattern_ts, question)
+    meta_value_ts = match_ts.group(1).strip() if match_ts else ''
+    meta_search_ts = 'ocel:timestamp'
+
+    pattern_js = r'"event:\d+"'
+    match_js = re.search(pattern_js, question)
+    meta_value_js = match_js.group(0).strip('"') if match_js else ''
+    meta_search_js = 'event:id'
+
+    if meta_value_oid:
+        search_filter = meta_value_oid
+        context = retrieve_context(vectdb, question, num_chunks, search_filter, meta_search_oid)
+    elif meta_value_ts:
+        search_filter = meta_value_ts
+        context = retrieve_context(vectdb, question, num_chunks, search_filter, meta_search_ts)
+    elif meta_value_js:
+        search_filter = meta_value_js
+        context = retrieve_context(vectdb, question, num_chunks, search_filter, meta_search_js)
+    else:
+        context = retrieve_context(vectdb, question, num_chunks)
 
     if model_id not in openai_models:
         complete_answer = llm_chain.invoke({"question": question,
@@ -228,18 +258,16 @@ def live_prompting(choice_llm, model1, vect_db, num_chunks, info_run):
         print()
 
 
-def evaluate_rag_pipeline(choice_llm, lang_chain, vect_db, num_chunks, list_questions, info_run):
+def evaluate_rag_chain_zero_shot(choice_llm, lang_chain, vect_db, num_chunks, questions, info_run):
     oracle = AnswerVerificationOracle(info_run)
     count = 0
-    for el in list_questions:
-        prefix = el[0]
-        expected_prediction = el[1]
-        oracle.add_prefix_with_expected_answer_pair(prefix, expected_prediction)
-        prompt, answer = produce_answer(prefix, choice_llm, lang_chain, vect_db, num_chunks, info_run)
-        #print(f'Prompt: {prompt}\n')
-        oracle.verify_answer(prompt, prefix, answer)
+    for q, a in questions:
+        oracle.add_prompt_expected_answer_pair(q, a)
+        prompt, answer = produce_answer(q, choice_llm, lang_chain, vect_db, num_chunks, info_run)
+        oracle.verify_answer(answer, prompt)
         count += 1
-        print(f'Processing prediction for prefix {count} of {len(list_questions)}...')
+        print(f'Processing answer for trace {count} of {len(questions)}...')
 
     print('Validation process completed. Check the output file.')
     oracle.write_results_to_file()
+

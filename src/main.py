@@ -1,4 +1,5 @@
 from argparse import ArgumentParser
+import json
 from dotenv import load_dotenv
 import os
 import torch
@@ -16,9 +17,16 @@ HF_AUTH = os.getenv('HF_TOKEN')
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 URL = os.getenv('QDRANT_URL')
 GRPC_PORT = int(os.getenv('QDRANT_GRPC_PORT'))
-COLLECTION_NAME = 'nap-rag'
+COLLECTION_NAME = 'ocel2-rag'
 SEED = 10
 warnings.filterwarnings('ignore')
+eval_datasets = {
+                'all': 'validation_dataset.csv',
+                'global': 'validation_questions_global_info.csv',
+                'events': 'validation_events_questions.csv',
+                'objects': 'validation_objects_questions.csv',
+                'ts': 'validation_timestamps_questions.csv',
+            }
 
 
 def parse_arguments():
@@ -27,7 +35,7 @@ def parse_arguments():
                         help='Embedding model identifier')
     parser.add_argument('--vector_dimension', type=int, default=384,
                         help='Vector space dimension')
-    parser.add_argument('--llm_id', type=str, default='meta-llama/Meta-Llama-3.1-8B-Instruct',
+    parser.add_argument('--llm_id', type=str, default='gpt-4o-mini',
                         help='LLM model identifier')
     parser.add_argument('--model_max_length', type=int, help='Maximum input length (context window)',
                         default=128000)
@@ -35,18 +43,13 @@ def parse_arguments():
                         default=5)
     parser.add_argument('--log', type=str, help='The event log to use for the next activity prediction',
                         default='Hospital_log.xes')
-    parser.add_argument('--prefix_base', type=int, help='Maximum number of tokens to generate',
-                        default=1)
-    parser.add_argument('--prefix_gap', type=int, help='Maximum number of tokens to generate',
-                        default=3)
     parser.add_argument('--max_new_tokens', type=int, help='Maximum number of tokens to generate',
                         default=1280)
     parser.add_argument('--batch_size', type=int, default=32)
     parser.add_argument('--rebuild_db_and_tests', type=u.str2bool,
                         help='Rebuild the vector index and the test set', default=False)
-    parser.add_argument('--modality', type=str, default='evaluation-concept_names',
-                        help='Modality to use between: evaluation-concept_names, evaluation-attributes, '
-                             'live-concept_names, live-attributes')
+    parser.add_argument('--modality', type=str, default='live',
+                        help='Modality to use between: evaluation-all, evaluation-global, evaluation-events, evaluation-objects, evaluation-ts, live.')
     args = parser.parse_args()
 
     return args
@@ -63,33 +66,37 @@ def main():
     num_docs = args.num_documents_in_context
     test_set_path = os.path.join(os.path.dirname(__file__), '..', 'tests', 'test_sets',
                                  f"test_set_{args.log.split('.xes')[0]}_{args.modality}.csv")
-    event_attributes = []
-    activities_set = set()
-    total_traces_size = 0
-    test_set_size = 0
-    traces_to_store_size = 0
-    test_size_prefixes = 0
     if args.rebuild_db_and_tests:
         vs.delete_qdrant_collection(q_client, COLLECTION_NAME)
         q_client, q_store = vs.initialize_vector_store(URL, GRPC_PORT, COLLECTION_NAME, embed_model, space_dimension)
-        content = lp.read_event_log(args.log)
-        #if 'attributes' in args.modality:
-        traces, event_attributes, activities_set = lp.extract_traces_with_attributes(content)
-        total_traces_size = len(traces)
-        #else:
-            #traces = lp.extract_traces_concept_names(content)
-        #if 'evaluation' in args.modality:
-        test_set = lp.generate_test_set(traces, 0.2)
-        test_set_size = len(test_set)
-        traces = [trace for trace in traces if trace not in test_set]
-        traces = lp.process_traces_with_last_attribute_values(traces)
-        traces_to_store_size = len(traces)
-        prefix_prediction = lp.create_prefixes_with_attribute_last_values(test_set, base=args.prefix_base, gap=args.prefix_gap)
-        prefix_prediction_pairs = lp.process_prefixes_prediction_with_last_attribute_values(prefix_prediction)
-        test_size_prefixes = len(prefix_prediction_pairs)
-        lp.generate_csv_from_test_set(test_set=prefix_prediction_pairs, test_path=test_set_path)
-        vs.store_traces(traces, q_client, args.log, embed_model, COLLECTION_NAME)
-
+        
+        with open(os.path.dirname(__file__), '..', 'src', 'preprocessing.py') as file:
+            exec(file.read())
+        id = 0
+        print("Building and populating the vector collection... (1/3)")
+        files = os.listdir(os.path.join(os.path.dirname(__file__), '..', 'data', 'execution'))
+        for f in files:
+            if f.endswith('.txt'):
+                content = vs.load_process_representation(f)
+                vs.store_vectorized_info(content, f, q_client, embed_model, COLLECTION_NAME)
+        print(f"Populating the vector collection... (2/3)")
+        files_to_chunk = os.listdir(os.path.join('data', 'execution', 'to_chunk'))
+        jsonfile = 'objects_ot_count.txt'
+        for f in files_to_chunk:
+            if f.endswith('.txt') and f != jsonfile:
+                chunks_to_store = vs.intelligent_chunking_large_files(f)
+                id = vs.store_vectorized_chunks(chunks_to_store, f, q_client, embed_model, COLLECTION_NAME)
+            elif f == jsonfile:
+                file_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'execution', 'to_chunk', jsonfile)
+                with open(file_path, 'r') as jsonf:
+                    print(f"Populating the vector collection... (3/3)")
+                    j_dict = json.load(jsonf)
+                    j_chunks = vs.intelligent_chunking_json(j_dict)
+                    id = vs.store_vectorized_chunks(j_chunks, f, q_client, embed_model, COLLECTION_NAME)
+                    
+        print(f"vector collection successfully created and initialized!")
+        
+       
     model_id = args.llm_id
     max_new_tokens = args.max_new_tokens
     chain = p.initialize_chain(model_id, HF_AUTH, OPENAI_API_KEY, max_new_tokens)
@@ -100,22 +107,16 @@ def main():
         'Vector Space Dimension': space_dimension,
         'Evaluation Modality': args.modality,
         'Event Log': args.log,
-        'Total Traces in Log': total_traces_size,
-        'Test Set Size': test_set_size,
-        'Traces Stored Size': traces_to_store_size,
-        'Test Set Prefixes Size': test_size_prefixes,
         'LLM ID': model_id,
         'Context Window LLM': args.model_max_length,
         'Max Generated Tokens LLM': max_new_tokens,
         'Number of Documents in the Context': num_docs,
         'Rebuilt Vector Index and Test Set': args.rebuild_db_and_tests
     }
-    if event_attributes:
-        run_data['Event Attributes'] = str(event_attributes)
-        run_data['Activities'] = str(activities_set)
 
     if 'evaluation' in args.modality:
-        test_list = u.load_csv_questions(test_set_path)
+        modality_suffix = args.modality.split('-')[-1]
+        test_list = u.load_csv_questions(eval_datasets[modality_suffix])
         p.evaluate_rag_pipeline(model_id, chain, q_store, num_docs, test_list, run_data)
     else:
         p.live_prompting(model_id, chain, q_store, num_docs, run_data)

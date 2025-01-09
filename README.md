@@ -9,21 +9,21 @@ This dataset functions as a benchmark for evaluating the effectiveness of conver
 
 ## Installation
 
-(Optional) Set up a conda environment for the project.
-```bash
-conda create -n rag_next_activity python=3.10 --yes
-conda activate rag_next_activity
-```
-
-To install the required Python packages for this project, you can use *pip* along with the *requirements.txt* file.
-
 First, you need to clone the repository:
 ```bash
 git clone https://github.com/angelo-casciani/Conversational-OCEL2
 cd Conversational-OCEL2
 ```
 
-Run the following command to install the necessary dependencies using pip:
+(Optional) Set up a conda environment for the project.
+```bash
+conda create -n conv_ocel python=3.10 --yes
+conda activate conv_ocel
+```
+
+To install the required Python packages for this project, you can use *pip* along with the *requirements.txt* file.
+Run the following command to install the n
+ecessary dependencies using pip:
 ```bash
 pip install -r requirements.txt
 ```
