@@ -105,6 +105,7 @@ def delete_files_no_info():
 
 
 if __name__ == "__main__":
+    print("OCEL2.0 log Preprocessing is running...")
     directory = os.path.join(os.path.dirname(__file__), '..', 'data', 'execution')
     if not os.path.exists(directory):
         os.makedirs(directory)

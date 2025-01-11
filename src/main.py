@@ -2,6 +2,7 @@ from argparse import ArgumentParser
 import json
 from dotenv import load_dotenv
 import os
+import subprocess
 import torch
 import warnings
 
@@ -64,13 +65,12 @@ def main():
 
     q_client, q_store = vs.initialize_vector_store(URL, GRPC_PORT, COLLECTION_NAME, embed_model, space_dimension)
     num_docs = args.num_documents_in_context
-    test_set_path = os.path.join(base_path, 'tests', 'test_dataset')
     if args.rebuild_db:
         vs.delete_qdrant_collection(q_client, COLLECTION_NAME)
         q_client, q_store = vs.initialize_vector_store(URL, GRPC_PORT, COLLECTION_NAME, embed_model, space_dimension)
 
-        #with open('preprocessing.py') as file:
-        #   exec(file.read())
+        preprocessing_path = os.path.join(base_path, 'src', 'preprocessing.py')
+        subprocess.run(['python3', preprocessing_path])
         print("Building and populating the vector collection... (1/3)")
         files = os.listdir(os.path.join(base_path, 'data', 'execution'))
         general_info = []
@@ -115,8 +115,14 @@ def main():
     }
 
     if 'evaluation' in args.modality:
+        test_set_path = os.path.join(base_path, 'tests', 'test_dataset')
         modality_suffix = args.modality.split('-')[-1]
-        test_list = u.load_csv_questions(eval_datasets[modality_suffix])
+        dataset_name = eval_datasets[modality_suffix]
+        if modality_suffix != 'all':
+            test_set_path = os.path.join(test_set_path, 'divided_dataset', dataset_name)
+        else:
+            test_set_path = os.path.join(test_set_path, dataset_name)
+        test_list = u.load_csv_questions(test_set_path)
         p.evaluate_rag_chain(model_id, chain, q_store, num_docs, test_list, run_data)
     else:
         p.live_prompting(model_id, chain, q_store, num_docs, run_data)

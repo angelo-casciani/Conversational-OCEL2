@@ -78,13 +78,13 @@ def store_vectorized_chunks(chunks_to_save, filename, qdrant_client, embed_model
     source = filename.strip('.txt').capitalize()
     if filename == 'object_summary.txt':
         pattern = r'ocel:oid:\s*([^|]+)'
-        meta_search = 'ocel:oid'
+        meta_search = 'ocel_oid'
     elif filename == 'objects_ot_count.txt':
         pattern = r'event:\d+\s*'
-        meta_search = 'event:id'
+        meta_search = 'event_id'
     else:
         pattern = r'ocel:timestamp:\s*([^|]+)'
-        meta_search = 'ocel:timestamp'
+        meta_search = 'ocel_timestamp'
 
     points = []
     identifier = actual_identifier + 1
@@ -133,6 +133,7 @@ def intelligent_chunking_json(json_dict):
 
 def retrieve_context(vector_index, query, num_chunks, key=None, search_filter=None):
     retrieved = vector_index.similarity_search(query, num_chunks)
+
     if key is not None and search_filter is not None:
         filter_ = models.Filter(
             must=[

@@ -29,7 +29,7 @@ class AnswerVerificationOracle:
     This method allows to add the prompt-expected answer pairs to the ground truth of the oracle.
     """
 
-    def add_prompt_expected_answer_pair(self, question, expected_answer):
+    def add_question_expected_answer_pair(self, question, expected_answer):
         """Add a prompt-expected answer pair to the oracle."""
         self.question_expected_answer_pairs[question] = expected_answer
         if expected_answer == "True":
@@ -57,12 +57,7 @@ class AnswerVerificationOracle:
             for word in model_answer.split():
                 if expected_answer.lower() in word.strip(' .,').lower():
                     result['verification_result'] = True
-            """
-            if result['verification_result'] == False:
-                print(f'\n++++++++++++\nRAG Answer: {model_answer}\nExpected Answer: {expected_answer}.\n++++++++++++')
-                human_feedback = input('t - True or f - False: ')
-                if human_feedback == 't': result['verification_result'] = True
-            """
+        print(f"\nPrompt: {prompt}\nAnswer: {model_answer}\nExpected Answer: {expected_answer}\nResult: {result['verification_result']}")
         self.results.append(result)
         
         return result['verification_result']

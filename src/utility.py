@@ -36,8 +36,7 @@ def load_process_representation(filename):
         return file_content
 
 
-def load_csv_questions(filename):
-    filepath = os.path.join(os.path.dirname(__file__), '..', 'tests', 'test_sets', filename)
+def load_csv_questions(filepath):
     questions = []
     with open(filepath, newline='') as csvfile:
         reader = csv.reader(csvfile)

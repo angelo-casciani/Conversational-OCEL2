@@ -1,7 +1,6 @@
 import datetime
 import json
 import os
-import random
 import re
 
 from langchain_huggingface import HuggingFacePipeline, HuggingFaceEmbeddings
@@ -169,33 +168,31 @@ def produce_answer(question, model_id, llm_chain, vectdb, num_chunks, info_run):
         sys_mess = prompts.get('system_message-eval', '')
     else:
         sys_mess = prompts.get('system_message-live', '')
-    
+
+
     # Take the question and extract the metadata for the filtering if any.
     # Pattern in the question: metadata_key "metadata_value", while for events "event:id_num"
     pattern_oid = r'ocel:oid\s*"([^"]+)"'
     match_oid = re.search(pattern_oid, question)
     meta_value_oid = match_oid.group(1).strip() if match_oid else ''
-    meta_search_oid = 'ocel:oid'
+    meta_search_oid = 'ocel_oid'
 
     pattern_ts = r'ocel:timestamp\s*"([^"]+)"'
     match_ts = re.search(pattern_ts, question)
     meta_value_ts = match_ts.group(1).strip() if match_ts else ''
-    meta_search_ts = 'ocel:timestamp'
+    meta_search_ts = "ocel_timestamp"
 
     pattern_js = r'"event:\d+"'
     match_js = re.search(pattern_js, question)
     meta_value_js = match_js.group(0).strip('"') if match_js else ''
-    meta_search_js = 'event:id'
+    meta_search_js = "event_id"
 
     if meta_value_oid:
-        search_filter = meta_value_oid
-        context = retrieve_context(vectdb, question, num_chunks, search_filter, meta_search_oid)
+        context = retrieve_context(vectdb, question, num_chunks, meta_search_oid, meta_value_oid)
     elif meta_value_ts:
-        search_filter = meta_value_ts
-        context = retrieve_context(vectdb, question, num_chunks, search_filter, meta_search_ts)
+        context = retrieve_context(vectdb, question, num_chunks, meta_search_ts, meta_value_ts)
     elif meta_value_js:
-        search_filter = meta_value_js
-        context = retrieve_context(vectdb, question, num_chunks, search_filter, meta_search_js)
+        context = retrieve_context(vectdb, question, num_chunks, meta_search_js, meta_value_js)
     else:
         context = retrieve_context(vectdb, question, num_chunks)
 
@@ -262,9 +259,9 @@ def evaluate_rag_chain(choice_llm, lang_chain, vect_db, num_chunks, questions, i
     oracle = AnswerVerificationOracle(info_run)
     count = 0
     for q, a in questions:
-        oracle.add_prompt_expected_answer_pair(q, a)
+        oracle.add_question_expected_answer_pair(q, a)
         prompt, answer = produce_answer(q, choice_llm, lang_chain, vect_db, num_chunks, info_run)
-        oracle.verify_answer(answer, prompt)
+        oracle.verify_answer(prompt, q, answer)
         count += 1
         print(f'Processing answer for trace {count} of {len(questions)}...')
 
