@@ -20,33 +20,36 @@ def initialize_vector_store(url, grpc_port, collection_name, embed_model, dimens
     return client, store
 
 
-def store_vectorized_info(file_content, filename, qdrant_client, embed_model, collection_name):
-    source = filename.strip('.txt').capitalize()
-    batch_size = 2048
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=batch_size, chunk_overlap=128)
-    splits = text_splitter.split_text(file_content)
-    all_splits = text_splitter.create_documents(splits)
-    points = []
+def store_vectorized_info(file_content_list, qdrant_client, embed_model, collection_name):
     identifier = 0
+    for el in file_content_list:
+        filename = el[0]
+        file_content = el[1]
+        source = filename.strip('.txt').capitalize()
+        batch_size = 2048
+        text_splitter = RecursiveCharacterTextSplitter(chunk_size=batch_size, chunk_overlap=128)
+        splits = text_splitter.split_text(file_content)
+        all_splits = text_splitter.create_documents(splits)
+        points = []
 
-    for document in all_splits:
-        chunk = document.page_content
-        print(chunk)
-        metadata = {'page_content': chunk, 'name': f'{source} Chunk {identifier}'}
-        point = models.PointStruct(
-            id=identifier,
-            vector=embed_model.embed_documents([chunk])[0],
-            payload=metadata
+        for document in all_splits:
+            chunk = document.page_content
+            metadata = {'page_content': chunk, 'name': f'{source} Chunk {identifier}'}
+            point = models.PointStruct(
+                id=identifier,
+                vector=embed_model.embed_documents([chunk])[0],
+                payload=metadata
+            )
+            print(point)
+            print(f'Processing point {identifier}...')
+            points.append(point)
+            identifier += 1
+
+        print('Storing points into the vector store...')
+        qdrant_client.upsert(
+            collection_name=collection_name,
+            points=points
         )
-        print(f'Processing point {identifier + 1} of {len(all_splits)}...')
-        points.append(point)
-        identifier += 1
-
-    print('Storing points into the vector store...')
-    qdrant_client.upsert(
-        collection_name=collection_name,
-        points=points
-    )
 
     return identifier
 
@@ -71,7 +74,7 @@ def intelligent_chunking_large_files(file_path, chunk_size=1):
         return chunks
 
 
-def store_vectorized_chunks(chunks_to_save, filename, qdrant_client, embed_model, collection_name):
+def store_vectorized_chunks(chunks_to_save, filename, qdrant_client, embed_model, collection_name, actual_identifier):
     source = filename.strip('.txt').capitalize()
     if filename == 'object_summary.txt':
         pattern = r'ocel:oid:\s*([^|]+)'
@@ -84,7 +87,7 @@ def store_vectorized_chunks(chunks_to_save, filename, qdrant_client, embed_model
         meta_search = 'ocel:timestamp'
 
     points = []
-    identifier = 0
+    identifier = actual_identifier + 1
 
     for chunk in chunks_to_save:
         match = re.search(pattern, chunk)
@@ -103,7 +106,7 @@ def store_vectorized_chunks(chunks_to_save, filename, qdrant_client, embed_model
         )
         points.append(point)
         identifier += 1
-        print(f'Processing point {identifier} of {len(chunks_to_save)}...')
+        print(f'Processing point {identifier} of {actual_identifier + len(chunks_to_save)}...')
 
 
     print("Created points for this phase!")

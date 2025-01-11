@@ -8,7 +8,7 @@ import datetime
 
 
 class AnswerVerificationOracle:
-    def __init__(self):
+    def __init__(self, info_run):
         self.prompt_expected_answer_pairs = []
         self.positives = 0
         self.negatives = 0
@@ -21,6 +21,7 @@ class AnswerVerificationOracle:
         self.recall = 0
         self.f1score = 0
         self.results = []
+        self.run_info = info_run
 
     """ Adding the prompt-answer pairs.
     

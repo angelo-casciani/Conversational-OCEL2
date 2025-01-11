@@ -45,8 +45,8 @@ def parse_arguments():
     parser.add_argument('--max_new_tokens', type=int, help='Maximum number of tokens to generate',
                         default=1280)
     parser.add_argument('--batch_size', type=int, default=32)
-    parser.add_argument('--rebuild_db_and_tests', type=u.str2bool,
-                        help='Rebuild the vector index and the test set', default=False)
+    parser.add_argument('--rebuild_db', type=u.str2bool,
+                        help='Rebuild the vector index', default=False)
     parser.add_argument('--modality', type=str, default='live',
                         help='Modality to use between: evaluation-all, evaluation-global, evaluation-events, '
                              'evaluation-objects, evaluation-ts, live.')
@@ -65,7 +65,7 @@ def main():
     q_client, q_store = vs.initialize_vector_store(URL, GRPC_PORT, COLLECTION_NAME, embed_model, space_dimension)
     num_docs = args.num_documents_in_context
     test_set_path = os.path.join(base_path, 'tests', 'test_dataset')
-    if args.rebuild_db_and_tests:
+    if args.rebuild_db:
         vs.delete_qdrant_collection(q_client, COLLECTION_NAME)
         q_client, q_store = vs.initialize_vector_store(URL, GRPC_PORT, COLLECTION_NAME, embed_model, space_dimension)
 
@@ -73,10 +73,12 @@ def main():
         #   exec(file.read())
         print("Building and populating the vector collection... (1/3)")
         files = os.listdir(os.path.join(base_path, 'data', 'execution'))
+        general_info = []
         for f in files:
             if f.endswith('.txt'):
                 content = u.load_process_representation(f)
-                vs.store_vectorized_info(content, f, q_client, embed_model, COLLECTION_NAME)
+                general_info.append((f, content))
+        actual_id = vs.store_vectorized_info(general_info, q_client, embed_model, COLLECTION_NAME)
         print(f"Populating the vector collection... (2/3)")
         files_to_chunk = os.listdir(os.path.join(base_path, 'data', 'execution', 'to_chunk'))
         jsonfile = 'objects_ot_count.txt'
@@ -84,14 +86,14 @@ def main():
             if f.endswith('.txt') and f != jsonfile:
                 chunks_to_store = vs.intelligent_chunking_large_files(f)
                 print('Chunking completed')
-                vs.store_vectorized_chunks(chunks_to_store, f, q_client, embed_model, COLLECTION_NAME)
+                actual_id = vs.store_vectorized_chunks(chunks_to_store, f, q_client, embed_model, COLLECTION_NAME, actual_id)
             elif f == jsonfile:
                 file_path = os.path.join(base_path, 'data', 'execution', 'to_chunk', jsonfile)
                 with open(file_path, 'r') as jsonf:
                     print(f"Populating the vector collection... (3/3)")
                     j_dict = json.load(jsonf)
                     j_chunks = vs.intelligent_chunking_json(j_dict)
-                    vs.store_vectorized_chunks(j_chunks, f, q_client, embed_model, COLLECTION_NAME)
+                    actual_id = vs.store_vectorized_chunks(j_chunks, f, q_client, embed_model, COLLECTION_NAME, actual_id)
 
         print(f"Vector collection successfully created and initialized!")
 
@@ -109,13 +111,13 @@ def main():
         'Context Window LLM': args.model_max_length,
         'Max Generated Tokens LLM': max_new_tokens,
         'Number of Documents in the Context': num_docs,
-        'Rebuilt Vector Index and Test Set': args.rebuild_db_and_tests
+        'Rebuilt Vector Index': args.rebuild_db
     }
 
     if 'evaluation' in args.modality:
         modality_suffix = args.modality.split('-')[-1]
         test_list = u.load_csv_questions(eval_datasets[modality_suffix])
-        p.evaluate_rag_chain_zero_shot(model_id, chain, q_store, num_docs, test_list, run_data)
+        p.evaluate_rag_chain(model_id, chain, q_store, num_docs, test_list, run_data)
     else:
         p.live_prompting(model_id, chain, q_store, num_docs, run_data)
 

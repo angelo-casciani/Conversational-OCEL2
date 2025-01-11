@@ -258,7 +258,7 @@ def live_prompting(choice_llm, model1, vect_db, num_chunks, info_run):
         print()
 
 
-def evaluate_rag_chain_zero_shot(choice_llm, lang_chain, vect_db, num_chunks, questions, info_run):
+def evaluate_rag_chain(choice_llm, lang_chain, vect_db, num_chunks, questions, info_run):
     oracle = AnswerVerificationOracle(info_run)
     count = 0
     for q, a in questions:
