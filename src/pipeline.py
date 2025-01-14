@@ -202,12 +202,12 @@ def produce_answer(question, model_id, llm_chain, vectdb, num_chunks, info_run):
                                             "context": context})
         prompt, answer = parse_llm_answer(complete_answer, model_id)
     else:
-        prompt = f'{sys_mess}\nHere is the most similar past traces: {context}\n' + f'Here is the prefix to predict: {question}\nAnswer: '
+        prompt = f'{sys_mess}\nHere is the context: {context}\n' + f'Question: {question}\nAnswer: '
         completion = llm_chain.chat.completions.create(
             model=model_id,
             messages=[
-                {"role": "system", "content": f'{sys_mess}\nHere is the most similar past traces: {context}\n'},
-                {"role": "user", "content": f'Here is the prefix to predict: {question}\nAnswer: '},
+                {"role": "system", "content": f'{sys_mess}\nHere is the context: {context}\n'},
+                {"role": "user", "content": f'Question: {question}\nAnswer: '},
             ]
         )
         answer = completion.choices[0].message.content.strip()
