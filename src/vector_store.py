@@ -1,158 +1,355 @@
+# vector_store.py
+
 import os
 import re
+from typing import List, Dict, Any, Tuple, Union
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from qdrant_client import QdrantClient, models
 from qdrant_client.http.models import Distance, VectorParams
-from langchain_qdrant import Qdrant
+from langchain_qdrant import QdrantVectorStore
+from langchain_core.embeddings import Embeddings
+from langchain_core.documents import Document
+
+# --- Constants for Configuration ---
+# This makes it easier to adjust these values without searching through the code.
+DEFAULT_BATCH_SIZE = 100
+TEXT_SPLITTER_CHUNK_SIZE = 2048
+TEXT_SPLITTER_CHUNK_OVERLAP = 128
 
 
-def initialize_vector_store(url, grpc_port, collection_name, embed_model, dimension):
-    client = QdrantClient(url, grpc_port=grpc_port, prefer_grpc=True)
-    store = Qdrant(client, collection_name=collection_name, embeddings=embed_model)
+def initialize_vector_store(url: str, grpc_port: int, collection_name: str, embed_model: Embeddings, dimension: int, rebuild_db: bool = False) -> Tuple[QdrantClient, QdrantVectorStore]:
+    """
+    Initialize Qdrant client and vector store, ensuring collection exists with the correct configuration.
+    """
+    try:
+        client = QdrantClient(url, grpc_port=grpc_port, prefer_grpc=True)
 
-    if not client.collection_exists(collection_name):
-        client.create_collection(
-            collection_name=collection_name,
-            vectors_config=VectorParams(size=dimension, distance=Distance.COSINE),
-        )
+        collection_exists = client.collection_exists(collection_name=collection_name)
+        
+        if rebuild_db and collection_exists:
+            print(f"Rebuilding DB: Deleting existing collection '{collection_name}'...")
+            client.delete_collection(collection_name=collection_name)
+            collection_exists = False
 
-    return client, store
+        if not collection_exists:
+            print(f"Creating new collection: '{collection_name}' with dimension: {dimension}")
+            client.create_collection(
+                collection_name=collection_name,
+                vectors_config=VectorParams(size=dimension, distance=Distance.COSINE),
+            )
+        else:
+            # Verify if the existing collection has the correct dimension
+            collection_info = client.get_collection(collection_name=collection_name)
+            
+            # FIX IS HERE: Updated attribute path according to current qdrant-client documentation.
+            existing_dimension = collection_info.config.params.vectors.size
+            
+            if existing_dimension != dimension:
+                print(f"Dimension mismatch! Collection '{collection_name}' has dimension {existing_dimension}, but model requires {dimension}.")
+                print("Recreating collection with correct dimensions...")
+                client.delete_collection(collection_name=collection_name)
+                client.create_collection(
+                    collection_name=collection_name,
+                    vectors_config=VectorParams(size=dimension, distance=Distance.COSINE),
+                )
+
+        store = QdrantVectorStore(client, collection_name=collection_name, embedding=embed_model)
+        return client, store
+
+    except Exception as e:
+        print(f"Error initializing vector store: {e}")
+        raise
 
 
-def store_vectorized_info(file_content_list, qdrant_client, embed_model, collection_name):
-    identifier = 0
-    for el in file_content_list:
-        filename = el[0]
-        file_content = el[1]
-        source = filename.strip('.txt').capitalize()
-        batch_size = 2048
-        text_splitter = RecursiveCharacterTextSplitter(chunk_size=batch_size, chunk_overlap=128)
-        splits = text_splitter.split_text(file_content)
-        all_splits = text_splitter.create_documents(splits)
-        points = []
 
-        for document in all_splits:
-            chunk = document.page_content
-            metadata = {'page_content': chunk, 'name': f'{source} Chunk {identifier}'}
+def delete_qdrant_collection(client: QdrantClient, collection_name: str):
+    """
+    Deletes a specified Qdrant collection.
+
+    Args:
+        client: The Qdrant client instance.
+        collection_name: The name of the collection to delete.
+    """
+    try:
+        client.delete_collection(collection_name=collection_name)
+        print(f"Successfully deleted collection: {collection_name}")
+    except Exception as e:
+        print(f"Error deleting collection {collection_name}: {e}")
+
+
+def _batch_upsert_points(
+    qdrant_client: QdrantClient,
+    collection_name: str,
+    embed_model: Embeddings,
+    metadata_list: List[Dict[str, Any]],
+    start_id: int = 0,
+    batch_size: int = DEFAULT_BATCH_SIZE
+) -> int:
+    """
+    A helper function to create embeddings, construct points, and upsert them in batches.
+
+    Args:
+        qdrant_client: The Qdrant client.
+        collection_name: The name of the collection.
+        embed_model: The embedding model.
+        metadata_list: A list of metadata dictionaries. Each dict must contain 'page_content'.
+        start_id: The starting ID for the points.
+        batch_size: The number of points to upsert in each batch.
+
+    Returns:
+        The total number of points processed.
+    """
+    points = []
+    current_id = start_id
+    total_processed = 0
+
+    for i, metadata in enumerate(metadata_list):
+        chunk = metadata.get('page_content')
+        if not chunk:
+            print(f"Warning: Skipping metadata at index {i} due to missing 'page_content'.")
+            continue
+
+        try:
+            # Generate embedding for the chunk
+            embedding = embed_model.embed_documents([chunk])[0]
+
+            # Create the point structure
             point = models.PointStruct(
-                id=identifier,
-                vector=embed_model.embed_documents([chunk])[0],
+                id=current_id,
+                vector=embedding,
                 payload=metadata
             )
-            print(point)
-            print(f'Processing point {identifier}...')
             points.append(point)
-            identifier += 1
+            current_id += 1
+            total_processed += 1
 
-        print('Storing points into the vector store...')
-        qdrant_client.upsert(
-            collection_name=collection_name,
-            points=points
-        )
+            # Upsert in batches
+            if len(points) >= batch_size:
+                qdrant_client.upsert(collection_name=collection_name, points=points)
+                print(f"Stored batch of {len(points)} points.")
+                points = []
 
-    return identifier
+        except Exception as e:
+            print(f"Error processing point ID {current_id}: {e}")
+            # Ensure ID increments even if an error occurs to avoid ID conflicts
+            current_id += 1
+            continue
+    
+    # Store any remaining points
+    if points:
+        qdrant_client.upsert(collection_name=collection_name, points=points)
+        print(f"Stored final batch of {len(points)} points.")
 
-
-# Chunk size in lines of the file
-def intelligent_chunking_large_files(file_path, chunk_size=1):
-    file_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'execution', 'to_chunk', file_path)
-    chunks = []
-    with open(file_path, 'r') as file:
-        next(file)
-        next(file)
-        chunk = ''
-        for line in file:
-            chunk += line
-            if line.strip() == '' or len(
-                    chunk.split('\n')) > chunk_size:
-                chunk_cleaned = re.sub(r'\| +', '|', chunk)
-                chunks.append(chunk_cleaned)
-                chunk = ''
-        if chunk.strip() != '':  # Append remaining lines as the last chunk
-            chunks.append(chunk)
-        return chunks
+    return total_processed
 
 
-def store_vectorized_chunks(chunks_to_save, filename, qdrant_client, embed_model, collection_name, actual_identifier):
-    source = filename.strip('.txt').capitalize()
-    if filename == 'object_summary.txt':
-        pattern = r'ocel:oid:\s*([^|]+)'
-        meta_search = 'ocel_oid'
-    elif filename == 'objects_ot_count.txt':
-        pattern = r'event:\d+\s*'
-        meta_search = 'event_id'
-    else:
-        pattern = r'ocel:timestamp:\s*([^|]+)'
-        meta_search = 'ocel_timestamp'
-
-    points = []
-    identifier = actual_identifier + 1
-
-    for chunk in chunks_to_save:
-        match = re.search(pattern, chunk)
-        if match is not None:
-            if filename == 'objects_ot_count.txt':
-                meta_value = match.group(0).strip()
-            else:
-                meta_value = match.group(1).strip()
-        else:
-            meta_value = ''
-        metadata = {'page_content': chunk, 'name': f'{source} Chunk {identifier}', meta_search: meta_value}
-        point = models.PointStruct(
-            id=identifier,
-            vector=embed_model.embed_documents([chunk])[0],
-            payload=metadata
-        )
-        points.append(point)
-        identifier += 1
-        print(f'Processing point {identifier} of {actual_identifier + len(chunks_to_save)}...')
-
-
-    print("Created points for this phase!")
-    qdrant_client.upsert(
-        collection_name=collection_name,
-        points=points
-    )
-
-    return identifier
-
-
-def intelligent_chunking_json(json_dict):
-    chunks_list = []
-    items = list(json_dict.items())
-    chunk = ''
-    for i in range(0, len(items)):
-        key, value = items[i]
-        chunk = chunk.join(key + ' : ' + str(value))
-        chunks_list.append(chunk)
-        chunk = ''
-
-    return chunks_list
-
-
-def retrieve_context(vector_index, query, num_chunks, key=None, search_filter=None):
-    retrieved = vector_index.similarity_search(query, num_chunks)
-
-    if key is not None and search_filter is not None:
-        filter_ = models.Filter(
-            must=[
-                models.FieldCondition(
-                    key=key,
-                    match=models.MatchValue(value=search_filter)
+def store_vectorized_info(file_content_list: List[Tuple[str, str]], qdrant_client: QdrantClient, embed_model: Embeddings, collection_name: str) -> int:
+    """
+    Processes and stores vectorized information from a list of file contents.
+    
+    This function now uses the `_batch_upsert_points` helper for cleaner logic.
+    """
+    total_points_stored = 0
+    
+    try:
+        for filename, file_content in file_content_list:
+            try:
+                print(f"Processing file: {filename}...")
+                source = filename.strip('.txt').capitalize()
+                
+                # Split text into manageable chunks
+                text_splitter = RecursiveCharacterTextSplitter(chunk_size=TEXT_SPLITTER_CHUNK_SIZE, chunk_overlap=TEXT_SPLITTER_CHUNK_OVERLAP)
+                splits = text_splitter.split_text(file_content)
+                
+                # Prepare metadata for each chunk
+                metadata_list = [
+                    {'page_content': chunk, 'name': f'{source} Chunk {total_points_stored + i}'}
+                    for i, chunk in enumerate(splits)
+                ]
+                
+                # Use the helper function to handle embedding and batch upserting
+                points_stored = _batch_upsert_points(
+                    qdrant_client,
+                    collection_name,
+                    embed_model,
+                    metadata_list,
+                    start_id=total_points_stored
                 )
-            ]
+                total_points_stored += points_stored
+                print(f"Finished processing file: {filename}. Stored {points_stored} points.")
+
+            except Exception as file_error:
+                print(f"Error processing file {filename}: {file_error}")
+                continue
+                
+    except Exception as e:
+        print(f"An unexpected error occurred in store_vectorized_info: {e}")
+        raise
+
+    return total_points_stored
+
+
+def intelligent_chunking_large_files(file_path: str, lines_per_chunk: int = 1, lines_to_skip: int = 2) -> List[str]:
+    """
+    Intelligently chunks a large file by grouping lines.
+
+    Args:
+        file_path: The full path to the file to chunk.
+        lines_per_chunk: The number of non-empty lines to include in a chunk.
+        lines_to_skip: The number of header lines to skip at the beginning of the file.
+
+    Returns:
+        A list of string chunks.
+    """
+    try:
+        chunks = []
+        with open(file_path, 'r', encoding='utf-8') as file:
+            # Skip header lines
+            for _ in range(lines_to_skip):
+                next(file)
+
+            chunk = ''
+            for line in file:
+                chunk += line
+                # Create a new chunk after a blank line or if chunk size is exceeded
+                if line.strip() == '' or len(chunk.split('\n')) > lines_per_chunk:
+                    chunk_cleaned = re.sub(r'\| +', '|', chunk)
+                    chunks.append(chunk_cleaned)
+                    chunk = ''
+            
+            # Add the last chunk if it's not empty
+            if chunk.strip() != '':
+                chunks.append(re.sub(r'\| +', '|', chunk))
+        
+        return chunks
+    except FileNotFoundError:
+        print(f"Error: File not found at {file_path}")
+        return []
+    except Exception as e:
+        print(f"Error chunking file {file_path}: {e}")
+        return []
+
+
+def store_vectorized_chunks(chunks_to_save: List[str], filename: str, qdrant_client: QdrantClient, embed_model: Embeddings, collection_name: str, actual_identifier: int) -> int:
+    """
+    Creates metadata and stores vectorized chunks using the helper function.
+    """
+    try:
+        source = filename.strip('.txt').capitalize()
+        # Define patterns to extract specific metadata from chunks
+        patterns = {
+            'object_summary.txt': (r'ocel:oid:\s*([^|]+)', 'ocel_oid'),
+            'objects_ot_count.txt': (r'event:\d+\s*', 'event_id'),
+        }
+        default_pattern = (r'ocel:timestamp:\s*([^|]+)', 'ocel_timestamp')
+
+        pattern, meta_key = patterns.get(filename, default_pattern)
+
+        metadata_list = []
+        for i, chunk in enumerate(chunks_to_save):
+            meta_value = ''
+            match = re.search(pattern, chunk)
+            if match:
+                meta_value = match.group(1).strip() if len(match.groups()) > 0 else match.group(0).strip()
+            
+            metadata = {
+                'page_content': chunk,
+                'name': f'{source} Chunk {actual_identifier + i + 1}',
+                meta_key: meta_value
+            }
+            metadata_list.append(metadata)
+
+        print(f"Prepared {len(metadata_list)} points for this phase.")
+        
+        # Use the helper function for embedding and upserting
+        points_stored = _batch_upsert_points(
+            qdrant_client,
+            collection_name,
+            embed_model,
+            metadata_list,
+            start_id=actual_identifier
         )
-        meta_retrieved = vector_index.similarity_search(query, filter=filter_, k=num_chunks)
-        if len(meta_retrieved) > 0:
-            retrieved = meta_retrieved
-    retrieved_text = ''
-    for i in range(len(retrieved)):
-        content = retrieved[i].page_content
-        retrieved_text += f'\n{i + 1}. {content}'
 
-    return retrieved_text
+        return actual_identifier + points_stored
+        
+    except Exception as e:
+        print(f"Error in store_vectorized_chunks: {e}")
+        return actual_identifier
 
 
-def delete_qdrant_collection(q_client, q_collection_name):
-    q_client.delete_collection(q_collection_name)
+def intelligent_chunking_json(json_dict: Dict[str, Any]) -> List[str]:
+    """
+    Converts a dictionary into a list of "key : value" string chunks.
+
+    Args:
+        json_dict: The dictionary to chunk.
+
+    Returns:
+        A list of string chunks.
+    """
+    try:
+        return [f"{key} : {str(value)}" for key, value in json_dict.items()]
+    except Exception as e:
+        print(f"Error chunking JSON: {e}")
+        return []
+
+
+def retrieve_context(vector_index: QdrantVectorStore, query: str, num_chunks: int, key: str = None, search_filter: Any = None) -> str:
+    """
+    Retrieve context from the vector index, with optional metadata filtering.
+
+    Args:
+        vector_index: The vector store to search.
+        query: The query string.
+        num_chunks: The number of chunks to retrieve.
+        key: The metadata key to filter on.
+        search_filter: The value to match for the filter.
+
+    Returns:
+        A formatted string of the retrieved context.
+    """
+    try:
+        # If a key and filter are provided, use them for the search
+        if key and search_filter is not None:
+            qdrant_filter = models.Filter(
+                must=[models.FieldCondition(key=key, match=models.MatchValue(value=search_filter))]
+            )
+            retrieved_docs = vector_index.similarity_search(query, k=num_chunks, filter=qdrant_filter)
+        else:
+            # Otherwise, perform a standard similarity search
+            retrieved_docs = vector_index.similarity_search(query, k=num_chunks)
+
+        # Format the retrieved documents into a single string
+        retrieved_text = '\n'.join([f'{i + 1}. {doc.page_content}' for i, doc in enumerate(retrieved_docs)])
+        
+        return retrieved_text if retrieved_text else "No context found for the given query."
+        
+    except Exception as e:
+        print(f"Error retrieving context: {e}")
+        return "Context retrieval failed due to an error."
+
+
+def store_traces(traces: List[str], qdrant_client: QdrantClient, log_name: str, embed_model: Embeddings, collection_name: str) -> None:
+    """
+    Stores log traces in the vector database using the helper function.
+    """
+    try:
+        print(f"Preparing to store {len(traces)} traces for log: {log_name}")
+        metadata_list = [
+            {'page_content': trace, 'name': f'{log_name} Trace {i}'}
+            for i, trace in enumerate(traces)
+        ]
+        
+        _batch_upsert_points(
+            qdrant_client,
+            collection_name,
+            embed_model,
+            metadata_list,
+            start_id=0  # Assuming traces are stored in a new or separate context
+        )
+        print("Successfully stored all traces.")
+            
+    except Exception as e:
+        print(f"Error in store_traces: {e}")
+        raise

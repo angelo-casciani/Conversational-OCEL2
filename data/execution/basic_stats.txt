@@ -1,4 +1,5 @@
 OCEL2.0 basic statistics.
 Object-Centric Event Log (number of events: 14671, number of objects: 9054, number of activities: 10, number of object types: 7, events-objects relationships: 35927)
-Activities occurrences: {'Create Goods Receipt': 4042, 'Create Invoice Receipt': 1941, 'Perform Two-Way Match': 1941, 'Create Purchase Order': 1598, 'Approve Purchase Order': 1598, 'Execute Payment': 1166, 'Create Request for Quotation': 927, 'Create Purchase Requisition': 729, 'Approve Purchase Requisition': 607, 'Delegate Purchase Requisition Approval': 122}
-Object types occurrences (number of objects): {'goods receipt': 1941, 'material': 1807, 'purchase_order': 1598, 'invoice receipt': 927, 'payment': 927, 'purchase_requisition': 927, 'quotation': 927}
+Activities occurrences: Counter({'Create Goods Receipt': 4042, 'Create Invoice Receipt': 1941, 'Perform Two-Way Match': 1941, 'Approve Purchase Order': 1598, 'Create Purchase Order': 1598, 'Execute Payment': 1166, 'Create Request for Quotation': 927, 'Create Purchase Requisition': 729, 'Approve Purchase Requisition': 607, 'Delegate Purchase Requisition Approval': 122})
+Object types occurrences (number of objects): Counter({'goods receipt': 1941, 'material': 1807, 'purchase_order': 1598, 'invoice receipt': 927, 'payment': 927, 'purchase_requisition': 927, 'quotation': 927})
+Unique activities per object type: Counter({'goods receipt': 4, 'purchase_order': 4, 'purchase_requisition': 4, 'invoice receipt': 3, 'material': 3, 'quotation': 3, 'payment': 1})

@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-""" Python class for the verification oracle.
-
-The class instantiate an oracle to check if the answers provided by the LLM are correct with respect to the
-provided ground truth (prompt-expected answer pairs).
-"""
 import datetime
 import os
 
