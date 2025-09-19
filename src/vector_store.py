@@ -1,27 +1,23 @@
-# vector_store.py
-
+import json
 import os
 import re
-from typing import List, Dict, Any, Tuple, Union
+import subprocess
+from typing import List, Dict, Any, Tuple
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from qdrant_client import QdrantClient, models
 from qdrant_client.http.models import Distance, VectorParams
 from langchain_qdrant import QdrantVectorStore
 from langchain_core.embeddings import Embeddings
-from langchain_core.documents import Document
+
+import utility as u
 
 # --- Constants for Configuration ---
 # This makes it easier to adjust these values without searching through the code.
-DEFAULT_BATCH_SIZE = 100
-TEXT_SPLITTER_CHUNK_SIZE = 2048
-TEXT_SPLITTER_CHUNK_OVERLAP = 128
+
 
 
 def initialize_vector_store(url: str, grpc_port: int, collection_name: str, embed_model: Embeddings, dimension: int, rebuild_db: bool = False) -> Tuple[QdrantClient, QdrantVectorStore]:
-    """
-    Initialize Qdrant client and vector store, ensuring collection exists with the correct configuration.
-    """
     try:
         client = QdrantClient(url, grpc_port=grpc_port, prefer_grpc=True)
 
@@ -34,15 +30,10 @@ def initialize_vector_store(url: str, grpc_port: int, collection_name: str, embe
 
         if not collection_exists:
             print(f"Creating new collection: '{collection_name}' with dimension: {dimension}")
-            client.create_collection(
-                collection_name=collection_name,
-                vectors_config=VectorParams(size=dimension, distance=Distance.COSINE),
-            )
+            client.create_collection(collection_name=collection_name,
+                                     vectors_config=VectorParams(size=dimension, distance=Distance.COSINE))
         else:
-            # Verify if the existing collection has the correct dimension
             collection_info = client.get_collection(collection_name=collection_name)
-            
-            # FIX IS HERE: Updated attribute path according to current qdrant-client documentation.
             existing_dimension = collection_info.config.params.vectors.size
             
             if existing_dimension != dimension:
@@ -64,18 +55,55 @@ def initialize_vector_store(url: str, grpc_port: int, collection_name: str, embe
 
 
 def delete_qdrant_collection(client: QdrantClient, collection_name: str):
-    """
-    Deletes a specified Qdrant collection.
-
-    Args:
-        client: The Qdrant client instance.
-        collection_name: The name of the collection to delete.
-    """
     try:
         client.delete_collection(collection_name=collection_name)
         print(f"Successfully deleted collection: {collection_name}")
     except Exception as e:
         print(f"Error deleting collection {collection_name}: {e}")
+
+
+def rebuild_and_populate_vector_db(base_path, q_client, embed_model, collection_name, batch_size=100, chunk_size=2048, chunk_overlap=128):
+    try:
+        preprocessing_path = os.path.join(base_path, 'src', 'preprocessing.py')
+        subprocess.run(['python3', preprocessing_path], check=True)
+        print("Building and populating the vector collection... (1/3)")
+        execution_path = os.path.join(base_path, 'data', 'execution')
+        files = os.listdir(execution_path)
+        general_info = []
+        for f in files:
+            if f.endswith('.txt'):
+                try:
+                    content = u.load_process_representation(f)
+                    general_info.append((f, content))
+                except Exception as file_error:
+                    print(f"Error loading file {f}: {str(file_error)}")
+                    continue
+        actual_id = store_vectorized_info(general_info, q_client, embed_model, collection_name, batch_size=batch_size, chunk_size=chunk_size, chunk_overlap=chunk_overlap)
+        print("Populating the vector collection... (2/3)")
+        to_chunk_path = os.path.join(execution_path, 'to_chunk')
+        if os.path.exists(to_chunk_path):
+            files_to_chunk = os.listdir(to_chunk_path)
+            jsonfile = 'objects_ot_count.txt'
+            for f in files_to_chunk:
+                try:
+                    full_file_path = os.path.join(to_chunk_path, f)
+                    if f.endswith('.txt') and f != jsonfile:
+                        chunks_to_store = intelligent_chunking_large_files(full_file_path)
+                        print(f'Chunking completed for {f}')
+                        actual_id = store_vectorized_chunks(chunks_to_store, f, q_client, embed_model, collection_name, actual_id, batch_size=batch_size)
+                    elif f == jsonfile:
+                        with open(full_file_path, 'r') as jsonf:
+                            print("Populating the vector collection... (3/3)")
+                            j_dict = json.load(jsonf)
+                            j_chunks = intelligent_chunking_json(j_dict)
+                            actual_id = store_vectorized_chunks(j_chunks, f, q_client, embed_model, collection_name, actual_id, batch_size=batch_size)
+                except Exception as chunk_error:
+                    print(f"Error processing file {f}: {str(chunk_error)}")
+                    continue
+        print("Vector collection successfully created and initialized!")
+    except Exception as e:
+        print(f"Error populating vector database: {str(e)}")
+        raise
 
 
 def _batch_upsert_points(
@@ -84,7 +112,7 @@ def _batch_upsert_points(
     embed_model: Embeddings,
     metadata_list: List[Dict[str, Any]],
     start_id: int = 0,
-    batch_size: int = DEFAULT_BATCH_SIZE
+    batch_size: int = 100
 ) -> int:
     """
     A helper function to create embeddings, construct points, and upsert them in batches.
@@ -144,7 +172,7 @@ def _batch_upsert_points(
     return total_processed
 
 
-def store_vectorized_info(file_content_list: List[Tuple[str, str]], qdrant_client: QdrantClient, embed_model: Embeddings, collection_name: str) -> int:
+def store_vectorized_info(file_content_list: List[Tuple[str, str]], qdrant_client: QdrantClient, embed_model: Embeddings, collection_name: str, batch_size=100, chunk_size=2048, chunk_overlap=128) -> int:
     """
     Processes and stores vectorized information from a list of file contents.
     
@@ -159,7 +187,7 @@ def store_vectorized_info(file_content_list: List[Tuple[str, str]], qdrant_clien
                 source = filename.strip('.txt').capitalize()
                 
                 # Split text into manageable chunks
-                text_splitter = RecursiveCharacterTextSplitter(chunk_size=TEXT_SPLITTER_CHUNK_SIZE, chunk_overlap=TEXT_SPLITTER_CHUNK_OVERLAP)
+                text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
                 splits = text_splitter.split_text(file_content)
                 
                 # Prepare metadata for each chunk
@@ -174,7 +202,8 @@ def store_vectorized_info(file_content_list: List[Tuple[str, str]], qdrant_clien
                     collection_name,
                     embed_model,
                     metadata_list,
-                    start_id=total_points_stored
+                    start_id=total_points_stored,
+                    batch_size=batch_size
                 )
                 total_points_stored += points_stored
                 print(f"Finished processing file: {filename}. Stored {points_stored} points.")
@@ -231,7 +260,7 @@ def intelligent_chunking_large_files(file_path: str, lines_per_chunk: int = 1, l
         return []
 
 
-def store_vectorized_chunks(chunks_to_save: List[str], filename: str, qdrant_client: QdrantClient, embed_model: Embeddings, collection_name: str, actual_identifier: int) -> int:
+def store_vectorized_chunks(chunks_to_save: List[str], filename: str, qdrant_client: QdrantClient, embed_model: Embeddings, collection_name: str, actual_identifier: int, batch_size=100) -> int:
     """
     Creates metadata and stores vectorized chunks using the helper function.
     """
@@ -268,7 +297,8 @@ def store_vectorized_chunks(chunks_to_save: List[str], filename: str, qdrant_cli
             collection_name,
             embed_model,
             metadata_list,
-            start_id=actual_identifier
+            start_id=actual_identifier,
+            batch_size=batch_size
         )
 
         return actual_identifier + points_stored

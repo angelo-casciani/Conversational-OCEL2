@@ -4,6 +4,7 @@ import numpy as np
 import os
 import torch
 import random
+from eval import SEED
 
 
 def seed_everything(seed=10):
@@ -29,7 +30,6 @@ def str2bool(v):
 
 
 def load_process_representation(filename):
-    """Load process representation file with improved error handling."""
     try:
         filepath = os.path.join(os.path.dirname(__file__), '..', 'data', 'execution', filename)
         with open(filepath, 'r', encoding='utf-8') as file:
@@ -63,14 +63,17 @@ def load_csv_questions(filepath):
         print(f"Error: CSV file {filepath} not found")
     except Exception as e:
         print(f"Error loading CSV {filepath}: {str(e)}")
-    
+
+    try:
+        random.seed(SEED) # For reproducibility
+    except ImportError:
+        random.seed(10)
+    random.shuffle(questions)
     return questions
 
 
 def log_to_file(conversation, curr_datetime, info_run):
-    """Log conversation to file with improved error handling."""
     try:
-        # Ensure the output directory exists
         output_dir = os.path.join(os.path.dirname(__file__), "..", "tests", "outputs")
         os.makedirs(output_dir, exist_ok=True)
         

@@ -10,6 +10,7 @@ import pipeline as p
 import utility as u
 import vector_store as vs
 
+
 DEVICE = f'cuda:{torch.cuda.current_device()}' if torch.cuda.is_available() else 'cpu'
 os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
 load_dotenv()
@@ -31,6 +32,8 @@ eval_datasets = {
 
 
 def parse_arguments():
+    parser.add_argument('--vector_chunk_size', type=int, default=2048, help='Chunk size for text splitting')
+    parser.add_argument('--vector_chunk_overlap', type=int, default=128, help='Chunk overlap for text splitting')
     parser = ArgumentParser(description="Run Framework for OCEL2 analysis.")
     parser.add_argument('--embed_model_id', type=str, default='sentence-transformers/all-MiniLM-L12-v2',
                         help='Embedding model identifier')
@@ -48,7 +51,7 @@ def parse_arguments():
                         default=1280)
     parser.add_argument('--batch_size', type=int, default=32)
     parser.add_argument('--rebuild_db', type=u.str2bool,
-                        help='Rebuild the vector index', default=False)
+                        help='Rebuild the vector index', default=True)
     args = parser.parse_args()
 
     return args
@@ -59,12 +62,14 @@ def initialize_vector_database(args, embed_model, space_dimension):
         q_client, q_store = vs.initialize_vector_store(
             URL, GRPC_PORT, COLLECTION_NAME, embed_model, space_dimension, args.rebuild_db
         )
-        
         if args.rebuild_db:
             print("Rebuilding vector database...")
-            populate_vector_database(q_client, embed_model)
-            print("Vector collection successfully created and initialized!")
-            
+            vs.rebuild_and_populate_vector_db(
+                base_path, q_client, embed_model, COLLECTION_NAME,
+                batch_size=args.batch_size,
+                chunk_size=args.vector_chunk_size,
+                chunk_overlap=args.vector_chunk_overlap
+            )
         return q_client, q_store
     except Exception as e:
         print(f"Error initializing vector database: {str(e)}")
@@ -143,7 +148,9 @@ def main():
             'Context Window LLM': args.model_max_length,
             'Max Generated Tokens LLM': max_new_tokens,
             'Number of Documents in the Context': num_docs,
-            'Rebuilt Vector Index': args.rebuild_db
+            'Rebuilt Vector Index': args.rebuild_db,
+            'Vector Chunk Size': args.vector_chunk_size,
+            'Vector Chunk Overlap': args.vector_chunk_overlap
         }
 
         print("Using OCEL2Pipeline...")
