@@ -39,7 +39,7 @@ def parse_arguments():
     parser.add_argument('--batch_size', type=int, default=32)
     parser.add_argument('--modality', type=str, default='evaluation-all', help='Evaluation modality: evaluation-all, evaluation-global, '
                              'evaluation-events, evaluation-objects, evaluation-ts')
-    parser.add_argument('--rebuild_db', action='store_true', default=False, help='Rebuild the vector index')
+    parser.add_argument('--rebuild_db', type=u.str2bool, help='Rebuild the vector index', default=True)
     args = parser.parse_args()
     return args
 
