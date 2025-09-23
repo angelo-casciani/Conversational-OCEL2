@@ -19,8 +19,8 @@ from vector_store import retrieve_context
 class OCEL2Pipeline:   
     MODELS = {
         'api': {
-            'openai': ['gpt-4o-mini', 'gpt-4.1-mini', 'gpt-4.1-nano', 'gpt-4.1', 'gpt-4o'],
-            'google_genai': ['gemini-2.0-flash', 'gemini-2.5-flash-preview-05-20', 'gemini-2.5-pro', 'gemini-2.5-flash'],
+            'openai': ['gpt-4o-mini', 'gpt-4.1-mini', 'gpt-4.1-nano', 'gpt-4.1', 'gpt-4o', 'gpt-5', 'gpt-5-mini', 'gpt-5-nano'],
+            'google_genai': ['gemini-2.5-pro', 'gemini-2.5-flash'],
             'deepseek': ['deepseek-chat', 'deepseek-reasoner'],
             'anthropic': [],
         },
@@ -33,6 +33,7 @@ class OCEL2Pipeline:
             'google_genai': ['google/gemma-2-9b-it'],
             'microsoft': ['microsoft/phi-4'],
             'deepseek': ['deepseek-ai/DeepSeek-R1-Distill-Qwen-7B', 'deepseek-ai/DeepSeek-R1-Distill-Llama-8B'],
+            'openai': ['gpt-oss-20b'],
         }
     }
     

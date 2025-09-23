@@ -11,11 +11,11 @@ This dataset functions as a benchmark for evaluating the effectiveness of conver
 
 ```
 .
-└── data/
+├── data/
 │   ├── execution              # Knowledge extracted from the event log
 │   └── ocel2-p2p.json         # Event log used for the evaluation
 ├── src/ 
-│   ├── cmd4tests.sh
+│   ├── cmd4tests.sh           # Commands for launching evaluations
 │   ├── eval.py                # Logic for Evaluation
 │   ├── main.py                # Main logic for live interaction
 │   ├── oracle.py              # Verification oracle for evaluation
