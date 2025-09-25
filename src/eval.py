@@ -39,6 +39,8 @@ def parse_arguments():
     parser.add_argument('--batch_size', type=int, default=32)
     parser.add_argument('--modality', type=str, default='evaluation-all', help='Evaluation modality: evaluation-all, evaluation-global, '
                              'evaluation-events, evaluation-objects, evaluation-ts')
+    parser.add_argument('--prompt', type=str, default='system_message-eval', help='Evaluation prompt: system_message-eval, system_message-eval-factual, '
+                             'system_message-eval-few-shot, system_message-eval-factual-few-shot')
     parser.add_argument('--rebuild_db', type=u.str2bool, help='Rebuild the vector index', default=True)
     args = parser.parse_args()
     return args
@@ -73,6 +75,7 @@ def main():
     q_client, q_store = initialize_vector_database(args, embed_model, space_dimension)
     num_docs = args.num_documents_in_context
     model_id = args.llm_id
+    prompt = args.prompt
     max_new_tokens = args.max_new_tokens
     run_data = {
         'Batch Size': args.batch_size,
@@ -81,6 +84,7 @@ def main():
         'Evaluation Modality': args.modality,
         'Event Log': args.log,
         'LLM ID': model_id,
+        'Prompt': prompt,
         'Context Window LLM': args.model_max_length,
         'Max Generated Tokens LLM': max_new_tokens,
         'Number of Documents in the Context': num_docs,
@@ -89,7 +93,7 @@ def main():
         'Vector Chunk Overlap': args.vector_chunk_overlap
     }
     print("Using OCEL2Pipeline for evaluation...")
-    pipeline = p.OCEL2Pipeline(model_id, max_new_tokens, HF_AUTH, OPENAI_API_KEY)
+    pipeline = p.OCEL2Pipeline(model_id, max_new_tokens, HF_AUTH, OPENAI_API_KEY, prompt)
     test_set_path = os.path.join(base_path, 'tests', 'test_dataset')
     modality_suffix = args.modality.split('-')[-1]
     dataset_name = eval_datasets[modality_suffix]

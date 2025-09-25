@@ -63,8 +63,9 @@ class OCEL2Pipeline:
         'deepseek': 'Assistant: '
     }
 
-    def __init__(self, model_id: str, max_new_tokens: int, hf_auth: str = None, openai_auth: str = None) -> None:
+    def __init__(self, model_id: str, max_new_tokens: int, hf_auth: str = None, openai_auth: str = None, prompt: str = 'system_message-eval') -> None:
         self.model_id = model_id
+        self.prompt = prompt
         self.model_family, self.model_type = self._get_model_family_type()
         if not self.model_family:
             raise ValueError(f"Could not determine model family for ID: {self.model_id}. Please check MODELS definition.")
@@ -185,7 +186,7 @@ class OCEL2Pipeline:
         
         modality = info_run.get('Evaluation Modality', 'live')
         if 'evaluation' in modality:
-            sys_mess = prompts.get('system_message-eval', '')
+            sys_mess = prompts.get(self.prompt, 'system_message-eval')
         else:
             sys_mess = prompts.get('system_message-live', '')
             

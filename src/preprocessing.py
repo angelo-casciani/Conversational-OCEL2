@@ -84,6 +84,7 @@ def empty_execution_data(exe_dir):
 def format_df_value(val, name):
     return f'{name}: {val} | '
 
+
 def delete_files_no_info():
     files = os.listdir(os.path.join(directory))
     criteria = ('date_attributes', 'string_attributes', 'numeric_attributes')
