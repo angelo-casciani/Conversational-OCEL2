@@ -32,9 +32,9 @@ eval_datasets = {
 
 
 def parse_arguments():
+    parser = ArgumentParser(description="Run Framework for OCEL2 analysis.")
     parser.add_argument('--vector_chunk_size', type=int, default=2048, help='Chunk size for text splitting')
     parser.add_argument('--vector_chunk_overlap', type=int, default=128, help='Chunk overlap for text splitting')
-    parser = ArgumentParser(description="Run Framework for OCEL2 analysis.")
     parser.add_argument('--embed_model_id', type=str, default='sentence-transformers/all-MiniLM-L12-v2',
                         help='Embedding model identifier')
     parser.add_argument('--vector_dimension', type=int, default=384,

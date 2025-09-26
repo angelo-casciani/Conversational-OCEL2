@@ -12,7 +12,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline, BitsAndB
 from torch import bfloat16
 from sentence_transformers import SentenceTransformer
 
-from utility import log_to_file
+from utility import log_to_file, log_info_run
 from vector_store import retrieve_context
 
 
@@ -369,7 +369,8 @@ def initialize_embedding_model(model_id: str, device: str = 'cpu', batch_size: i
 def live_prompting(pipeline: OCEL2Pipeline, vect_db, num_chunks: int, info_run: Dict):
     current_datetime = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     print("Starting live prompting mode...")
-    
+    output_file = log_info_run(current_datetime, info_run)
+
     while True:
         try:
             query = input('Insert the query (type "quit" to exit): ')
@@ -382,9 +383,8 @@ def live_prompting(pipeline: OCEL2Pipeline, vect_db, num_chunks: int, info_run: 
             print(f'Prompt: {complete_prompt}\n')
             print(f'Answer: {answer}\n')
             print('--------------------------------------------------')
-
-            log_to_file(f'Query: {complete_prompt}\n\nAnswer: {answer}\n\n##########################\n\n',
-                       current_datetime, info_run)
+            
+            log_to_file(f'Query: {complete_prompt}\n\nAnswer: {answer}', output_file)
             print()
         except KeyboardInterrupt:
             print("\nExiting the chat.")

@@ -72,7 +72,16 @@ def load_csv_questions(filepath):
     return questions
 
 
-def log_to_file(conversation, curr_datetime, info_run):
+def log_to_file(conversation, filepath):
+    try:        
+        with open(filepath, 'a', encoding='utf-8') as file:
+            file.write(conversation)
+            file.write('\n-----------------------------------\n\n')
+    except Exception as e:
+        print(f"Error logging to file: {str(e)}")
+
+
+def log_info_run(curr_datetime, info_run):
     try:
         output_dir = os.path.join(os.path.dirname(__file__), "..", "tests", "outputs")
         os.makedirs(output_dir, exist_ok=True)
@@ -83,6 +92,6 @@ def log_to_file(conversation, curr_datetime, info_run):
             for key in info_run.keys():
                 file.write(f"{key}: {info_run[key]}\n")
             file.write('\n-----------------------------------\n\n')
-            file.write(conversation)
+        return filepath
     except Exception as e:
-        print(f"Error logging to file: {str(e)}")
+        print(f"Error logging run information to file: {str(e)}")
