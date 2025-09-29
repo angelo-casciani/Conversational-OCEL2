@@ -1,5 +1,6 @@
 import datetime
 import os
+import re
 from sklearn.metrics import (
     matthews_corrcoef, roc_auc_score, accuracy_score,
     precision_score, recall_score, f1_score
@@ -43,10 +44,11 @@ class AnswerVerificationOracle:
         expected_answer = self.question_expected_answer_pairs.get(question)
         if expected_answer is not None:
             result['expected_answer'] = expected_answer
-            normalized_answer = (model_answer.strip().split()[-1].strip(' .,:;!?').capitalize())
-            if normalized_answer in ["True", "False"]:
-                result['predicted_answer'] = normalized_answer
-                result['verification_result'] = (normalized_answer == expected_answer)
+            matches = list(re.finditer(r'\b(true|false)\b', model_answer, re.IGNORECASE))
+            if matches:
+                last_match = matches[-1].group(1).capitalize()
+                result['predicted_answer'] = last_match
+                result['verification_result'] = (last_match == expected_answer)
             else:
                 result['predicted_answer'] = "UNKNOWN"
                 result['verification_result'] = False
