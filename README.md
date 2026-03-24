@@ -1,6 +1,6 @@
 # Conversational-OCEL2
 
-This repository contains the code and data to reproduce the experiments from the paper *A Conversational Framework for Object-centric Event Logs Analysis*.
+This repository contains the code and data to reproduce the experiments from the paper *"Enabling natural language analysis for object-centric event logs"*.
 Conversational-OCEL2 is a conversational framework designed to facilitate process mining analysis over object-centric event logs following the OCEL 2.0 standard (in JSON). 
 The approach leverages an architecture that combines Large Language Models (LLMs) with Retrieval Augmented Generation (RAG) to handle users' queries about OCEL 2.0 event logs and generate contextually relevant responses in natural language.
 
@@ -219,4 +219,21 @@ python3 main.py --embed_model_id=sentence-transformers/all-mpnet-base-v2
 
 # Better error recovery and batch processing
 python3 main.py --rebuild_db=true --batch_size=16
+```
+
+## Citation
+
+If you use this repository in your research, please cite:
+
+```bibtex
+@article{casciani2026enabling,
+  title={Enabling natural language analysis for object-centric event logs},
+  author={Casciani, Angelo and Bernardi, Mario Luca and Cimitile, Marta and Marrella, Andrea},
+  journal={Process Science},
+  volume={3},
+  number={1},
+  pages={5},
+  year={2026},
+  publisher={Springer}
+}
 ```
