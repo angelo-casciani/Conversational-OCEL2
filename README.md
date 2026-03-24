@@ -1,6 +1,6 @@
 # Conversational-OCEL2
 
-This repository contains the code and data to reproduce the experiments from the paper *"Enabling natural language analysis for object-centric event logs"*.
+This repository contains the code and data to reproduce the experiments from the paper [Enabling natural language analysis for object-centric event logs](https://link.springer.com/article/10.1007/s44311-026-00037-9).
 Conversational-OCEL2 is a conversational framework designed to facilitate process mining analysis over object-centric event logs following the OCEL 2.0 standard (in JSON). 
 The approach leverages an architecture that combines Large Language Models (LLMs) with Retrieval Augmented Generation (RAG) to handle users' queries about OCEL 2.0 event logs and generate contextually relevant responses in natural language.
 
