@@ -1,6 +1,6 @@
 # Enabling natural language analysis for object-centric event logs
 
-<a href="https://doi.org/10.5281/zenodo.21292776"><img src="https://zenodo.org/badge/793553632.svg" alt="DOI"></a>
+[![DOI](https://img.shields.io/badge/DOI-/zenodo.21292776-blue.svg)](https://doi.org/10.5281/zenodo.21292776)
 [![GitHub release](https://img.shields.io/github/v/release/your-username/your-repo)](https://github.com/angelo-casciani/Conversational-OCEL2/releases)
 
 This repository contains the code and data to reproduce the experiments from the paper [Enabling natural language analysis for object-centric event logs](https://link.springer.com/article/10.1007/s44311-026-00037-9).
