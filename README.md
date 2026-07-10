@@ -1,11 +1,7 @@
-<div align="center">    
-
 # Enabling natural language analysis for object-centric event logs
 
-[![Sapienza](https://img.shields.io/badge/Sapienza_University_of_Rome-blue?style=flatlabelColor=781A2D&color=781A2D&logoColor=white)](https://www.diag.uniroma1.it/gruppi-di-ricerca/25462)
 <a href="https://doi.org/10.5281/zenodo.21292776"><img src="https://zenodo.org/badge/793553632.svg" alt="DOI"></a>
-
-</div>
+[![GitHub release](https://img.shields.io/github/v/release/your-username/your-repo)](https://github.com/angelo-casciani/Conversational-OCEL2/releases)
 
 This repository contains the code and data to reproduce the experiments from the paper [Enabling natural language analysis for object-centric event logs](https://link.springer.com/article/10.1007/s44311-026-00037-9).
 Conversational-OCEL2 is a conversational framework designed to facilitate process mining analysis over object-centric event logs following the OCEL 2.0 standard (in JSON). 
